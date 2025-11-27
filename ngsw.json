@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1764247580029,
+  "timestamp": 1764247840033,
   "index": "/index.csr.html",
   "assetGroups": [
     {
@@ -71,10 +71,10 @@
     "/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/index.csr.html": "18de79662d795612fd7d1008bf12afb31d866227",
-    "/index.html": "646e2037a3bccbfc7756cf5e0e9a9d36ca23cf90",
+    "/index.csr.html": "963a5e75e391fa0437dc27fc80ab51eac0ac02c6",
+    "/index.html": "845868bd127414bdbff8fbbf355a3d311d263421",
     "/main-6DJ3BDI5.js": "61636037d41046b4f33ac4bdef90761a5944ff3b",
-    "/manifest.webmanifest": "95547c95d69e00ded1103930cc96b5f14f206de8",
+    "/manifest.webmanifest": "df4e59dcb7872d7baaaa7457ce08a56e5d2677a9",
     "/styles-VZ3KKS4B.css": "32536bbcd181846ad694f8014ff20e304ee83c19",
     "/worker-CIDOVL3H.js": "7c4547944d928aa398a3b9da9e5a2997272a45d6"
   },
