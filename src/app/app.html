@@ -6,8 +6,20 @@
       <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">F</div>
       <h1 class="text-xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">Flashcards</h1>
     </div>
-    <div *ngIf="store.phase() !== 'MENU'" class="text-sm font-medium text-slate-500">
-       {{ store.currentIndex() + 1 }} / {{ store.activeDeck().length }}
+    <div class="flex items-center gap-3">
+      <button *ngIf="showInstallButton()"
+        (click)="installPWA()"
+        class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg shadow-sm transition-colors flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7,10 12,15 17,10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Install
+      </button>
+      <div *ngIf="store.phase() !== 'MENU'" class="text-sm font-medium text-slate-500">
+         {{ store.currentIndex() + 1 }} / {{ store.activeDeck().length }}
+      </div>
     </div>
   </header>
 

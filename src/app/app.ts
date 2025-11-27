@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
+import { isPlatformBrowser } from '@angular/common';
 import { AiWordGenerationService } from './services/ai-word-generation';
 import { StaticVocabularyService } from './services/static-vocabulary.service';
 import { GameStore, Flashcard } from './game-store';
@@ -30,7 +31,7 @@ if (!crypto.randomUUID) {
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
   `]
 })
-export class App {
+export class App implements OnInit {
   store = inject(GameStore);
   llm = inject(AiWordGenerationService);
   staticVocab = inject(StaticVocabularyService);
@@ -40,6 +41,50 @@ export class App {
   isLoading = false;
   inputControl = new FormControl('');
   typingFeedback: { correct: boolean, msg: string } | null = null;
+
+  // PWA Install properties
+  deferredPrompt: any = null;
+  showInstallButton = signal(false);
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngOnInit() {
+    // Only add event listeners in the browser
+    if (isPlatformBrowser(this.platformId)) {
+      // Listen for the beforeinstallprompt event
+      window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent the mini-infobar from appearing on mobile
+        e.preventDefault();
+        // Stash the event so it can be triggered later
+        this.deferredPrompt = e;
+        // Update UI to notify the user they can install the PWA
+        this.showInstallButton.set(true);
+      });
+
+      // Listen for the appinstalled event
+      window.addEventListener('appinstalled', () => {
+        // Hide the install button when the PWA has been installed
+        this.showInstallButton.set(false);
+        this.deferredPrompt = null;
+      });
+    }
+  }
+
+  async installPWA() {
+    if (!this.deferredPrompt) return;
+
+    // Show the install prompt
+    this.deferredPrompt.prompt();
+
+    // Wait for the user to respond to the prompt
+    const { outcome } = await this.deferredPrompt.userChoice;
+
+    // Hide the install button regardless of the outcome
+    this.showInstallButton.set(false);
+
+    // Clear the deferredPrompt
+    this.deferredPrompt = null;
+  }
 
   async selectTopic(topic: string) {
     this.isLoading = true;
