@@ -25,21 +25,21 @@ export class WorkerMessageHandler {
 
             // STRATEGY UPDATE 1: Tweak prompt to ensure 'Sentence' is descriptive enough to provide context
             const prompt = `Generate exactly ${count} vocabulary learning examples for the theme "${theme}".
-Crucial: The 'Sentence' must clearly demonstrate the meaning of the 'Vocabulary' word. The vocabulary word should always be a single word or phrase.
+Crucial: The 'Sentence' must clearly demonstrate the meaning of the 'Vocabulary' word. The 'Vocabulary' word should be exactly a single word or phrase, no multiple words after commas.
 
 Format (repeat exactly for each example):
-Sentence: [complete sentence]
-Vocabulary: [word from the sentence]
+Vocabulary: [vocabulary word]
+Sentence: [complete sentence using the vocabulary word in context]
 
 Examples:
+Vocabulary: fired
 Sentence: The bad employee was fired from his job.
-Vocabulary: fired
 
+Vocabulary: fired
 Sentence: The soldier fired his rifle at the target.
-Vocabulary: fired
 
-Sentence: Company really cares about employee work-life balance.
 Vocabulary: work-life balance
+Sentence: Company really cares about employee work-life balance.
 
 Now generate exactly ${count} examples for theme "${theme}":`;
 
@@ -51,7 +51,7 @@ Now generate exactly ${count} examples for theme "${theme}":`;
             console.log('AI Prompt:', prompt);
 
             const output = await generator(messages, {
-                max_new_tokens: 750, // Increased slightly to ensure full JSON/format completion
+                max_new_tokens: 500, // Increased slightly to ensure full JSON/format completion
                 temperature: 0.7,
                 do_sample: true
             });

@@ -11,16 +11,16 @@ export class TextParser {
         let currentExample: { sentence?: string, vocabulary?: string } = {};
 
         for (const line of lines) {
-            if (line.startsWith('Sentence:')) {
+            if (line.startsWith('Vocabulary:')) {
                 // Start new example if we have a complete previous one
                 if (currentExample.sentence && currentExample.vocabulary) {
                     examples.push({ sentence: currentExample.sentence, vocabulary: currentExample.vocabulary });
                 }
-                currentExample = { sentence: line.substring(9).trim() };
-            } else if (line.startsWith('Vocabulary:')) {
-                currentExample.vocabulary = line.substring(11).trim();
-                // Add example when vocabulary is found (assuming sentence comes first)
-                if (currentExample.sentence) {
+                currentExample = { vocabulary: line.substring(11).trim() };
+            } else if (line.startsWith('Sentence:')) {
+                currentExample.sentence = line.substring(9).trim();
+                // Add example when sentence is found (assuming vocabulary comes first)
+                if (currentExample.vocabulary) {
                     examples.push({ sentence: currentExample.sentence, vocabulary: currentExample.vocabulary });
                     currentExample = {};
                 }

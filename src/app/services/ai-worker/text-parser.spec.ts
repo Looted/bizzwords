@@ -4,8 +4,8 @@ import { TextParser, Example } from './text-parser';
 describe('TextParser', () => {
   describe('parseExamples', () => {
     it('should parse a single example correctly', () => {
-      const input = `Sentence: I use a computer every day to complete my tasks.
-Vocabulary: computer`;
+      const input = `Vocabulary: computer
+Sentence: I use a computer every day to complete my tasks.`;
 
       const result = TextParser.parseExamples(input);
 
@@ -18,14 +18,14 @@ Vocabulary: computer`;
     });
 
     it('should parse multiple examples correctly', () => {
-      const input = `Sentence: I use a computer every day to complete my tasks.
-Vocabulary: computer
+      const input = `Vocabulary: computer
+Sentence: I use a computer every day to complete my tasks.
 
-Sentence: The software helps me work efficiently and saves time.
 Vocabulary: software
+Sentence: The software helps me work efficiently and saves time.
 
-Sentence: I browse the internet for information and news.
-Vocabulary: internet`;
+Vocabulary: internet
+Sentence: I browse the internet for information and news.`;
 
       const result = TextParser.parseExamples(input);
 
@@ -48,11 +48,11 @@ Vocabulary: internet`;
     it('should filter out theme and generate lines', () => {
       const input = `Theme: IT
 Generate exactly 2 examples in this format:
-Sentence: I use a computer every day to complete my tasks.
 Vocabulary: computer
+Sentence: I use a computer every day to complete my tasks.
 
-Sentence: The software helps me work efficiently and saves time.
-Vocabulary: software`;
+Vocabulary: software
+Sentence: The software helps me work efficiently and saves time.`;
 
       const result = TextParser.parseExamples(input);
 
@@ -96,8 +96,8 @@ Generate exactly 2 examples in this format:`;
     });
 
     it('should trim whitespace from lines', () => {
-      const input = `  Sentence:   I use a computer every day to complete my tasks.
-  Vocabulary:   computer  `;
+      const input = `  Vocabulary:   computer
+  Sentence:   I use a computer every day to complete my tasks.  `;
 
       const result = TextParser.parseExamples(input);
 
@@ -112,14 +112,14 @@ Generate exactly 2 examples in this format:`;
     it('should handle examples with extra whitespace and newlines', () => {
       const input = `
 
-Sentence: I use a computer every day to complete my tasks.
-
 Vocabulary: computer
 
+Sentence: I use a computer every day to complete my tasks.
 
 
-Sentence: The software helps me work efficiently and saves time.
+
 Vocabulary: software
+Sentence: The software helps me work efficiently and saves time.
 `;
 
       const result = TextParser.parseExamples(input);

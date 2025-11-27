@@ -9,6 +9,14 @@ vi.mock('@huggingface/transformers', () => ({
   }
 }));
 
+// Mock navigator.gpu for WebGPU availability check
+Object.defineProperty(global.navigator, 'gpu', {
+  value: {
+    requestAdapter: vi.fn().mockResolvedValue({})
+  },
+  writable: true
+});
+
 describe('TextGenerationSingleton', () => {
   beforeEach(() => {
     // Reset the singleton instance before each test
@@ -45,6 +53,7 @@ describe('TextGenerationSingleton', () => {
 
     expect(mockPipeline).toHaveBeenCalledWith('text-generation', 'HuggingFaceTB/SmolLM2-360M-Instruct', {
       device: 'webgpu',
+      dtype: 'fp16',
       progress_callback: mockProgressCallback
     });
   });

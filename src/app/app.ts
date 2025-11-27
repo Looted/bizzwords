@@ -1,10 +1,22 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { AiWordGenerationService } from './services/ai-word-generation';
+import { StaticVocabularyService } from './services/static-vocabulary.service';
 import { GameStore, Flashcard } from './game-store';
 
 import { FlashcardComponent } from './flashcard.component';
+
+// Polyfill for crypto.randomUUID for mobile browsers
+if (!crypto.randomUUID) {
+  crypto.randomUUID = function() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      const r = Math.random() * 16 | 0;
+      const v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    }) as `${string}-${string}-${string}-${string}-${string}`;
+  };
+}
 
 // 2. MAIN APP COMPONENT
 @Component({
@@ -21,7 +33,10 @@ import { FlashcardComponent } from './flashcard.component';
 export class App {
   store = inject(GameStore);
   llm = inject(AiWordGenerationService);
+  staticVocab = inject(StaticVocabularyService);
 
+  useStatic = signal(false);
+  selectedDifficulty = signal<number | null>(null);
   isLoading = false;
   inputControl = new FormControl('');
   typingFeedback: { correct: boolean, msg: string } | null = null;
@@ -29,7 +44,14 @@ export class App {
   async selectTopic(topic: string) {
     this.isLoading = true;
     try {
-      const cards = await this.llm.generateWords(topic, 3);
+      let cards: {english: string, polish: string}[];
+
+      if (this.useStatic() && topic === 'HR') {
+        cards = await this.staticVocab.generateWords(topic, 10, this.selectedDifficulty() ?? undefined).toPromise() || [];
+      } else {
+        cards = await this.llm.generateWords(topic, 10);
+      }
+
       const flashcards: Flashcard[] = cards.map((item, index) => ({
         id: crypto.randomUUID(),
         english: item.english,

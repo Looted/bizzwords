@@ -37,7 +37,7 @@ describe('WorkerMessageHandler', () => {
       const { pipeline } = await import('@huggingface/transformers');
       const mockGenerator = vi.fn().mockResolvedValue([{
         generated_text: [{
-          content: 'Scene: Test scene\nSentence: Test sentence\nVocabulary: test'
+          content: 'Vocabulary: test\nSentence: Test sentence'
         }]
       }]);
 
@@ -71,7 +71,7 @@ describe('WorkerMessageHandler', () => {
       const { pipeline } = await import('@huggingface/transformers');
       const mockGenerator = vi.fn().mockResolvedValue([{
         generated_text: [{
-          content: 'Scene: Test scene\nSentence: Test sentence\nVocabulary: test'
+          content: 'Vocabulary: test\nSentence: Test sentence'
         }]
       }]);
 
@@ -103,7 +103,7 @@ describe('WorkerMessageHandler', () => {
       const { pipeline } = await import('@huggingface/transformers');
       const mockGenerator = vi.fn().mockResolvedValue([{
         generated_text: [{
-          content: 'Scene: Test scene\nSentence: Test sentence\nVocabulary: test'
+          content: 'Vocabulary: test\nSentence: Test sentence'
         }]
       }]);
 
@@ -137,7 +137,7 @@ describe('WorkerMessageHandler', () => {
       const { pipeline } = await import('@huggingface/transformers');
       const mockGenerator = vi.fn().mockResolvedValue([{
         generated_text: [{
-          content: 'Scene: Test scene 1\nSentence: Test sentence 1\nVocabulary: test1\n\nScene: Test scene 2\nSentence: Test sentence 2\nVocabulary: test2\n\nScene: Test scene 3\nSentence: Test sentence 3\nVocabulary: test3'
+          content: 'Vocabulary: test1\nSentence: Test sentence 1\n\nVocabulary: test2\nSentence: Test sentence 2\n\nVocabulary: test3\nSentence: Test sentence 3'
         }]
       }]);
 
@@ -209,7 +209,7 @@ describe('WorkerMessageHandler', () => {
       const { pipeline } = await import('@huggingface/transformers');
       const mockGenerator = vi.fn().mockResolvedValue([{
         generated_text: [{
-          content: 'Scene: Test scene\nSentence: Test sentence\nVocabulary: test'
+          content: 'Vocabulary: test\nSentence: Test sentence'
         }]
       }]);
 
