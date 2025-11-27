@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1764247840033,
-  "index": "/index.csr.html",
+  "timestamp": 1764247986664,
+  "index": "/flashcards/index.csr.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/favicon.ico",
-        "/index.csr.html",
-        "/index.html",
-        "/main-6DJ3BDI5.js",
-        "/manifest.webmanifest",
-        "/styles-VZ3KKS4B.css",
-        "/worker-CIDOVL3H.js"
+        "/flashcards/favicon.ico",
+        "/flashcards/index.csr.html",
+        "/flashcards/index.html",
+        "/flashcards/main-6DJ3BDI5.js",
+        "/flashcards/manifest.webmanifest",
+        "/flashcards/styles-VZ3KKS4B.css",
+        "/flashcards/worker-CIDOVL3H.js"
       ],
       "patterns": []
     },
@@ -29,14 +29,14 @@
         "ignoreVary": true
       },
       "urls": [
-        "/icons/icon-128x128.png",
-        "/icons/icon-144x144.png",
-        "/icons/icon-152x152.png",
-        "/icons/icon-192x192.png",
-        "/icons/icon-384x384.png",
-        "/icons/icon-512x512.png",
-        "/icons/icon-72x72.png",
-        "/icons/icon-96x96.png"
+        "/flashcards/icons/icon-128x128.png",
+        "/flashcards/icons/icon-144x144.png",
+        "/flashcards/icons/icon-152x152.png",
+        "/flashcards/icons/icon-192x192.png",
+        "/flashcards/icons/icon-384x384.png",
+        "/flashcards/icons/icon-512x512.png",
+        "/flashcards/icons/icon-72x72.png",
+        "/flashcards/icons/icon-96x96.png"
       ],
       "patterns": []
     },
@@ -48,35 +48,35 @@
         "ignoreVary": true
       },
       "urls": [
-        "/hr_eng_pl/hr_vocabulary_list_sample.csv",
-        "/hr_eng_pl/hr_vocabulary_part2_fixed.csv",
-        "/hr_eng_pl/hr_vocabulary_part3.csv.txt",
-        "/hr_eng_pl/vocabulary.json"
+        "/flashcards/hr_eng_pl/hr_vocabulary_list_sample.csv",
+        "/flashcards/hr_eng_pl/hr_vocabulary_part2_fixed.csv",
+        "/flashcards/hr_eng_pl/hr_vocabulary_part3.csv.txt",
+        "/flashcards/hr_eng_pl/vocabulary.json"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/hr_eng_pl/hr_vocabulary_list_sample.csv": "0fa6260526fcea2ad3a1162e04af630205999bc2",
-    "/hr_eng_pl/hr_vocabulary_part2_fixed.csv": "e0cdf39c4ba2e2a63bfee249656f8ef6702c339c",
-    "/hr_eng_pl/hr_vocabulary_part3.csv.txt": "3571e499c56cb43110f33a3123910b1dc766f94d",
-    "/hr_eng_pl/vocabulary.json": "2e963c4075c97beb958f01f1a291624dfa706273",
-    "/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
-    "/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
-    "/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
-    "/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
-    "/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
-    "/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
-    "/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
-    "/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/index.csr.html": "963a5e75e391fa0437dc27fc80ab51eac0ac02c6",
-    "/index.html": "845868bd127414bdbff8fbbf355a3d311d263421",
-    "/main-6DJ3BDI5.js": "61636037d41046b4f33ac4bdef90761a5944ff3b",
-    "/manifest.webmanifest": "df4e59dcb7872d7baaaa7457ce08a56e5d2677a9",
-    "/styles-VZ3KKS4B.css": "32536bbcd181846ad694f8014ff20e304ee83c19",
-    "/worker-CIDOVL3H.js": "7c4547944d928aa398a3b9da9e5a2997272a45d6"
+    "/flashcards/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/flashcards/hr_eng_pl/hr_vocabulary_list_sample.csv": "0fa6260526fcea2ad3a1162e04af630205999bc2",
+    "/flashcards/hr_eng_pl/hr_vocabulary_part2_fixed.csv": "e0cdf39c4ba2e2a63bfee249656f8ef6702c339c",
+    "/flashcards/hr_eng_pl/hr_vocabulary_part3.csv.txt": "3571e499c56cb43110f33a3123910b1dc766f94d",
+    "/flashcards/hr_eng_pl/vocabulary.json": "2e963c4075c97beb958f01f1a291624dfa706273",
+    "/flashcards/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/flashcards/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/flashcards/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/flashcards/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/flashcards/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/flashcards/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/flashcards/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/flashcards/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/flashcards/index.csr.html": "f5505d84399062d118923820b3ac16fdacfa8df9",
+    "/flashcards/index.html": "48d9f9ca8c820a96d95f1c0130320167aa814a8c",
+    "/flashcards/main-6DJ3BDI5.js": "61636037d41046b4f33ac4bdef90761a5944ff3b",
+    "/flashcards/manifest.webmanifest": "df4e59dcb7872d7baaaa7457ce08a56e5d2677a9",
+    "/flashcards/styles-VZ3KKS4B.css": "32536bbcd181846ad694f8014ff20e304ee83c19",
+    "/flashcards/worker-CIDOVL3H.js": "7c4547944d928aa398a3b9da9e5a2997272a45d6"
   },
   "navigationUrls": [
     {
