@@ -37,7 +37,7 @@ describe('WorkerMessageHandler', () => {
       const { pipeline } = await import('@huggingface/transformers');
       const mockGenerator = vi.fn().mockResolvedValue([{
         generated_text: [{
-          content: 'Vocabulary: test\nSentence: Test sentence'
+          content: 'Difficulty: beginner\nVocabulary: test\nSentence: Test sentence'
         }]
       }]);
 
@@ -52,7 +52,7 @@ describe('WorkerMessageHandler', () => {
       });
 
       mockParseExamples.mockReturnValue([
-        { sentence: 'Test sentence', vocabulary: 'test' }
+        { sentence: 'Test sentence', vocabulary: 'test', difficulty: 'beginner' }
       ]);
 
       const event = {
@@ -63,7 +63,7 @@ describe('WorkerMessageHandler', () => {
 
       expect(mockPostMessage).toHaveBeenCalledWith({
         status: 'complete',
-        pairs: [{ english: 'test', polish: 'test-polish' }]
+        pairs: [{ english: 'test', polish: 'test-polish', difficulty: 'beginner' }]
       });
     });
 
@@ -71,7 +71,7 @@ describe('WorkerMessageHandler', () => {
       const { pipeline } = await import('@huggingface/transformers');
       const mockGenerator = vi.fn().mockResolvedValue([{
         generated_text: [{
-          content: 'Vocabulary: test\nSentence: Test sentence'
+          content: 'Difficulty: beginner\nVocabulary: test\nSentence: Test sentence'
         }]
       }]);
 
@@ -84,7 +84,7 @@ describe('WorkerMessageHandler', () => {
       });
 
       mockParseExamples.mockReturnValue([
-        { sentence: 'Test sentence', vocabulary: 'test' }
+        { sentence: 'Test sentence', vocabulary: 'test', difficulty: 'beginner' }
       ]);
 
       const event = {
@@ -95,7 +95,7 @@ describe('WorkerMessageHandler', () => {
 
       expect(mockPostMessage).toHaveBeenCalledWith({
         status: 'complete',
-        pairs: [{ english: 'test', polish: 'test' }] // Fallback to original word
+        pairs: [{ english: 'test', polish: 'test', difficulty: 'beginner' }] // Fallback to original word
       });
     });
 
@@ -103,7 +103,7 @@ describe('WorkerMessageHandler', () => {
       const { pipeline } = await import('@huggingface/transformers');
       const mockGenerator = vi.fn().mockResolvedValue([{
         generated_text: [{
-          content: 'Vocabulary: test\nSentence: Test sentence'
+          content: 'Difficulty: beginner\nVocabulary: test\nSentence: Test sentence'
         }]
       }]);
 
@@ -118,7 +118,7 @@ describe('WorkerMessageHandler', () => {
       });
 
       mockParseExamples.mockReturnValue([
-        { sentence: 'Test sentence', vocabulary: 'test' }
+        { sentence: 'Test sentence', vocabulary: 'test', difficulty: 'beginner' }
       ]);
 
       const event = {
@@ -129,7 +129,7 @@ describe('WorkerMessageHandler', () => {
 
       expect(mockPostMessage).toHaveBeenCalledWith({
         status: 'complete',
-        pairs: [{ english: 'test', polish: 'test' }] // Fallback to original word
+        pairs: [{ english: 'test', polish: 'test', difficulty: 'beginner' }] // Fallback to original word
       });
     });
 
@@ -137,7 +137,7 @@ describe('WorkerMessageHandler', () => {
       const { pipeline } = await import('@huggingface/transformers');
       const mockGenerator = vi.fn().mockResolvedValue([{
         generated_text: [{
-          content: 'Vocabulary: test1\nSentence: Test sentence 1\n\nVocabulary: test2\nSentence: Test sentence 2\n\nVocabulary: test3\nSentence: Test sentence 3'
+          content: 'Difficulty: beginner\nVocabulary: test1\nSentence: Test sentence 1\n\nDifficulty: intermediate\nVocabulary: test2\nSentence: Test sentence 2\n\nDifficulty: advanced\nVocabulary: test3\nSentence: Test sentence 3'
         }]
       }]);
 
@@ -152,9 +152,9 @@ describe('WorkerMessageHandler', () => {
       });
 
       mockParseExamples.mockReturnValue([
-        { sentence: 'Test sentence 1', vocabulary: 'test1' },
-        { sentence: 'Test sentence 2', vocabulary: 'test2' },
-        { sentence: 'Test sentence 3', vocabulary: 'test3' }
+        { sentence: 'Test sentence 1', vocabulary: 'test1', difficulty: 'beginner' },
+        { sentence: 'Test sentence 2', vocabulary: 'test2', difficulty: 'intermediate' },
+        { sentence: 'Test sentence 3', vocabulary: 'test3', difficulty: 'advanced' }
       ]);
 
       const event = {
@@ -167,8 +167,8 @@ describe('WorkerMessageHandler', () => {
       expect(mockPostMessage).toHaveBeenCalledWith({
         status: 'complete',
         pairs: [
-          { english: 'test1', polish: 'test1-polish' },
-          { english: 'test2', polish: 'test2-polish' }
+          { english: 'test1', polish: 'test1-polish', difficulty: 'beginner' },
+          { english: 'test2', polish: 'test2-polish', difficulty: 'intermediate' }
         ]
       });
     });
@@ -234,7 +234,7 @@ describe('WorkerMessageHandler', () => {
       });
 
       mockParseExamples.mockReturnValue([
-        { sentence: 'Test sentence', vocabulary: 'test' }
+        { sentence: 'Test sentence', vocabulary: 'test', difficulty: 'beginner' }
       ]);
 
       const event = {

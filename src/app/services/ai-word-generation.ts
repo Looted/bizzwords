@@ -19,8 +19,9 @@ export class AiWordGenerationService {
   async generateWords(
     theme: string,
     count: number = 10,
-    progressCallback?: (info: AIProgress) => void
-  ): Promise<{english: string, polish: string}[]> {
+    progressCallback?: (info: AIProgress) => void,
+    difficulty?: number | null
+  ): Promise<{english: string, polish: string, difficulty: 'beginner' | 'intermediate' | 'advanced'}[]> {
 
     if (!isPlatformBrowser(this.platformId)) {
       console.log('Skipping AI word generation during SSR, using fallback words');
@@ -66,7 +67,7 @@ export class AiWordGenerationService {
           reject(error);
         });
 
-        worker.postMessage({ theme, count });
+        worker.postMessage({ theme, count, difficulty });
 
       } catch (error) {
         reject(error);
@@ -74,56 +75,56 @@ export class AiWordGenerationService {
     });
   }
 
-  private getFallbackWords(theme: string, count: number): {english: string, polish: string}[] {
-    // Fallback words organized by theme
-    const fallbackThemes: Record<string, {english: string, polish: string}[]> = {
+  private getFallbackWords(theme: string, count: number): {english: string, polish: string, difficulty: 'beginner' | 'intermediate' | 'advanced'}[] {
+    // Fallback words organized by theme with difficulty levels
+    const fallbackThemes: Record<string, {english: string, polish: string, difficulty: 'beginner' | 'intermediate' | 'advanced'}[]> = {
       'IT': [
-        { english: 'computer', polish: 'komputer' },
-        { english: 'software', polish: 'oprogramowanie' },
-        { english: 'internet', polish: 'internet' },
-        { english: 'database', polish: 'baza danych' },
-        { english: 'algorithm', polish: 'algorytm' },
-        { english: 'network', polish: 'sieć' },
-        { english: 'server', polish: 'serwer' },
-        { english: 'browser', polish: 'przeglądarka' },
-        { english: 'keyboard', polish: 'klawiatura' },
-        { english: 'mouse', polish: 'mysz' },
+        { english: 'computer', polish: 'komputer', difficulty: 'beginner' },
+        { english: 'software', polish: 'oprogramowanie', difficulty: 'beginner' },
+        { english: 'internet', polish: 'internet', difficulty: 'beginner' },
+        { english: 'database', polish: 'baza danych', difficulty: 'intermediate' },
+        { english: 'algorithm', polish: 'algorytm', difficulty: 'intermediate' },
+        { english: 'network', polish: 'sieć', difficulty: 'intermediate' },
+        { english: 'server', polish: 'serwer', difficulty: 'intermediate' },
+        { english: 'browser', polish: 'przeglądarka', difficulty: 'beginner' },
+        { english: 'keyboard', polish: 'klawiatura', difficulty: 'beginner' },
+        { english: 'mouse', polish: 'mysz', difficulty: 'beginner' },
       ],
       'HR': [
-        { english: 'employee', polish: 'pracownik' },
-        { english: 'manager', polish: 'menedżer' },
-        { english: 'interview', polish: 'wywiad' },
-        { english: 'salary', polish: 'wynagrodzenie' },
-        { english: 'recruitment', polish: 'rekrutacja' },
-        { english: 'benefits', polish: 'świadczenia' },
-        { english: 'performance', polish: 'wydajność' },
-        { english: 'training', polish: 'szkolenie' },
-        { english: 'contract', polish: 'umowa' },
-        { english: 'vacation', polish: 'urlop' },
+        { english: 'employee', polish: 'pracownik', difficulty: 'beginner' },
+        { english: 'manager', polish: 'menedżer', difficulty: 'beginner' },
+        { english: 'interview', polish: 'wywiad', difficulty: 'intermediate' },
+        { english: 'salary', polish: 'wynagrodzenie', difficulty: 'intermediate' },
+        { english: 'recruitment', polish: 'rekrutacja', difficulty: 'advanced' },
+        { english: 'benefits', polish: 'świadczenia', difficulty: 'intermediate' },
+        { english: 'performance', polish: 'wydajność', difficulty: 'intermediate' },
+        { english: 'training', polish: 'szkolenie', difficulty: 'intermediate' },
+        { english: 'contract', polish: 'umowa', difficulty: 'intermediate' },
+        { english: 'vacation', polish: 'urlop', difficulty: 'beginner' },
       ],
       'Business': [
-        { english: 'meeting', polish: 'spotkanie' },
-        { english: 'project', polish: 'projekt' },
-        { english: 'budget', polish: 'budżet' },
-        { english: 'strategy', polish: 'strategia' },
-        { english: 'deadline', polish: 'termin' },
-        { english: 'presentation', polish: 'prezentacja' },
-        { english: 'client', polish: 'klient' },
-        { english: 'profit', polish: 'zysk' },
-        { english: 'investment', polish: 'inwestycja' },
-        { english: 'partnership', polish: 'partnerstwo' },
+        { english: 'meeting', polish: 'spotkanie', difficulty: 'beginner' },
+        { english: 'project', polish: 'projekt', difficulty: 'beginner' },
+        { english: 'budget', polish: 'budżet', difficulty: 'intermediate' },
+        { english: 'strategy', polish: 'strategia', difficulty: 'intermediate' },
+        { english: 'deadline', polish: 'termin', difficulty: 'intermediate' },
+        { english: 'presentation', polish: 'prezentacja', difficulty: 'intermediate' },
+        { english: 'client', polish: 'klient', difficulty: 'beginner' },
+        { english: 'profit', polish: 'zysk', difficulty: 'intermediate' },
+        { english: 'investment', polish: 'inwestycja', difficulty: 'advanced' },
+        { english: 'partnership', polish: 'partnerstwo', difficulty: 'intermediate' },
       ],
       'Medical': [
-        { english: 'doctor', polish: 'lekarz' },
-        { english: 'patient', polish: 'pacjent' },
-        { english: 'medicine', polish: 'lek' },
-        { english: 'hospital', polish: 'szpital' },
-        { english: 'diagnosis', polish: 'diagnoza' },
-        { english: 'treatment', polish: 'leczenie' },
-        { english: 'symptom', polish: 'objaw' },
-        { english: 'prescription', polish: 'recepta' },
-        { english: 'appointment', polish: 'wizyta' },
-        { english: 'emergency', polish: 'nagły wypadek' },
+        { english: 'doctor', polish: 'lekarz', difficulty: 'beginner' },
+        { english: 'patient', polish: 'pacjent', difficulty: 'beginner' },
+        { english: 'medicine', polish: 'lek', difficulty: 'beginner' },
+        { english: 'hospital', polish: 'szpital', difficulty: 'beginner' },
+        { english: 'diagnosis', polish: 'diagnoza', difficulty: 'intermediate' },
+        { english: 'treatment', polish: 'leczenie', difficulty: 'intermediate' },
+        { english: 'symptom', polish: 'objaw', difficulty: 'intermediate' },
+        { english: 'prescription', polish: 'recepta', difficulty: 'intermediate' },
+        { english: 'appointment', polish: 'wizyta', difficulty: 'beginner' },
+        { english: 'emergency', polish: 'nagły wypadek', difficulty: 'intermediate' },
       ]
     };
 

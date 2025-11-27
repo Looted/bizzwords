@@ -1,8 +1,8 @@
 # Active Context
 
-Current work focus: Test suite completed and fully passing.
+Current work focus: Difficulty selection feature implemented and tested.
 
-Recent changes: Successfully fixed all test failures, achieving 100% test coverage with 26 passing tests across 5 test files. Resolved device compatibility issues by implementing CPU fallback for AI models in test environments, and established robust mocking patterns for complex dependencies.
+Recent changes: Added difficulty level selection for AI-generated vocabulary. Users can now choose between beginner, intermediate, advanced, or all levels when generating words. The LLM prompt has been updated to request words at the specific difficulty level, ensuring targeted vocabulary generation. All 48 tests pass with 100% coverage. The development server is running successfully at localhost:4200.
 
 Next steps: Begin implementing core flashcard application components (deck management, learning rounds, word tracking).
 

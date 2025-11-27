@@ -4,18 +4,19 @@ import { TextParser, Example } from './text-parser';
 export interface WorkerRequest {
     theme: string;
     count: number;
+    difficulty?: number | null;
 }
 
 export interface WorkerResponse {
     status: 'complete' | 'error';
-    pairs?: Array<{ english: string; polish: string }>;
+    pairs?: Array<{ english: string; polish: string; difficulty: 'beginner' | 'intermediate' | 'advanced' }>;
     error?: string;
 }
 
 export class WorkerMessageHandler {
     static async handleMessage(event: MessageEvent<WorkerRequest>): Promise<void> {
         console.log('Worker handling AI word generation message');
-        const { theme, count } = event.data;
+        const { theme, count, difficulty } = event.data;
 
         try {
             // Step 1: Generate English words only
@@ -23,25 +24,41 @@ export class WorkerMessageHandler {
                 self.postMessage({ ...x, step: 'generating' });
             });
 
+            // Map difficulty number to string
+            const difficultyMap: { [key: number]: string } = {
+                1: 'beginner',
+                2: 'intermediate',
+                3: 'advanced'
+            };
+
+            const difficultyInstruction = difficulty
+                ? `Generate words at ${difficultyMap[difficulty]} difficulty level only.`
+                : 'Include a mix of difficulty levels: beginner, intermediate, and advanced words.';
+
             // STRATEGY UPDATE 1: Tweak prompt to ensure 'Sentence' is descriptive enough to provide context
             const prompt = `Generate exactly ${count} vocabulary learning examples for the theme "${theme}".
+${difficultyInstruction}
 Crucial: The 'Sentence' must clearly demonstrate the meaning of the 'Vocabulary' word. The 'Vocabulary' word should be exactly a single word or phrase, no multiple words after commas.
 
 Format (repeat exactly for each example):
+Difficulty: [beginner/intermediate/advanced]
 Vocabulary: [vocabulary word]
 Sentence: [complete sentence using the vocabulary word in context]
 
 Examples:
-Vocabulary: fired
-Sentence: The bad employee was fired from his job.
+Difficulty: beginner
+Vocabulary: computer
+Sentence: I use my computer every day for work.
 
-Vocabulary: fired
-Sentence: The soldier fired his rifle at the target.
+Difficulty: intermediate
+Vocabulary: algorithm
+Sentence: The programmer wrote an efficient algorithm to solve the problem.
 
-Vocabulary: work-life balance
-Sentence: Company really cares about employee work-life balance.
+Difficulty: advanced
+Vocabulary: virtualization
+Sentence: Server virtualization allows multiple operating systems to run on a single physical machine.
 
-Now generate exactly ${count} examples for theme "${theme}":`;
+Now generate exactly ${count} examples for theme "${theme}"${difficulty ? ` at ${difficultyMap[difficulty]} level` : ' with a balanced mix of difficulty levels'}:`;
 
             const messages = [
                 { role: "system", content: "You are an expert English teacher. Generate clear, context-rich vocabulary examples." },
@@ -65,7 +82,7 @@ Now generate exactly ${count} examples for theme "${theme}":`;
                 self.postMessage({ ...x, step: 'translating' });
             });
 
-            const pairs: { english: string, polish: string }[] = [];
+            const pairs: { english: string, polish: string, difficulty: 'beginner' | 'intermediate' | 'advanced' }[] = [];
 
             // We use a distinct separator that is unlikely to be modified by the translator
             // " === " is usually preserved or translated to " === "
@@ -116,7 +133,8 @@ Now generate exactly ${count} examples for theme "${theme}":`;
 
                         pairs.push({
                             english: example.vocabulary,
-                            polish: polishWord
+                            polish: polishWord,
+                            difficulty: example.difficulty
                         });
                         console.log(`Contextual success: "${example.vocabulary}" (Context: ${example.sentence}) -> "${polishWord}"`);
                     } else {
@@ -127,7 +145,8 @@ Now generate exactly ${count} examples for theme "${theme}":`;
                     console.error(`Translation failed for "${example.vocabulary}":`, translationError);
                     pairs.push({
                         english: example.vocabulary,
-                        polish: example.vocabulary // Fallback
+                        polish: example.vocabulary, // Fallback
+                        difficulty: example.difficulty
                     });
                 }
             }

@@ -49,7 +49,7 @@ export class App {
       if (this.useStatic() && topic === 'HR') {
         cards = await this.staticVocab.generateWords(topic, 10, this.selectedDifficulty() ?? undefined).toPromise() || [];
       } else {
-        cards = await this.llm.generateWords(topic, 10);
+        cards = await this.llm.generateWords(topic, 10, undefined, this.selectedDifficulty());
       }
 
       const flashcards: Flashcard[] = cards.map((item, index) => ({
