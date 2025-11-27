@@ -6,7 +6,7 @@ env.allowLocalModels = false;
 // Use the Singleton pattern to enable lazy construction of the pipeline.
 class PipelineSingleton {
     static task: any = 'text-generation';
-    static model = 'onnx-community/granite-4.0-350m-ONNX';
+    static model = 'onnx-community/granite-4.0-micro-ONNX-web';
     static instance?: TextGenerationPipeline = undefined;
 
   static async getInstance(progress_callback?: (x: any) => void): Promise<TextGenerationPipeline> {
@@ -29,7 +29,7 @@ self.addEventListener('message', async (event) => {
   });
 
   // Generate words based on the request
-  console.log('Worker received request:', event.data);
+  console.log('Worker received request:', JSON.stringify(event.data));
   const { theme, count } = event.data;
 
   const prompt = `Generate ${count} English-Polish vocabulary word pairs for the theme "${theme}". Each pair should be a common word or phrase used in this context. Format each pair as: English: [word] | Polish: [translation]
@@ -49,15 +49,19 @@ Generate exactly ${count} pairs:`;
 
   const output = await generator(messages, {
     max_new_tokens: 500,
-    temperature: 0.3
+    temperature: 0.7,
+    do_sample: true
   });
 
-  console.log('Generated words in worker:', output);
+  console.log('Raw model response:', JSON.stringify(output));
+  console.log('Generated words in worker:', JSON.stringify(output));
 
   // Parse the generated text to extract word pairs
   const generatedText = (output as any)[0].generated_text.at(-1).content;
+  console.log('Generated text to parse:', JSON.stringify(generatedText));
   const pairs: {english: string, polish: string}[] = [];
   const lines = generatedText.split('\n');
+  console.log('Split lines:', JSON.stringify(lines));
 
   for (const line of lines) {
     const match = line.match(/English:\s*([^|]+)\s*\|\s*Polish:\s*(.+)/i);
@@ -70,8 +74,11 @@ Generate exactly ${count} pairs:`;
   }
 
   // Send the output back to the main thread
-  self.postMessage({
+  console.log('Parsed word pairs:', JSON.stringify(pairs.slice(0, count)));
+  const finalMessage = {
     status: 'complete',
     pairs: pairs.slice(0, count)
-  });
+  };
+  console.log('Sending final message to main thread:', JSON.stringify(finalMessage));
+  self.postMessage(finalMessage);
 });

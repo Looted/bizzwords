@@ -15,7 +15,15 @@ export class App {
   selectedTheme = signal<string | null>(null);
   selectedMode = signal<'new' | 'practice' | null>(null);
 
-  constructor(private router: Router) {}
+  // Current route
+  protected readonly currentRoute = signal('/');
+
+  constructor(private router: Router) {
+    // Update current route on navigation
+    this.router.events.subscribe(() => {
+      this.currentRoute.set(this.router.url);
+    });
+  }
 
   // Methods
   selectTheme(theme: string) {

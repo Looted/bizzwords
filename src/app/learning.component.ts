@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, AfterViewInit, signal } from '@angular/core';
 import { AiWordGenerationService } from './services/ai-word-generation';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
@@ -15,7 +15,7 @@ interface WordPair {
   styleUrl: './learning.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LearningComponent implements OnInit {
+export class LearningComponent implements OnInit, AfterViewInit {
   protected readonly words = signal<WordPair[]>([]);
   protected readonly currentIndex = signal(0);
   protected readonly showTranslation = signal(false);
@@ -29,13 +29,16 @@ export class LearningComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  async ngOnInit() {
+  ngOnInit() {
     // Get query parameters
     this.route.queryParams.subscribe(params => {
       this.selectedTheme.set(params['theme'] || 'IT');
       this.selectedMode.set(params['mode'] || 'new');
     });
+  }
 
+  async ngAfterViewInit() {
+    // Delay word generation until we're definitely in browser context
     await this.generateWords();
   }
 
@@ -44,22 +47,11 @@ export class LearningComponent implements OnInit {
     try {
       const theme = this.selectedTheme();
       const generatedWords = await this.aiService.generateWords(theme, 20);
+      console.log('Generated words:', JSON.stringify(generatedWords));
       this.words.set(generatedWords);
     } catch (error) {
       console.error('Failed to generate words:', error);
-      // Fallback words for demo
-      this.words.set([
-        { english: 'computer', polish: 'komputer' },
-        { english: 'software', polish: 'oprogramowanie' },
-        { english: 'internet', polish: 'internet' },
-        { english: 'database', polish: 'baza danych' },
-        { english: 'algorithm', polish: 'algorytm' },
-        { english: 'network', polish: 'sieć' },
-        { english: 'server', polish: 'serwer' },
-        { english: 'browser', polish: 'przeglądarka' },
-        { english: 'keyboard', polish: 'klawiatura' },
-        { english: 'mouse', polish: 'mysz' },
-      ]);
+      // No fallback words - let it fail to test the worker
     } finally {
       this.isGenerating.set(false);
     }

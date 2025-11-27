@@ -1,6 +1,7 @@
 <!-- Fiszki - Polish English Learning App -->
 
-<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+@if (currentRoute() === '/') {
+  <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
   <div class="max-w-md w-full bg-white rounded-2xl shadow-xl p-8">
     <!-- App Header -->
     <div class="text-center mb-8">
@@ -101,6 +102,7 @@
     </div>
   </div>
 </div>
+}
 
 <!-- Router outlet for displaying routed components -->
 <router-outlet></router-outlet>
