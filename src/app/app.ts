@@ -1,90 +1,8 @@
-import { ChangeDetectionStrategy, Component, signal, computed, effect, inject, Injectable } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { AiWordGenerationService } from './services/ai-word-generation';
-
-// --- MODELS ---
-export interface Flashcard {
-  id: string;
-  english: string;
-  polish: string;
-  category: string;
-  masteryLevel: number;
-}
-
-export type GamePhase = 'MENU' | 'PLAYING' | 'SUMMARY';
-export type RoundType = 'RECOGNIZE_EN' | 'RECOGNIZE_PL' | 'WRITE_EN';
-
-// --- GAME STORE SERVICE (Signals) ---
-@Injectable({ providedIn: 'root' })
-export class GameStore {
-  // State Signals
-  phase = signal<GamePhase>('MENU');
-  currentRound = signal<RoundType>('RECOGNIZE_EN');
-
-  activeDeck = signal<Flashcard[]>([]);
-  currentIndex = signal<number>(0);
-
-  // Track wrong answers to repeat them
-  wrongAnswers = signal<string[]>([]);
-
-  currentCard = computed(() => {
-    const deck = this.activeDeck();
-    const idx = this.currentIndex();
-    return deck.length > idx ? deck[idx] : null;
-  });
-
-  progress = computed(() => {
-    const total = this.activeDeck().length;
-    const current = this.currentIndex() + 1; // +1 because we're showing progress through current card
-    return total === 0 ? 0 : (current / total) * 100;
-  });
-
-  startGame(cards: Flashcard[]) {
-    this.activeDeck.set(cards);
-    this.currentIndex.set(0);
-    this.wrongAnswers.set([]);
-    this.currentRound.set('RECOGNIZE_EN'); // Start with Round 1
-    this.phase.set('PLAYING');
-  }
-
-  handleAnswer(correct: boolean) {
-    const card = this.currentCard();
-    if (!card) return;
-
-    if (!correct) {
-      this.wrongAnswers.update(ids => [...ids, card.id]);
-    }
-
-    const nextIndex = this.currentIndex() + 1;
-    if (nextIndex < this.activeDeck().length) {
-      this.currentIndex.set(nextIndex);
-    } else {
-      this.advanceRound();
-    }
-  }
-
-  private advanceRound() {
-    const current = this.currentRound();
-    if (current === 'RECOGNIZE_EN') {
-      this.currentRound.set('RECOGNIZE_PL');
-      this.currentIndex.set(0);
-    } else if (current === 'RECOGNIZE_PL') {
-      this.currentRound.set('WRITE_EN');
-      this.currentIndex.set(0);
-    } else {
-      this.phase.set('SUMMARY');
-    }
-  }
-
-  reset() {
-    this.phase.set('MENU');
-    this.activeDeck.set([]);
-    this.currentIndex.set(0);
-    this.wrongAnswers.set([]);
-    this.currentRound.set('RECOGNIZE_EN');
-  }
-}
+import { GameStore, Flashcard } from './game-store';
 
 import { FlashcardComponent } from './flashcard.component';
 
@@ -259,7 +177,7 @@ export class App {
   async selectTopic(topic: string) {
     this.isLoading = true;
     try {
-      const cards = await this.llm.generateWords(topic);
+      const cards = await this.llm.generateWords(topic, 3);
       const flashcards: Flashcard[] = cards.map((item, index) => ({
         id: crypto.randomUUID(),
         english: item.english,

@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { FlashcardComponent } from './flashcard.component';
-import { GameStore, Flashcard } from './app';
+import { GameStore, Flashcard } from './game-store';
 import { describe, it, expect, beforeEach } from 'vitest';
 
 describe('FlashcardComponent', () => {

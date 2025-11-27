@@ -6,7 +6,7 @@ env.allowLocalModels = false;
 // Use the Singleton pattern to enable lazy construction of the pipeline.
 export class TextGenerationSingleton {
     static task: any = 'text-generation';
-    static model = 'onnx-community/granite-4.0-micro-ONNX-web';
+    static model = 'onnx-community/granite-4.0-350m-ONNX';
     static instance?: TextGenerationPipeline = undefined;
 
     static async getInstance(progress_callback?: (x: any) => void): Promise<TextGenerationPipeline> {

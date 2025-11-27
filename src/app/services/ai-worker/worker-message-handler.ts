@@ -15,120 +15,126 @@ export interface WorkerResponse {
 export class WorkerMessageHandler {
     static async handleMessage(event: MessageEvent<WorkerRequest>): Promise<void> {
         console.log('Worker handling AI word generation message');
-
-        // Generate words based on the request
-        console.log('Worker received request:', JSON.stringify(event.data));
         const { theme, count } = event.data;
 
         try {
             // Step 1: Generate English words only
             const generator = await TextGenerationSingleton.getInstance((x: any) => {
-                // Forward progress updates to the main thread
                 self.postMessage({ ...x, step: 'generating' });
             });
 
-            const prompt = `Generate ${count} vocabulary learning examples for the theme "${theme}". Each example should be a short dialogue or scene that clearly identifies the vocabulary word to learn.
+            // STRATEGY UPDATE 1: Tweak prompt to ensure 'Sentence' is descriptive enough to provide context
+            const prompt = `Generate ${count} vocabulary learning examples for the theme "${theme}".
+Each example must be a distinct scene.
+Crucial: The 'Sentence' must clearly demonstrate the meaning of the 'Vocabulary' word.
 
-Format each example as:
-Scene: [brief description of the scene]
-Sentence: [complete sentence using the vocabulary word]
-Vocabulary: [the specific word/phrase to learn]
+Format:
+Scene: [brief description]
+Sentence: [complete sentence]
+Vocabulary: [word from the sentence]
 
-Examples for theme "IT":
-Scene: Office worker explaining daily routine
-Sentence: I use a computer every day to complete my tasks.
-Vocabulary: computer
+Examples:
+Scene: Employment termination
+Sentence: The bad employee was fired from his job.
+Vocabulary: fired
 
-Scene: Developer discussing productivity tools
-Sentence: The software helps me work efficiently and saves time.
-Vocabulary: software
-
-Scene: Student researching online
-Sentence: I browse the internet for information and news.
-Vocabulary: internet
-
-Scene: Database administrator explaining data storage
-Sentence: The database stores important data securely.
-Vocabulary: database
+Scene: Weapon usage
+Sentence: The soldier fired his rifle at the target.
+Vocabulary: fired
 
 Theme: ${theme}
-Generate exactly ${count} examples in this format:`;
+Generate exactly ${count} examples:`;
 
             const messages = [
-                { role: "system", content: "You are a helpful assistant that generates common English words for language learning themes. Generate appropriate vocabulary." },
+                { role: "system", content: "You are an expert English teacher. Generate clear, context-rich vocabulary examples." },
                 { role: "user", content: prompt }
             ];
 
             const output = await generator(messages, {
-                max_new_tokens: 300,
+                max_new_tokens: 500, // Increased slightly to ensure full JSON/format completion
                 temperature: 0.7,
                 do_sample: true
             });
 
-            console.log('Raw English sentences response:', JSON.stringify(output));
-
-            // Extract English examples with vocabulary words
             const generatedText = (output as any)[0].generated_text.at(-1).content;
-            console.log('Generated English text to parse:', JSON.stringify(generatedText));
-
             const examples: Example[] = TextParser.parseExamples(generatedText);
 
-            console.log('Extracted examples:', JSON.stringify(examples));
-
-            // Step 2: Translate vocabulary words directly
+            // Step 2: Translate with Context Injection
             const translator = await TranslationSingleton.getInstance((x: any) => {
-                // Forward progress updates to the main thread
                 self.postMessage({ ...x, step: 'translating' });
             });
 
-            const pairs: {english: string, polish: string}[] = [];
+            const pairs: { english: string, polish: string }[] = [];
+
+            // We use a distinct separator that is unlikely to be modified by the translator
+            // " === " is usually preserved or translated to " === "
+            const SEPARATOR = " === ";
 
             for (const example of examples.slice(0, count)) {
                 try {
-                    console.log(`Translating vocabulary word: "${example.vocabulary}" from sentence: "${example.sentence}"`);
+                    console.log(`Translating with context: "${example.vocabulary}"`);
 
-                    // Translate the vocabulary word directly
-                    const translationResult = await translator(example.vocabulary, {
+                    // STRATEGY UPDATE 2: Context Injection
+                    // We send "Sentence === Word". The model translates the sentence first,
+                    // establishing the context (e.g., "employment"), so when it hits
+                    // "fired" after the separator, it maps it to "zwolniony" instead of "wystrzelony".
+                    const inputWithContext = `${example.sentence}${SEPARATOR}${example.vocabulary}`;
+
+                    const translationResult = await translator(inputWithContext, {
                         src_lang: 'eng_Latn',
                         tgt_lang: 'pol_Latn'
                     } as any);
 
-                    console.log('Translation result:', JSON.stringify(translationResult));
+                    const fullTranslatedText = (translationResult as any)[0]?.translation_text;
 
-                    const polishWord = (translationResult as any)[0]?.translation_text;
+                    let polishWord = '';
+
+                    // STRATEGY UPDATE 3: Parse the contextualized output
+                    if (fullTranslatedText && fullTranslatedText.includes('===')) {
+                        // Split by separator and take the word part
+                        const parts = fullTranslatedText.split('===');
+                        polishWord = parts[parts.length - 1].trim();
+
+                        // Cleanup: Remove any trailing punctuation the translator might have added (like a period)
+                        polishWord = polishWord.replace(/[.,;!?]+$/, '');
+                    } else {
+                        // Fallback: If separator was lost, try to translate just the word
+                        // This happens rarely, but good to have a safety net
+                        console.warn('Separator lost in translation, retrying single word...');
+                        const retryResult = await translator(example.vocabulary, {
+                            src_lang: 'eng_Latn',
+                            tgt_lang: 'pol_Latn'
+                        } as any);
+                        polishWord = (retryResult as any)[0]?.translation_text;
+                    }
+
                     if (polishWord) {
+                        // Sanity check: Ensure we didn't get the english word back (unless they are same)
+                        // and capitalize consistency (optional, but nice for Flashcards)
+                        polishWord = polishWord.toLowerCase();
+
                         pairs.push({
                             english: example.vocabulary,
                             polish: polishWord
                         });
-
-                        console.log(`Translated pair: "${example.vocabulary}" -> "${polishWord}"`);
+                        console.log(`Contextual success: "${example.vocabulary}" (Context: ${example.sentence}) -> "${polishWord}"`);
                     } else {
-                        console.error(`Failed to translate vocabulary: "${example.vocabulary}"`);
-                        // Fallback: keep original word
-                        pairs.push({
-                            english: example.vocabulary,
-                            polish: example.vocabulary
-                        });
+                        throw new Error("Empty translation");
                     }
 
                 } catch (translationError) {
-                    console.error(`Failed to translate vocabulary "${example.vocabulary}":`, translationError);
-                    // Fallback: keep original word
+                    console.error(`Translation failed for "${example.vocabulary}":`, translationError);
                     pairs.push({
                         english: example.vocabulary,
-                        polish: example.vocabulary
+                        polish: example.vocabulary // Fallback
                     });
                 }
             }
 
-            // Send the output back to the main thread
-            console.log('Final word pairs:', JSON.stringify(pairs));
             const finalMessage: WorkerResponse = {
                 status: 'complete',
                 pairs: pairs
             };
-            console.log('Sending final message to main thread:', JSON.stringify(finalMessage));
             self.postMessage(finalMessage);
 
         } catch (error) {
