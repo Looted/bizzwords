@@ -44,7 +44,7 @@ describe('TextGenerationSingleton', () => {
     await TextGenerationSingleton.getInstance(mockProgressCallback);
 
     expect(mockPipeline).toHaveBeenCalledWith('text-generation', 'onnx-community/granite-4.0-micro-ONNX-web', {
-      device: 'cpu',
+      device: 'webgpu',
       progress_callback: mockProgressCallback,
       dtype: "q4f16"
     });

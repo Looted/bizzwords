@@ -17,7 +17,7 @@ export type RoundType = 'RECOGNIZE_EN' | 'RECOGNIZE_PL' | 'WRITE_EN';
 
 // --- GAME STORE SERVICE (Signals) ---
 @Injectable({ providedIn: 'root' })
-class GameStore {
+export class GameStore {
   // State Signals
   phase = signal<GamePhase>('MENU');
   currentRound = signal<RoundType>('RECOGNIZE_EN');
@@ -36,7 +36,7 @@ class GameStore {
 
   progress = computed(() => {
     const total = this.activeDeck().length;
-    const current = this.currentIndex();
+    const current = this.currentIndex() + 1; // +1 because we're showing progress through current card
     return total === 0 ? 0 : (current / total) * 100;
   });
 
@@ -81,6 +81,8 @@ class GameStore {
     this.phase.set('MENU');
     this.activeDeck.set([]);
     this.currentIndex.set(0);
+    this.wrongAnswers.set([]);
+    this.currentRound.set('RECOGNIZE_EN');
   }
 }
 
