@@ -1,9 +1,10 @@
-import { ChangeDetectionStrategy, Component, inject, signal, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal, computed, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { isPlatformBrowser } from '@angular/common';
 import { AiWordGenerationService } from './services/ai-word-generation';
 import { StaticVocabularyService } from './services/static-vocabulary.service';
+import { VocabularyStatsService } from './services/vocabulary-stats.service';
 import { GameStore, Flashcard } from './game-store';
 
 import { FlashcardComponent } from './flashcard.component';
@@ -35,12 +36,22 @@ export class App implements OnInit {
   store = inject(GameStore);
   llm = inject(AiWordGenerationService);
   staticVocab = inject(StaticVocabularyService);
+  statsService = inject(VocabularyStatsService);
 
   useStatic = signal(true);
   selectedDifficulty = signal<number | null>(null);
+  selectedMode = signal<'new' | 'practice'>('new');
   isLoading = false;
   inputControl = new FormControl('');
   typingFeedback: { correct: boolean, msg: string } | null = null;
+
+  // Mobile detection
+  isMobile = computed(() => {
+    if (isPlatformBrowser(this.platformId)) {
+      return window.innerWidth < 768;
+    }
+    return false;
+  });
 
   // PWA Install properties
   deferredPrompt: any = null;
@@ -67,6 +78,11 @@ export class App implements OnInit {
         this.showInstallButton.set(false);
         this.deferredPrompt = null;
       });
+
+      // Ensure static mode is used on mobile devices
+      if (this.isMobile()) {
+        this.useStatic.set(true);
+      }
     }
   }
 
@@ -95,6 +111,19 @@ export class App implements OnInit {
         cards = await this.staticVocab.generateWords(topic, 10, this.selectedDifficulty() ?? undefined).toPromise() || [];
       } else {
         cards = await this.llm.generateWords(topic, 10, undefined, this.selectedDifficulty());
+      }
+
+      // Filter cards based on selected mode
+      if (this.selectedMode() === 'new') {
+        // Show only words never seen before
+        cards = cards.filter(card => !this.statsService.getStats(card.english, card.polish));
+      } else if (this.selectedMode() === 'practice') {
+        // Show words that need practice from the stats service
+        const wordsNeedingPractice = this.statsService.getWordsNeedingPractice()
+          .filter(stat => stat.category === topic)
+          .slice(0, 10)
+          .map(stat => ({ english: stat.english, polish: stat.polish }));
+        cards = wordsNeedingPractice;
       }
 
       const flashcards: Flashcard[] = cards.map((item, index) => ({

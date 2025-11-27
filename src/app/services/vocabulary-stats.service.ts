@@ -48,6 +48,8 @@ export class VocabularyStatsService {
         existing.timesCorrect++;
       } else {
         existing.timesIncorrect++;
+        // Reset timesCorrect to 0 when user gets it wrong in practice mode
+        existing.timesCorrect = 0;
       }
       existing.lastEncountered = new Date();
       existing.masteryLevel = this.calculateMasteryLevel(existing);
