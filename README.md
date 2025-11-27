@@ -1,59 +1,118 @@
-# Fiszki
+# Fiszki - Polish-English Flashcard Learning App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+An efficient flashcard application designed to help Polish users learn and memorize English vocabulary through spaced repetition and AI-generated words. Built with modern Angular v20+ and featuring offline-first Progressive Web App capabilities.
 
-## Development server
+## 🚀 Features
 
-To start a local development server, run:
+- **AI-Powered Word Generation**: Uses embedded transformers.js LLM models to generate contextual vocabulary on-the-fly
+- **Spaced Repetition Learning**: Three progressive learning rounds:
+  - English → Polish recognition
+  - Polish → English recognition
+  - Polish → English typing practice
+- **Themed Decks**: Create custom decks for different themes (IT, HR, etc.) with difficulty levels
+- **Progress Tracking**: Saves learned words and tracks mistakes for focused review
+- **Progressive Web App**: Installable, offline-capable with service workers
+- **Modern Angular**: Built with Angular v20+ signals, standalone components, and OnPush change detection
+- **Responsive Design**: Works seamlessly across desktop and mobile devices
 
+## 🛠 Tech Stack
+
+- **Frontend**: Angular v20+, TypeScript, HTML5, CSS3
+- **Styling**: Tailwind CSS v4 with custom responsive design
+- **AI/ML**: Hugging Face Transformers.js for on-device LLM word generation
+- **State Management**: Angular signals for reactive state
+- **PWA**: Angular PWA package with service workers
+- **Build Tool**: Angular CLI with Vite
+- **Testing**: Vitest with Angular testing utilities
+- **Server-Side Rendering**: Angular SSR for improved performance
+
+## 📋 Prerequisites
+
+- Node.js 18+
+- npm 11.6.2+
+
+## 🚀 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd fiszki
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## 🏃 Development
+
+Start the development server:
 ```bash
+npm start
+# or
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The application will be available at `http://localhost:4200/`. The app will automatically reload when you make changes to the source files.
 
-## Code scaffolding
+## 🏗 Building
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+Build the project for production:
 ```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
+npm run build
+# or
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## 🧪 Testing
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
+Run unit tests:
 ```bash
-ng test
+npm run test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
+Run tests with coverage:
 ```bash
-ng e2e
+npm run test -- --coverage --no-watch --no-progress
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Run a specific test suite (replace `.spec.ts` with `.*` due to a bug):
+```bash
+npm run test -- --no-watch --no-progress --include=src/app/app.spec.*
+```
 
-## Additional Resources
+**Note**: Maintain 100% test coverage for all new code.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🔧 Development Scripts
+
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm run watch` - Build and watch for changes
+- `npm run test` - Run unit tests
+- `npm run serve:ssr:flashcards` - Serve SSR version
+
+## 🌐 Progressive Web App
+
+This app is built as a PWA and can be installed on devices:
+
+1. The app works offline thanks to service workers
+2. Installable as a native app on supported devices
+3. Fast loading with optimized caching strategies
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature-name`
+3. Make your changes and ensure tests pass
+4. Commit with conventional commit format
+5. Push to your fork and submit a pull request
+
+## 📄 License
+
+This project is private and proprietary.
+
+## 📞 Support
+
+For questions or support, please refer to the project documentation or create an issue in the repository.

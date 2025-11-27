@@ -1,9 +1,12 @@
 {
-  "name": "fiszki",
-  "short_name": "fiszki",
+  "name": "Flashcards - Language Learning App",
+  "short_name": "Flashcards",
+  "description": "Learn languages with AI-powered flashcards",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "icons": [
     {
       "src": "icons/icon-72x72.png",

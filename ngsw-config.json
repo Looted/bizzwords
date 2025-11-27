@@ -25,6 +25,17 @@
           "/**/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
         ]
       }
+    },
+    {
+      "name": "vocabulary",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/hr_eng_pl/**/*.csv",
+          "/hr_eng_pl/**/*.json",
+          "/hr_eng_pl/**/*.txt"
+        ]
+      }
     }
   ]
 }
