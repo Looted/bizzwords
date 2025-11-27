@@ -10,3 +10,7 @@
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+:host {
+  display: block;
+  width: 100%;
+}
