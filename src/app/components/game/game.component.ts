@@ -1,4 +1,4 @@
-import { Component, inject, effect } from '@angular/core';
+import { Component, inject, effect, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -21,11 +21,27 @@ export class GameComponent {
 
   inputControl = new FormControl('');
   typingFeedback: { correct: boolean, msg: string } | null = null;
+  isPaused = signal(false);
 
   constructor() {
+    // Redirect to menu if no active game
+    effect(() => {
+      if (this.store.phase() === 'MENU' && this.store.activeDeck().length === 0) {
+        this.router.navigate(['/']);
+      }
+    });
+
     effect(() => {
       if (this.store.phase() === 'SUMMARY') {
         this.router.navigate(['/summary']);
+      }
+    });
+
+    effect(() => {
+      if (this.isPaused()) {
+        this.inputControl.disable();
+      } else {
+        this.inputControl.enable();
       }
     });
   }
@@ -39,6 +55,11 @@ export class GameComponent {
 
   skipCard() {
     this.gameService.skipCard();
+  }
+
+  backToMenu() {
+    this.store.reset();
+    this.router.navigate(['/']);
   }
 
   checkTyping() {
@@ -56,11 +77,15 @@ export class GameComponent {
       }, GAME_CONSTANTS.FEEDBACK_DELAY);
     } else {
       this.typingFeedback = { correct: false, msg: `Incorrect. It was: ${correct}` };
-      setTimeout(() => {
-        this.gameService.handleAnswer(false);
-        this.inputControl.setValue('');
-        this.typingFeedback = null;
-      }, GAME_CONSTANTS.ERROR_DELAY);
+      this.isPaused.set(true);
+      // Do not auto-proceed; wait for continue button
     }
+  }
+
+  continueAfterWrongAnswer() {
+    this.isPaused.set(false);
+    this.typingFeedback = null;
+    this.inputControl.setValue('');
+    this.gameService.handleAnswer(false);
   }
 }

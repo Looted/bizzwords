@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { PwaService } from '../../services/pwa.service';
 
 @Component({
@@ -11,6 +12,7 @@ import { PwaService } from '../../services/pwa.service';
 })
 export class HeaderComponent {
   pwaService = inject(PwaService);
+  router = inject(Router);
 
   @Input() showCardCount = false;
   @Input() currentIndex = 0;
@@ -18,5 +20,9 @@ export class HeaderComponent {
 
   onInstallClick() {
     this.pwaService.installPWA();
+  }
+
+  onLogoClick() {
+    this.router.navigate(['/']);
   }
 }
