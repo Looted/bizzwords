@@ -8,6 +8,8 @@ export class PwaService {
   showInstallButton = signal(false);
 
   init() {
+    if (typeof window === 'undefined') return; // Skip on server-side
+
     // Listen for the beforeinstallprompt event
     window.addEventListener('beforeinstallprompt', (e) => {
       // Prevent the mini-infobar from appearing on mobile
