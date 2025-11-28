@@ -1,6 +1,6 @@
-import { WorkerMessageHandler } from './worker-message-handler';
+import { WorkerOrchestrator } from './worker-orchestrator';
 
 // Listen for messages from the main thread
 self.addEventListener('message', async (event) => {
-  await WorkerMessageHandler.handleMessage(event);
+  await WorkerOrchestrator.handleMessage(event);
 });

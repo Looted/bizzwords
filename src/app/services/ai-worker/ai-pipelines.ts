@@ -13,7 +13,7 @@ declare global {
 }
 
 // Use the Singleton pattern to enable lazy construction of the pipeline.
-export class TextGenerationSingleton {
+export class TextGenerationPipelineFactory {
     static task: any = 'text-generation';
     static model = 'HuggingFaceTB/SmolLM2-360M-Instruct';
     static instance?: TextGenerationPipeline = undefined;
@@ -27,7 +27,7 @@ export class TextGenerationSingleton {
             if (device === 'wasm') {
                 pipelineOptions.dtype = "q8"; // Use quantized model for better performance on WASM
             } else {
-              pipelineOptions.dtype = "fp16"; // Use fp16 for WebGPU
+                pipelineOptions.dtype = "fp16"; // Use fp16 for WebGPU
             }
             this.instance = await pipeline<'text-generation'>(this.task, this.model, pipelineOptions);
             console.log('AI text generation pipeline loaded in worker.');
@@ -36,7 +36,7 @@ export class TextGenerationSingleton {
     }
 }
 
-export class TranslationSingleton {
+export class TranslationPipelineFactory {
     static task: any = 'translation';
     static model = 'Xenova/nllb-200-distilled-600M';
     static instance?: TranslationPipeline = undefined;

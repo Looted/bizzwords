@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { TextGenerationSingleton, TranslationSingleton } from './ai-models';
+import { TextGenerationPipelineFactory, TranslationPipelineFactory } from './ai-pipelines';
 
 // Mock the @huggingface/transformers module
 vi.mock('@huggingface/transformers', () => ({
@@ -17,15 +17,15 @@ Object.defineProperty(global.navigator, 'gpu', {
   writable: true
 });
 
-describe('TextGenerationSingleton', () => {
+describe('TextGenerationPipelineFactory', () => {
   beforeEach(() => {
     // Reset the singleton instance before each test
-    TextGenerationSingleton.instance = undefined;
+    TextGenerationPipelineFactory.instance = undefined;
   });
 
   it('should have correct static properties', () => {
-    expect(TextGenerationSingleton.task).toBe('text-generation');
-    expect(TextGenerationSingleton.model).toBe('HuggingFaceTB/SmolLM2-360M-Instruct');
+    expect(TextGenerationPipelineFactory.task).toBe('text-generation');
+    expect(TextGenerationPipelineFactory.model).toBe('HuggingFaceTB/SmolLM2-360M-Instruct');
   });
 
   it('should return the same instance on multiple calls', async () => {
@@ -34,8 +34,8 @@ describe('TextGenerationSingleton', () => {
 
     (pipeline as any).mockImplementation(mockPipeline);
 
-    const instance1 = await TextGenerationSingleton.getInstance();
-    const instance2 = await TextGenerationSingleton.getInstance();
+    const instance1 = await TextGenerationPipelineFactory.getInstance();
+    const instance2 = await TextGenerationPipelineFactory.getInstance();
 
     expect(instance1).toBe(instance2);
     expect(instance1).toBe('mock-pipeline-instance');
@@ -49,7 +49,7 @@ describe('TextGenerationSingleton', () => {
 
     (pipeline as any).mockImplementation(mockPipeline);
 
-    await TextGenerationSingleton.getInstance(mockProgressCallback);
+    await TextGenerationPipelineFactory.getInstance(mockProgressCallback);
 
     expect(mockPipeline).toHaveBeenCalledWith('text-generation', 'HuggingFaceTB/SmolLM2-360M-Instruct', {
       device: 'webgpu',
@@ -59,15 +59,15 @@ describe('TextGenerationSingleton', () => {
   });
 });
 
-describe('TranslationSingleton', () => {
+describe('TranslationPipelineFactory', () => {
   beforeEach(() => {
     // Reset the singleton instance before each test
-    TranslationSingleton.instance = undefined;
+    TranslationPipelineFactory.instance = undefined;
   });
 
   it('should have correct static properties', () => {
-    expect(TranslationSingleton.task).toBe('translation');
-    expect(TranslationSingleton.model).toBe('Xenova/nllb-200-distilled-600M');
+    expect(TranslationPipelineFactory.task).toBe('translation');
+    expect(TranslationPipelineFactory.model).toBe('Xenova/nllb-200-distilled-600M');
   });
 
   it('should return the same instance on multiple calls', async () => {
@@ -76,8 +76,8 @@ describe('TranslationSingleton', () => {
 
     (pipeline as any).mockImplementation(mockPipeline);
 
-    const instance1 = await TranslationSingleton.getInstance();
-    const instance2 = await TranslationSingleton.getInstance();
+    const instance1 = await TranslationPipelineFactory.getInstance();
+    const instance2 = await TranslationPipelineFactory.getInstance();
 
     expect(instance1).toBe(instance2);
     expect(instance1).toBe('mock-translation-instance');
@@ -91,7 +91,7 @@ describe('TranslationSingleton', () => {
 
     (pipeline as any).mockImplementation(mockPipeline);
 
-    await TranslationSingleton.getInstance(mockProgressCallback);
+    await TranslationPipelineFactory.getInstance(mockProgressCallback);
 
     expect(mockPipeline).toHaveBeenCalledWith('translation', 'Xenova/nllb-200-distilled-600M', {
       device: 'wasm',

@@ -1,5 +1,8 @@
 # Coding workflow
 
+## Operating system
+The code is being developed on Windows 11 using git-bash and git for windows. Please use appropriate commands.
+
 ## Running unit tests
 Run the unit tests by running `npm run test -- --no-watch --no-progress` command. After code changes, make sure no failures are present. Refer to @https://angular.dev/guide/testing for guidelines on how to test with vitest.
 If you wish to run a single suite, use the `--include` flag. Due to a bug, it must be a glob pattern, so replace `.ts` with `.*`, e.g. `npm run test -- --no-watch --no-progress --include=src/app/app.spec.*`.

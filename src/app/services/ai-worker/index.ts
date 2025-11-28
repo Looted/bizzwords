@@ -1,1 +1,1 @@
-export { createAiWorker } from './worker-helper';
+export { createAiWorker } from './worker.factory';

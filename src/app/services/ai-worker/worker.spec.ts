@@ -1,8 +1,8 @@
 import { describe, it, expect, vi } from 'vitest';
 
-// Mock the worker-message-handler module
-vi.mock('./worker-message-handler', () => ({
-  WorkerMessageHandler: {
+// Mock the worker-orchestrator module
+vi.mock('./worker-orchestrator', () => ({
+  WorkerOrchestrator: {
     handleMessage: vi.fn().mockResolvedValue(undefined)
   }
 }));
