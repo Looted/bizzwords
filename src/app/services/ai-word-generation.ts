@@ -1,6 +1,6 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { createAiWorker } from './ai-worker';
+import { createAiWorker } from './ai-worker/worker.factory';
 
 export interface AIProgress {
   step: 'loading_model';
@@ -13,7 +13,7 @@ export interface AIProgress {
 })
 export class AiWordGenerationService {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   // Add progressCallback parameter
   async generateWords(
@@ -21,7 +21,7 @@ export class AiWordGenerationService {
     count: number = 10,
     progressCallback?: (info: AIProgress) => void,
     difficulty?: number | null
-  ): Promise<{english: string, polish: string, difficulty: 'beginner' | 'intermediate' | 'advanced'}[]> {
+  ): Promise<{ english: string, polish: string, difficulty: 'beginner' | 'intermediate' | 'advanced' }[]> {
 
     if (!isPlatformBrowser(this.platformId)) {
       console.log('Skipping AI word generation during SSR, using fallback words');
@@ -45,20 +45,20 @@ export class AiWordGenerationService {
 
           // Handle error
           if (data.status === 'error') {
-             worker.terminate();
-             reject(new Error(data.error));
-             return;
+            worker.terminate();
+            reject(new Error(data.error));
+            return;
           }
 
           // Handle progress updates (custom step messages from worker)
           if (progressCallback && (data.status === 'progress')) {
-             // Map worker internal structure to our UI interface
-             // Worker sends: { status: 'progress', progress: 45, ... }
-             progressCallback({
-                step: 'loading_model',
-                progress: data.progress, // Ensure your worker sends this numeric value if available
-                message: 'Loading model...'
-             });
+            // Map worker internal structure to our UI interface
+            // Worker sends: { status: 'progress', progress: 45, ... }
+            progressCallback({
+              step: 'loading_model',
+              progress: data.progress, // Ensure your worker sends this numeric value if available
+              message: 'Loading model...'
+            });
           }
         });
 
@@ -75,9 +75,9 @@ export class AiWordGenerationService {
     });
   }
 
-  private getFallbackWords(theme: string, count: number): {english: string, polish: string, difficulty: 'beginner' | 'intermediate' | 'advanced'}[] {
+  private getFallbackWords(theme: string, count: number): { english: string, polish: string, difficulty: 'beginner' | 'intermediate' | 'advanced' }[] {
     // Fallback words organized by theme with difficulty levels
-    const fallbackThemes: Record<string, {english: string, polish: string, difficulty: 'beginner' | 'intermediate' | 'advanced'}[]> = {
+    const fallbackThemes: Record<string, { english: string, polish: string, difficulty: 'beginner' | 'intermediate' | 'advanced' }[]> = {
       'IT': [
         { english: 'computer', polish: 'komputer', difficulty: 'beginner' },
         { english: 'software', polish: 'oprogramowanie', difficulty: 'beginner' },

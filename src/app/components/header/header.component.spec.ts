@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
 import { PwaService } from '../../services/pwa.service';
+import { Router } from '@angular/router';
 import { signal } from '@angular/core';
 import { vi } from 'vitest';
 
@@ -8,6 +9,7 @@ describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
   let pwaServiceMock: any;
+  let routerMock: any;
 
   beforeEach(async () => {
     pwaServiceMock = {
@@ -15,10 +17,15 @@ describe('HeaderComponent', () => {
       installPWA: vi.fn().mockResolvedValue(undefined)
     };
 
+    routerMock = {
+      navigate: vi.fn()
+    };
+
     await TestBed.configureTestingModule({
       imports: [HeaderComponent],
       providers: [
-        { provide: PwaService, useValue: pwaServiceMock }
+        { provide: PwaService, useValue: pwaServiceMock },
+        { provide: Router, useValue: routerMock }
       ]
     }).compileComponents();
 
@@ -33,7 +40,7 @@ describe('HeaderComponent', () => {
 
   it('should display title', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Flashcards');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Bizzwords');
   });
 
   it('should call installPWA when button is clicked', () => {
@@ -44,5 +51,12 @@ describe('HeaderComponent', () => {
     button.click();
 
     expect(pwaServiceMock.installPWA).toHaveBeenCalled();
+  });
+
+  it('should navigate to home when logo is clicked', () => {
+    const logo = fixture.nativeElement.querySelector('.flex.items-center.gap-2.cursor-pointer');
+    logo.click();
+
+    expect(routerMock.navigate).toHaveBeenCalledWith(['/']);
   });
 });

@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { GameStore, Flashcard } from './game-store';
+import { VocabularyStatsService } from './services/vocabulary-stats.service';
 import { describe, it, expect, beforeEach } from 'vitest';
 
 describe('GameStore', () => {
@@ -138,6 +139,66 @@ describe('GameStore', () => {
       store.handleAnswer(true); // End round 3
 
       expect(store.phase()).toBe('SUMMARY');
+    });
+  });
+
+  describe('skipCurrentCard', () => {
+    beforeEach(() => {
+      store.startGame(mockCards);
+    });
+
+    it('should mark current card as skipped in stats service', () => {
+      const statsService = TestBed.inject(VocabularyStatsService);
+      const markAsSkippedSpy = vi.spyOn(statsService, 'markAsSkipped');
+
+      store.skipCurrentCard();
+
+      expect(markAsSkippedSpy).toHaveBeenCalledWith('Hello', 'Cześć', 'Basic');
+    });
+
+    it('should remove current card from active deck', () => {
+      expect(store.activeDeck()).toHaveLength(3);
+
+      store.skipCurrentCard();
+
+      expect(store.activeDeck()).toHaveLength(2);
+      expect(store.activeDeck()).not.toContain(mockCards[0]);
+    });
+
+    it('should keep same index when skipping middle card', () => {
+      store['currentIndex'].set(1); // Skip second card
+
+      store.skipCurrentCard();
+
+      expect(store.currentIndex()).toBe(1);
+      expect(store.currentCard()).toEqual(mockCards[2]); // Now points to what was the third card
+    });
+
+    it('should advance round when skipping last card in round', () => {
+      store['currentIndex'].set(2); // Last card
+
+      store.skipCurrentCard();
+
+      expect(store.currentRound()).toBe('RECOGNIZE_PL');
+      expect(store.currentIndex()).toBe(0);
+      expect(store.activeDeck()).toHaveLength(2); // Original 3 - 1 skipped
+    });
+
+    it('should handle skipping when deck becomes empty', () => {
+      // Set up single card deck
+      const singleCard = [mockCards[0]];
+      store.startGame(singleCard);
+
+      store.skipCurrentCard();
+
+      expect(store.activeDeck()).toHaveLength(0);
+      expect(store.currentRound()).toBe('RECOGNIZE_PL'); // Should advance to next round when deck empty
+      expect(store.phase()).toBe('PLAYING'); // Phase stays PLAYING until all rounds complete
+    });
+
+    it('should not crash when no current card', () => {
+      store.startGame([]);
+      expect(() => store.skipCurrentCard()).not.toThrow();
     });
   });
 

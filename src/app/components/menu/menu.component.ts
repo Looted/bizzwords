@@ -26,18 +26,18 @@ export class MenuComponent implements OnInit {
 
   GameMode = GameMode;
 
-  isMobile = computed(() => {
+  get isMobile(): boolean {
     if (isPlatformBrowser(this.platformId)) {
       return window.innerWidth < 768;
     }
     return false;
-  });
+  }
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      if (this.isMobile()) {
+      if (this.isMobile) {
         this.useStatic.set(true);
       }
     }
@@ -53,6 +53,9 @@ export class MenuComponent implements OnInit {
         this.selectedDifficulty()
       );
       this.router.navigate(['/game']);
+    } catch (error) {
+      console.error('Failed to start game:', error);
+      throw error;
     } finally {
       this.isLoading = false;
     }
