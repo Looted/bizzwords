@@ -133,14 +133,16 @@ describe('GameStore', () => {
       expect(store.queue()[2].flashcard).toEqual(mockCards[0]); // Requeued at position 3 (index 2)
     });
 
-    it('should go to summary when all cards graduate', () => {
+    it('should advance to next round when all cards graduate in current round', () => {
       // Graduate all cards in round 1
       store.submitAnswer(true);
       store.submitAnswer(true);
       store.submitAnswer(true);
 
-      expect(store.phase()).toBe('SUMMARY'); // Advances through empty rounds to summary
+      expect(store.phase()).toBe('PLAYING'); // Advances to round 2 with full deck
+      expect(store.roundIndex()).toBe(1); // Now in round 2 (recall)
       expect(store.graduatePile()).toHaveLength(3);
+      expect(store.queue()).toHaveLength(3); // Round 2 starts with full deck
     });
 
     it('should keep failed cards in current round', () => {

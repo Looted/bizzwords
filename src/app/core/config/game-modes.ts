@@ -34,7 +34,7 @@ export const STANDARD_GAME_MODE: GameMode = {
           secondary: 'english'
         }
       },
-      inputSource: 'prev_round_failures',
+      inputSource: 'deck_start',
       completionCriteria: {
         requiredSuccesses: 1
       },
@@ -54,7 +54,7 @@ export const STANDARD_GAME_MODE: GameMode = {
           secondary: 'english'
         }
       },
-      inputSource: 'prev_round_failures',
+      inputSource: 'deck_start',
       completionCriteria: {
         requiredSuccesses: 1
       },
