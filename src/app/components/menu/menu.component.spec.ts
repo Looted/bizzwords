@@ -59,6 +59,28 @@ describe('MenuComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should have categories array with HR and PM categories', () => {
+    expect(component.categories).toHaveLength(2);
+
+    const hrCategory = component.categories.find(cat => cat.id === 'hr');
+    expect(hrCategory).toBeDefined();
+    expect(hrCategory!.name).toBe('HR Words');
+    expect(hrCategory!.icon).toBe('👥');
+    expect(hrCategory!.bgClass).toBe('bg-purple-50 hover:bg-purple-100');
+    expect(hrCategory!.textClass).toBe('text-purple-700');
+
+    const pmCategory = component.categories.find(cat => cat.id === 'pm');
+    expect(pmCategory).toBeDefined();
+    expect(pmCategory!.name).toBe('Project Management');
+    expect(pmCategory!.icon).toBe('📊');
+    expect(pmCategory!.bgClass).toBe('bg-blue-50 hover:bg-blue-100');
+    expect(pmCategory!.textClass).toBe('text-blue-700');
+  });
+
+  it('should initialize selectedCategory signal', () => {
+    expect(component.selectedCategory()).toBeNull();
+  });
+
   describe('ngOnInit', () => {
     it('should set useStatic to true on mobile devices', () => {
       // Mock window.innerWidth for mobile
@@ -147,6 +169,25 @@ describe('MenuComponent', () => {
       resolvePromise!();
       await selectPromise;
       expect(component.isLoading).toBe(false);
+    });
+
+    it('should set selectedCategory when starting game', async () => {
+      await component.selectTopic('hr');
+      expect(component.selectedCategory()).toBe('hr');
+    });
+
+    it('should reset selectedCategory on error', async () => {
+      const error = new Error('Game start failed');
+      gameServiceMock.startGame.mockRejectedValue(error);
+
+      // Spy on console.error to avoid test output pollution
+      const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => { });
+
+      await expect(component.selectTopic('hr')).rejects.toThrow('Game start failed');
+
+      expect(component.selectedCategory()).toBeNull();
+
+      consoleSpy.mockRestore();
     });
   });
 

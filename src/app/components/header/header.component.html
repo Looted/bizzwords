@@ -4,6 +4,7 @@
     <h1 class="text-xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">Bizzwords</h1>
   </div>
   <div class="flex items-center gap-3">
+    <app-language-switcher class="hidden sm:block"></app-language-switcher>
     <button *ngIf="pwaService.showInstallButton()"
       (click)="onInstallClick()"
       class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg shadow-sm transition-colors flex items-center gap-2">

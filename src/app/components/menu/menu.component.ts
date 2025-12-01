@@ -6,12 +6,11 @@ import { isPlatformBrowser } from '@angular/common';
 import { GameService } from '../../services/game.service';
 import { VocabularyStatsService } from '../../services/vocabulary-stats.service';
 import { GameMode } from '../../shared/constants';
-import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CommonModule, FormsModule, LanguageSwitcherComponent],
+  imports: [CommonModule, FormsModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
@@ -23,7 +22,32 @@ export class MenuComponent implements OnInit {
   useStatic = signal(true);
   selectedDifficulty = signal<number | null>(null);
   selectedMode = signal<GameMode>(GameMode.New);
+  selectedCategory = signal<string | null>(null);
   isLoading = false;
+
+  // Computed signal for AI checkbox - true when AI is enabled
+  useAI = computed(() => !this.useStatic());
+
+  categories = [
+    {
+      id: 'hr',
+      name: 'HR Words',
+      icon: '👥',
+      bgClass: 'bg-purple-50 hover:bg-purple-100',
+      borderClass: 'border-purple-200',
+      textClass: 'text-purple-700',
+      ringClass: 'ring-purple-500'
+    },
+    {
+      id: 'pm',
+      name: 'Project Management',
+      icon: '📊',
+      bgClass: 'bg-blue-50 hover:bg-blue-100',
+      borderClass: 'border-blue-200',
+      textClass: 'text-blue-700',
+      ringClass: 'ring-blue-500'
+    }
+  ];
 
   GameMode = GameMode;
 
@@ -44,11 +68,17 @@ export class MenuComponent implements OnInit {
     }
   }
 
-  async selectTopic(topic: string) {
+  onAICheckboxChange(event: Event) {
+    const checked = (event.target as HTMLInputElement).checked;
+    this.useStatic.set(!checked); // checked=true means AI on, so useStatic=false
+  }
+
+  async selectTopic(categoryId: string) {
+    this.selectedCategory.set(categoryId);
     this.isLoading = true;
     try {
       await this.gameService.startGame(
-        topic,
+        categoryId,
         this.selectedMode(),
         this.useStatic(),
         this.selectedDifficulty()
@@ -56,6 +86,7 @@ export class MenuComponent implements OnInit {
       this.router.navigate(['/game']);
     } catch (error) {
       console.error('Failed to start game:', error);
+      this.selectedCategory.set(null); // Reset on error
       throw error;
     } finally {
       this.isLoading = false;

@@ -122,7 +122,31 @@ describe('StaticVocabularyService', () => {
 
   describe('loadVocabulary', () => {
     it('should load vocabulary from JSON file', async () => {
-      const resultPromise = firstValueFrom(service.loadVocabulary());
+      const resultPromise = firstValueFrom(service.loadVocabulary('hr'));
+
+      const req = httpMock.expectOne('hr_eng_pl/vocabulary.json');
+      expect(req.request.method).toBe('GET');
+      req.flush(mockVocabulary);
+
+      const result = await resultPromise;
+
+      expect(result).toEqual(mockVocabulary);
+    });
+
+    it('should load PM vocabulary from different file', async () => {
+      const resultPromise = firstValueFrom(service.loadVocabulary('pm'));
+
+      const req = httpMock.expectOne('pm_eng_pl/vocabulary.json');
+      expect(req.request.method).toBe('GET');
+      req.flush(mockVocabulary);
+
+      const result = await resultPromise;
+
+      expect(result).toEqual(mockVocabulary);
+    });
+
+    it('should fallback to HR vocabulary for unknown topics', async () => {
+      const resultPromise = firstValueFrom(service.loadVocabulary('unknown'));
 
       const req = httpMock.expectOne('hr_eng_pl/vocabulary.json');
       expect(req.request.method).toBe('GET');

@@ -71,18 +71,25 @@ describe('GameService', () => {
       mockStatsService.getWordsNeedingPractice.mockReturnValue([]);
     });
 
-    it('should use static vocabulary for HR topic when useStatic is true', async () => {
-      await service.startGame('HR', GameMode.New, true, null);
+    it('should use static vocabulary for hr topic when useStatic is true', async () => {
+      await service.startGame('hr', GameMode.New, true, null);
 
-      expect(mockStaticService.generateWords).toHaveBeenCalledWith('HR', GAME_CONSTANTS.CARDS_PER_GAME, undefined);
+      expect(mockStaticService.generateWords).toHaveBeenCalledWith('hr', GAME_CONSTANTS.CARDS_PER_GAME, undefined);
       expect(mockAiService.generateWords).not.toHaveBeenCalled();
     });
 
-    it('should use AI service for non-HR topics even when useStatic is true', async () => {
+    it('should use static vocabulary for pm topic when useStatic is true', async () => {
+      await service.startGame('pm', GameMode.New, true, null);
+
+      expect(mockStaticService.generateWords).toHaveBeenCalledWith('pm', GAME_CONSTANTS.CARDS_PER_GAME, undefined);
+      expect(mockAiService.generateWords).not.toHaveBeenCalled();
+    });
+
+    it('should use fallback words for non-hr/pm topics when useStatic is true', async () => {
       await service.startGame('IT', GameMode.New, true, null);
 
-      expect(mockAiService.generateWords).toHaveBeenCalledWith('IT', GAME_CONSTANTS.CARDS_PER_GAME, undefined, null);
       expect(mockStaticService.generateWords).not.toHaveBeenCalled();
+      expect(mockAiService.generateWords).not.toHaveBeenCalled();
     });
 
     it('should use AI service when useStatic is false', async () => {
@@ -99,9 +106,9 @@ describe('GameService', () => {
     });
 
     it('should pass difficulty parameter to static service', async () => {
-      await service.startGame('HR', GameMode.New, true, 3);
+      await service.startGame('hr', GameMode.New, true, 3);
 
-      expect(mockStaticService.generateWords).toHaveBeenCalledWith('HR', GAME_CONSTANTS.CARDS_PER_GAME, 3);
+      expect(mockStaticService.generateWords).toHaveBeenCalledWith('hr', GAME_CONSTANTS.CARDS_PER_GAME, 3);
     });
 
     it('should filter cards for New mode to show only unseen words', async () => {
@@ -209,7 +216,7 @@ describe('GameService', () => {
     it('should handle static service returning empty observable', async () => {
       mockStaticService.generateWords.mockReturnValue(of([]));
 
-      await service.startGame('HR', GameMode.New, true, null);
+      await service.startGame('hr', GameMode.New, true, null);
 
       const gameModeService = TestBed.inject(GameModeService);
       expect(mockStore.startGame).toHaveBeenCalledWith(gameModeService.getStandardGameMode(), []);
