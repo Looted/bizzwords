@@ -2,7 +2,7 @@
 
 ## Current Test Status
 
-### Passing Tests (48/48 total tests) - 100% SUCCESS
+### Passing Tests (204/204 total tests) - 100% SUCCESS
 - **Game Store Tests (17/17)**: All GameStore functionality tests pass
   - State management (phase, round, deck, index)
   - Progress calculation with floating point tolerance
@@ -16,8 +16,14 @@
   - AI models initialization (6/6 tests)
   - Difficulty parameter integration tests
 
-- **Component Tests (7/7)**: All component tests pass
-  - Flashcard component rendering and interactions
+- **Component Tests (76/76)**: All component tests pass
+  - CardRendererComponent: 19 tests (with mocked child components)
+  - GameComponent: 7 tests (with mocked CardRendererComponent)
+  - HeaderComponent: 4 tests
+  - MenuComponent: 10 tests
+  - SummaryComponent: 2 tests
+  - TypingCardComponent: 10 tests
+  - FlashcardComponent: 24 tests
 
 - **App Tests (1/1)**: App functionality tests pass
   - Component creation and basic functionality
@@ -27,10 +33,10 @@
 - ✅ No current test failures
 
 ## Test Coverage
-- **Statements**: 100% (based on npm run test -- --coverage)
-- **Branches**: 100%
-- **Functions**: 100%
-- **Lines**: 100%
+- **Statements**: 83.56% (based on npm run test -- --coverage)
+- **Branches**: 74.78%
+- **Functions**: 84.17%
+- **Lines**: 88.06%
 
 ## Recommendations
 1. **Fix App Typing Tests**: Adjust test timing or modify component to expose feedback state more reliably for testing
@@ -43,6 +49,39 @@
 - ✅ Fixed floating point precision in progress tests with `toBeCloseTo`
 - ✅ Updated AI models test expectations for correct device setting
 - ✅ Improved async test handling in app component tests
+
+## Component Testing Best Practices
+
+### Isolation with ng-mocks
+Following Angular 20+ best practices, component tests now use `overrideComponent` with `MockComponent` from ng-mocks for proper isolation:
+
+```typescript
+import { MockComponent } from 'ng-mocks';
+
+// In test setup
+.overrideComponent(ComponentUnderTest, {
+  set: {
+    imports: [
+      MockComponent(StandaloneComponentDep)
+    ],
+    providers: [
+      { provide: UserService, useValue: mockUserService }
+    ]
+  }
+})
+```
+
+**Key Guidelines:**
+- **Always use `overrideComponent`** with at least an empty `set: {}` object to make overriding dependencies the default state for component tests
+- Use `MockComponent()` from ng-mocks to easily mock out component dependencies
+- Provide service mocks in component overrides when testing components (not in module overrides)
+- Override transitive component dependencies to achieve proper unit test isolation
+- Set `providers: []` explicitly even when empty to establish the pattern
+- This pattern ensures components are tested in isolation from their child components
+
+**Examples Implemented:**
+- `CardRendererComponent` tests now mock `FlashcardComponent` and `TypingCardComponent`
+- `GameComponent` tests now mock `CardRendererComponent`
 
 ## Test Commands
 ```bash

@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { MockComponent } from 'ng-mocks';
 import { CardRendererComponent } from './card-renderer.component';
 import { FlashcardComponent } from '../../flashcard.component';
 import { TypingCardComponent } from '../typing-card/typing-card.component';
@@ -29,7 +30,16 @@ describe('CardRendererComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [CardRendererComponent]
-    }).compileComponents();
+    })
+    .overrideComponent(CardRendererComponent, {
+      set: {
+        imports: [
+          MockComponent(FlashcardComponent),
+          MockComponent(TypingCardComponent)
+        ]
+      }
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(CardRendererComponent);
     component = fixture.componentInstance;

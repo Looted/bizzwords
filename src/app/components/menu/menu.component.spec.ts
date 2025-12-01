@@ -42,7 +42,13 @@ describe('MenuComponent', () => {
         { provide: PLATFORM_ID, useValue: 'browser' },
         { provide: StorageService, useValue: storageServiceMock }
       ]
-    }).compileComponents();
+    })
+    .overrideComponent(MenuComponent, {
+      set: {
+        providers: []
+      }
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(MenuComponent);
     component = fixture.componentInstance;

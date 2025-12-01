@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MockComponent } from 'ng-mocks';
 import { GameComponent } from './game.component';
+import { CardRendererComponent } from '../card-renderer/card-renderer.component';
 import { GameStore } from '../../game-store';
 import { GameService } from '../../services/game.service';
 import { StorageService } from '../../services/storage.service';
@@ -68,7 +70,15 @@ describe('GameComponent', () => {
         { provide: StorageService, useValue: storageServiceMock },
         { provide: PLATFORM_ID, useValue: 'browser' }
       ]
-    }).compileComponents();
+    })
+    .overrideComponent(GameComponent, {
+      set: {
+        imports: [
+          MockComponent(CardRendererComponent)
+        ]
+      }
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(GameComponent);
     component = fixture.componentInstance;

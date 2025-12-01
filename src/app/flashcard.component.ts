@@ -52,6 +52,15 @@ export class FlashcardComponent {
     return field === 'english' ? card.english : card.polish;
   });
 
+  textSizeClass = computed(() => {
+    const text = this.isFlipped() ? this.displayBackText() : this.displayFrontText();
+    const length = text.length;
+
+    if (length > 60) return 'text-lg sm:text-xl md:text-2xl';
+    if (length > 40) return 'text-xl sm:text-2xl md:text-3xl';
+    return 'text-2xl sm:text-3xl md:text-4xl';
+  });
+
   flip() {
     this.isFlipped.update(v => !v);
   }

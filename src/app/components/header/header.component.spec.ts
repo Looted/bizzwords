@@ -39,7 +39,13 @@ describe('HeaderComponent', () => {
         { provide: StorageService, useValue: storageServiceMock },
         { provide: PLATFORM_ID, useValue: 'browser' }
       ]
-    }).compileComponents();
+    })
+    .overrideComponent(HeaderComponent, {
+      set: {
+        providers: []
+      }
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;

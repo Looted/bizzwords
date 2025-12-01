@@ -1,4 +1,4 @@
-<div class="perspective-1000 w-full max-w-4xl h-96 sm:h-[32rem] cursor-pointer group mx-auto" (click)="flip()">
+<div class="perspective-1000 w-full max-w-lg h-96 sm:h-[32rem] cursor-pointer group mx-auto" (click)="flip()">
   <div class="relative w-full h-full transition-all duration-500 transform preserve-3d"
        [class.rotate-y-180]="isFlipped()">
 
@@ -7,7 +7,7 @@
       <div class="text-gray-400 text-sm font-semibold tracking-wider uppercase mb-3">
         {{ frontLabel() }}
       </div>
-      <h2 class="text-4xl sm:text-6xl font-bold text-slate-800 break-words leading-tight">
+      <h2 [class]="textSizeClass()" class="font-bold text-slate-800 break-words leading-tight">
         {{ frontText() }}
       </h2>
       <div class="mt-10 text-blue-500 text-sm animate-pulse">
@@ -20,7 +20,7 @@
       <div class="text-blue-400 text-sm font-semibold tracking-wider uppercase mb-3">
         {{ backLabel() }}
       </div>
-      <h2 class="text-4xl sm:text-6xl font-bold text-blue-900 break-words leading-tight">
+      <h2 [class]="textSizeClass()" class="font-bold text-blue-900 break-words leading-tight">
         {{ backText() }}
       </h2>
     </div>

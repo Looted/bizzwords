@@ -19,7 +19,13 @@ describe('FlashcardComponent', () => {
       providers: [
         { provide: GameStore, useValue: mockStore }
       ]
-    }).compileComponents();
+    })
+    .overrideComponent(FlashcardComponent, {
+      set: {
+        providers: []
+      }
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(FlashcardComponent);
     component = fixture.componentInstance;
@@ -152,6 +158,39 @@ describe('FlashcardComponent', () => {
       mockStore.currentCard.mockReturnValue(null);
       mockStore.currentRoundConfig.mockReturnValue(null);
       expect(component.displayBackText()).toBe('');
+    });
+  });
+
+  describe('textSizeClass', () => {
+    it('should return large text size for short text (front)', () => {
+      (component as any).frontText = () => 'Short';
+      expect(component.textSizeClass()).toBe('text-2xl sm:text-3xl md:text-4xl');
+    });
+
+    it('should return large text size for short text (back)', () => {
+      component.flip(); // flip to back
+      (component as any).backText = () => 'Short';
+      expect(component.textSizeClass()).toBe('text-2xl sm:text-3xl md:text-4xl');
+    });
+
+    it('should return medium text size for medium length text', () => {
+      const mediumText = 'A'.repeat(45); // length 45
+      (component as any).frontText = () => mediumText;
+      expect(component.textSizeClass()).toBe('text-xl sm:text-2xl md:text-3xl');
+    });
+
+    it('should return small text size for long text', () => {
+      const longText = 'A'.repeat(65); // length 65
+      (component as any).frontText = () => longText;
+      expect(component.textSizeClass()).toBe('text-lg sm:text-xl md:text-2xl');
+    });
+
+    it('should handle text from store when inputs not provided', () => {
+      mockStore.currentCard.mockReturnValue({ english: 'A'.repeat(50), polish: 'cześć' });
+      mockStore.currentRoundConfig.mockReturnValue({
+        layout: { dataMap: { primary: 'english', secondary: 'polish' } }
+      });
+      expect(component.textSizeClass()).toBe('text-xl sm:text-2xl md:text-3xl');
     });
   });
 });

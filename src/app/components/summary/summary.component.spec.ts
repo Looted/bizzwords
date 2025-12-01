@@ -38,7 +38,13 @@ describe('SummaryComponent', () => {
         { provide: StorageService, useValue: storageServiceMock },
         { provide: PLATFORM_ID, useValue: 'browser' }
       ]
-    }).compileComponents();
+    })
+    .overrideComponent(SummaryComponent, {
+      set: {
+        providers: []
+      }
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(SummaryComponent);
     component = fixture.componentInstance;

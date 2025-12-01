@@ -11,7 +11,13 @@ describe('TypingCardComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [TypingCardComponent, ReactiveFormsModule]
-    }).compileComponents();
+    })
+    .overrideComponent(TypingCardComponent, {
+      set: {
+        providers: []
+      }
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(TypingCardComponent);
     component = fixture.componentInstance;
