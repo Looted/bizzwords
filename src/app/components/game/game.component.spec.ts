@@ -2,16 +2,39 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { GameComponent } from './game.component';
 import { GameStore } from '../../game-store';
 import { GameService } from '../../services/game.service';
+import { StorageService } from '../../services/storage.service';
 import { Router } from '@angular/router';
-import { signal } from '@angular/core';
-import { vi } from 'vitest';
+import { PLATFORM_ID } from '@angular/core';
+import { signal, WritableSignal } from '@angular/core';
+import { vi, Mock } from 'vitest';
 
 describe('GameComponent', () => {
   let component: GameComponent;
   let fixture: ComponentFixture<GameComponent>;
-  let gameStoreMock: any;
-  let gameServiceMock: any;
-  let routerMock: any;
+
+  // Define mock types
+  type MockGameStore = {
+    phase: WritableSignal<string>;
+    currentRound: WritableSignal<string>;
+    progress: WritableSignal<number>;
+    currentCard: WritableSignal<any>;
+    activeDeck: WritableSignal<any[]>;
+    reset: Mock;
+  };
+
+  type MockGameService = {
+    handleAnswer: Mock;
+    skipCard: Mock;
+  };
+
+  type MockRouter = {
+    navigate: Mock;
+  };
+
+  let gameStoreMock: MockGameStore;
+  let gameServiceMock: MockGameService;
+  let routerMock: MockRouter;
+  let storageServiceMock: any;
 
   beforeEach(async () => {
     gameStoreMock = {
@@ -29,13 +52,21 @@ describe('GameComponent', () => {
     routerMock = {
       navigate: vi.fn()
     };
+    storageServiceMock = {
+      getItem: vi.fn().mockReturnValue(null),
+      setItem: vi.fn(),
+      removeItem: vi.fn(),
+      clear: vi.fn()
+    };
 
     await TestBed.configureTestingModule({
       imports: [GameComponent],
       providers: [
         { provide: GameStore, useValue: gameStoreMock },
         { provide: GameService, useValue: gameServiceMock },
-        { provide: Router, useValue: routerMock }
+        { provide: Router, useValue: routerMock },
+        { provide: StorageService, useValue: storageServiceMock },
+        { provide: PLATFORM_ID, useValue: 'browser' }
       ]
     }).compileComponents();
 

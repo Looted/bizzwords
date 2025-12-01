@@ -1,7 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SummaryComponent } from './summary.component';
 import { GameStore } from '../../game-store';
+import { StorageService } from '../../services/storage.service';
 import { Router } from '@angular/router';
+import { PLATFORM_ID } from '@angular/core';
 import { signal } from '@angular/core';
 import { vi } from 'vitest';
 
@@ -10,6 +12,7 @@ describe('SummaryComponent', () => {
   let fixture: ComponentFixture<SummaryComponent>;
   let gameStoreMock: any;
   let routerMock: any;
+  let storageServiceMock: any;
 
   beforeEach(async () => {
     gameStoreMock = {
@@ -20,12 +23,20 @@ describe('SummaryComponent', () => {
     routerMock = {
       navigate: vi.fn()
     };
+    storageServiceMock = {
+      getItem: vi.fn().mockReturnValue(null),
+      setItem: vi.fn(),
+      removeItem: vi.fn(),
+      clear: vi.fn()
+    };
 
     await TestBed.configureTestingModule({
       imports: [SummaryComponent],
       providers: [
         { provide: GameStore, useValue: gameStoreMock },
-        { provide: Router, useValue: routerMock }
+        { provide: Router, useValue: routerMock },
+        { provide: StorageService, useValue: storageServiceMock },
+        { provide: PLATFORM_ID, useValue: 'browser' }
       ]
     }).compileComponents();
 

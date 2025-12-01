@@ -17,8 +17,11 @@ Active decisions and considerations:
 - Framework choice: Angular v20+ for modern web-based UI with signals, standalone components, and OnPush change detection for optimal performance.
 - Data storage: Start with local storage, expand to IndexedDB for word databases and user progress.
 - AI integration: Use transformers.js for on-device LLM word generation to avoid server dependencies and ensure privacy.
-- Learning algorithm: Implement three-round system (recognition→recognition→typing) with spaced repetition for comprehensive vocabulary acquisition.
-- Algorithm: Implement basic spaced repetition (e.g., SM-2 algorithm) using pure functions.
+- Learning algorithm: Implemented three-round spaced repetition system:
+  - Round 1 (RECOGNIZE_EN): English→Polish recognition. If all correct, skip to summary.
+  - Round 2 (RECOGNIZE_PL): Polish→English recognition, testing only words wrong in Round 1. If all correct, skip to summary.
+  - Round 3 (WRITE_EN): Polish→English typing, testing only words wrong in Round 2.
+- Algorithm: Basic spaced repetition where each round focuses on reinforcing mistakes from the previous round, ensuring efficient learning without wasting time on mastered content.
 - PWA: Implement service workers for offline caching, web app manifest for installability, and background sync for data persistence.
 
 Important patterns and preferences:

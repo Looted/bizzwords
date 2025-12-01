@@ -5,7 +5,7 @@ import { vi } from 'vitest';
 global.self = global.self || {};
 
 // Mock Worker API for tests
-;(global as any).Worker = vi.fn().mockImplementation(function() {
+; (global as any).Worker = vi.fn().mockImplementation(function () {
   return {
     postMessage: vi.fn(),
     terminate: vi.fn(),

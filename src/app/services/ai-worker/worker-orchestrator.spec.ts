@@ -3,6 +3,7 @@ import { WorkerOrchestrator, WorkerRequest } from './worker-orchestrator';
 import { TextParser } from './text-parser';
 import { PromptBuilder } from './prompt-builder';
 import { TranslationService } from './translation-service';
+import * as AIPipelines from './ai-pipelines';
 
 // Mock the @huggingface/transformers module
 vi.mock('@huggingface/transformers', () => ({
@@ -23,9 +24,9 @@ global.self = {
 describe('WorkerOrchestrator', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    // Reset singleton instances
-    require('./ai-pipelines').TextGenerationPipelineFactory.instance = undefined;
-    require('./ai-pipelines').TranslationPipelineFactory.instance = undefined;
+    // Reset singleton instances using imported module
+    (AIPipelines.TextGenerationPipelineFactory as any).instance = undefined;
+    (AIPipelines.TranslationPipelineFactory as any).instance = undefined;
   });
 
   describe('handleMessage', () => {

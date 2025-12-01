@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MenuComponent } from './menu.component';
 import { GameService } from '../../services/game.service';
 import { VocabularyStatsService } from '../../services/vocabulary-stats.service';
+import { StorageService } from '../../services/storage.service';
 import { Router } from '@angular/router';
 import { PLATFORM_ID } from '@angular/core';
 import { GameMode } from '../../shared/constants';
@@ -13,6 +14,7 @@ describe('MenuComponent', () => {
   let gameServiceMock: any;
   let statsServiceMock: any;
   let routerMock: any;
+  let storageServiceMock: any;
 
   beforeEach(async () => {
     gameServiceMock = {
@@ -24,6 +26,12 @@ describe('MenuComponent', () => {
     routerMock = {
       navigate: vi.fn()
     };
+    storageServiceMock = {
+      getItem: vi.fn().mockReturnValue(null),
+      setItem: vi.fn(),
+      removeItem: vi.fn(),
+      clear: vi.fn()
+    };
 
     await TestBed.configureTestingModule({
       imports: [MenuComponent],
@@ -31,7 +39,8 @@ describe('MenuComponent', () => {
         { provide: GameService, useValue: gameServiceMock },
         { provide: VocabularyStatsService, useValue: statsServiceMock },
         { provide: Router, useValue: routerMock },
-        { provide: PLATFORM_ID, useValue: 'browser' }
+        { provide: PLATFORM_ID, useValue: 'browser' },
+        { provide: StorageService, useValue: storageServiceMock }
       ]
     }).compileComponents();
 
@@ -98,7 +107,7 @@ describe('MenuComponent', () => {
       gameServiceMock.startGame.mockRejectedValue(error);
 
       // Spy on console.error to avoid test output pollution
-      const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => { });
 
       await expect(component.selectTopic('IT')).rejects.toThrow('Game start failed');
 
@@ -163,7 +172,8 @@ describe('MenuComponent', () => {
           { provide: GameService, useValue: gameServiceMock },
           { provide: VocabularyStatsService, useValue: statsServiceMock },
           { provide: Router, useValue: routerMock },
-          { provide: PLATFORM_ID, useValue: 'server' }
+          { provide: PLATFORM_ID, useValue: 'server' },
+          { provide: StorageService, useValue: storageServiceMock }
         ]
       });
 

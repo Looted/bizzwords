@@ -1,12 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { StaticVocabularyService } from './static-vocabulary.service';
-import { describe, it, expect, beforeEach } from 'vitest';
+import { StorageService } from './storage.service';
+import { PLATFORM_ID } from '@angular/core';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { firstValueFrom } from 'rxjs';
 
 describe('StaticVocabularyService', () => {
   let service: StaticVocabularyService;
   let httpMock: HttpTestingController;
+  let storageServiceMock: any;
 
   const mockVocabulary = [
     { english: 'hello', polish: 'cześć', difficulty: 1 },
@@ -17,9 +20,20 @@ describe('StaticVocabularyService', () => {
   ];
 
   beforeEach(() => {
+    storageServiceMock = {
+      getItem: vi.fn().mockReturnValue(null),
+      setItem: vi.fn(),
+      removeItem: vi.fn(),
+      clear: vi.fn()
+    };
+
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [StaticVocabularyService]
+      providers: [
+        StaticVocabularyService,
+        { provide: StorageService, useValue: storageServiceMock },
+        { provide: PLATFORM_ID, useValue: 'browser' }
+      ]
     });
     service = TestBed.inject(StaticVocabularyService);
     httpMock = TestBed.inject(HttpTestingController);

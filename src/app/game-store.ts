@@ -98,12 +98,37 @@ export class GameStore {
   private advanceRound() {
     const current = this.currentRound();
     if (current === 'RECOGNIZE_EN') {
+      // Ending Round 1: Filter deck to only wrong answers, skip if perfect
+      const wrongIds = this.wrongAnswers();
+      if (wrongIds.length === 0) {
+        // User got everything right, skip rounds and go to summary
+        this.phase.set('SUMMARY');
+        return;
+      }
+      // Filter active deck to only cards that were wrong
+      this.activeDeck.update(deck => deck.filter(card => wrongIds.includes(card.id)));
+      // Reset wrong answers for Round 2
+      this.wrongAnswers.set([]);
+      // Proceed to Round 2
       this.currentRound.set('RECOGNIZE_PL');
       this.currentIndex.set(0);
     } else if (current === 'RECOGNIZE_PL') {
+      // Ending Round 2: Apply same filtering for Round 3
+      const wrongIds = this.wrongAnswers();
+      if (wrongIds.length === 0) {
+        // User got everything right in Round 2, go to summary
+        this.phase.set('SUMMARY');
+        return;
+      }
+      // Filter active deck to only cards that were wrong in Round 2
+      this.activeDeck.update(deck => deck.filter(card => wrongIds.includes(card.id)));
+      // Reset wrong answers for Round 3
+      this.wrongAnswers.set([]);
+      // Proceed to Round 3
       this.currentRound.set('WRITE_EN');
       this.currentIndex.set(0);
     } else {
+      // Ending Round 3: Go to summary
       this.phase.set('SUMMARY');
     }
   }

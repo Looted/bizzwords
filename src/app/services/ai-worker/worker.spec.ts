@@ -1,31 +1,33 @@
-import { describe, it, expect, vi, beforeAll } from 'vitest';
+// @vitest-environment jsdom
+import { describe, it, expect, vi, beforeAll, afterAll } from 'vitest';
 import { WorkerOrchestrator } from './worker-orchestrator';
-
-// Mock self globally
-const mockAddEventListener = vi.fn();
-const mockPostMessage = vi.fn();
-global.self = {
-  addEventListener: mockAddEventListener,
-  postMessage: mockPostMessage
-} as any;
 
 describe('Worker', () => {
   let mockHandleMessage: any;
+  let addEventListenerSpy: any;
 
   beforeAll(async () => {
     // Spy on the static method
     mockHandleMessage = vi.spyOn(WorkerOrchestrator, 'handleMessage').mockResolvedValue(undefined);
 
+    // Spy on self.addEventListener
+    addEventListenerSpy = vi.spyOn(self, 'addEventListener');
+
     // Import the worker module once to trigger the event listener setup
     await import('./worker');
   });
 
+  afterAll(() => {
+    // Restore the spy
+    addEventListenerSpy.mockRestore();
+  });
+
   it('should set up message event listener', () => {
     // Verify that addEventListener was called with 'message' event
-    expect(mockAddEventListener).toHaveBeenCalledWith('message', expect.any(Function));
+    expect(addEventListenerSpy).toHaveBeenCalledWith('message', expect.any(Function));
 
     // Verify that the event listener is a function
-    const calls = mockAddEventListener.mock.calls;
+    const calls = addEventListenerSpy.mock.calls;
     expect(calls.length).toBeGreaterThan(0);
     const eventListener = calls[0][1];
     expect(typeof eventListener).toBe('function');
@@ -33,7 +35,7 @@ describe('Worker', () => {
 
   it('should handle message events by calling WorkerOrchestrator.handleMessage', async () => {
     // Get the event listener function
-    const calls = mockAddEventListener.mock.calls;
+    const calls = addEventListenerSpy.mock.calls;
     expect(calls.length).toBeGreaterThan(0);
     const eventListener = calls[0][1];
 
@@ -48,7 +50,7 @@ describe('Worker', () => {
   });
 
   it('should handle async message processing', async () => {
-    const calls = mockAddEventListener.mock.calls;
+    const calls = addEventListenerSpy.mock.calls;
     expect(calls.length).toBeGreaterThan(0);
     const eventListener = calls[0][1];
     const mockEvent = { data: 'async test' };

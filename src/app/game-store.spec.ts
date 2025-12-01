@@ -1,13 +1,42 @@
 import { TestBed } from '@angular/core/testing';
 import { GameStore, Flashcard } from './game-store';
 import { VocabularyStatsService } from './services/vocabulary-stats.service';
-import { describe, it, expect, beforeEach } from 'vitest';
+import { StorageService } from './services/storage.service';
+import { PLATFORM_ID } from '@angular/core';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 
 describe('GameStore', () => {
   let store: GameStore;
+  let storageServiceMock: any;
+  let vocabularyStatsServiceMock: any;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    storageServiceMock = {
+      getItem: vi.fn(),
+      setItem: vi.fn(),
+      removeItem: vi.fn(),
+      clear: vi.fn()
+    };
+
+    vocabularyStatsServiceMock = {
+      markAsSkipped: vi.fn(),
+      recordEncounter: vi.fn(),
+      getStats: vi.fn(),
+      getAllStats: vi.fn(),
+      getStatsByCategory: vi.fn(),
+      getWordsNeedingPractice: vi.fn(),
+      getMasteryStats: vi.fn(),
+      clearAllStats: vi.fn()
+    };
+
+    TestBed.configureTestingModule({
+      providers: [
+        GameStore,
+        { provide: VocabularyStatsService, useValue: vocabularyStatsServiceMock },
+        { provide: StorageService, useValue: storageServiceMock },
+        { provide: PLATFORM_ID, useValue: 'browser' }
+      ]
+    });
     store = TestBed.inject(GameStore);
   });
 
@@ -93,37 +122,38 @@ describe('GameStore', () => {
       expect(store.wrongAnswers()).toEqual(['1']);
     });
 
-    it('should advance round when reaching end of deck', () => {
-      // Complete first round
+    it('should go to SUMMARY when completing round with all correct', () => {
+      // Complete first round with all correct
       store.handleAnswer(true);
       store.handleAnswer(true);
+      store.handleAnswer(true);
+
+      expect(store.phase()).toBe('SUMMARY');
+      expect(store.currentRound()).toBe('RECOGNIZE_EN'); // Round stays the same when skipping
+    });
+
+    it('should advance to second round when some answers wrong', () => {
+      // Complete first round with one wrong
+      store.handleAnswer(true);
+      store.handleAnswer(false); // Wrong
       store.handleAnswer(true);
 
       expect(store.currentRound()).toBe('RECOGNIZE_PL');
       expect(store.currentIndex()).toBe(0);
+      expect(store.activeDeck()).toHaveLength(1); // Only the wrong one
+      expect(store.activeDeck()[0]).toEqual(mockCards[1]);
     });
 
-    it('should advance to second round correctly', () => {
-      // Complete first round
+    it('should advance to third round when wrong answers in both rounds', () => {
+      // Complete first round with wrong answer
       store.handleAnswer(true);
-      store.handleAnswer(true);
-      store.handleAnswer(true);
-
-      expect(store.currentRound()).toBe('RECOGNIZE_PL');
-      expect(store.currentCard()).toEqual(mockCards[0]);
-    });
-
-    it('should advance to third round correctly', () => {
-      // Complete first two rounds
-      store.handleAnswer(true);
-      store.handleAnswer(true);
-      store.handleAnswer(true); // End round 1
-      store.handleAnswer(true);
-      store.handleAnswer(true);
-      store.handleAnswer(true); // End round 2
+      store.handleAnswer(false); // Wrong
+      store.handleAnswer(true); // End round 1, go to round 2 with 1 card
+      store.handleAnswer(false); // Wrong in round 2
 
       expect(store.currentRound()).toBe('WRITE_EN');
       expect(store.currentIndex()).toBe(0);
+      expect(store.activeDeck()).toHaveLength(1); // Only the wrong one from round 2
     });
 
     it('should go to SUMMARY when completing all rounds', () => {
@@ -174,17 +204,18 @@ describe('GameStore', () => {
       expect(store.currentCard()).toEqual(mockCards[2]); // Now points to what was the third card
     });
 
-    it('should advance round when skipping last card in round', () => {
+    it('should continue round when skipping card not last', () => {
       store['currentIndex'].set(2); // Last card
 
       store.skipCurrentCard();
 
-      expect(store.currentRound()).toBe('RECOGNIZE_PL');
-      expect(store.currentIndex()).toBe(0);
+      expect(store.currentRound()).toBe('RECOGNIZE_EN'); // Still in same round
+      expect(store.currentIndex()).toBe(2); // Index stays at 2, but deck now has 2 cards, so no current card
       expect(store.activeDeck()).toHaveLength(2); // Original 3 - 1 skipped
+      expect(store.currentCard()).toBeNull(); // No card at index 2 in 2-card deck
     });
 
-    it('should handle skipping when deck becomes empty', () => {
+    it('should go to SUMMARY when skipping makes deck empty with no mistakes', () => {
       // Set up single card deck
       const singleCard = [mockCards[0]];
       store.startGame(singleCard);
@@ -192,8 +223,8 @@ describe('GameStore', () => {
       store.skipCurrentCard();
 
       expect(store.activeDeck()).toHaveLength(0);
-      expect(store.currentRound()).toBe('RECOGNIZE_PL'); // Should advance to next round when deck empty
-      expect(store.phase()).toBe('PLAYING'); // Phase stays PLAYING until all rounds complete
+      expect(store.phase()).toBe('SUMMARY'); // Since no wrong answers, skip rounds
+      expect(store.currentRound()).toBe('RECOGNIZE_EN'); // Round stays the same
     });
 
     it('should not crash when no current card', () => {

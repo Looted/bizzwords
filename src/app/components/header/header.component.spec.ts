@@ -1,7 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
 import { PwaService } from '../../services/pwa.service';
+import { StorageService } from '../../services/storage.service';
 import { Router } from '@angular/router';
+import { PLATFORM_ID } from '@angular/core';
 import { signal } from '@angular/core';
 import { vi } from 'vitest';
 
@@ -10,6 +12,7 @@ describe('HeaderComponent', () => {
   let fixture: ComponentFixture<HeaderComponent>;
   let pwaServiceMock: any;
   let routerMock: any;
+  let storageServiceMock: any;
 
   beforeEach(async () => {
     pwaServiceMock = {
@@ -21,11 +24,20 @@ describe('HeaderComponent', () => {
       navigate: vi.fn()
     };
 
+    storageServiceMock = {
+      getItem: vi.fn().mockReturnValue(null),
+      setItem: vi.fn(),
+      removeItem: vi.fn(),
+      clear: vi.fn()
+    };
+
     await TestBed.configureTestingModule({
       imports: [HeaderComponent],
       providers: [
         { provide: PwaService, useValue: pwaServiceMock },
-        { provide: Router, useValue: routerMock }
+        { provide: Router, useValue: routerMock },
+        { provide: StorageService, useValue: storageServiceMock },
+        { provide: PLATFORM_ID, useValue: 'browser' }
       ]
     }).compileComponents();
 

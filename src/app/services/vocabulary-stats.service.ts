@@ -1,14 +1,14 @@
-import { Injectable, inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Injectable } from '@angular/core';
+import { StorageService } from './storage.service';
 
-export interface VocabularyStats {
+export interface WordStats {
   english: string;
   polish: string;
   category: string;
   timesEncountered: number;
   timesCorrect: number;
   timesIncorrect: number;
-  lastEncountered: Date;
+  lastEncountered: number;
   masteryLevel: number; // 0-5 scale
   skipped?: boolean;
 }
@@ -18,133 +18,122 @@ export interface VocabularyStats {
 })
 export class VocabularyStatsService {
   private readonly STORAGE_KEY = 'vocabulary-stats';
-  private platformId = inject(PLATFORM_ID);
+  private stats: Map<string, WordStats> = new Map();
 
-  private stats = new Map<string, VocabularyStats>();
-
-  constructor() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.loadStats();
-    }
+  constructor(private storageService: StorageService) {
+    this.loadStats();
   }
 
-  /**
-   * Get stats for a specific word
-   */
-  getStats(english: string, polish: string): VocabularyStats | null {
-    const key = this.createKey(english, polish);
-    return this.stats.get(key) || null;
-  }
-
-  /**
-   * Record an encounter with a word
-   */
-  recordEncounter(english: string, polish: string, category: string, correct: boolean): void {
-    const key = this.createKey(english, polish);
-    const existing = this.stats.get(key);
-
-    if (existing) {
-      existing.timesEncountered++;
-      if (correct) {
-        existing.timesCorrect++;
-      } else {
-        existing.timesIncorrect++;
-        // Reset timesCorrect to 0 when user gets it wrong in practice mode
-        existing.timesCorrect = 0;
+  private loadStats(): void {
+    try {
+      const savedStats = this.storageService.getItem(this.STORAGE_KEY);
+      if (savedStats) {
+        const parsed = JSON.parse(savedStats);
+        this.stats = new Map(Object.entries(parsed));
       }
-      existing.lastEncountered = new Date();
-      existing.masteryLevel = this.calculateMasteryLevel(existing);
-    } else {
-      this.stats.set(key, {
-        english,
-        polish,
-        category,
-        timesEncountered: 1,
-        timesCorrect: correct ? 1 : 0,
-        timesIncorrect: correct ? 0 : 1,
-        lastEncountered: new Date(),
-        masteryLevel: correct ? 1 : 0
-      });
+    } catch (e) {
+      console.warn('Failed to load vocabulary stats:', e);
     }
-
-    this.saveStats();
   }
 
-  /**
-   * Mark a word as skipped (will not appear in games)
-   */
-  markAsSkipped(english: string, polish: string, category: string): void {
-    const key = this.createKey(english, polish);
-    const existing = this.stats.get(key);
+  private saveStats(): void {
+    try {
+      const obj = Object.fromEntries(this.stats);
+      this.storageService.setItem(this.STORAGE_KEY, JSON.stringify(obj));
+    } catch (e) {
+      console.warn('Failed to save vocabulary stats:', e);
+    }
+  }
 
-    if (existing) {
-      existing.skipped = true;
-      existing.lastEncountered = new Date();
-    } else {
-      this.stats.set(key, {
+  recordEncounter(english: string, polish: string, category: string, isCorrect: boolean): void {
+    const key = this.getKey(english, polish);
+    let stat = this.stats.get(key);
+
+    if (!stat) {
+      stat = {
         english,
         polish,
         category,
         timesEncountered: 0,
         timesCorrect: 0,
         timesIncorrect: 0,
-        lastEncountered: new Date(),
-        masteryLevel: 0,
-        skipped: true
-      });
+        lastEncountered: Date.now(),
+        masteryLevel: 0
+      };
     }
 
+    stat.timesEncountered++;
+    stat.lastEncountered = Date.now();
+
+    if (isCorrect) {
+      stat.timesCorrect++;
+      // Increase mastery if correct
+      if (stat.masteryLevel < 5) {
+        stat.masteryLevel++;
+      }
+    } else {
+      stat.timesIncorrect++;
+      // Decrease mastery if incorrect
+      if (stat.masteryLevel > 0) {
+        stat.masteryLevel = Math.max(0, stat.masteryLevel - 2);
+      }
+    }
+
+    this.stats.set(key, stat);
     this.saveStats();
   }
 
-  /**
-   * Get all stats
-   */
-  getAllStats(): VocabularyStats[] {
+  markAsSkipped(english: string, polish: string, category: string): void {
+    const key = this.getKey(english, polish);
+    let stat = this.stats.get(key);
+
+    if (!stat) {
+      stat = {
+        english,
+        polish,
+        category,
+        timesEncountered: 0,
+        timesCorrect: 0,
+        timesIncorrect: 0,
+        lastEncountered: Date.now(),
+        masteryLevel: 0
+      };
+    }
+
+    stat.skipped = true;
+    this.stats.set(key, stat);
+    this.saveStats();
+  }
+
+  getStats(english: string, polish: string): WordStats | undefined {
+    return this.stats.get(this.getKey(english, polish));
+  }
+
+  getAllStats(): WordStats[] {
     return Array.from(this.stats.values()).filter(s => !s.skipped);
   }
 
-  /**
-   * Get stats for a specific category
-   */
-  getStatsByCategory(category: string): VocabularyStats[] {
-    return Array.from(this.stats.values()).filter(stat => stat.category === category && !stat.skipped);
+  getStatsByCategory(category: string): WordStats[] {
+    return this.getAllStats().filter(s => s.category === category);
   }
 
-  /**
-   * Get words that need practice (low mastery or recently wrong)
-   */
-  getWordsNeedingPractice(limit: number = 10): VocabularyStats[] {
-    return Array.from(this.stats.values())
-      .filter(stat => !stat.skipped && (stat.masteryLevel < 3 || stat.timesIncorrect > stat.timesCorrect))
+  getWordsNeedingPractice(limit: number = 10): WordStats[] {
+    return this.getAllStats()
       .sort((a, b) => {
-        // Prioritize words with lower mastery levels
+        // First sort by mastery level (ascending)
         if (a.masteryLevel !== b.masteryLevel) {
           return a.masteryLevel - b.masteryLevel;
         }
-        // Then by error rate
-        const aErrorRate = a.timesIncorrect / (a.timesEncountered || 1);
-        const bErrorRate = b.timesIncorrect / (b.timesEncountered || 1);
-        return bErrorRate - aErrorRate;
+        // Then by error rate (descending)
+        const aRate = a.timesIncorrect / (a.timesEncountered || 1);
+        const bRate = b.timesIncorrect / (b.timesEncountered || 1);
+        return bRate - aRate;
       })
       .slice(0, limit);
   }
 
-  /**
-   * Clear all stats
-   */
-  clearAllStats(): void {
-    this.stats.clear();
-    if (isPlatformBrowser(this.platformId)) {
-      localStorage.removeItem(this.STORAGE_KEY);
-    }
-  }
-
-  /**
-   * Get mastery statistics
-   */
-  getMasteryStats() {
-    const allStats = Array.from(this.stats.values()).filter(s => !s.skipped);
+  getMasteryStats(): { totalWords: number, mastered: number, learning: number, needsPractice: number, averageMastery: number } {
+    const allStats = this.getAllStats();
     const totalWords = allStats.length;
 
     if (totalWords === 0) {
@@ -160,64 +149,25 @@ export class VocabularyStatsService {
     const mastered = allStats.filter(s => s.masteryLevel >= 4).length;
     const learning = allStats.filter(s => s.masteryLevel >= 2 && s.masteryLevel < 4).length;
     const needsPractice = allStats.filter(s => s.masteryLevel < 2).length;
-    const averageMastery = allStats.reduce((sum, s) => sum + s.masteryLevel, 0) / totalWords;
+
+    const totalMastery = allStats.reduce((sum, s) => sum + s.masteryLevel, 0);
+    const averageMastery = Number((totalMastery / totalWords).toFixed(2));
 
     return {
       totalWords,
       mastered,
       learning,
       needsPractice,
-      averageMastery: Math.round(averageMastery * 100) / 100
+      averageMastery
     };
   }
 
-  private createKey(english: string, polish: string): string {
-    return `${english.toLowerCase().trim()}|${polish.toLowerCase().trim()}`;
+  clearAllStats(): void {
+    this.stats.clear();
+    this.storageService.removeItem(this.STORAGE_KEY);
   }
 
-  private calculateMasteryLevel(stats: VocabularyStats): number {
-    const totalAttempts = stats.timesEncountered;
-    const correctRate = stats.timesCorrect / totalAttempts;
-
-    // Simple mastery calculation
-    if (totalAttempts < 3) {
-      return correctRate >= 0.5 ? 1 : 0;
-    } else if (totalAttempts < 5) {
-      return correctRate >= 0.7 ? 2 : correctRate >= 0.5 ? 1 : 0;
-    } else {
-      if (correctRate >= 0.9) return 5;
-      if (correctRate >= 0.8) return 4;
-      if (correctRate >= 0.7) return 3;
-      if (correctRate >= 0.6) return 2;
-      return correctRate >= 0.4 ? 1 : 0;
-    }
-  }
-
-  private loadStats(): void {
-    try {
-      const stored = localStorage.getItem(this.STORAGE_KEY);
-      if (stored) {
-        const parsedStats = JSON.parse(stored);
-        // Convert date strings back to Date objects
-        Object.values(parsedStats).forEach((stat: any) => {
-          stat.lastEncountered = new Date(stat.lastEncountered);
-        });
-        this.stats = new Map(Object.entries(parsedStats));
-      }
-    } catch (error) {
-      console.warn('Failed to load vocabulary stats:', error);
-      this.stats = new Map();
-    }
-  }
-
-  private saveStats(): void {
-    if (!isPlatformBrowser(this.platformId)) return;
-
-    try {
-      const statsObject = Object.fromEntries(this.stats);
-      localStorage.setItem(this.STORAGE_KEY, JSON.stringify(statsObject));
-    } catch (error) {
-      console.warn('Failed to save vocabulary stats:', error);
-    }
+  private getKey(english: string, polish: string): string {
+    return `${english.toLowerCase()}|${polish.toLowerCase()}`;
   }
 }
