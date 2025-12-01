@@ -1,7 +1,7 @@
 import { Injectable, inject, signal, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
-export type Language = 'polish' | 'german' | 'french' | 'spanish' | 'italian' | 'portuguese' | 'dutch' | 'czech' | 'slovak' | 'hungarian' | 'romanian';
+export type Language = 'polish' | 'spanish'
 
 @Injectable({
   providedIn: 'root'
@@ -12,16 +12,7 @@ export class LanguageService {
   // Supported native languages with their ISO codes
   private supportedLanguages: Record<string, Language> = {
     'pl': 'polish',
-    'de': 'german',
-    'fr': 'french',
-    'es': 'spanish',
-    'it': 'italian',
-    'pt': 'portuguese',
-    'nl': 'dutch',
-    'cs': 'czech',
-    'sk': 'slovak',
-    'hu': 'hungarian',
-    'ro': 'romanian'
+    'es': 'spanish'
   };
 
   // Current native language
@@ -61,16 +52,7 @@ export class LanguageService {
   getLanguageDisplayName(language: Language): string {
     const names: Record<Language, string> = {
       polish: 'Polski',
-      german: 'Deutsch',
-      french: 'Français',
       spanish: 'Español',
-      italian: 'Italiano',
-      portuguese: 'Português',
-      dutch: 'Nederlands',
-      czech: 'Čeština',
-      slovak: 'Slovenčina',
-      hungarian: 'Magyar',
-      romanian: 'Română'
     };
     return names[language];
   }
