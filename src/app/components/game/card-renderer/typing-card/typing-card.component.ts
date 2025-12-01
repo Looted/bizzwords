@@ -1,7 +1,7 @@
 import { Component, input, output, signal, effect, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
-import { GAME_CONSTANTS } from '../../shared/constants';
+import { GAME_CONSTANTS } from '../../../../shared/constants';
 
 @Component({
   selector: 'app-typing-card',

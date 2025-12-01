@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TypingCardComponent } from './typing-card.component';
-import { GAME_CONSTANTS } from '../../shared/constants';
+import { GAME_CONSTANTS } from '../../../../shared/constants';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
 describe('TypingCardComponent', () => {

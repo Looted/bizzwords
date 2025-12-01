@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, signal, computed, inject, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { GameStore } from './game-store';
+import { GameStore } from '../../../../game-store';
 
 @Component({
   selector: 'app-flashcard',

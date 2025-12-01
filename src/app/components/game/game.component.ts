@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { GameStore } from '../../game-store';
 import { GameService } from '../../services/game.service';
-import { CardRendererComponent } from '../card-renderer/card-renderer.component';
+import { CardRendererComponent } from './card-renderer/card-renderer.component';
 import { GAME_CONSTANTS } from '../../shared/constants';
 
 @Component({

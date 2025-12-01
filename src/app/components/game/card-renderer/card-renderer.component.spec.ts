@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { MockComponent } from 'ng-mocks';
 import { CardRendererComponent } from './card-renderer.component';
-import { FlashcardComponent } from '../../flashcard.component';
-import { TypingCardComponent } from '../typing-card/typing-card.component';
-import { Flashcard } from '../../game-store';
-import { LayoutPolicy } from '../../core/models/game-config.model';
+import { FlashcardComponent } from './flashcard/flashcard.component';
+import { TypingCardComponent } from './typing-card/typing-card.component';
+import { Flashcard } from '../../../game-store';
+import { LayoutPolicy } from '../../../core/models/game-config.model';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
 describe('CardRendererComponent', () => {

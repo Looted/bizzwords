@@ -1,9 +1,9 @@
 import { Component, input, computed, ViewChild, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FlashcardComponent } from '../../flashcard.component';
-import { TypingCardComponent } from '../typing-card/typing-card.component';
-import { Flashcard } from '../../game-store';
-import { LayoutPolicy } from '../../core/models/game-config.model';
+import { FlashcardComponent } from './flashcard/flashcard.component';
+import { TypingCardComponent } from './typing-card/typing-card.component';
+import { Flashcard } from '../../../game-store';
+import { LayoutPolicy } from '../../../core/models/game-config.model';
 
 @Component({
   selector: 'app-card-renderer',
