@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { PwaService } from '../../services/pwa.service';
 import { ThemeService, ThemeMode } from '../../services/theme.service';
+import { EnvironmentService } from '../../services/environment.service';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 
 @Component({
@@ -16,6 +17,7 @@ export class HeaderComponent implements OnDestroy {
   pwaService = inject(PwaService);
   themeService = inject(ThemeService);
   router = inject(Router);
+  environmentService = inject(EnvironmentService);
 
   @Input() showCardCount = false;
   @Input() currentIndex = 0;
@@ -24,6 +26,9 @@ export class HeaderComponent implements OnDestroy {
   // Developer controls
   showDevControls = signal(false);
   useStatic = signal(true); // Default to static mode
+
+  // Environment
+  isAiModeEnabled = false;
 
   private readonly TRIPLE_CLICK_THRESHOLD = 3;
   private readonly CLICK_TIMEOUT_MS = 500;

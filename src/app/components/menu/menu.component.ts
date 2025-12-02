@@ -6,6 +6,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { GameService } from '../../services/game.service';
 import { VocabularyStatsService } from '../../services/vocabulary-stats.service';
 import { StorageService } from '../../services/storage.service';
+import { PwaService } from '../../services/pwa.service';
 import { GameMode } from '../../shared/constants';
 import { GameModeType } from '../../services/game-mode.service';
 
@@ -21,6 +22,7 @@ export class MenuComponent implements OnInit {
   statsService = inject(VocabularyStatsService);
   router = inject(Router);
   storageService = inject(StorageService);
+  pwaService = inject(PwaService);
 
   // Two-screen navigation
   currentScreen = signal<'home' | 'config'>('home');

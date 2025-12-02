@@ -27,17 +27,6 @@
       }
     },
     {
-      "name": "vocabulary",
-      "installMode": "prefetch",
-      "resources": {
-        "files": [
-          "/hr_eng_pl/**/*.csv",
-          "/hr_eng_pl/**/*.json",
-          "/hr_eng_pl/**/*.txt"
-        ]
-      }
-    },
-    {
       "name": "translations",
       "installMode": "prefetch",
       "resources": {

@@ -13,6 +13,26 @@
       </p>
     </div>
 
+    <!-- Install Button -->
+    @if (pwaService.showInstallButton()) {
+      <button (click)="pwaService.installPWA()"
+        class="group relative w-full max-w-sm mx-auto overflow-hidden rounded-2xl bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 p-1 shadow-md shadow-green-500/30 ring-1 ring-green-200/50 transition-all hover:shadow-lg hover:-translate-y-1"
+        type="button">
+        <div class="relative flex items-center justify-center gap-3 rounded-xl bg-white dark:bg-slate-800 p-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-300 text-xl">
+            📱
+          </div>
+          <div class="text-left">
+            <div class="font-bold text-slate-900 dark:text-white">Install App</div>
+            <div class="text-sm text-slate-500 dark:text-slate-400">Add to home screen</div>
+          </div>
+          <div class="text-green-600 dark:text-green-300 group-hover:translate-x-1 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+        </div>
+      </button>
+    }
+
     <!-- Continue Learning Card -->
     <button *ngIf="lastSession()" (click)="continueLearning()"
       class="group relative w-full overflow-hidden rounded-2xl bg-white dark:bg-slate-800 p-1 shadow-md shadow-slate-200/60 dark:shadow-slate-900/50 ring-1 ring-slate-200 dark:ring-white/10 transition-all hover:shadow-xl hover:-translate-y-1 hover:ring-blue-500/40"

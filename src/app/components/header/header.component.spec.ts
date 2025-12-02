@@ -13,9 +13,26 @@ describe('HeaderComponent', () => {
   let pwaServiceMock: any;
   let routerMock: any;
   let storageServiceMock: any;
+  let themeServiceMock: any;
+  let environmentServiceMock: any;
 
   beforeAll(() => {
     vi.useFakeTimers();
+
+    // Mock window.matchMedia
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: vi.fn().mockImplementation(query => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addListener: vi.fn(),
+        removeListener: vi.fn(),
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+        dispatchEvent: vi.fn(),
+      })),
+    });
   });
 
   afterAll(() => {
@@ -39,19 +56,25 @@ describe('HeaderComponent', () => {
       clear: vi.fn()
     };
 
+    themeServiceMock = {
+      themeMode: signal('system'),
+      cycleTheme: vi.fn()
+    };
+
+    environmentServiceMock = {
+      isAiModeEnabled: true
+    };
+
     await TestBed.configureTestingModule({
       imports: [HeaderComponent],
       providers: [
         { provide: PwaService, useValue: pwaServiceMock },
         { provide: Router, useValue: routerMock },
         { provide: StorageService, useValue: storageServiceMock },
-        { provide: PLATFORM_ID, useValue: 'browser' }
+        { provide: PLATFORM_ID, useValue: 'browser' },
+        { provide: 'ThemeService', useValue: themeServiceMock },
+        { provide: 'EnvironmentService', useValue: environmentServiceMock }
       ]
-    })
-    .overrideComponent(HeaderComponent, {
-      set: {
-        providers: []
-      }
     })
     .compileComponents();
 
@@ -176,7 +199,9 @@ describe('HeaderComponent', () => {
     });
 
     afterEach(() => {
-      clearTimeoutSpy.mockRestore();
+      if (clearTimeoutSpy && clearTimeoutSpy.mockRestore) {
+        clearTimeoutSpy.mockRestore();
+      }
     });
 
     it('should clear timeout on destroy', () => {

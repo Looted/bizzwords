@@ -77,7 +77,7 @@ describe('SummaryComponent', () => {
       fixture.detectChanges();
       await fixture.whenStable();
 
-      const totalCardsElement = fixture.nativeElement.querySelector('.border-b span:last-child');
+      const totalCardsElement = fixture.nativeElement.querySelector('.border-b .text-2xl');
       expect(totalCardsElement.textContent.trim()).toBe('3');
     });
 
@@ -87,7 +87,7 @@ describe('SummaryComponent', () => {
       fixture.detectChanges();
       await fixture.whenStable();
 
-      const needsPracticeElement = fixture.nativeElement.querySelector('.text-red-500 span:last-child');
+      const needsPracticeElement = fixture.nativeElement.querySelector('.text-amber-500, .text-green-500');
       expect(needsPracticeElement.textContent.trim()).toBe('2');
     });
 
@@ -97,7 +97,7 @@ describe('SummaryComponent', () => {
       fixture.detectChanges();
       await fixture.whenStable();
 
-      const needsPracticeElement = fixture.nativeElement.querySelector('.text-red-500 span:last-child');
+      const needsPracticeElement = fixture.nativeElement.querySelector('.text-amber-500, .text-green-500');
       expect(needsPracticeElement.textContent.trim()).toBe('0');
     });
 
@@ -107,8 +107,8 @@ describe('SummaryComponent', () => {
       fixture.detectChanges();
       await fixture.whenStable();
 
-      const totalCardsElement = fixture.nativeElement.querySelector('.border-b span:last-child');
-      const needsPracticeElement = fixture.nativeElement.querySelector('.text-red-500 span:last-child');
+      const totalCardsElement = fixture.nativeElement.querySelector('.border-b .text-2xl');
+      const needsPracticeElement = fixture.nativeElement.querySelector('.text-amber-500, .text-green-500');
       expect(totalCardsElement.textContent.trim()).toBe('0');
       expect(needsPracticeElement.textContent.trim()).toBe('0');
     });
@@ -120,9 +120,9 @@ describe('SummaryComponent', () => {
       expect(heading.textContent.trim()).toBe('Session Complete!');
     });
 
-    it('should render celebration emoji', () => {
-      const emojiDiv = fixture.nativeElement.querySelector('.bg-green-100');
-      expect(emojiDiv.textContent.trim()).toBe('🎉');
+    it('should render celebration icon', () => {
+      const starIcon = fixture.nativeElement.querySelector('.bg-gradient-to-br svg');
+      expect(starIcon).toBeTruthy();
     });
 
     it('should render start new session button', () => {
