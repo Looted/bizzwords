@@ -1,195 +1,178 @@
-<div class="app-container max-w-2xl mx-auto p-4">
-  <div class="menu-wrapper bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+<div class="w-full max-w-2xl mx-auto animate-fade-in">
 
-    <!-- Home Screen -->
-    <div *ngIf="currentScreen() === 'home'" class="screen active">
+  <!-- Home Screen -->
+  <div *ngIf="currentScreen() === 'home'" class="flex flex-col gap-8">
 
-      <!-- Menu Header -->
-      <div class="menu-header text-center mb-8">
-        <h1 class="text-2xl font-bold mb-2">Master Business Lingo</h1>
-        <p class="text-slate-500 text-sm">Welcome back! Ready to learn?</p>
-      </div>
+    <!-- Welcome Header -->
+    <div class="text-center space-y-2 py-8">
+      <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        Master <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Business</span> Lingo
+      </h1>
+      <p class="text-lg text-slate-600 max-w-lg mx-auto">
+        Level up your professional vocabulary with spaced repetition and AI-powered decks.
+      </p>
+    </div>
 
-      <!-- Continue Learning - Primary CTA -->
-      <button
-        *ngIf="lastSession()"
-        (click)="continueLearning()"
-        class="continue-action w-full bg-blue-600 text-white border-none py-4 px-6 rounded-lg font-semibold text-lg flex items-center justify-between mb-4 shadow-md hover:shadow-lg transition-all"
-        [disabled]="isLoading">
-        <div class="continue-left flex items-center gap-3">
-          <span class="continue-icon text-xl">▶️</span>
-          <div class="continue-text text-left">
-            <span class="continue-title block text-lg font-semibold">Continue Learning</span>
-            <span class="continue-subtitle block text-sm opacity-85">
-              {{ getCategoryName(lastSession()?.category ?? null) }} • {{ lastSession()?.gameMode === 'classic' ? 'Classic' : 'Blitz' }} • Level {{ lastSession()?.difficulty || 'All' }}
-            </span>
+    <!-- Continue Learning Card -->
+    <button *ngIf="lastSession()" (click)="continueLearning()"
+      class="group relative w-full overflow-hidden rounded-2xl bg-white p-1 shadow-lg shadow-slate-200/50 ring-1 ring-slate-900/5 transition-all hover:shadow-xl hover:-translate-y-1 hover:ring-blue-500/30"
+      [disabled]="isLoading">
+      <div class="relative flex items-center gap-6 rounded-xl bg-gradient-to-r from-slate-900 to-slate-800 p-6 sm:p-8">
+        <!-- Decoration -->
+        <div class="absolute right-0 top-0 -mt-8 -mr-8 h-32 w-32 rounded-full bg-white/5 blur-2xl transition-all group-hover:bg-white/10"></div>
+
+        <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white/10 text-3xl shadow-inner backdrop-blur-sm group-hover:scale-110 transition-transform">
+          ▶️
+        </div>
+        <div class="flex-1 text-left">
+          <h3 class="text-lg font-bold text-white mb-1">Continue Learning</h3>
+          <div class="flex flex-wrap gap-2 text-sm text-slate-300">
+             <span class="bg-white/10 px-2 py-0.5 rounded text-xs font-medium">{{ getCategoryName(lastSession()?.category ?? null) }}</span>
+             <span class="text-slate-500">•</span>
+             <span>{{ lastSession()?.gameMode === 'classic' ? 'Classic' : 'Blitz' }}</span>
           </div>
         </div>
-        <span class="continue-arrow text-xl opacity-80">→</span>
-      </button>
-
-      <!-- Separator - only show when there are quick actions above -->
-      <div *ngIf="lastSession()" class="separator text-center mb-6 relative">
-        <div class="absolute inset-0 flex items-center">
-          <div class="w-full border-t border-slate-200"></div>
-        </div>
-        <div class="relative bg-white px-4">
-          <span class="text-sm text-slate-500 font-medium uppercase tracking-wide">or choose</span>
+        <div class="text-white/50 group-hover:translate-x-1 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </div>
       </div>
+    </button>
 
-      <!-- Quick Actions - only show if user has completed at least one session -->
-      <div *ngIf="lastSession()" class="quick-actions grid grid-cols-2 gap-3 mb-6">
-        <button
-          (click)="quickStartNew(lastSession()!.category)"
-          class="quick-action bg-slate-50 border-2 border-slate-200 rounded-lg p-4 text-center transition-all hover:border-blue-500 hover:shadow-md disabled:opacity-50"
+    <div *ngIf="lastSession()" class="relative flex items-center py-2">
+      <div class="flex-grow border-t border-slate-200"></div>
+      <span class="flex-shrink-0 mx-4 text-xs font-semibold uppercase tracking-wider text-slate-400">Or start fresh</span>
+      <div class="flex-grow border-t border-slate-200"></div>
+    </div>
+
+    <!-- Category Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      @for (category of categoryStats(); track category.id) {
+        <button (click)="selectCategory(category.id)"
+          class="group relative flex flex-col items-center p-6 bg-white rounded-2xl shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md hover:ring-blue-500/50 hover:bg-slate-50 text-center h-full"
           [disabled]="isLoading">
-          <div class="quick-action-icon text-3xl mb-2">🎯</div>
-          <div class="quick-action-title font-semibold text-sm mb-1">New Words</div>
-          <div class="quick-action-subtitle text-xs text-slate-400">{{ getCategoryName(lastSession()!.category) }}</div>
+
+          <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl text-3xl shadow-sm transition-transform group-hover:scale-110 group-hover:rotate-3"
+               [ngClass]="category.id === 'hr' ? 'bg-purple-100 text-purple-600' : 'bg-blue-100 text-blue-600'">
+            {{ category.icon }}
+          </div>
+
+          <h3 class="text-lg font-bold text-slate-900">{{ category.name }}</h3>
+          <p class="mt-1 text-sm text-slate-500 mb-4">{{ category.totalLearned }} words mastered</p>
+
+          <div class="w-full mt-auto">
+             <!-- Status badges -->
+             <div class="flex gap-2 justify-center mb-3">
+                <span *ngIf="category.needsPractice > 0" class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-medium ring-1 ring-inset ring-amber-600/20">
+                  ⚠️ {{ category.needsPractice }} to review
+                </span>
+             </div>
+             <!-- Progress bar -->
+             <div class="h-1.5 w-full rounded-full bg-slate-100 overflow-hidden">
+                <div class="h-full bg-blue-500 transition-all duration-500" [style.width.%]="getProgressPercentage(category)"></div>
+             </div>
+          </div>
         </button>
-        <button
-          (click)="quickStartPracticeFromHome(lastSession()!.category)"
-          class="quick-action bg-slate-50 border-2 border-slate-200 rounded-lg p-4 text-center transition-all hover:border-blue-500 hover:shadow-md disabled:opacity-50"
-          [disabled]="isLoading || getCategoryStats(lastSession()!.category).needsPractice === 0">
-          <div class="quick-action-icon text-3xl mb-2">⚠️</div>
-          <div class="quick-action-title font-semibold text-sm mb-1">Practice Mistakes</div>
-          <div class="quick-action-subtitle text-xs text-slate-400">{{ getCategoryName(lastSession()!.category) }}</div>
-        </button>
-      </div>
+      }
+    </div>
 
-      <!-- Categories -->
-      <div class="categories-section mb-6">
-        <div class="categories-label text-xs font-semibold uppercase tracking-wide text-slate-500 mb-3">
-          {{ lastSession() ? 'Or choose a category' : 'Choose a category to start' }}
-        </div>
-        <div class="categories-grid grid grid-cols-1 sm:grid-cols-2 gap-4">
-          @for (category of categoryStats(); track category.id) {
-            <button
-              (click)="selectCategory(category.id)"
-              class="category-card bg-white border-2 border-slate-200 rounded-lg p-5 text-center transition-all hover:border-blue-500 hover:shadow-md hover:-translate-y-1"
-              [disabled]="isLoading">
-              <div class="category-icon w-12 h-12 mx-auto mb-3 rounded-lg flex items-center justify-center text-2xl"
-                   [class]="category.id === 'hr' ? 'bg-purple-50' : 'bg-blue-50'">
-                {{ category.icon }}
-              </div>
-              <h3 class="text-lg font-semibold mb-3">{{ category.name }}</h3>
+    <!-- Quick Actions Row (Desktop) -->
+    <div *ngIf="lastSession()" class="grid grid-cols-2 gap-4">
+      <button (click)="quickStartNew(lastSession()!.category)"
+        class="flex items-center justify-center gap-3 p-4 rounded-xl border border-slate-200 bg-slate-50 text-slate-600 font-semibold hover:bg-white hover:border-blue-300 hover:text-blue-600 hover:shadow-sm transition-all">
+        <span>🎯</span> New Words
+      </button>
+      <button (click)="quickStartPracticeFromHome(lastSession()!.category)"
+        class="flex items-center justify-center gap-3 p-4 rounded-xl border border-slate-200 bg-slate-50 text-slate-600 font-semibold hover:bg-white hover:border-amber-300 hover:text-amber-600 hover:shadow-sm transition-all"
+        [disabled]="getCategoryStats(lastSession()!.category).needsPractice === 0">
+        <span>⚠️</span> Review Mistakes
+      </button>
+    </div>
+  </div>
 
-              <!-- Progress Bar -->
-              <div class="progress-bar w-full h-2 bg-slate-100 rounded-full overflow-hidden mb-3">
-                <div class="progress-fill h-full bg-blue-500 transition-all duration-300"
-                     [style.width.%]="getProgressPercentage(category)"></div>
-              </div>
+  <!-- Config Screen -->
+  <div *ngIf="currentScreen() === 'config'" class="flex flex-col h-full animate-slide-up">
 
-              <!-- Stats -->
-              <div class="category-stats flex gap-2 justify-center mb-3 flex-wrap">
-                <span *ngIf="category.needsPractice > 0" class="stat-item text-xs px-2 py-1 bg-orange-50 rounded text-orange-700">⚠️ {{ category.needsPractice }} mistakes</span>
-                <span *ngIf="category.mastered > 0" class="stat-item text-xs px-2 py-1 bg-green-50 rounded text-green-700">🎯 {{ category.mastered }} new</span>
-              </div>
-
-              <div class="category-meta text-xs text-slate-500">
-                {{ category.totalLearned }} mastered
-              </div>
-            </button>
-          }
-        </div>
+    <!-- Header -->
+    <div class="flex items-center gap-4 mb-8">
+      <button (click)="backToHome()" class="p-2 rounded-xl hover:bg-slate-200 text-slate-500 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900">{{ getCategoryName(selectedCategory()) }}</h2>
+        <p class="text-sm text-slate-500">Configure your session</p>
       </div>
     </div>
 
-    <!-- Config Screen -->
-    <div *ngIf="currentScreen() === 'config'" class="screen active">
+    <div class="space-y-8 bg-white p-6 sm:p-8 rounded-3xl shadow-sm ring-1 ring-slate-900/5">
 
-      <!-- Config Header -->
-      <div class="config-header flex items-center gap-3 mb-6">
-        <button (click)="backToHome()" class="back-button w-9 h-9 bg-slate-100 border border-slate-200 rounded-lg flex items-center justify-center text-lg transition-all hover:bg-slate-200">
-          ←
-        </button>
-        <div class="config-title flex-1">
-          <h2 class="text-xl font-bold">{{ getCategoryName(selectedCategory()) }}</h2>
-          <p class="text-sm text-slate-500">Customize session settings</p>
-        </div>
-      </div>
-
-      <!-- Mode Selection -->
-      <div class="config-section mb-6">
-        <div class="section-title text-xs font-semibold uppercase tracking-wide text-slate-500 mb-3">Game Mode</div>
-        <div class="option-group flex flex-col gap-2">
-          <input type="radio" id="mode-classic" name="gameMode" value="classic" class="option hidden" [checked]="selectedGameMode() === 'classic'" (change)="selectedGameMode.set('classic')">
-          <label for="mode-classic" class="option-label flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer transition-all"
-                 [class]="selectedGameMode() === 'classic' ? 'border-blue-500 bg-blue-50' : 'hover:border-blue-500'">
-            <span class="option-icon text-xl w-6 text-center">🎮</span>
-            <div class="option-content flex-1">
-              <span class="option-name block font-semibold text-sm">Classic Mode</span>
-              <span class="option-description block text-xs text-slate-500">Flashcards • Learn at your own pace</span>
+      <!-- Mode -->
+      <section>
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Game Mode</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <label class="cursor-pointer relative">
+            <input type="radio" name="gameMode" value="classic" class="peer sr-only" [checked]="selectedGameMode() === 'classic'" (change)="selectedGameMode.set('classic')">
+            <div class="p-4 rounded-xl border-2 border-slate-100 bg-slate-50 hover:bg-slate-100 peer-checked:border-blue-500 peer-checked:bg-blue-50 transition-all">
+              <div class="text-2xl mb-2">🎮</div>
+              <div class="font-bold text-slate-900">Classic</div>
+              <div class="text-xs text-slate-500">Standard flashcards</div>
             </div>
           </label>
-
-          <input type="radio" id="mode-blitz" name="gameMode" value="blitz" class="option hidden" [checked]="selectedGameMode() === 'blitz'" (change)="selectedGameMode.set('blitz')">
-          <label for="mode-blitz" class="option-label flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer transition-all"
-                 [class]="selectedGameMode() === 'blitz' ? 'border-blue-500 bg-blue-50' : 'hover:border-blue-500'">
-            <span class="option-icon text-xl w-6 text-center">⚡</span>
-            <div class="option-content flex-1">
-              <span class="option-name block font-semibold text-sm">Blitz Mode</span>
-              <span class="option-description block text-xs text-slate-500">Type answers • Race against time</span>
+          <label class="cursor-pointer relative">
+            <input type="radio" name="gameMode" value="blitz" class="peer sr-only" [checked]="selectedGameMode() === 'blitz'" (change)="selectedGameMode.set('blitz')">
+            <div class="p-4 rounded-xl border-2 border-slate-100 bg-slate-50 hover:bg-slate-100 peer-checked:border-blue-500 peer-checked:bg-blue-50 transition-all">
+              <div class="text-2xl mb-2">⚡</div>
+              <div class="font-bold text-slate-900">Blitz</div>
+              <div class="text-xs text-slate-500">Fast-paced typing</div>
             </div>
           </label>
         </div>
-      </div>
+      </section>
 
-      <!-- Difficulty Selection -->
-      <div class="config-section mb-6">
-        <div class="section-title text-xs font-semibold uppercase tracking-wide text-slate-500 mb-3">Difficulty Level</div>
-        <div class="difficulty-grid grid grid-cols-3 gap-2 mb-2">
-          <button (click)="selectedDifficulty.set(1)" class="difficulty-btn p-3 border-2 border-slate-200 bg-white rounded-lg text-center transition-all hover:border-blue-500"
-                  [class]="selectedDifficulty() === 1 ? 'border-blue-500 bg-blue-50' : ''">
-            <div class="difficulty-number text-lg font-bold">1</div>
-            <div class="difficulty-label text-xs text-slate-500">Beginner</div>
-          </button>
-          <button (click)="selectedDifficulty.set(2)" class="difficulty-btn p-3 border-2 border-slate-200 bg-white rounded-lg text-center transition-all hover:border-blue-500"
-                  [class]="selectedDifficulty() === 2 ? 'border-blue-500 bg-blue-50' : ''">
-            <div class="difficulty-number text-lg font-bold">2</div>
-            <div class="difficulty-label text-xs text-slate-500">Intermediate</div>
-          </button>
-          <button (click)="selectedDifficulty.set(3)" class="difficulty-btn p-3 border-2 border-slate-200 bg-white rounded-lg text-center transition-all hover:border-blue-500"
-                  [class]="selectedDifficulty() === 3 ? 'border-blue-500 bg-blue-50' : ''">
-            <div class="difficulty-number text-lg font-bold">3</div>
-            <div class="difficulty-label text-xs text-slate-500">Advanced</div>
-          </button>
+      <!-- Difficulty -->
+      <section>
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Difficulty</h3>
+        <div class="flex gap-2 bg-slate-100 p-1.5 rounded-xl">
+           <button *ngFor="let level of [1, 2, 3]"
+             (click)="selectedDifficulty.set(level)"
+             class="flex-1 py-2 rounded-lg text-sm font-semibold transition-all"
+             [ngClass]="selectedDifficulty() === level ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'">
+             {{ level === 1 ? 'Easy' : level === 2 ? 'Medium' : 'Hard' }}
+           </button>
+           <button (click)="selectedDifficulty.set(null)"
+             class="flex-1 py-2 rounded-lg text-sm font-semibold transition-all"
+             [ngClass]="selectedDifficulty() === null ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'">
+             All
+           </button>
         </div>
-        <button (click)="selectedDifficulty.set(null)" class="difficulty-all p-3 border-2 border-slate-200 bg-white rounded-lg text-center font-semibold transition-all hover:border-blue-500"
-                [class]="selectedDifficulty() === null ? 'border-blue-500 bg-blue-50' : ''">
-          📚 All Levels
-        </button>
-      </div>
+      </section>
 
-      <!-- Practice Type -->
-      <div class="config-section mb-8">
-        <div class="section-title text-xs font-semibold uppercase tracking-wide text-slate-500 mb-3">What do you want to practice?</div>
-        <div class="option-group flex flex-col gap-2">
-          <input type="radio" id="practice-new" name="practiceMode" value="new" class="option hidden" [checked]="selectedPracticeMode() === GameMode.New" (change)="selectedPracticeMode.set(GameMode.New)">
-          <label for="practice-new" class="option-label flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer transition-all"
-                 [class]="selectedPracticeMode() === GameMode.New ? 'border-blue-500 bg-blue-50' : 'hover:border-blue-500'">
-            <span class="option-icon text-xl w-6 text-center">🎯</span>
-            <div class="option-content flex-1">
-              <span class="option-name block font-semibold text-sm">New Words</span>
+      <!-- Content Source -->
+      <section>
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Content</h3>
+        <div class="space-y-3">
+          <label class="flex items-center p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/50 transition-all">
+            <input type="radio" name="practiceMode" value="new" class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500" [checked]="selectedPracticeMode() === GameMode.New" (change)="selectedPracticeMode.set(GameMode.New)">
+            <div class="ml-3">
+              <span class="block text-sm font-bold text-slate-900">Learn New Words</span>
+              <span class="block text-xs text-slate-500">Expand your vocabulary</span>
             </div>
           </label>
-
-          <input type="radio" id="practice-mistakes" name="practiceMode" value="practice" class="option hidden" [checked]="selectedPracticeMode() === GameMode.Practice" (change)="selectedPracticeMode.set(GameMode.Practice)">
-          <label for="practice-mistakes" class="option-label flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer transition-all"
-                 [class]="selectedPracticeMode() === GameMode.Practice ? 'border-blue-500 bg-blue-50' : 'hover:border-blue-500'"
+          <label class="flex items-center p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/50 transition-all"
                  [class.opacity-50]="getMistakesCount(selectedCategory()) === 0">
-            <span class="option-icon text-xl w-6 text-center">⚠️</span>
-            <div class="option-content flex-1">
-              <span class="option-name block font-semibold text-sm">Practice Mistakes</span>
+            <input type="radio" name="practiceMode" value="practice" class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500" [checked]="selectedPracticeMode() === GameMode.Practice" (change)="selectedPracticeMode.set(GameMode.Practice)">
+            <div class="ml-3">
+              <span class="block text-sm font-bold text-slate-900">Review Mistakes</span>
+              <span class="block text-xs text-slate-500">Focus on what you missed</span>
             </div>
           </label>
         </div>
-      </div>
+      </section>
 
-      <button (click)="startSession()" class="start-button w-full py-4 bg-blue-600 text-white border-none rounded-lg text-base font-semibold transition-all hover:bg-blue-700 hover:shadow-md disabled:opacity-50"
-              [disabled]="isLoading">
-        Start Session 🚀
+      <button (click)="startSession()"
+        class="w-full py-4 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 transform transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        [disabled]="isLoading">
+        <span *ngIf="isLoading" class="animate-spin">⏳</span>
+        <span>{{ isLoading ? 'Generating Deck...' : 'Start Session' }}</span>
       </button>
     </div>
   </div>
