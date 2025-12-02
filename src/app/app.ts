@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { GameStore } from './game-store';
 import { PwaService } from './services/pwa.service';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { PwaService } from './services/pwa.service';
 export class App implements OnInit {
   store = inject(GameStore);
   pwaService = inject(PwaService);
+  themeService = inject(ThemeService); // Inject to initialize
 
   // Computed values for header
   shouldShowCardCount = computed(() => this.store.phase() === 'PLAYING');

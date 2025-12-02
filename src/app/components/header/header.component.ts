@@ -1,7 +1,8 @@
-import { Component, Input, Output, EventEmitter, inject, signal, OnDestroy } from '@angular/core';
+import { Component, Input, inject, signal, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { PwaService } from '../../services/pwa.service';
+import { ThemeService, ThemeMode } from '../../services/theme.service';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 
 @Component({
@@ -13,6 +14,7 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
 })
 export class HeaderComponent implements OnDestroy {
   pwaService = inject(PwaService);
+  themeService = inject(ThemeService);
   router = inject(Router);
 
   @Input() showCardCount = false;
@@ -30,6 +32,20 @@ export class HeaderComponent implements OnDestroy {
 
   onInstallClick() {
     this.pwaService.installPWA();
+  }
+
+  onThemeToggle() {
+    this.themeService.cycleTheme();
+  }
+
+  getThemeIcon(): string {
+    const mode = this.themeService.themeMode();
+    switch (mode) {
+      case 'light': return '☀️';
+      case 'dark': return '🌙';
+      case 'system': return '💻';
+      default: return '💻';
+    }
   }
 
   onLogoClick() {
@@ -59,6 +75,6 @@ export class HeaderComponent implements OnDestroy {
 
   onAIToggleChange(event: Event) {
     const checked = (event.target as HTMLInputElement).checked;
-    this.useStatic.set(!checked); // checked=true means AI on, so useStatic=false
+    this.useStatic.set(!checked);
   }
 }
