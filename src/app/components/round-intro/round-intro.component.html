@@ -1,6 +1,6 @@
 <!-- Remove flip card structure, use simple layout -->
 <div class="round-intro-overlay" (click)="onOverlayClick()">
-  <div class="round-intro-card" (click)="$event.stopPropagation()">
+  <div class="round-intro-card" (click)="onContinue()">
     <!-- Header with icon -->
     <div class="intro-header">
       <div class="emoji">{{ intro().emoji }}</div>
@@ -20,13 +20,13 @@
     <!-- Action buttons -->
     <div class="actions">
       <button
-        (click)="onContinue()"
+        (click)="onContinue(); $event.stopPropagation()"
         class="btn-primary">
         {{ intro().ctaText }}
       </button>
 
       <button
-        (click)="onSkipAll()"
+        (click)="onSkipAll(); $event.stopPropagation()"
         class="btn-text">
         Don't show again this session
       </button>

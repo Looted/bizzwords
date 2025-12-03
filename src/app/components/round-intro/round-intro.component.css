@@ -28,11 +28,20 @@
   padding: 2.5rem;
   max-width: 500px;
   width: 100%;
-  box-shadow: 0 25px 50px rgba(56, 189, 248, 0.4);
-  cursor: default;
+  box-shadow: 0 25px 50px rgba(67, 85, 250, 0.4);
+  cursor: pointer;
   animation: slideInUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   /* Remove any transform-style or flip properties */
+}
+
+/* ADD THIS - Hover effect for desktop */
+@media (hover: hover) {
+  .round-intro-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px rgba(56, 189, 248, 0.5);
+  }
 }
 
 @keyframes slideInUp {

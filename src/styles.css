@@ -2,16 +2,44 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --color-primary: #4355fa;
+  --color-primary-dark: #3447d8;
+  --color-secondary: #f59e0b;
+  --color-secondary-dark: #d97706;
+  --color-success: #10b981;
+  --color-success-dark: #059669;
+  --color-danger: #ef4444;
+  --color-danger-dark: #dc2626;
+  --color-background-light: #f3f4f6;
+  --color-background-dark: #111827;
+  --color-card-light: #ffffff;
+  --color-card-dark: #1f2937;
+  --color-text-light: #1f2937;
+  --color-text-dark: #f9fafb;
+  --color-category-hr: #8b5cf6;
+  --color-category-management: #3b82f6;
+  --color-category-finance: #14b8a6;
+  --color-category-marketing: #ec4899;
+  --color-category-bg-hr: #f3e8ff;
+  --color-category-bg-management: #dbeafe;
+  --color-category-bg-finance: #ccfbf1;
+  --color-category-bg-marketing: #fce7f3;
+
+  --font-heading: 'Poppins', sans-serif;
+  --radius-card: 12px;
+  --radius-button: 8px;
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
   --color-brand-50: #eef2ff;
   --color-brand-100: #e0e7ff;
   --color-brand-200: #c7d2fe;
   --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #3d4bf9;   /* main brand */
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
+  --color-brand-400: #38BDF8;   /* sky blue */
+  --color-brand-500: #4355fa;   /* main brand */
+  --color-brand-600: #0284C7;   /* ocean blue */
+  --color-brand-700: #2b3aa3;
+  --color-brand-800: #1e2b7a;
+  --color-brand-900: #141e5c;
 
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
@@ -37,23 +65,23 @@
 
 /* Light Mode Variables */
 :root {
-  --color-surface-ground: #f1f5f9; /* Slate-100 */
+  --color-surface-ground: #F3F4F6; /* Paper White */
   --color-surface-card: #ffffff;
-  --color-surface-text: #0f172a;
+  --color-surface-text: #1F2937; /* Dark Grey */
   --color-surface-border: #cbd5e1; /* Slate-300 */
   --color-surface-subtext: #475569; /* Slate-600 */
 }
 
 /* Dark Mode Variables */
 :root.dark {
-  --color-surface-ground: #0f172a; /* Slate-900 */
-  --color-surface-card: #1e293b; /* Slate-800 */
-  --color-surface-text: #f1f5f9; /* Slate-100 */
-  --color-surface-border: #334155; /* Slate-700 */
+  --color-surface-ground: #111827; /* Deep Navy */
+  --color-surface-card: #1F2937; /* Dark Gray */
+  --color-surface-text: #F9FAFB; /* Off-white */
+  --color-surface-border: #374151; /* Dark Gray */
   --color-surface-subtext: #94a3b8; /* Slate-400 */
 
   /* Ensure slate-50 maps to a dark color when in dark mode to prevent flashes */
-  --color-slate-50: #0f172a;
+  --color-slate-50: #111827;
 }
 
 /* Base Styles */
