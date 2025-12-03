@@ -19,10 +19,6 @@ export class HeaderComponent implements OnDestroy {
   router = inject(Router);
   environmentService = inject(EnvironmentService);
 
-  @Input() showCardCount = false;
-  @Input() currentIndex = 0;
-  @Input() totalCards = 0;
-
   // Developer controls
   showDevControls = signal(false);
   useStatic = signal(true); // Default to static mode

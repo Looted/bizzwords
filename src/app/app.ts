@@ -18,11 +18,6 @@ export class App implements OnInit {
   pwaService = inject(PwaService);
   themeService = inject(ThemeService); // Inject to initialize
 
-  // Computed values for header
-  shouldShowCardCount = computed(() => this.store.phase() === 'PLAYING');
-  currentCardIndex = computed(() => this.store.graduatePile().length);
-  totalCardCount = computed(() => this.store.activeDeck().length);
-
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit() {
