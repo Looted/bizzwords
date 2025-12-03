@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MockComponent } from 'ng-mocks';
 import { GameComponent } from './game.component';
 import { CardRendererComponent } from './card-renderer/card-renderer.component';
+import { RoundIntroComponent } from '../round-intro/round-intro.component';
 import { GameStore } from '../../game-store';
 import { GameService } from '../../services/game.service';
 import { StorageService } from '../../services/storage.service';
@@ -21,6 +22,7 @@ describe('GameComponent', () => {
     currentCard: WritableSignal<any>;
     activeDeck: WritableSignal<any[]>;
     currentRoundConfig: Mock;
+    roundIntroShown: WritableSignal<boolean>;
     reset: Mock;
   };
 
@@ -45,6 +47,7 @@ describe('GameComponent', () => {
       currentCard: signal({ english: 'cat', polish: 'kot' }),
       activeDeck: signal([{ id: '1', english: 'test', polish: 'test' }]),
       currentRoundConfig: vi.fn().mockReturnValue({ layout: { templateId: 'flashcard_standard', dataMap: { primary: 'term', secondary: 'definition' } } }),
+      roundIntroShown: signal(false),
       reset: vi.fn()
     };
     gameServiceMock = {
@@ -74,7 +77,8 @@ describe('GameComponent', () => {
     .overrideComponent(GameComponent, {
       set: {
         imports: [
-          MockComponent(CardRendererComponent)
+          MockComponent(CardRendererComponent),
+          MockComponent(RoundIntroComponent)
         ]
       }
     })

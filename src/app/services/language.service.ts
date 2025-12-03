@@ -51,8 +51,8 @@ export class LanguageService {
   // Get display name for a language
   getLanguageDisplayName(language: Language): string {
     const names: Record<Language, string> = {
-      polish: 'Polski',
-      spanish: 'Español',
+      polish: 'Polish',
+      spanish: 'Spanish',
     };
     return names[language];
   }

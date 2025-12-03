@@ -53,6 +53,7 @@ Thumbs.db
 # Android deployment
 com.bizzwords
 
-# Playwright
+# Test reports
 playwright-report/
 test-results/
+test-report-for-coding-agents/

@@ -39,6 +39,9 @@ export class GameStore {
   roundInitialQueueSize = signal<number>(0);
   roundGraduatedCount = signal<number>(0);
 
+  // Round intro state
+  roundIntroShown = signal<boolean>(false);
+
   currentCard = computed(() => this.queue()[0]?.flashcard || null);
 
   currentRoundConfig = computed(() => {
@@ -67,6 +70,8 @@ export class GameStore {
     // Initialize round-specific progress signals
     this.roundInitialQueueSize.set(cards.length);
     this.roundGraduatedCount.set(0);
+    // Initialize round intro state
+    this.roundIntroShown.set(false);
 
     this.phase.set("PLAYING");
   }
@@ -163,6 +168,8 @@ export class GameStore {
         // Reset round-specific progress signals for the new round
         this.roundInitialQueueSize.set(newQueue.length);
         this.roundGraduatedCount.set(0);
+        // Reset round intro state for the new round
+        this.roundIntroShown.set(false);
         break;
       }
       // If queue would be empty, continue to next round
@@ -182,6 +189,8 @@ export class GameStore {
     // Initialize round-specific progress signals
     this.roundInitialQueueSize.set(this.activeDeck().length);
     this.roundGraduatedCount.set(0);
+    // Initialize round intro state
+    this.roundIntroShown.set(false);
 
     this.phase.set("PLAYING");
   }

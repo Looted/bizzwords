@@ -4,12 +4,13 @@ import { Router } from '@angular/router';
 import { GameStore } from '../../game-store';
 import { GameService } from '../../services/game.service';
 import { CardRendererComponent } from './card-renderer/card-renderer.component';
+import { RoundIntroComponent } from '../round-intro/round-intro.component';
 import { GAME_CONSTANTS } from '../../shared/constants';
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, CardRendererComponent],
+  imports: [CommonModule, CardRendererComponent, RoundIntroComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.css'
 })
@@ -49,6 +50,10 @@ export class GameComponent {
 
   onTypingAnswer(event: {success: boolean}) {
     this.gameService.handleAnswer(event.success);
+  }
+
+  onIntroDismissed() {
+    this.store.roundIntroShown.set(true);
   }
 
   backToMenu() {

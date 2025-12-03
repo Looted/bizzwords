@@ -136,11 +136,11 @@ describe('LanguageService', () => {
 
   describe('getLanguageDisplayName', () => {
     it('should return display name for polish', () => {
-      expect(service.getLanguageDisplayName('polish')).toBe('Polski');
+      expect(service.getLanguageDisplayName('polish')).toBe('Polish');
     });
 
     it('should return display name for spanish', () => {
-      expect(service.getLanguageDisplayName('spanish')).toBe('Español');
+      expect(service.getLanguageDisplayName('spanish')).toBe('Spanish');
     });
   });
 

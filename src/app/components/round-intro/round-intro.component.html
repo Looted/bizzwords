@@ -1,0 +1,39 @@
+<div class="flex items-center justify-center min-h-full p-6 animate-fade-in">
+  <div class="w-full max-w-md bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-900 rounded-3xl shadow-2xl shadow-indigo-500/20 dark:shadow-slate-900/50 ring-1 ring-slate-200/50 dark:ring-slate-700/50 overflow-hidden">
+
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 px-6 py-4">
+      <h2 class="text-xl font-bold text-white text-center">
+        {{ roundConfig().name }}
+      </h2>
+    </div>
+
+    <!-- Content -->
+    <div class="p-6">
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-4 text-center">
+          How to play this round:
+        </h3>
+        <ul class="space-y-3">
+          @for (step of getRoundDescription(); track $index) {
+            <li class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center mt-0.5">
+                <span class="text-xs font-bold text-white">{{ $index + 1 }}</span>
+              </div>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                {{ step }}
+              </p>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <!-- Action Button -->
+      <button
+        (click)="onDismiss()"
+        class="w-full py-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+        Start Round
+      </button>
+    </div>
+  </div>
+</div>
