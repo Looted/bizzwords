@@ -32,24 +32,13 @@ describe('RoundIntroComponent', () => {
   });
 
   it('should create', () => {
-    const roundConfig: GameRoundConfig = {
-      id: 'round1',
-      name: 'Round 1',
-      layout: {
-        templateId: 'flashcard_standard',
-        dataMap: {
-          primary: 'english',
-          secondary: 'polish'
-        }
-      },
-      inputSource: 'deck_start',
-      completionCriteria: { requiredSuccesses: 1 },
-      failureBehavior: { action: 'requeue', strategy: 'static_offset', params: [3] }
-    };
-
-    (component as any).roundConfig = () => roundConfig;
-    fixture.detectChanges();
     expect(component).toBeTruthy();
+  });
+
+  it('should handle undefined roundConfig', () => {
+    (component as any).roundConfig = () => undefined;
+    const description = component.getRoundDescription();
+    expect(description).toEqual(['Loading...']);
   });
 
   it('should get flashcard description for polish language', () => {
@@ -105,7 +94,7 @@ describe('RoundIntroComponent', () => {
     ]);
   });
 
-  it('should emit dismissed event when onDismiss is called', () => {
+  it('should emit dismissed event when flip is called', () => {
     const roundConfig: GameRoundConfig = {
       id: 'round1',
       name: 'Round 1',
@@ -125,7 +114,41 @@ describe('RoundIntroComponent', () => {
     const dismissedSpy = vi.fn();
     component.dismissed.subscribe(dismissedSpy);
 
-    component.onDismiss();
+    // Mock setTimeout to avoid waiting
+    vi.useFakeTimers();
+    component.flip();
+
+    // Advance timers to trigger the timeout
+    vi.advanceTimersByTime(500);
+
     expect(dismissedSpy).toHaveBeenCalled();
+    vi.useRealTimers();
+  });
+
+  it('should not flip if already flipped', () => {
+    const roundConfig: GameRoundConfig = {
+      id: 'round1',
+      name: 'Round 1',
+      layout: {
+        templateId: 'flashcard_standard',
+        dataMap: {
+          primary: 'english',
+          secondary: 'polish'
+        }
+      },
+      inputSource: 'deck_start',
+      completionCriteria: { requiredSuccesses: 1 },
+      failureBehavior: { action: 'requeue', strategy: 'static_offset', params: [3] }
+    };
+
+    (component as any).roundConfig = () => roundConfig;
+    component.isFlipped.set(true); // Set as already flipped
+
+    const dismissedSpy = vi.fn();
+    component.dismissed.subscribe(dismissedSpy);
+
+    component.flip(); // Try to flip again
+
+    expect(dismissedSpy).not.toHaveBeenCalled();
   });
 });
