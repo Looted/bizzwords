@@ -19,10 +19,11 @@
   </div>
 
   <!-- ROUND INTRO -->
-  @if (!store.roundIntroShown()) {
+  @if (!store.roundIntroShown() && roundIntro()) {
     <app-round-intro
-      [roundConfig]="store.currentRoundConfig()!"
-      (dismissed)="onIntroDismissed()">
+      [intro]="roundIntro()!"
+      (continue)="onIntroDismissed()"
+      (skipAll)="onSkipAllRounds()">
     </app-round-intro>
   } @else {
 

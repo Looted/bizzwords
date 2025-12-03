@@ -1,29 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RoundIntroComponent } from './round-intro.component';
-import { GameRoundConfig } from '../../core/models/game-config.model';
-import { LanguageService } from '../../services/language.service';
-import { vi, Mock } from 'vitest';
+import { vi } from 'vitest';
+
+interface RoundIntro {
+  roundNumber: number;
+  title: string;
+  emoji: string;
+  subtitle: string;
+  instructions: string[];
+  ctaText: string;
+}
 
 describe('RoundIntroComponent', () => {
   let component: RoundIntroComponent;
   let fixture: ComponentFixture<RoundIntroComponent>;
 
-  let languageServiceMock: {
-    nativeLanguage: string;
-    getLanguageDisplayName: Mock;
-  };
-
   beforeEach(async () => {
-    languageServiceMock = {
-      nativeLanguage: 'polish',
-      getLanguageDisplayName: vi.fn().mockReturnValue('Polish')
-    };
-
     await TestBed.configureTestingModule({
-      imports: [RoundIntroComponent],
-      providers: [
-        { provide: LanguageService, useValue: languageServiceMock }
-      ]
+      imports: [RoundIntroComponent]
     })
     .compileComponents();
 
@@ -35,120 +29,58 @@ describe('RoundIntroComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should handle undefined roundConfig', () => {
-    (component as any).roundConfig = () => undefined;
-    const description = component.getRoundDescription();
-    expect(description).toEqual(['Loading...']);
+  it('should emit continue event when onContinue is called', () => {
+    const continueSpy = vi.fn();
+    component.continue.subscribe(continueSpy);
+
+    component.onContinue();
+
+    expect(continueSpy).toHaveBeenCalled();
   });
 
-  it('should get flashcard description for polish language', () => {
-    const roundConfig: GameRoundConfig = {
-      id: 'round1',
-      name: 'Round 1',
-      layout: {
-        templateId: 'flashcard_standard',
-        dataMap: {
-          primary: 'english',
-          secondary: 'polish'
-        }
-      },
-      inputSource: 'deck_start',
-      completionCriteria: { requiredSuccesses: 1 },
-      failureBehavior: { action: 'requeue', strategy: 'static_offset', params: [3] }
-    };
+  it('should emit skipAll event when onSkipAll is called', () => {
+    const skipAllSpy = vi.fn();
+    component.skipAll.subscribe(skipAllSpy);
 
-    (component as any).roundConfig = () => roundConfig;
-    const description = component.getRoundDescription();
-    expect(description).toEqual([
-      'See an English word',
-      'Flip to reveal the Polish translation',
-      'Choose "Got It" or "Still Learning"'
-    ]);
+    component.onSkipAll();
+
+    expect(skipAllSpy).toHaveBeenCalled();
   });
 
-  it('should get typing challenge description for spanish language', () => {
-    languageServiceMock.nativeLanguage = 'spanish';
-    languageServiceMock.getLanguageDisplayName.mockReturnValue('Spanish');
+  it('should emit continue event when overlay is clicked', () => {
+    const continueSpy = vi.fn();
+    component.continue.subscribe(continueSpy);
 
-    const roundConfig: GameRoundConfig = {
-      id: 'round3',
-      name: 'Round 3',
-      layout: {
-        templateId: 'typing_challenge',
-        dataMap: {
-          primary: 'english',
-          secondary: 'spanish'
-        }
-      },
-      inputSource: 'deck_start',
-      completionCriteria: { requiredSuccesses: 1 },
-      failureBehavior: { action: 'requeue', strategy: 'static_offset', params: [3] }
-    };
+    component.onOverlayClick();
 
-    (component as any).roundConfig = () => roundConfig;
-    const description = component.getRoundDescription();
-    expect(description).toEqual([
-      'See an English word',
-      'Type the Spanish translation',
-      'Check your spelling and submit'
-    ]);
+    expect(continueSpy).toHaveBeenCalled();
   });
 
-  it('should emit dismissed event when flip is called', () => {
-    const roundConfig: GameRoundConfig = {
-      id: 'round1',
-      name: 'Round 1',
-      layout: {
-        templateId: 'flashcard_standard',
-        dataMap: {
-          primary: 'english',
-          secondary: 'polish'
-        }
-      },
-      inputSource: 'deck_start',
-      completionCriteria: { requiredSuccesses: 1 },
-      failureBehavior: { action: 'requeue', strategy: 'static_offset', params: [3] }
+  it('should render intro data correctly', () => {
+    const testIntro: RoundIntro = {
+      roundNumber: 2,
+      title: 'Round 2',
+      emoji: '🎴',
+      subtitle: 'Flashcard Challenge',
+      instructions: [
+        'See an English word',
+        'Flip to reveal the translation',
+        'Choose your answer'
+      ],
+      ctaText: 'Start Round 2 →'
     };
 
-    (component as any).roundConfig = () => roundConfig;
-    const dismissedSpy = vi.fn();
-    component.dismissed.subscribe(dismissedSpy);
+    // Set the input using component fixture
+    fixture.componentRef.setInput('intro', testIntro);
+    fixture.detectChanges();
 
-    // Mock setTimeout to avoid waiting
-    vi.useFakeTimers();
-    component.flip();
+    const compiled = fixture.nativeElement as HTMLElement;
 
-    // Advance timers to trigger the timeout
-    vi.advanceTimersByTime(500);
-
-    expect(dismissedSpy).toHaveBeenCalled();
-    vi.useRealTimers();
-  });
-
-  it('should not flip if already flipped', () => {
-    const roundConfig: GameRoundConfig = {
-      id: 'round1',
-      name: 'Round 1',
-      layout: {
-        templateId: 'flashcard_standard',
-        dataMap: {
-          primary: 'english',
-          secondary: 'polish'
-        }
-      },
-      inputSource: 'deck_start',
-      completionCriteria: { requiredSuccesses: 1 },
-      failureBehavior: { action: 'requeue', strategy: 'static_offset', params: [3] }
-    };
-
-    (component as any).roundConfig = () => roundConfig;
-    component.isFlipped.set(true); // Set as already flipped
-
-    const dismissedSpy = vi.fn();
-    component.dismissed.subscribe(dismissedSpy);
-
-    component.flip(); // Try to flip again
-
-    expect(dismissedSpy).not.toHaveBeenCalled();
+    // Check that the intro data is rendered
+    expect(compiled.textContent).toContain('Round 2');
+    expect(compiled.textContent).toContain('🎴');
+    expect(compiled.textContent).toContain('Flashcard Challenge');
+    expect(compiled.textContent).toContain('See an English word');
+    expect(compiled.textContent).toContain('Start Round 2 →');
   });
 });

@@ -22,6 +22,7 @@ describe('GameComponent', () => {
     currentCard: WritableSignal<any>;
     activeDeck: WritableSignal<any[]>;
     currentRoundConfig: Mock;
+    roundIndex: WritableSignal<number>;
     roundIntroShown: WritableSignal<boolean>;
     reset: Mock;
   };
@@ -47,6 +48,7 @@ describe('GameComponent', () => {
       currentCard: signal({ english: 'cat', polish: 'kot' }),
       activeDeck: signal([{ id: '1', english: 'test', polish: 'test' }]),
       currentRoundConfig: vi.fn().mockReturnValue({ layout: { templateId: 'flashcard_standard', dataMap: { primary: 'term', secondary: 'definition' } } }),
+      roundIndex: signal(0),
       roundIntroShown: signal(false),
       reset: vi.fn()
     };
