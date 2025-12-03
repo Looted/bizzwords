@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 import { PLATFORM_ID } from '@angular/core';
 import { signal } from '@angular/core';
 import { vi } from 'vitest';
+import { ThemeService } from '../../services/theme.service';
+import { EnvironmentService } from '../../services/environment.service';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -74,15 +76,19 @@ describe('HeaderComponent', () => {
 
     await TestBed.configureTestingModule({
       imports: [HeaderComponent],
-      providers: [
+    }).overrideComponent(HeaderComponent, {
+      set: {
+        providers: [
         { provide: PwaService, useValue: pwaServiceMock },
         { provide: Router, useValue: routerMock },
         { provide: StorageService, useValue: storageServiceMock },
         { provide: PLATFORM_ID, useValue: 'browser' },
-        { provide: 'ThemeService', useValue: themeServiceMock },
-        { provide: 'EnvironmentService', useValue: environmentServiceMock }
-      ]
-    })
+        { provide: ThemeService, useValue: themeServiceMock },
+        { provide: EnvironmentService, useValue: environmentServiceMock }
+        ]
+      }
+    }
+    )
     .compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
