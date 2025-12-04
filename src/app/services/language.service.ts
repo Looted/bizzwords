@@ -1,73 +1,94 @@
 import { Injectable, inject, signal, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
-export type Language = 'polish' | 'spanish'
+export type SupportedLanguage = 'pl' | 'es';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LanguageService {
-  private platformId = inject(PLATFORM_ID);
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly LANGUAGE_KEY = 'nativeLanguage';
 
-  // Supported native languages with their ISO codes
-  private supportedLanguages: Record<string, Language> = {
-    'pl': 'polish',
-    'es': 'spanish'
-  };
-
-  // Current native language
-  private _nativeLanguage = signal<Language>('polish');
-
-  get nativeLanguage() {
-    return this._nativeLanguage();
-  }
-
-  set nativeLanguage(language: Language) {
-    this._nativeLanguage.set(language);
-    if (isPlatformBrowser(this.platformId)) {
-      localStorage.setItem('nativeLanguage', language);
-    }
-  }
-
-  get nativeLanguageSignal() {
-    return this._nativeLanguage;
-  }
+  // Current native language signal
+  readonly currentLanguage = signal<SupportedLanguage>('pl');
 
   constructor() {
     if (isPlatformBrowser(this.platformId)) {
-      // Load from localStorage or detect from browser
-      const savedLanguage = localStorage.getItem('nativeLanguage') as Language;
-      if (savedLanguage && Object.values(this.supportedLanguages).includes(savedLanguage)) {
-        this._nativeLanguage.set(savedLanguage);
-      } else {
-        // Detect browser language
-        const browserLang = navigator.language.split('-')[0]; // Get primary language code
-        const detectedLanguage = this.supportedLanguages[browserLang] || 'polish'; // Default to Polish
-        this._nativeLanguage.set(detectedLanguage);
+      this.initializeLanguage();
+    }
+  }
+
+  /**
+   * Initialize native language from localStorage or auto-detect.
+   * This controls which language appears as translations on flashcards.
+   * UI remains in English.
+   */
+  private initializeLanguage(): void {
+    const saved = localStorage.getItem(this.LANGUAGE_KEY) as SupportedLanguage;
+    if (saved && this.isValidLanguage(saved)) {
+      this.currentLanguage.set(saved);
+    } else {
+      const detected = this.detectBrowserLanguage();
+      this.currentLanguage.set(detected);
+      localStorage.setItem(this.LANGUAGE_KEY, detected);
+    }
+  }
+
+  /**
+   * Detects user's native language from browser settings.
+   * Used to show appropriate translations when learning English business terms.
+   * @returns Native language code: 'pl' (Polish), 'es' (Spanish), defaults to 'pl'
+   */
+  private detectBrowserLanguage(): SupportedLanguage {
+    const browserLang = navigator.language.split('-')[0];
+    if (browserLang === 'es') return 'es';
+    return 'pl'; // default fallback
+  }
+
+  /**
+   * Set the native language for flashcard translations.
+   * @param language The language code ('pl' or 'es')
+   */
+  setLanguage(language: SupportedLanguage): void {
+    if (this.isValidLanguage(language)) {
+      this.currentLanguage.set(language);
+      if (isPlatformBrowser(this.platformId)) {
+        localStorage.setItem(this.LANGUAGE_KEY, language);
       }
     }
   }
 
-  // Get display name for a language
-  getLanguageDisplayName(language: Language): string {
-    const names: Record<Language, string> = {
-      polish: 'Polish',
-      spanish: 'Spanish',
-    };
-    return names[language];
+  /**
+   * Check if a language code is valid.
+   */
+  private isValidLanguage(language: string): language is SupportedLanguage {
+    return language === 'pl' || language === 'es';
   }
 
-  // Get native display name for a language (in the language's native script)
-  getNativeLanguageDisplayName(language: Language): string {
-    const names: Record<Language, string> = {
-      polish: 'Polski',
-      spanish: 'Español',
-    };
-    return names[language];
+  /**
+   * Get the display name for a language code.
+   */
+  getLanguageDisplayName(language: SupportedLanguage): string {
+    switch (language) {
+      case 'pl': return 'Polish';
+      case 'es': return 'Spanish';
+      default: return 'Polish';
+    }
   }
 
-  // Get all supported languages
-  getSupportedLanguages(): Language[] {
-    return Object.values(this.supportedLanguages);
+  /**
+   * Get native display name for a language (in the language's native script).
+   * @deprecated Use getLanguageDisplayName instead
+   */
+  getNativeLanguageDisplayName(language: SupportedLanguage): string {
+    return this.getLanguageDisplayName(language);
+  }
+
+  /**
+   * Get all supported languages.
+   */
+  getSupportedLanguages(): SupportedLanguage[] {
+    return ['pl', 'es'];
   }
 }

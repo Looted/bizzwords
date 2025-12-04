@@ -30,7 +30,8 @@ export class FlashcardComponent {
     if (field === 'english') {
       return 'English';
     } else if (field !== 'contextSentence' && field !== 'translation') {
-      return this.languageService.getNativeLanguageDisplayName(field);
+      const langCode = this.mapFieldToLanguageCode(field);
+      return this.languageService.getLanguageDisplayName(langCode);
     }
     return field;
   });
@@ -58,7 +59,8 @@ export class FlashcardComponent {
     if (field === 'english') {
       return 'English';
     } else if (field !== 'contextSentence' && field !== 'translation') {
-      return this.languageService.getNativeLanguageDisplayName(field);
+      const langCode = this.mapFieldToLanguageCode(field);
+      return this.languageService.getLanguageDisplayName(langCode);
     }
     return field;
   });
@@ -93,5 +95,16 @@ export class FlashcardComponent {
 
   resetFlip() {
     this.isFlipped.set(false);
+  }
+
+  /**
+   * Maps LanguageField ('polish', 'spanish') to language codes ('pl', 'es')
+   */
+  private mapFieldToLanguageCode(field: string): 'pl' | 'es' {
+    switch (field) {
+      case 'polish': return 'pl';
+      case 'spanish': return 'es';
+      default: return 'pl';
+    }
   }
 }

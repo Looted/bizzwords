@@ -83,7 +83,8 @@ export class GameStore {
     this.queue.update(q => q.slice(1));
 
     // Record the encounter in stats
-    const nativeTranslation = card.flashcard.translations[this.languageService.nativeLanguage] || card.flashcard.translations.polish || '';
+    const languageField = this.mapLanguageToField(this.languageService.currentLanguage());
+    const nativeTranslation = card.flashcard.translations[languageField] || card.flashcard.translations.polish || '';
     this.statsService.recordEncounter(card.flashcard.english, nativeTranslation, card.flashcard.category, success);
 
     if (success) {
@@ -116,7 +117,8 @@ export class GameStore {
     this.queue.update(q => q.slice(1));
 
     // Mark as skipped in stats
-    const nativeTranslation = card.flashcard.translations[this.languageService.nativeLanguage] || card.flashcard.translations.polish || '';
+    const languageField = this.mapLanguageToField(this.languageService.currentLanguage());
+    const nativeTranslation = card.flashcard.translations[languageField] || card.flashcard.translations.polish || '';
     this.statsService.markAsSkipped(card.flashcard.english, nativeTranslation, card.flashcard.category);
 
     // Add to skippedPile
@@ -210,5 +212,16 @@ export class GameStore {
     // Reset round-specific progress signals
     this.roundInitialQueueSize.set(0);
     this.roundGraduatedCount.set(0);
+  }
+
+  /**
+   * Maps the new language codes ('pl', 'es') to the old LanguageField types ('polish', 'spanish')
+   */
+  private mapLanguageToField(language: 'pl' | 'es'): LanguageField {
+    switch (language) {
+      case 'pl': return 'polish';
+      case 'es': return 'spanish';
+      default: return 'polish'; // fallback
+    }
   }
 }

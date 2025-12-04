@@ -45,3 +45,17 @@ Critical implementation paths:
 - Card scheduling algorithm: Calculate next review date based on user rating (easy/hard) using pure functions.
 - Data flow: User actions -> signal updates -> computed signals -> UI updates -> localStorage/IndexedDB saves.
 - Performance: OnPush change detection, lazy loading, and signal reactivity for optimal performance with AI processing.
+
+## Native Language Switcher
+
+The language switcher controls the **native/translation language** for flashcard learning, NOT the UI language.
+
+- **UI Language**: Always English
+- **Native Language**: Polish (PL) or Spanish (ES) currently, with more languages planned (German, French, etc.)
+- **Purpose**: Users learn English business terminology with translations shown in their selected native language
+- **Design**: "Native language: PL | ES" with globe icon, always visible in header
+- **Auto-detect**: Automatically detects user's browser language on first visit, falls back to Polish
+- **State**: Saved in localStorage, persists across sessions
+- **Brand**: Indigo-600 active color, rounded-lg, font-medium, fully accessible with focus rings
+
+This design supports the use case of bilingual users who may want to switch between their known languages (e.g., a Polish-Spanish speaker practicing English).

@@ -45,12 +45,12 @@ describe('LanguageService', () => {
       expect(service).toBeTruthy();
     });
 
-    it('should initialize with polish as default native language', () => {
-      expect(service.nativeLanguage).toBe('polish');
+    it('should initialize with pl as default native language', () => {
+      expect(service.currentLanguage()).toBe('pl');
     });
 
     it('should load saved language from localStorage', () => {
-      mockLocalStorage.getItem.mockReturnValue('spanish');
+      mockLocalStorage.getItem.mockReturnValue('es');
 
       TestBed.resetTestingModule();
       TestBed.configureTestingModule({
@@ -63,7 +63,7 @@ describe('LanguageService', () => {
       const newService = TestBed.inject(LanguageService);
 
       expect(mockLocalStorage.getItem).toHaveBeenCalledWith('nativeLanguage');
-      expect(newService.nativeLanguage).toBe('spanish');
+      expect(newService.currentLanguage()).toBe('es');
     });
 
     it('should detect browser language when no saved language', () => {
@@ -80,10 +80,10 @@ describe('LanguageService', () => {
 
       const newService = TestBed.inject(LanguageService);
 
-      expect(newService.nativeLanguage).toBe('spanish');
+      expect(newService.currentLanguage()).toBe('es');
     });
 
-    it('should default to polish for unknown browser language', () => {
+    it('should default to pl for unknown browser language', () => {
       mockLocalStorage.getItem.mockReturnValue(null);
       mockNavigator.language = 'fr-FR';
 
@@ -97,7 +97,7 @@ describe('LanguageService', () => {
 
       const newService = TestBed.inject(LanguageService);
 
-      expect(newService.nativeLanguage).toBe('polish');
+      expect(newService.currentLanguage()).toBe('pl');
     });
 
     it('should handle invalid saved language', () => {
@@ -113,41 +113,41 @@ describe('LanguageService', () => {
 
       const newService = TestBed.inject(LanguageService);
 
-      expect(newService.nativeLanguage).toBe('polish'); // Should default to polish
+      expect(newService.currentLanguage()).toBe('pl'); // Should default to pl
     });
   });
 
-  describe('nativeLanguage setter', () => {
+  describe('setLanguage', () => {
     it('should set native language and save to localStorage', () => {
-      service.nativeLanguage = 'spanish';
+      service.setLanguage('es');
 
-      expect(service.nativeLanguage).toBe('spanish');
-      expect(mockLocalStorage.setItem).toHaveBeenCalledWith('nativeLanguage', 'spanish');
+      expect(service.currentLanguage()).toBe('es');
+      expect(mockLocalStorage.setItem).toHaveBeenCalledWith('nativeLanguage', 'es');
     });
   });
 
-  describe('nativeLanguageSignal', () => {
+  describe('currentLanguage signal', () => {
     it('should return the signal', () => {
-      const signal = service.nativeLanguageSignal;
+      const signal = service.currentLanguage;
       expect(signal).toBeDefined();
-      expect(signal()).toBe('polish');
+      expect(signal()).toBe('pl');
     });
   });
 
   describe('getLanguageDisplayName', () => {
-    it('should return display name for polish', () => {
-      expect(service.getLanguageDisplayName('polish')).toBe('Polish');
+    it('should return display name for pl', () => {
+      expect(service.getLanguageDisplayName('pl')).toBe('Polish');
     });
 
-    it('should return display name for spanish', () => {
-      expect(service.getLanguageDisplayName('spanish')).toBe('Spanish');
+    it('should return display name for es', () => {
+      expect(service.getLanguageDisplayName('es')).toBe('Spanish');
     });
   });
 
   describe('getSupportedLanguages', () => {
     it('should return all supported languages', () => {
       const languages = service.getSupportedLanguages();
-      expect(languages).toEqual(['polish', 'spanish']);
+      expect(languages).toEqual(['pl', 'es']);
     });
   });
 
@@ -190,7 +190,7 @@ describe('LanguageService', () => {
       const serverService = TestBed.inject(LanguageService);
 
       // Should not throw and should have default language
-      expect(serverService.nativeLanguage).toBe('polish');
+      expect(serverService.currentLanguage()).toBe('pl');
       expect(serverLocalStorageMock.getItem).not.toHaveBeenCalled();
     });
 
@@ -204,7 +204,7 @@ describe('LanguageService', () => {
       });
 
       const serverService = TestBed.inject(LanguageService);
-      serverService.nativeLanguage = 'spanish';
+      serverService.setLanguage('es');
 
       expect(serverLocalStorageMock.setItem).not.toHaveBeenCalled();
     });

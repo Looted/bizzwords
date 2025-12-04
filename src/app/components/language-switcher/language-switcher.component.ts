@@ -1,30 +1,31 @@
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LanguageService, Language } from '../../services/language.service';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
+/**
+ * Native language switcher for flashcard translations.
+ * Controls which language appears as translations when learning English business terms.
+ * UI remains in English. Currently supports Polish and Spanish, with more languages planned.
+ */
 @Component({
   selector: 'app-language-switcher',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './language-switcher.component.html',
-  styleUrls: ['./language-switcher.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LanguageSwitcherComponent {
-  private languageService = inject(LanguageService);
+  private readonly languageService = inject(LanguageService);
 
-  supportedLanguages = computed(() => this.languageService.getSupportedLanguages());
+  protected readonly currentLanguage = this.languageService.currentLanguage;
 
-  get currentLanguage() {
-    return this.languageService.nativeLanguage;
-  }
+  /**
+   * Available native languages for flashcard translations.
+   * More languages (DE, FR, etc.) will be added in future.
+   */
+  protected readonly languages = [
+    { code: 'pl' as const, label: 'PL', name: 'Polish' },
+    { code: 'es' as const, label: 'ES', name: 'Spanish' },
+  ];
 
-  onLanguageChange(event: Event) {
-    const target = event.target as HTMLSelectElement;
-    this.languageService.nativeLanguage = target.value as Language;
-  }
-
-  getLanguageDisplayName(language: Language): string {
-    return this.languageService.getLanguageDisplayName(language);
+  protected changeLanguage(code: 'pl' | 'es'): void {
+    this.languageService.setLanguage(code);
   }
 }

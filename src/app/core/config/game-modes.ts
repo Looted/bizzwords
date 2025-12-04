@@ -1,8 +1,18 @@
 import { GameMode } from '../models/game-config.model';
 import { LanguageService } from '../../services/language.service';
 
+// Helper function to map language codes to LanguageField
+function mapLanguageToField(language: 'pl' | 'es'): string {
+  switch (language) {
+    case 'pl': return 'polish';
+    case 'es': return 'spanish';
+    default: return 'polish';
+  }
+}
+
 // Factory function to create game modes with dynamic language configuration
 export function createStandardGameMode(languageService: LanguageService): GameMode {
+  const currentLanguage = mapLanguageToField(languageService.currentLanguage()) as 'polish' | 'spanish';
   return {
     id: 'standard',
     description: 'Classic Learning Mode',
@@ -14,7 +24,7 @@ export function createStandardGameMode(languageService: LanguageService): GameMo
           templateId: 'flashcard_standard',
           dataMap: {
             primary: 'english',
-            secondary: languageService.nativeLanguage
+            secondary: currentLanguage
           }
         },
         inputSource: 'deck_start',
@@ -33,7 +43,7 @@ export function createStandardGameMode(languageService: LanguageService): GameMo
         layout: {
           templateId: 'flashcard_standard',
           dataMap: {
-            primary: languageService.nativeLanguage,
+            primary: currentLanguage,
             secondary: 'english'
           }
         },
@@ -53,7 +63,7 @@ export function createStandardGameMode(languageService: LanguageService): GameMo
         layout: {
           templateId: 'typing_challenge',
           dataMap: {
-            primary: languageService.nativeLanguage,
+            primary: currentLanguage,
             secondary: 'english'
           }
         },
@@ -73,6 +83,7 @@ export function createStandardGameMode(languageService: LanguageService): GameMo
 
 // Factory function to create Blitz mode with dynamic language configuration
 export function createBlitzGameMode(languageService: LanguageService): GameMode {
+  const currentLanguage = mapLanguageToField(languageService.currentLanguage()) as 'polish' | 'spanish';
   return {
     id: 'blitz',
     description: 'Blitz Mode - Fast Flipping',
@@ -84,7 +95,7 @@ export function createBlitzGameMode(languageService: LanguageService): GameMode 
           templateId: 'flashcard_standard',
           dataMap: {
             primary: 'english',
-            secondary: languageService.nativeLanguage
+            secondary: currentLanguage
           }
         },
         inputSource: 'deck_start',
@@ -103,7 +114,7 @@ export function createBlitzGameMode(languageService: LanguageService): GameMode 
         layout: {
           templateId: 'flashcard_standard',
           dataMap: {
-            primary: languageService.nativeLanguage,
+            primary: currentLanguage,
             secondary: 'english'
           }
         },

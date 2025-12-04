@@ -38,7 +38,7 @@ export class GameComponent {
 
     const roundNumber = this.store.roundIndex() + 1;
     const templateId = config.layout.templateId;
-    const nativeLanguageName = this.languageService.getLanguageDisplayName(this.languageService.nativeLanguage);
+    const nativeLanguageName = this.languageService.getLanguageDisplayName(this.languageService.currentLanguage());
 
     // Define round intro data based on template
     const roundIntros: Record<string, Omit<RoundIntro, 'roundNumber'>> = {

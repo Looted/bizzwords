@@ -30,8 +30,9 @@ export class GameService {
 
       // Support HR and PM with static vocabulary files
       if (topicLower === 'hr' || topicLower === 'pm') {
-        console.log('[GameService] Loading translated vocabulary for:', topicLower, 'with language:', this.languageService.nativeLanguage);
-        const observable = this.staticVocab.generateTranslatedWords(topicLower, this.languageService.nativeLanguage, GAME_CONSTANTS.CARDS_PER_GAME, difficulty ?? undefined);
+        const languageField = this.mapLanguageToField(this.languageService.currentLanguage());
+        console.log('[GameService] Loading translated vocabulary for:', topicLower, 'with language:', languageField);
+        const observable = this.staticVocab.generateTranslatedWords(topicLower, languageField, GAME_CONSTANTS.CARDS_PER_GAME, difficulty ?? undefined);
         cards = await firstValueFrom(observable) || [];
         console.log('[GameService] Translated vocabulary loaded:', cards.length, 'cards');
       } else {
@@ -161,5 +162,16 @@ export class GameService {
       english: word.english,
       translations: { polish: word.polish }
     }));
+  }
+
+  /**
+   * Maps the new language codes ('pl', 'es') to the old LanguageField types ('polish', 'spanish')
+   */
+  private mapLanguageToField(language: 'pl' | 'es'): string {
+    switch (language) {
+      case 'pl': return 'polish';
+      case 'es': return 'spanish';
+      default: return 'polish'; // fallback
+    }
   }
 }
