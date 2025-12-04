@@ -90,6 +90,15 @@ test.describe("BizzWords Happy Path", () => {
       // Start the session
       await page.click("text=Start Session");
 
+      // Dismiss round intro if shown
+      try {
+        await page.waitForSelector("text=Start Round", { timeout: 2000 });
+        await page.click("text=Start Round");
+        await page.waitForTimeout(500);
+      } catch (e) {
+        // Round intro might not be shown, continue
+      }
+
       // Round 1: Recognition - Go through 3 cards (flashcards)
       for (let i = 0; i < 3; i++) {
         // Wait for card to be visible
@@ -108,6 +117,15 @@ test.describe("BizzWords Happy Path", () => {
         await page.waitForTimeout(500);
       }
 
+      // Dismiss round intro for Round 2 if shown
+      try {
+        await page.waitForSelector("text=Start Round", { timeout: 2000 });
+        await page.click("text=Start Round");
+        await page.waitForTimeout(500);
+      } catch (e) {
+        // Round intro might not be shown, continue
+      }
+
       // Round 2: Recall - Go through 3 cards (flashcards)
       for (let i = 0; i < 3; i++) {
         // Wait for card to be visible
@@ -124,6 +142,15 @@ test.describe("BizzWords Happy Path", () => {
 
         // Wait for next card
         await page.waitForTimeout(500);
+      }
+
+      // Dismiss round intro for Round 3 if shown
+      try {
+        await page.waitForSelector("text=Start Round", { timeout: 2000 });
+        await page.click("text=Start Round");
+        await page.waitForTimeout(500);
+      } catch (e) {
+        // Round intro might not be shown, continue
       }
 
       // Round 3: Writing - Go through 3 cards (typing)

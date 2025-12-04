@@ -74,6 +74,15 @@ test.describe("BizzWords", () => {
       // Start the session
       await page.click("text=Start Session");
 
+      // Dismiss round intro if shown
+      try {
+        await page.waitForSelector("text=Start Round", { timeout: 2000 });
+        await page.click("text=Start Round");
+        await page.waitForTimeout(500);
+      } catch (e) {
+        // Round intro might not be shown, continue
+      }
+
       // First card should be visible
       await expect(page.locator("[class*='perspective-1000']")).toBeVisible();
 
@@ -105,6 +114,15 @@ test.describe("BizzWords", () => {
       // Should advance to next round automatically
       await page.waitForTimeout(1000);
 
+      // Dismiss round intro for Round 2 if shown
+      try {
+        await page.waitForSelector("text=Start Round", { timeout: 2000 });
+        await page.click("text=Start Round");
+        await page.waitForTimeout(500);
+      } catch (e) {
+        // Round intro might not be shown, continue
+      }
+
       // In round 2, the skipped card should not appear
       // We should only see the non-skipped card
       await expect(page.locator("[class*='perspective-1000']")).toBeVisible();
@@ -123,6 +141,15 @@ test.describe("BizzWords", () => {
 
       // Should advance to round 3 (writing)
       await page.waitForTimeout(1000);
+
+      // Dismiss round intro for Round 3 if shown
+      try {
+        await page.waitForSelector("text=Start Round", { timeout: 2000 });
+        await page.click("text=Start Round");
+        await page.waitForTimeout(500);
+      } catch (e) {
+        // Round intro might not be shown, continue
+      }
 
       // In round 3, verify the skipped card's translation is not shown
       const skippedTranslation = skippedCardText?.trim() === "meeting" ? "spotkanie" : "prezentacja";
