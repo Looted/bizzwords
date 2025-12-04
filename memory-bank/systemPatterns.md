@@ -59,3 +59,11 @@ The language switcher controls the **native/translation language** for flashcard
 - **Brand**: Indigo-600 active color, rounded-lg, font-medium, fully accessible with focus rings
 
 This design supports the use case of bilingual users who may want to switch between their known languages (e.g., a Polish-Spanish speaker practicing English).
+
+### Game State Protection
+The native language switcher is automatically disabled when user is in an active game (`/game` route):
+- Buttons become grayed out (`opacity-50`, `text-gray-400`)
+- Cursor changes to `cursor-not-allowed`
+- Tooltip appears on hover: "Finish your game to change language"
+- Clicks are blocked both via `[disabled]` attribute and guard in `changeLanguage()` method
+- Re-enables automatically on menu, summary, or other non-game screens

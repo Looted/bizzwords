@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
 import { LanguageSwitcherComponent } from './language-switcher.component';
 import { LanguageService } from '../../services/language.service';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
@@ -7,6 +8,7 @@ import { signal } from '@angular/core';
 describe('LanguageSwitcherComponent', () => {
   let component: LanguageSwitcherComponent;
   let languageServiceMock: any;
+  let routerMock: any;
   let fixture: any;
 
   const setup = () => {
@@ -22,10 +24,21 @@ describe('LanguageSwitcherComponent', () => {
       })
     };
 
+    let currentUrl = '/menu';
+    routerMock = {
+      get url() {
+        return currentUrl;
+      },
+      set url(value: string) {
+        currentUrl = value;
+      }
+    };
+
     TestBed.configureTestingModule({
       imports: [LanguageSwitcherComponent],
       providers: [
-        { provide: LanguageService, useValue: languageServiceMock }
+        { provide: LanguageService, useValue: languageServiceMock },
+        { provide: Router, useValue: routerMock }
       ]
     });
 
@@ -33,7 +46,7 @@ describe('LanguageSwitcherComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
 
-    return { fixture, component };
+    return { fixture, component, routerMock };
   };
 
   it('should create', () => {
@@ -87,5 +100,64 @@ describe('LanguageSwitcherComponent', () => {
 
     expect(plButton?.getAttribute('aria-current')).toBe('true');
     expect(plButton?.getAttribute('aria-label')).toBe('Set native language to Polish');
+  });
+
+  describe('Game state handling', () => {
+    it('should disable language switcher during active game', () => {
+      const { fixture, routerMock } = setup();
+      routerMock.url = '/game';
+      fixture.detectChanges();
+
+      const buttons = fixture.nativeElement.querySelectorAll('button');
+      buttons.forEach((button: HTMLButtonElement) => {
+        expect(button.disabled).toBe(true);
+        expect(button.classList.contains('cursor-not-allowed')).toBe(true);
+      });
+    });
+
+    it('should enable language switcher on menu screen', () => {
+      const { fixture, routerMock } = setup();
+      routerMock.url = '/menu';
+      fixture.detectChanges();
+
+      const buttons = fixture.nativeElement.querySelectorAll('button');
+      buttons.forEach((button: HTMLButtonElement) => {
+        expect(button.disabled).toBe(false);
+      });
+    });
+
+    it('should show tooltip when game is active and switcher is hovered', () => {
+      const { fixture, routerMock } = setup();
+      routerMock.url = '/game';
+      fixture.detectChanges();
+
+      const tooltip = fixture.nativeElement.querySelector('.group-hover\\:visible');
+      expect(tooltip).toBeTruthy();
+      expect(tooltip.textContent).toContain('Finish your game to change language');
+    });
+
+    it('should not change language when button clicked during game', () => {
+      const { fixture, routerMock } = setup();
+      routerMock.url = '/game';
+      fixture.detectChanges();
+
+      const buttons = fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>;
+      const esButton = Array.from(buttons).find(btn => btn.textContent?.trim() === 'ES');
+      esButton?.click();
+
+      expect(languageServiceMock.setLanguage).not.toHaveBeenCalled();
+    });
+
+    it('should allow language change when on summary screen', () => {
+      const { fixture, routerMock } = setup();
+      routerMock.url = '/summary';
+      fixture.detectChanges();
+
+      const buttons = fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>;
+      const esButton = Array.from(buttons).find(btn => btn.textContent?.trim() === 'ES');
+      esButton?.click();
+
+      expect(languageServiceMock.setLanguage).toHaveBeenCalledWith('es');
+    });
   });
 });

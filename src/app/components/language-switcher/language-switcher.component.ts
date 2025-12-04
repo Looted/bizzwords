@@ -1,10 +1,13 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
 
 /**
  * Native language switcher for flashcard translations.
  * Controls which language appears as translations when learning English business terms.
  * UI remains in English. Currently supports Polish and Spanish, with more languages planned.
+ *
+ * Automatically disabled during active games to prevent mid-game language changes.
  */
 @Component({
   selector: 'app-language-switcher',
@@ -13,8 +16,16 @@ import { LanguageService } from '../../services/language.service';
 })
 export class LanguageSwitcherComponent {
   private readonly languageService = inject(LanguageService);
+  private readonly router = inject(Router);
 
   protected readonly currentLanguage = this.languageService.currentLanguage;
+
+  /**
+   * Detect if user is currently in an active game
+   */
+  protected readonly isGameActive = computed(() => {
+    return this.router.url.includes('/game');
+  });
 
   /**
    * Available native languages for flashcard translations.
@@ -26,6 +37,8 @@ export class LanguageSwitcherComponent {
   ];
 
   protected changeLanguage(code: 'pl' | 'es'): void {
+    // Extra safety: don't allow changes during game
+    if (this.isGameActive()) return;
     this.languageService.setLanguage(code);
   }
 }
