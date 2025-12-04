@@ -396,6 +396,50 @@ describe('GameStore', () => {
     });
   });
 
+  describe('startNewGame', () => {
+    it('should permanently exclude skipped cards from replay', () => {
+      // Start the game
+      store.startGame(mockGameMode, mockCards);
+
+      // Skip the first card
+      store.skipCurrentCard();
+      expect(store.skippedPile()).toHaveLength(1);
+      expect(store.skippedPile()[0]).toEqual(mockCards[0]);
+      expect(store.activeDeck()).toHaveLength(2);
+      expect(store.activeDeck()).not.toContain(mockCards[0]);
+
+      // Complete round 1 (the queue now has only the remaining 2 non-skipped cards)
+      store.submitAnswer(true); // Graduate second card
+      store.submitAnswer(true); // Graduate third card
+
+      // Should advance to round 2 with the remaining non-skipped cards
+      expect(store.phase()).toBe('PLAYING');
+      expect(store.roundIndex()).toBe(1);
+
+      // Call startNewGame (like replaying the same session)
+      store.startNewGame();
+
+      // Verify the game restarted
+      expect(store.phase()).toBe('PLAYING');
+      expect(store.roundIndex()).toBe(0);
+
+      // Verify skipped card is NOT in the active deck or queue
+      expect(store.activeDeck()).toHaveLength(2);
+      expect(store.activeDeck()).not.toContain(mockCards[0]);
+      expect(store.activeDeck()).toContain(mockCards[1]);
+      expect(store.activeDeck()).toContain(mockCards[2]);
+
+      expect(store.queue()).toHaveLength(2);
+      expect(store.queue().some(card => card.flashcard.id === mockCards[0].id)).toBe(false);
+      expect(store.queue().some(card => card.flashcard.id === mockCards[1].id)).toBe(true);
+      expect(store.queue().some(card => card.flashcard.id === mockCards[2].id)).toBe(true);
+
+      // Verify skippedPile is preserved
+      expect(store.skippedPile()).toHaveLength(1);
+      expect(store.skippedPile()[0]).toEqual(mockCards[0]);
+    });
+  });
+
   describe('reset', () => {
     it('should reset all state to initial values', () => {
       store.startGame(mockGameMode, mockCards);

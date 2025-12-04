@@ -177,17 +177,20 @@ export class GameStore {
   }
 
   startNewGame() {
-    // When starting a new game, reset progress, but re-initialize activeDeck based on initialSessionDeck
+    // When starting a new game, reset progress, but preserve skipped cards to maintain permanent exclusion
     this.roundIndex.set(0);
-    this.skippedPile.set([]); // Clear skipped cards for a new run
+    // Do NOT clear skippedPile - skipped cards should remain permanently excluded
 
-    // Re-filter activeDeck from initialSessionDeck (all original cards are back for a new game)
-    this.activeDeck.set(this.initialSessionDeck());
-    this.queue.set(this.activeDeck().map(c => ({ flashcard: c, successCount: 0 })));
+    // Filter out skipped cards from the initial session deck
+    const skippedIds = new Set(this.skippedPile().map(c => c.id));
+    const filteredDeck = this.initialSessionDeck().filter(c => !skippedIds.has(c.id));
+
+    this.activeDeck.set(filteredDeck);
+    this.queue.set(filteredDeck.map(c => ({ flashcard: c, successCount: 0 })));
     this.graduatePile.set([]);
 
     // Initialize round-specific progress signals
-    this.roundInitialQueueSize.set(this.activeDeck().length);
+    this.roundInitialQueueSize.set(filteredDeck.length);
     this.roundGraduatedCount.set(0);
     // Initialize round intro state
     this.roundIntroShown.set(false);
