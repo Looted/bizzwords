@@ -2,6 +2,7 @@ import { Component, input, output, signal, effect, inject } from '@angular/core'
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { GAME_CONSTANTS } from '../../../../shared/constants';
+import { ValidationService } from '../../../../services/validation.service';
 
 @Component({
   selector: 'app-typing-card',
@@ -20,6 +21,8 @@ export class TypingCardComponent {
   typingFeedback = signal<{ correct: boolean, msg: string } | null>(null);
   isPaused = signal(false);
 
+  private validationService = inject(ValidationService);
+
   constructor() {
     effect(() => {
       if (this.isPaused()) {
@@ -33,10 +36,10 @@ export class TypingCardComponent {
   checkTyping() {
     if (!this.inputControl.value) return;
 
-    const input = this.inputControl.value.trim().toLowerCase();
-    const correct = this.expectedAnswer().toLowerCase();
+    const input = this.inputControl.value;
+    const expected = this.expectedAnswer();
 
-    if (input === correct) {
+    if (this.validationService.validateTypingAnswer(input, expected)) {
       this.typingFeedback.set({ correct: true, msg: 'Correct!' });
       setTimeout(() => {
         this.answerSubmitted.emit({success: true});
@@ -44,7 +47,7 @@ export class TypingCardComponent {
         this.typingFeedback.set(null);
       }, GAME_CONSTANTS.FEEDBACK_DELAY);
     } else {
-      this.typingFeedback.set({ correct: false, msg: `Incorrect. It was: ${correct}` });
+      this.typingFeedback.set({ correct: false, msg: `Incorrect. It was: ${expected}` });
       this.isPaused.set(true);
     }
   }
