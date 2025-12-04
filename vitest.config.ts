@@ -5,12 +5,11 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    pool: 'threads',
-    maxConcurrency: 1,
+    pool: 'forks',
     maxWorkers: 1,
-    isolate: false,
+    isolate: true,
     setupFiles: ['src/test-setup.ts'],
-    reporters: ['default'],
+    reporters: ['vitest-llm-reporter'],
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
