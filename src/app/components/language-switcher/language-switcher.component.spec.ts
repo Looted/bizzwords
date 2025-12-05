@@ -56,115 +56,85 @@ describe('LanguageSwitcherComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should display "Native language:" label with globe icon', () => {
+  it('should render dropdown trigger button', () => {
     const { fixture } = setup();
-    const label = fixture.nativeElement.querySelector('span.text-gray-600');
+    const triggerButton = fixture.nativeElement.querySelector('button[aria-label="Change language"]');
 
-    expect(label?.textContent).toContain('Native language:');
-    expect(fixture.nativeElement.querySelector('svg')).toBeTruthy(); // globe icon
+    expect(triggerButton).toBeTruthy();
+    expect(triggerButton?.getAttribute('aria-expanded')).toBe('false');
   });
 
-  it('should render language buttons', () => {
+  it('should display current language flag and code', () => {
     const { fixture } = setup();
-    const buttons = fixture.nativeElement.querySelectorAll('button');
+    const flagSpan = fixture.nativeElement.querySelector('span.text-xl');
+    const codeSpan = fixture.nativeElement.querySelector('span.hidden.sm\\:block');
 
-    expect(buttons.length).toBe(2);
-    expect(buttons[0].textContent.trim()).toBe('PL');
-    expect(buttons[1].textContent.trim()).toBe('ES');
+    expect(flagSpan?.textContent).toBe('🇵🇱'); // Default is 'pl'
+    expect(codeSpan?.textContent.trim()).toBe('pl');
   });
 
-  it('should apply active styles to current native language button', () => {
-    const { fixture } = setup();
-    languageServiceMock.currentLanguage.set('es');
+  it('should toggle dropdown when trigger button is clicked', () => {
+    const { fixture, component } = setup();
+    const triggerButton = fixture.nativeElement.querySelector('button[aria-label="Change language"]');
+
+    expect(component.isDropdownOpen()).toBe(false);
+
+    triggerButton.click();
+    expect(component.isDropdownOpen()).toBe(true);
+
+    triggerButton.click();
+    expect(component.isDropdownOpen()).toBe(false);
+  });
+
+  it('should render dropdown menu with all languages when open', () => {
+    const { fixture, component } = setup();
+
+    component.isDropdownOpen.set(true);
     fixture.detectChanges();
 
-    const buttons = fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>;
-    const esButton = Array.from(buttons).find(btn => btn.textContent?.trim() === 'ES');
+    const dropdownMenu = fixture.nativeElement.querySelector('.absolute.right-0');
+    const languageButtons = dropdownMenu.querySelectorAll('button');
 
-    expect(esButton?.classList.contains('text-indigo-600')).toBe(true);
-    expect(esButton?.classList.contains('underline')).toBe(true);
+    expect(dropdownMenu).toBeTruthy();
+    expect(languageButtons.length).toBe(4); // es, pl, de, fr
   });
 
-  it('should call setLanguage when button is clicked', () => {
-    const { fixture } = setup();
-    const buttons = fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>;
-    const esButton = Array.from(buttons).find(btn => btn.textContent?.trim() === 'ES');
+  it('should call setLanguage when language is selected', () => {
+    const { fixture, component } = setup();
 
-    esButton?.click();
+    component.isDropdownOpen.set(true);
+    fixture.detectChanges();
+
+    const languageButtons = fixture.nativeElement.querySelectorAll('.absolute.right-0 button') as NodeListOf<HTMLButtonElement>;
+    const spanishButton = Array.from(languageButtons).find(btn =>
+      btn.textContent?.includes('Spanish')
+    );
+
+    spanishButton?.click();
 
     expect(languageServiceMock.setLanguage).toHaveBeenCalledWith('es');
+    expect(component.isDropdownOpen()).toBe(false); // Should close after selection
+  });
+
+  it('should close dropdown when clicking outside', () => {
+    const { fixture, component } = setup();
+
+    component.isDropdownOpen.set(true);
+    fixture.detectChanges();
+
+    const backdrop = fixture.nativeElement.querySelector('div.fixed.inset-0');
+    backdrop.click();
+
+    expect(component.isDropdownOpen()).toBe(false);
   });
 
   it('should have proper accessibility attributes', () => {
     const { fixture } = setup();
-    const buttons = fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>;
-    const plButton = Array.from(buttons).find(btn => btn.textContent?.trim() === 'PL');
+    const triggerButton = fixture.nativeElement.querySelector('button[aria-label="Change language"]');
 
-    expect(plButton?.getAttribute('aria-current')).toBe('true');
-    expect(plButton?.getAttribute('aria-label')).toBe('Set native language to Polish');
+    expect(triggerButton?.getAttribute('aria-label')).toBe('Change language');
+    expect(triggerButton?.getAttribute('aria-expanded')).toBe('false');
   });
 
-  describe('Game state handling', () => {
-    it('should disable language switcher during active game', async () => {
-      const { fixture, routerMock } = setup();
-      routerMock.navigateTo('/game');
-      await fixture.whenStable();
-      fixture.detectChanges();
 
-      const buttons = fixture.nativeElement.querySelectorAll('button');
-      buttons.forEach((button: HTMLButtonElement) => {
-        expect(button.disabled).toBe(true);
-        expect(button.classList.contains('cursor-not-allowed')).toBe(true);
-      });
-    });
-
-    it('should enable language switcher on menu screen', async () => {
-      const { fixture, routerMock } = setup();
-      routerMock.navigateTo('/menu');
-      await fixture.whenStable();
-      fixture.detectChanges();
-
-      const buttons = fixture.nativeElement.querySelectorAll('button');
-      buttons.forEach((button: HTMLButtonElement) => {
-        expect(button.disabled).toBe(false);
-      });
-    });
-
-    it('should show tooltip when game is active and switcher is hovered', async () => {
-      const { fixture, routerMock } = setup();
-      routerMock.navigateTo('/game');
-      await fixture.whenStable();
-      fixture.detectChanges();
-
-      const tooltip = fixture.nativeElement.querySelector('.group-hover\\:visible');
-      expect(tooltip).toBeTruthy();
-      expect(tooltip.textContent).toContain('Finish your game to change language');
-    });
-
-    it('should not change language when button clicked during game', async () => {
-      const { fixture, routerMock } = setup();
-      routerMock.navigateTo('/game');
-      await fixture.whenStable();
-      fixture.detectChanges();
-
-      const buttons = fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>;
-      const esButton = Array.from(buttons).find(btn => btn.textContent?.trim() === 'ES');
-      esButton?.click();
-
-      expect(languageServiceMock.setLanguage).not.toHaveBeenCalled();
-    });
-
-    it('should allow language change when on summary screen', async () => {
-      const { fixture, routerMock } = setup();
-      routerMock.navigateTo('/summary');
-      await fixture.whenStable();
-      fixture.detectChanges();
-
-      const buttons = fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>;
-      const esButton = Array.from(buttons).find(btn => btn.textContent?.trim() === 'ES');
-      esButton?.click();
-
-      expect(languageServiceMock.setLanguage).toHaveBeenCalledWith('es');
-    });
-  });
 });

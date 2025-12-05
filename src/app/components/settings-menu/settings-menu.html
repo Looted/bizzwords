@@ -1,0 +1,164 @@
+<!-- Backdrop -->
+@if (isOpen()) {
+  <div
+    class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ease-in-out"
+    (click)="closeMenu.emit()"
+    aria-hidden="true">
+  </div>
+}
+
+<!-- Menu Panel -->
+@if (isOpen()) {
+  <div
+    class="fixed top-0 right-0 z-50 h-full w-full sm:w-[320px] bg-white dark:bg-slate-900 shadow-2xl transform transition-transform duration-300 ease-in-out"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="settings-menu-title">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">
+      <h2 id="settings-menu-title" class="text-lg font-semibold text-slate-900 dark:text-white">Settings</h2>
+      <button
+        (click)="closeMenu.emit()"
+        class="flex h-8 w-8 items-center justify-center rounded-lg text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors"
+        aria-label="Close menu">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu Content -->
+    <div class="flex-1 overflow-y-auto p-4 space-y-6">
+
+      <!-- User Profile Section -->
+      <section>
+        <h3 class="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Account</h3>
+        <button
+          (click)="onUserProfileClick()"
+          class="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-left">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-500 text-white text-lg font-semibold">
+            U
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm font-medium text-slate-900 dark:text-white">User Profile</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Manage your account</p>
+          </div>
+          <svg class="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </section>
+
+      <!-- Settings Section -->
+      <section>
+        <h3 class="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Settings</h3>
+        <div class="space-y-4">
+
+          <!-- Theme Toggle -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800">
+                <span class="text-lg">{{ getThemeIcon() }}</span>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-slate-900 dark:text-white">Theme</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400">{{ currentThemeMode() === 'dark' ? 'Dark mode' : 'Light mode' }}</p>
+              </div>
+            </div>
+            <button
+              (click)="onThemeCycle()"
+              class="px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
+              {{ currentThemeMode() }}
+            </button>
+          </div>
+
+          <!-- Language Selector (Mobile Only) -->
+          <button
+            (click)="onLanguageClick()"
+            class="md:hidden w-full flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-left">
+            <div class="flex items-center gap-3">
+              <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800">
+                <span class="text-lg">🌐</span>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-slate-900 dark:text-white">Language</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400">{{ currentLanguageName() }}</p>
+              </div>
+            </div>
+            <svg class="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <!-- Language Selector -->
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800">
+                <span class="text-lg">🌐</span>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-slate-900 dark:text-white">Language</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Choose your language</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              @for (lang of supportedLanguages(); track lang) {
+                <button
+                  (click)="onLanguageChange(lang)"
+                  [class.active]="lang === currentLanguage()"
+                  class="px-3 py-2 text-sm font-medium rounded-lg border transition-colors"
+                  [class]="lang === currentLanguage()
+                    ? 'border-blue-500 bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
+                    : 'border-slate-200 text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800'">
+                  {{ getLanguageDisplayName(lang) }}
+                </button>
+              }
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Links Section -->
+      <section>
+        <h3 class="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Links</h3>
+        <div class="space-y-1">
+          <button
+            (click)="onAboutClick()"
+            class="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-left">
+            <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800">
+              <svg class="h-4 w-4 text-slate-600 dark:text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <span class="text-sm font-medium text-slate-900 dark:text-white">About</span>
+          </button>
+          <button
+            (click)="onPrivacyClick()"
+            class="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-left">
+            <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800">
+              <svg class="h-4 w-4 text-slate-600 dark:text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <span class="text-sm font-medium text-slate-900 dark:text-white">Privacy Policy</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Sign Out -->
+      <section>
+        <button
+          (click)="onSignOutClick()"
+          class="w-full flex items-center justify-center gap-2 p-3 rounded-lg bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/50 transition-colors">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+          <span class="text-sm font-medium">Sign Out</span>
+        </button>
+      </section>
+
+    </div>
+  </div>
+}

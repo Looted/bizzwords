@@ -63,7 +63,7 @@ export class LanguageService {
    * Check if a language code is valid.
    */
   private isValidLanguage(language: string): language is SupportedLanguage {
-    return language === 'pl' || language === 'es';
+    return ['pl', 'es'].includes(language);
   }
 
   /**

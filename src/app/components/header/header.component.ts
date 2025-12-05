@@ -5,11 +5,12 @@ import { PwaService } from '../../services/pwa.service';
 import { ThemeService, ThemeMode } from '../../services/theme.service';
 import { EnvironmentService } from '../../services/environment.service';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
+import { SettingsMenu } from '../settings-menu/settings-menu';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, LanguageSwitcherComponent],
+  imports: [CommonModule, LanguageSwitcherComponent, SettingsMenu],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -25,6 +26,12 @@ export class HeaderComponent implements OnDestroy {
 
   // Computed signal for AI toggle visibility
   showAiToggle = computed(() => this.showDevControls() && this.environmentService.isAiModeEnabled);
+
+  // Settings menu state
+  showMenu = signal(false);
+
+  // Computed signals
+  isDarkMode = computed(() => this.themeService.currentMode() === 'dark');
 
 
 
@@ -79,5 +86,13 @@ export class HeaderComponent implements OnDestroy {
   onAIToggleChange(event: Event) {
     const checked = (event.target as HTMLInputElement).checked;
     this.useStatic.set(!checked);
+  }
+
+  toggleMenu() {
+    this.showMenu.set(!this.showMenu());
+  }
+
+  closeMenu() {
+    this.showMenu.set(false);
   }
 }

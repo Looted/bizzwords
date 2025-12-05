@@ -1,48 +1,48 @@
-<div class="flex items-center gap-3">
-  <!-- Label with icon -->
-  <span class="text-sm text-gray-600 font-medium flex items-center gap-1.5"
-        [class.opacity-50]="isGameActive()">
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+<div class="relative">
+  <!-- Trigger button -->
+  <button (click)="toggleDropdown()"
+          class="flex h-9 items-center gap-2 rounded-lg px-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+          [attr.aria-label]="'Change language'"
+          [attr.aria-expanded]="isDropdownOpen()">
+    <!-- Current language flag -->
+    <span class="text-xl">{{ getCurrentFlag() }}</span>
+    <!-- Language name (desktop) or code (mobile) -->
+    <span class="hidden md:block text-sm font-medium text-slate-600 dark:text-slate-400">
+      {{ currentLanguage().name }}
+    </span>
+    <span class="md:hidden text-xs font-medium text-slate-600 dark:text-slate-400 uppercase">
+      {{ currentLanguage().code }}
+    </span>
+    <!-- Dropdown arrow -->
+    <svg class="h-3 w-3 text-slate-500 transition-transform"
+         [class.rotate-180]="isDropdownOpen()"
+         fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
     </svg>
-    Native language:
-  </span>
+  </button>
 
-  <!-- Language buttons with disabled state and tooltip -->
-  <div class="relative group">
-    <div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-50"
-         [class.opacity-50]="isGameActive()">
-      @for (lang of languages; track lang.code) {
-        <button
-          type="button"
-          (click)="changeLanguage(lang.code)"
-          [disabled]="isGameActive()"
-          [class.text-indigo-600]="currentLanguage() === lang.code && !isGameActive()"
-          [class.text-gray-800]="currentLanguage() !== lang.code && !isGameActive()"
-          [class.text-gray-400]="isGameActive()"
-          [class.underline]="currentLanguage() === lang.code && !isGameActive()"
-          [class.decoration-2]="currentLanguage() === lang.code && !isGameActive()"
-          [class.underline-offset-4]="currentLanguage() === lang.code && !isGameActive()"
-          [class.cursor-not-allowed]="isGameActive()"
-          class="font-medium text-sm transition-colors hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-1 disabled:hover:text-gray-400"
-          [attr.aria-current]="currentLanguage() === lang.code ? 'true' : null"
-          [attr.aria-label]="'Set native language to ' + lang.name"
-          [attr.aria-disabled]="isGameActive()"
-        >
-          {{ lang.label }}
+  <!-- Dropdown menu -->
+  @if (isDropdownOpen()) {
+    <div class="dropdown-menu absolute right-0 mt-2 w-40 rounded-lg bg-white dark:bg-slate-800 shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+      @for (lang of availableLanguages(); track lang.code) {
+        <button (click)="selectLanguage(lang.code)"
+                class="flex w-full items-center gap-3 px-4 py-2.5 text-left hover:bg-slate-100 dark:hover:bg-slate-700 first:rounded-t-lg last:rounded-b-lg"
+                [class.bg-slate-100]="lang.code === currentLanguage().code"
+                [class.dark:bg-slate-700]="lang.code === currentLanguage().code">
+          <span class="text-xl">{{ lang.flag }}</span>
+          <div class="flex flex-col">
+            <span class="text-sm font-medium text-slate-900 dark:text-slate-100">{{ lang.name }}</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400">{{ lang.nativeName }}</span>
+          </div>
         </button>
       }
     </div>
-
-    <!-- Tooltip shown on hover when disabled -->
-    @if (isGameActive()) {
-      <div class="absolute z-10 invisible group-hover:visible bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg whitespace-nowrap shadow-lg">
-        <div class="relative">
-          Finish your game to change language
-          <!-- Tooltip arrow -->
-          <div class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-gray-900"></div>
-        </div>
-      </div>
-    }
-  </div>
+  }
 </div>
+
+<!-- Click outside to close -->
+@if (isDropdownOpen()) {
+  <div (click)="closeDropdown()"
+       class="fixed inset-0 z-40"
+       aria-hidden="true"></div>
+}

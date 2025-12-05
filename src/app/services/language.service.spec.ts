@@ -147,7 +147,7 @@ describe('LanguageService', () => {
   describe('getSupportedLanguages', () => {
     it('should return all supported languages', () => {
       const languages = service.getSupportedLanguages();
-      expect(languages).toEqual(['pl', 'es']);
+      expect(languages).toEqual(['pl', 'es', 'de', 'fr']);
     });
   });
 

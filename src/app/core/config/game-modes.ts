@@ -2,11 +2,14 @@ import { GameMode } from '../models/game-config.model';
 import { LanguageService } from '../../services/language.service';
 
 // Helper function to map language codes to LanguageField
-function mapLanguageToField(language: 'pl' | 'es'): string {
+function mapLanguageToField(language: string): string {
   switch (language) {
     case 'pl': return 'polish';
     case 'es': return 'spanish';
-    default: return 'polish';
+    case 'en':
+    case 'de':
+    case 'fr':
+    default: return 'polish'; // Default to polish for unsupported languages
   }
 }
 

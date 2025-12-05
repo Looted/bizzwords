@@ -67,6 +67,7 @@ describe('HeaderComponent', () => {
 
     themeServiceMock = {
       themeMode: signal('system'),
+      currentMode: signal('light'),
       cycleTheme: vi.fn()
     };
 
@@ -235,6 +236,69 @@ describe('HeaderComponent', () => {
       component.ngOnDestroy();
 
       expect(clearTimeoutSpy).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('Settings menu', () => {
+    it('should toggle menu state', () => {
+      expect(component.showMenu()).toBe(false);
+
+      component.toggleMenu();
+      expect(component.showMenu()).toBe(true);
+
+      component.toggleMenu();
+      expect(component.showMenu()).toBe(false);
+    });
+
+    it('should close menu', () => {
+      component.showMenu.set(true);
+      expect(component.showMenu()).toBe(true);
+
+      component.closeMenu();
+      expect(component.showMenu()).toBe(false);
+    });
+
+    it('should render hamburger button', () => {
+      const hamburgerButton = fixture.nativeElement.querySelector('button[aria-label="Open settings menu"]');
+      expect(hamburgerButton).toBeTruthy();
+    });
+
+    it('should toggle menu when hamburger button is clicked', () => {
+      const hamburgerButton = fixture.nativeElement.querySelector('button[aria-label="Open settings menu"]');
+      expect(component.showMenu()).toBe(false);
+
+      hamburgerButton.click();
+      expect(component.showMenu()).toBe(true);
+
+      hamburgerButton.click();
+      expect(component.showMenu()).toBe(false);
+    });
+  });
+
+  describe('Header layout', () => {
+    it('should have correct icon order: Language first, Settings last', () => {
+      const actionsArea = fixture.nativeElement.querySelector('.flex.items-center.gap-2');
+      const buttons = actionsArea.querySelectorAll('app-language-switcher, button');
+
+      // First element should be language switcher
+      expect(buttons[0].tagName.toLowerCase()).toBe('app-language-switcher');
+
+      // Last element should be settings hamburger button
+      const lastButton = buttons[buttons.length - 1];
+      expect(lastButton.getAttribute('aria-label')).toBe('Open settings menu');
+    });
+
+    it('should have theme toggle button with hidden md:flex classes', () => {
+      const themeButton = fixture.nativeElement.querySelector('button[aria-label="Switch theme"]');
+      expect(themeButton).toBeTruthy();
+      expect(themeButton.classList.contains('hidden')).toBe(true);
+      expect(themeButton.classList.contains('md:flex')).toBe(true);
+    });
+
+    it('should have hamburger button with correct aria-label', () => {
+      const hamburgerButton = fixture.nativeElement.querySelector('button[aria-label="Open settings menu"]');
+      expect(hamburgerButton).toBeTruthy();
+      expect(hamburgerButton.getAttribute('aria-label')).toBe('Open settings menu');
     });
   });
 });

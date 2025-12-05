@@ -215,13 +215,16 @@ export class GameStore {
   }
 
   /**
-   * Maps the new language codes ('pl', 'es') to the old LanguageField types ('polish', 'spanish')
+   * Maps the new language codes to the old LanguageField types ('polish', 'spanish')
    */
-  private mapLanguageToField(language: 'pl' | 'es'): LanguageField {
+  private mapLanguageToField(language: string): LanguageField {
     switch (language) {
       case 'pl': return 'polish';
       case 'es': return 'spanish';
-      default: return 'polish'; // fallback
+      case 'en':
+      case 'de':
+      case 'fr':
+      default: return 'polish'; // fallback to polish for unsupported languages
     }
   }
 }

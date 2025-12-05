@@ -1,62 +1,53 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal, effect } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { LanguageService } from '../../services/language.service';
 
-/**
- * Native language switcher for flashcard translations.
- * Controls which language appears as translations when learning English business terms.
- * UI remains in English. Currently supports Polish and Spanish, with more languages planned.
- *
- * Automatically disabled during active games to prevent mid-game language changes.
- */
+interface Language {
+  code: string;
+  name: string;
+  nativeName: string;
+  flag: string;
+}
+
 @Component({
   selector: 'app-language-switcher',
+  imports: [CommonModule],
   templateUrl: './language-switcher.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LanguageSwitcherComponent {
-  private readonly languageService = inject(LanguageService);
-  private readonly router = inject(Router);
+  private languageService = inject(LanguageService);
 
-  protected readonly currentLanguage = this.languageService.currentLanguage;
+  isDropdownOpen = signal(false);
 
-  // Track current route
-  private readonly currentRoute = signal<string>('');
+  // Language options - add more as needed
+  availableLanguages = signal<Language[]>([
+    { code: 'es', name: 'Español', nativeName: 'Español', flag: '🇪🇸' },
+    { code: 'pl', name: 'Polski', nativeName: 'Polski', flag: '🇵🇱' },
+  ]);
 
-  /**
-   * Detect if user is currently in an active game
-   */
-  protected readonly isGameActive = computed(() => {
-    return this.currentRoute().includes('/game');
+  // Computed to get current language object
+  currentLanguage = computed(() => {
+    const currentCode = this.languageService.currentLanguage();
+    return this.availableLanguages().find(lang => lang.code === currentCode) || this.availableLanguages()[0];
   });
 
-  constructor() {
-    // Listen to router events to track current route
-    effect(() => {
-      const subscription = this.router.events
-        .pipe(filter(event => event instanceof NavigationEnd))
-        .subscribe((event: NavigationEnd) => {
-          this.currentRoute.set(event.url);
-        });
-
-      // Cleanup subscription when component is destroyed
-      return () => subscription.unsubscribe();
-    });
+  toggleDropdown() {
+    this.isDropdownOpen.update(open => !open);
   }
 
-  /**
-   * Available native languages for flashcard translations.
-   * More languages (DE, FR, etc.) will be added in future.
-   */
-  protected readonly languages = [
-    { code: 'pl' as const, label: 'PL', name: 'Polish' },
-    { code: 'es' as const, label: 'ES', name: 'Spanish' },
-  ];
+  closeDropdown() {
+    this.isDropdownOpen.set(false);
+  }
 
-  protected changeLanguage(code: 'pl' | 'es'): void {
-    // Extra safety: don't allow changes during game
-    if (this.isGameActive()) return;
-    this.languageService.setLanguage(code);
+  selectLanguage(code: string) {
+    this.languageService.setLanguage(code as any);
+    this.closeDropdown();
+  }
+
+  getCurrentFlag(): string {
+    return this.currentLanguage().flag;
   }
 }
