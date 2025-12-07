@@ -57,7 +57,8 @@
       @for (category of categoryStats(); track category.id) {
         <button (click)="selectCategory(category.id)"
           class="group relative flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-sm ring-1 ring-slate-200 dark:ring-white/5 transition-all hover:shadow-md hover:ring-blue-500/50 hover:bg-slate-50 dark:hover:bg-slate-700 text-center h-full"
-          [disabled]="isLoading">
+          [disabled]="isLoading"
+          [attr.data-testid]="'category-' + category.id">
 
           <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl text-3xl shadow-sm transition-transform group-hover:scale-110 group-hover:rotate-3"
                [class]="category.id === 'hr' ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300' : 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300'">
@@ -110,16 +111,16 @@
       <section>
         <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4">Game Mode</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <label class="cursor-pointer relative">
-            <input type="radio" name="gameMode" value="classic" class="peer sr-only" [checked]="selectedGameMode() === 'classic'" (change)="selectedGameMode.set('classic')">
+          <label class="cursor-pointer relative" data-testid="game-mode-classic-label">
+            <input type="radio" name="gameMode" value="classic" class="peer sr-only" [checked]="selectedGameMode() === 'classic'" (change)="selectedGameMode.set('classic')" data-testid="game-mode-classic">
             <div class="p-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-700 peer-checked:border-blue-500 dark:peer-checked:border-blue-500 peer-checked:bg-blue-50 dark:peer-checked:bg-blue-900/20 transition-all">
               <div class="text-2xl mb-2">🎮</div>
               <div class="font-bold text-slate-900 dark:text-white">Classic</div>
               <div class="text-xs text-slate-500 dark:text-slate-400">Standard flashcards</div>
             </div>
           </label>
-          <label class="cursor-pointer relative">
-            <input type="radio" name="gameMode" value="blitz" class="peer sr-only" [checked]="selectedGameMode() === 'blitz'" (change)="selectedGameMode.set('blitz')">
+          <label class="cursor-pointer relative" data-testid="game-mode-blitz-label">
+            <input type="radio" name="gameMode" value="blitz" class="peer sr-only" [checked]="selectedGameMode() === 'blitz'" (change)="selectedGameMode.set('blitz')" data-testid="game-mode-blitz">
             <div class="p-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-700 peer-checked:border-blue-500 dark:peer-checked:border-blue-500 peer-checked:bg-blue-50 dark:peer-checked:bg-blue-900/20 transition-all">
               <div class="text-2xl mb-2">⚡</div>
               <div class="font-bold text-slate-900 dark:text-white">Blitz</div>
@@ -136,13 +137,15 @@
            @for (level of [1, 2, 3]; track level) {
            <button (click)="selectedDifficulty.set(level)"
              class="flex-1 py-2 rounded-lg text-sm font-semibold transition-all"
-             [class]="selectedDifficulty() === level ? 'bg-white dark:bg-slate-600 text-blue-600 dark:text-blue-300 shadow-sm' : 'text-slate-500 dark:text-slate-300 hover:text-slate-700 dark:hover:text-white'">
+             [class]="selectedDifficulty() === level ? 'bg-white dark:bg-slate-600 text-blue-600 dark:text-blue-300 shadow-sm' : 'text-slate-500 dark:text-slate-300 hover:text-slate-700 dark:hover:text-white'"
+           [attr.data-testid]="'difficulty-level-' + level">
              {{ level === 1 ? 'Easy' : level === 2 ? 'Medium' : 'Hard' }}
            </button>
            }
            <button (click)="selectedDifficulty.set(null)"
              class="flex-1 py-2 rounded-lg text-sm font-semibold transition-all"
-             [class]="selectedDifficulty() === null ? 'bg-white dark:bg-slate-600 text-blue-600 dark:text-blue-300 shadow-sm' : 'text-slate-500 dark:text-slate-300 hover:text-slate-700 dark:hover:text-white'">
+             [class]="selectedDifficulty() === null ? 'bg-white dark:bg-slate-600 text-blue-600 dark:text-blue-300 shadow-sm' : 'text-slate-500 dark:text-slate-300 hover:text-slate-700 dark:hover:text-white'"
+             data-testid="difficulty-level-all">
              All
            </button>
         </div>
@@ -152,16 +155,18 @@
       <section>
         <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4">Content</h3>
         <div class="space-y-3">
-          <label class="flex items-center p-3 rounded-xl border border-slate-200 dark:border-slate-700 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 has-[:checked]:border-blue-500 dark:has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/50 dark:has-[:checked]:bg-blue-900/20 transition-all">
-            <input type="radio" name="practiceMode" value="new" class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500" [checked]="selectedPracticeMode() === GameMode.New" (change)="selectedPracticeMode.set(GameMode.New)">
+          <label class="flex items-center p-3 rounded-xl border border-slate-200 dark:border-slate-700 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 has-[:checked]:border-blue-500 dark:has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/50 dark:has-[:checked]:bg-blue-900/20 transition-all"
+                 data-testid="practice-mode-new-label">
+            <input type="radio" name="practiceMode" value="new" class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500" [checked]="selectedPracticeMode() === GameMode.New" (change)="selectedPracticeMode.set(GameMode.New)" data-testid="practice-mode-new">
             <div class="ml-3">
               <span class="block text-sm font-bold text-slate-900 dark:text-white">Learn New Words</span>
               <span class="block text-xs text-slate-500 dark:text-slate-400">Expand your vocabulary</span>
             </div>
           </label>
           <label class="flex items-center p-3 rounded-xl border border-slate-200 dark:border-slate-700 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 has-[:checked]:border-blue-500 dark:has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50/50 dark:has-[:checked]:bg-blue-900/20 transition-all"
-                 [class.opacity-50]="totalWordsNeedingReview() === 0">
-            <input type="radio" name="practiceMode" value="practice" class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500" [checked]="selectedPracticeMode() === GameMode.Practice" (change)="selectedPracticeMode.set(GameMode.Practice)" [disabled]="totalWordsNeedingReview() === 0">
+                 [class.opacity-50]="totalWordsNeedingReview() === 0"
+                 data-testid="practice-mode-practice-label">
+            <input type="radio" name="practiceMode" value="practice" class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500" [checked]="selectedPracticeMode() === GameMode.Practice" (change)="selectedPracticeMode.set(GameMode.Practice)" [disabled]="totalWordsNeedingReview() === 0" data-testid="practice-mode-practice">
             <div class="ml-3">
               <span class="block text-sm font-bold text-slate-900 dark:text-white">Review Mistakes</span>
               <span class="block text-xs text-slate-500 dark:text-slate-400">{{ totalWordsNeedingReview() }} words to review</span>
@@ -172,7 +177,8 @@
 
       <button (click)="startSession()"
         class="w-full py-4 px-6 bg-gradient-to-r from-primary to-primary-dark hover:from-primary hover:to-primary-dark text-white font-bold rounded-xl shadow-lg shadow-primary/30 transform transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-        [disabled]="isLoading">
+        [disabled]="isLoading"
+        data-testid="start-session">
         @if (isLoading) {
         <span class="animate-spin">⏳</span>
         }

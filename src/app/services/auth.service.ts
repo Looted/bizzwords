@@ -45,6 +45,8 @@ export class AuthService {
   constructor() {
     if (isPlatformBrowser(this.platformId)) {
       this.initializeAuthStateListener();
+      // Expose for E2E testing
+      (window as any).authService = this;
     }
   }
 

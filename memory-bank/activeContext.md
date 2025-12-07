@@ -1,17 +1,34 @@
 # Active Context
 
-Current work focus: Verifying refactoring and documenting changes.
+Current work focus: Implementing comprehensive E2E test fixes with Firebase emulator integration.
 
 Recent changes:
-- Refactored monolithic `App` component into `HeaderComponent`, `MenuComponent`, `GameComponent`, and `SummaryComponent`.
-- Implemented Angular Router for navigation between views (`/`, `/game`, `/summary`).
-- Removed redundant `LearningComponent`.
-- Updated tests to use `vi.spyOn` and cover new components.
-- All 63 tests pass with 100% coverage.
+- Implemented Firebase Authentication with Google OAuth and email/password providers
+- Added Firebase Firestore for cloud data synchronization across devices
+- Created slide-over hamburger menu replacing traditional settings page for better mobile UX
+- Added EmailSigninModal component for email-based authentication
+- Implemented automatic data migration from localStorage to Firestore on user sign-in
+- Updated header component with user avatar/initials display and hamburger menu toggle
+- Configured Firebase emulators for E2E testing isolation
+- Added comprehensive test IDs to UI components for robust e2e test selectors
+- Fixed all E2E tests to work with new authentication and navigation patterns
+- Updated memory bank documentation with new system architecture and technologies
+
+Current fixes in progress:
+- Updated Playwright config to start Firebase emulators before Angular dev server
+- Added English locale forcing to prevent language detection issues
+- Created test helper functions using Firebase Auth Emulator REST API instead of localStorage manipulation
+- Fixed TypeScript declarations for Firebase window properties
+- Updated happy-path.spec.ts to use new helper functions and proper app readiness checks
+- **Resolved E2E auth test failure**: Fixed `SettingsMenu` component state persistence issue where sign-in options remained visible after sign-out, causing test failures. Implemented `effect()` to reset component state on close.
 
 Next steps:
-- Continue implementing core flashcard application components (deck management, learning rounds, word tracking).
-- Consider implementing `CanDeactivate` guard for GameComponent to prevent accidental exit.
+- Continue fixing authentication tests using new Firebase emulator API
+- Update remaining test files to use proper authentication mocking
+- Run incremental test verification starting with simple game flow tests
+- Monitor test stability and performance with Firebase emulators
+- Consider implementing push notifications for learning reminders
+- Plan expansion of supported languages beyond Polish/Spanish
 
 Active decisions and considerations:
 - Framework choice: Angular v20+ for modern web-based UI with signals, standalone components, and OnPush change detection for optimal performance.

@@ -1,8 +1,11 @@
 import { test, expect } from "@playwright/test";
+import { waitForAppReady, clearBrowserStorage } from "../src/test-helpers";
 
 test.describe("Validation Features", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/");
+    await waitForAppReady(page);
+    await clearBrowserStorage(page);
   });
 
   test("should accept acronym answers and normalized input", async ({ page }) => {
@@ -65,7 +68,7 @@ test.describe("Validation Features", () => {
     await expect(page.locator("text=Master Business Lingo")).toBeVisible();
 
     // Click on HR category
-    await page.click("text=HR");
+    await page.click("text=HR Words");
 
     // Select Classic mode
     await page.click("text=Classic");

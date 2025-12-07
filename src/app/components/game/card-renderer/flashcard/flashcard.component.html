@@ -1,6 +1,7 @@
-<div class="perspective-1000 w-full max-w-lg h-96 sm:h-[28rem] cursor-pointer group mx-auto select-none" (click)="flip()">
+<div class="perspective-1000 w-full max-w-lg h-96 sm:h-[28rem] cursor-pointer group mx-auto select-none" (click)="flip()" data-testid="flashcard-container">
   <div class="relative w-full h-full transition-all duration-500 transform preserve-3d"
-       [class.rotate-y-180]="isFlipped()">
+       [class.rotate-y-180]="isFlipped()"
+       data-testid="flashcard-flip-area">
 
     <!-- FRONT FACE -->
     <div class="absolute w-full h-full backface-hidden bg-white dark:bg-slate-800 rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)] ring-1 ring-slate-900/5 dark:ring-white/5 border-b-8 border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center p-8 text-center transition-transform hover:-translate-y-1">
@@ -13,7 +14,8 @@
       </div>
 
       <!-- Main Content -->
-      <h2 [class]="textSizeClass()" class="font-black text-slate-800 dark:text-white break-words leading-tight tracking-tight">
+      <h2 [class]="textSizeClass()" class="font-black text-slate-800 dark:text-white break-words leading-tight tracking-tight"
+          data-testid="flashcard-front-text">
         {{ frontText() }}
       </h2>
 
@@ -33,7 +35,8 @@
         </span>
       </div>
 
-      <h2 [class]="textSizeClass()" class="font-black text-blue-900 dark:text-blue-100 break-words leading-tight tracking-tight">
+      <h2 [class]="textSizeClass()" class="font-black text-blue-900 dark:text-blue-100 break-words leading-tight tracking-tight"
+          data-testid="flashcard-back-text">
         {{ backText() }}
       </h2>
 

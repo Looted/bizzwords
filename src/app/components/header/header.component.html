@@ -15,7 +15,7 @@
       <div class="flex items-center gap-2">
 
         <!-- Language Switcher (LEFT) -->
-        <app-language-switcher></app-language-switcher>
+        <app-language-switcher data-testid="language-switcher"></app-language-switcher>
 
         <!-- Theme Toggle (MIDDLE) - Hidden on mobile, available in hamburger menu -->
         <button (click)="onThemeToggle()"
@@ -28,7 +28,8 @@
         <button (click)="toggleMenu()"
           class="flex h-9 w-9 items-center justify-center rounded-lg text-slate-500 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-50 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500"
           [attr.aria-label]="isAuthenticated() ? 'Open user menu' : 'Open settings menu'"
-          [attr.aria-expanded]="showMenu()">
+          [attr.aria-expanded]="showMenu()"
+          data-testid="user-menu-button">
           @if (isAuthenticated() && userDisplayInfo()?.photoURL) {
             <!-- User Avatar -->
             <img

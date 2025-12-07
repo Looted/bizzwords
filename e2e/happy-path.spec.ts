@@ -1,7 +1,22 @@
 import { test, expect } from "@playwright/test";
+import { waitForAppReady, clearBrowserStorage } from "../src/test-helpers";
 
 test.describe("BizzWords Happy Path", () => {
   test.describe("Classic Game", () => {
+    test.beforeEach(async ({ page }) => {
+      await page.goto("/");
+      await waitForAppReady(page);
+      // Don't clear storage for happy path tests to preserve component state
+      // await clearBrowserStorage(page);
+    });
+
+    test("should load the main menu", async ({ page }) => {
+      // Just verify the app loads properly
+      await expect(page.locator("text=Master Business Lingo")).toBeVisible();
+      await expect(page.locator("text=HR Words")).toBeVisible();
+      await expect(page.locator("text=Project Management")).toBeVisible();
+    });
+
     test("should complete a classic game from start to summary", async ({ page }) => {
       // Mock the English vocabulary data
       await page.route("**/i18n/hr_en.json", async (route) => {
@@ -71,29 +86,30 @@ test.describe("BizzWords Happy Path", () => {
         });
       });
 
-      // Navigate to the app
-      await page.goto("/");
-
-      // Wait for the app to load and verify we're on the main menu
+      // Wait for the app to load and verify we're on the main menu (already done in beforeEach)
       await expect(page.locator("text=Master Business Lingo")).toBeVisible();
 
-      // Click on HR category
-      await page.click("text=HR");
+      // Click on HR category to go to config screen
+      await page.click("text=HR Words");
 
-      // Select Classic mode
+      // Wait for screen transition and verify we're on the config screen
+      await page.waitForTimeout(1000); // Allow time for screen transition
+      await expect(page.locator("text=Configure your session")).toBeVisible();
+
+      // Select Classic mode (should already be selected by default)
       await page.click("text=Classic");
 
-      // Keep default difficulty (All)
+      // Keep default difficulty (All) - already selected
 
-      // Keep default content source (Learn New Words)
+      // Keep default content source (Learn New Words) - already selected
 
       // Start the session
       await page.click("text=Start Session");
 
       // Dismiss round intro if shown
       try {
-        await page.waitForSelector("text=Start Round", { timeout: 2000 });
-        await page.click("text=Start Round");
+        await page.waitForSelector("button:has-text('Start Round')", { timeout: 2000 });
+        await page.click("button:has-text('Start Round')");
         await page.waitForTimeout(500);
       } catch (e) {
         // Round intro might not be shown, continue
@@ -102,10 +118,10 @@ test.describe("BizzWords Happy Path", () => {
       // Round 1: Recognition - Go through 3 cards (flashcards)
       for (let i = 0; i < 3; i++) {
         // Wait for card to be visible
-        await expect(page.locator("[class*='perspective-1000']")).toBeVisible();
+        await expect(page.locator("[data-testid='flashcard-container']")).toBeVisible();
 
         // Click the card to flip it
-        await page.click("[class*='perspective-1000']");
+        await page.click("[data-testid='flashcard-container']");
 
         // Wait for flip animation
         await page.waitForTimeout(600);
@@ -119,8 +135,8 @@ test.describe("BizzWords Happy Path", () => {
 
       // Dismiss round intro for Round 2 if shown
       try {
-        await page.waitForSelector("text=Start Round", { timeout: 2000 });
-        await page.click("text=Start Round");
+        await page.waitForSelector("button:has-text('Start Round')", { timeout: 2000 });
+        await page.click("button:has-text('Start Round')");
         await page.waitForTimeout(500);
       } catch (e) {
         // Round intro might not be shown, continue
@@ -129,10 +145,10 @@ test.describe("BizzWords Happy Path", () => {
       // Round 2: Recall - Go through 3 cards (flashcards)
       for (let i = 0; i < 3; i++) {
         // Wait for card to be visible
-        await expect(page.locator("[class*='perspective-1000']")).toBeVisible();
+        await expect(page.locator("[data-testid='flashcard-container']")).toBeVisible();
 
         // Click the card to flip it
-        await page.click("[class*='perspective-1000']");
+        await page.click("[data-testid='flashcard-container']");
 
         // Wait for flip animation
         await page.waitForTimeout(600);
@@ -146,8 +162,8 @@ test.describe("BizzWords Happy Path", () => {
 
       // Dismiss round intro for Round 3 if shown
       try {
-        await page.waitForSelector("text=Start Round", { timeout: 2000 });
-        await page.click("text=Start Round");
+        await page.waitForSelector("button:has-text('Start Round')", { timeout: 2000 });
+        await page.click("button:has-text('Start Round')");
         await page.waitForTimeout(500);
       } catch (e) {
         // Round intro might not be shown, continue
@@ -188,7 +204,7 @@ test.describe("BizzWords Happy Path", () => {
 
       // Verify summary content is displayed
       await expect(page.locator("text=Total Cards")).toBeVisible();
-      await expect(page.locator("text=To Review")).toBeVisible();
+      await expect(page.locator("text=Needs Learning")).toBeVisible();
 
       // Verify action buttons are present
       await expect(page.locator("text=Start New Session")).toBeVisible();

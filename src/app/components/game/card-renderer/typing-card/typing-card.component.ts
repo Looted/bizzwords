@@ -14,8 +14,10 @@ import { ValidationService } from '../../../../services/validation.service';
 export class TypingCardComponent {
   promptText = input.required<string>();
   expectedAnswer = input.required<string>();
+  label = input<string>('Translate to English');
+  placeholder = input<string>('Type English word...');
 
-  answerSubmitted = output<{success: boolean}>();
+  answerSubmitted = output<{ success: boolean }>();
 
   inputControl = new FormControl('');
   typingFeedback = signal<{ correct: boolean, msg: string } | null>(null);
@@ -42,7 +44,7 @@ export class TypingCardComponent {
     if (this.validationService.validateTypingAnswer(input, expected)) {
       this.typingFeedback.set({ correct: true, msg: 'Correct!' });
       setTimeout(() => {
-        this.answerSubmitted.emit({success: true});
+        this.answerSubmitted.emit({ success: true });
         this.inputControl.setValue('');
         this.typingFeedback.set(null);
       }, GAME_CONSTANTS.FEEDBACK_DELAY);
@@ -56,6 +58,6 @@ export class TypingCardComponent {
     this.isPaused.set(false);
     this.typingFeedback.set(null);
     this.inputControl.setValue('');
-    this.answerSubmitted.emit({success: false});
+    this.answerSubmitted.emit({ success: false });
   }
 }

@@ -7,7 +7,8 @@
             : 'hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer'"
           [attr.aria-label]="isGameActive() ? 'Language switching disabled during game' : 'Change language'"
           [attr.aria-expanded]="isDropdownOpen()"
-          [disabled]="isGameActive()">
+          [disabled]="isGameActive()"
+          data-testid="language-switcher-button">
     <!-- Current language flag -->
     <span class="text-xl">{{ getCurrentFlag() }}</span>
     <!-- Language name (desktop) or code (mobile) -->
@@ -28,12 +29,14 @@
 
   <!-- Dropdown menu -->
   @if (isDropdownOpen()) {
-    <div class="dropdown-menu absolute right-0 mt-2 w-40 rounded-lg bg-white dark:bg-slate-800 shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+    <div class="dropdown-menu absolute right-0 mt-2 w-40 rounded-lg bg-white dark:bg-slate-800 shadow-lg ring-1 ring-black ring-opacity-5 z-50"
+         data-testid="language-dropdown">
       @for (lang of availableLanguages(); track lang.code) {
         <button (click)="selectLanguage(lang.code)"
                 class="flex w-full items-center gap-3 px-4 py-2.5 text-left hover:bg-slate-100 dark:hover:bg-slate-700 first:rounded-t-lg last:rounded-b-lg"
                 [class.bg-slate-100]="lang.code === currentLanguage().code"
-                [class.dark:bg-slate-700]="lang.code === currentLanguage().code">
+                [class.dark:bg-slate-700]="lang.code === currentLanguage().code"
+                [attr.data-testid]="'language-option-' + lang.code">
           <span class="text-xl">{{ lang.flag }}</span>
           <div class="flex flex-col">
             <span class="text-sm font-medium text-slate-900 dark:text-slate-100">{{ lang.name }}</span>

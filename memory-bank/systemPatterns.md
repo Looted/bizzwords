@@ -1,15 +1,18 @@
 # System Patterns
 
-System architecture: Client-side web application built with Angular v20+, using standalone components and signals-based reactive architecture. Data stored locally in browser storage initially.
+System architecture: Client-side web application built with Angular v20+, using standalone components and signals-based reactive architecture. Data stored locally in browser storage initially, with Firebase integration for cloud sync.
 
 Key technical decisions:
 - Framework: Angular v20+ with standalone components for streamlined architecture.
 - Routing: Angular Router with lazy loading for feature routes to optimize bundle sizes.
 - State management: Angular signals for reactive local state; computed signals for derived state.
 - Change detection: OnPush strategy for optimized performance and reduced unnecessary re-renders.
-- Data persistence: LocalStorage for user data; migrate to IndexedDB for larger datasets.
+- Data persistence: LocalStorage for guest users; Firestore for authenticated users with automatic migration.
+- Authentication: Firebase Auth with Google and email/password providers, signals-based reactive auth state.
+- Cloud storage: Firestore for user profiles, vocabulary statistics, and progress sync across devices.
 - Forms: Reactive forms for complex form handling with validation.
 - PWA: Service workers for caching strategies, web app manifest for installability, background sync for offline data persistence.
+- Navigation: Slide-over settings menu replacing dedicated settings page for mobile-first experience.
 
 Design patterns in use:
 - Standalone components: Self-contained components without NgModules for better tree-shaking.
@@ -21,6 +24,7 @@ Design patterns in use:
 - Template event handling: Handle complex event type casting in component methods rather than inlining in templates for better maintainability and to avoid template parser limitations.
 - Modular worker architecture: AI worker split into focused modules (models, parsing, message handling) for better testability and maintainability.
 - Singleton pattern: AI model pipelines use lazy-loaded singletons to avoid redundant initialization.
+- Component state reset: Modal/Menu components using signals and OnPush strategy must explicitly reset internal state (using effects or inputs) when closed, as component instances persist in the DOM.
 
 Testing patterns:
 - Mock external dependencies: Use vi.mock() to isolate units from external libraries (transformers.js, browser APIs).
@@ -68,3 +72,89 @@ The native language switcher is automatically disabled when user is in an active
 - Tooltip appears on hover: "Finish your game to change language"
 - Clicks are blocked both via `[disabled]` attribute and guard in `changeLanguage()` method
 - Re-enables automatically on menu, summary, or other non-game screens
+
+## Firebase Authentication & Authorization
+
+Firebase Auth provides seamless user authentication with multiple providers and automatic session management.
+
+### Implementation Details
+- **Providers**: Google OAuth, Email/Password authentication
+- **State Management**: Signals-based reactive auth state (`AuthService`)
+- **Session Persistence**: Automatic Firebase session persistence with localStorage
+- **User Profile**: Basic profile data (email, displayName, photoURL) stored in Firestore
+- **Migration**: Automatic migration of guest user data to authenticated user accounts
+- **UI Integration**: Header displays user avatar/initials or hamburger menu for guest users
+
+### Auth Flow
+1. **Guest Access**: Users can play games without authentication
+2. **Sign-in Options**: Click user menu → "Sign In" → Choose provider
+3. **Email Sign-in**: Modal dialog with email/password fields and mode toggle
+4. **Google Sign-in**: Popup-based OAuth flow
+5. **Data Migration**: Guest progress automatically migrates to authenticated account
+6. **Sign-out**: Available in settings menu with confirmation
+
+### Security Considerations
+- Client-side only authentication (no custom backend)
+- Firebase security rules protect user data
+- Automatic token refresh handled by Firebase SDK
+- Test environment uses Firebase emulators for isolated testing
+
+## Firestore Cloud Storage
+
+Firestore provides real-time cloud storage for user data synchronization across devices.
+
+### Data Structure
+```
+users/{userId}/
+├── profile: { email, displayName, photoURL, createdAt, hasMigratedLocalData }
+├── vocabularyStats: { categoryId: { totalLearned, needsPractice, lastPlayed } }
+├── sessions: { sessionId: { date, score, duration, category, gameMode } }
+└── settings: { theme, language, notifications }
+```
+
+### Implementation Details
+- **Service**: `FirestoreService` with typed CRUD operations
+- **Offline Support**: Automatic offline caching with online sync
+- **Migration**: One-time migration of localStorage data to Firestore
+- **Real-time**: Live updates for shared data (future feature)
+- **Security**: User-scoped data with Firebase security rules
+
+### Sync Strategy
+- **Guest Mode**: All data stored in localStorage
+- **Authenticated**: Data syncs to/from Firestore on sign-in
+- **Conflict Resolution**: Server-side timestamp-based conflict resolution
+- **Backup**: LocalStorage serves as offline backup and cache
+
+## Hamburger Menu & Settings UI
+
+Mobile-first slide-over menu replaces traditional settings page for better UX.
+
+### Implementation Details
+- **Trigger**: Hamburger icon (guest) or user avatar/initials (authenticated)
+- **Animation**: Smooth slide-in from right with backdrop blur
+- **Content**: Auth section, settings section, navigation links
+- **Accessibility**: Proper ARIA attributes, keyboard navigation, focus management
+- **Responsive**: Full-width on mobile, fixed width on desktop
+
+### Menu Sections
+1. **Account Section**:
+   - User profile display (authenticated users)
+   - Sign-in options (guest users)
+   - Sign-out button (authenticated users)
+
+2. **Settings Section**:
+   - Theme toggle (light/dark/system)
+   - Language selector (dropdown buttons)
+   - Future settings (notifications, etc.)
+
+3. **Links Section**:
+   - About page navigation
+   - Privacy policy navigation
+   - Help/support links
+
+### Technical Features
+- **State Management**: Signals for menu open/close state
+- **Event Handling**: Backdrop click and escape key close menu
+- **Positioning**: Fixed positioning with z-index management
+- **Styling**: Tailwind CSS with consistent design system
+- **Testing**: Comprehensive test IDs for e2e testing

@@ -1,8 +1,11 @@
 import { test, expect } from "@playwright/test";
+import { waitForAppReady, clearBrowserStorage } from "../src/test-helpers";
 
 test.describe("BizzWords", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/");
+    await waitForAppReady(page);
+    await clearBrowserStorage(page);
   });
 
   test.describe("Learning Mechanics", () => {
@@ -59,14 +62,11 @@ test.describe("BizzWords", () => {
         });
       });
 
-      // Navigate to the app
-      await page.goto("/");
-
-      // Wait for the app to load and verify we're on the main menu
+      // Already on main menu from beforeEach
       await expect(page.locator("text=Master Business Lingo")).toBeVisible();
 
       // Click on HR category
-      await page.click("text=HR");
+      await page.click("text=HR Words");
 
       // Select Classic mode
       await page.click("text=Classic");
@@ -108,7 +108,7 @@ test.describe("BizzWords", () => {
       await expect(page.locator("[class*='perspective-1000']")).toBeVisible();
       await page.click("[class*='perspective-1000']"); // Flip card
       await page.waitForTimeout(600);
-      await page.click("#got-it");
+      await page.click("text=Got It");
       await page.waitForTimeout(500);
 
       // Should advance to next round automatically
@@ -136,7 +136,7 @@ test.describe("BizzWords", () => {
       // Complete round 2
       await page.click("[class*='perspective-1000']"); // Flip card
       await page.waitForTimeout(600);
-      await page.click("#got-it");
+      await page.click("text=Got It");
       await page.waitForTimeout(500);
 
       // Should advance to round 3 (writing)

@@ -1,4 +1,4 @@
-import { Component, input, output, inject, HostListener, computed, ChangeDetectionStrategy, signal } from '@angular/core';
+import { Component, input, output, inject, HostListener, computed, ChangeDetectionStrategy, signal, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../services/theme.service';
 import { LanguageService, SupportedLanguage } from '../../services/language.service';
@@ -11,7 +11,7 @@ import { EmailSigninModal } from '../email-signin-modal/email-signin-modal';
   imports: [CommonModule, EmailSigninModal],
   templateUrl: './settings-menu.html',
   styleUrl: './settings-menu.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SettingsMenu {
   themeService = inject(ThemeService);
@@ -90,6 +90,16 @@ export class SettingsMenu {
   showSignInOptions = signal(false);
   showEmailSignInModal = signal(false);
 
+  constructor() {
+    effect(() => {
+      if (!this.isOpen()) {
+        // Reset local UI state when menu closes
+        this.showSignInOptions.set(false);
+        this.showEmailSignInModal.set(false);
+      }
+    });
+  }
+
   async onSignInClick() {
     this.showSignInOptions.set(true);
   }
@@ -135,10 +145,12 @@ export class SettingsMenu {
   onAboutClick() {
     // TODO: Navigate to about page
     console.log('About clicked');
+    this.closeMenu.emit();
   }
 
   onPrivacyClick() {
     // TODO: Navigate to privacy page
     console.log('Privacy clicked');
+    this.closeMenu.emit();
   }
 }

@@ -6,9 +6,12 @@ Technologies used:
 - Routing: Angular Router with lazy loading for feature modules
 - Styling: Custom CSS with utility classes for responsive design
 - State management: Angular signals for reactive state management; migrate from FormsModule/ngModel to signal-based [value] and (change) bindings for optimal performance
+- Authentication: Firebase Auth with Google OAuth and email/password providers
+- Cloud storage: Firebase Firestore for user data synchronization and persistence
 - Forms: Reactive forms for complex form handling
 - PWA: Angular PWA package with service workers for offline functionality, web app manifest for installability, custom install button with beforeinstallprompt event handling, SSR-compatible browser detection
-- Data persistence: VocabularyStatsService with localStorage for tracking word performance, mastery levels, and learning statistics across sessions
+- Data persistence: Hybrid localStorage (guest) + Firestore (authenticated) for tracking word performance, mastery levels, and learning statistics across sessions
+- Testing: Playwright for E2E tests with Firebase emulators for isolated testing
 
 Development setup:
 - Node.js 20+ and npm for package management
@@ -25,10 +28,11 @@ Technical constraints:
 
 Dependencies:
 - Core: @angular/core, @angular/common, @angular/router, @angular/forms
+- Firebase: @angular/fire for Firebase Auth and Firestore integration
 - Styling: tailwindcss v4.1.17, @tailwindcss/postcss for utility-first CSS
 - AI/ML: @huggingface/transformers for on-device LLM word generation with WebGPU acceleration
 - Development: @angular/cli, eslint, prettier, vitest for testing
-- Testing: @angular/core/testing, vitest with Angular testing utilities
+- Testing: @angular/core/testing, vitest with Angular testing utilities, Playwright for E2E testing
 
 Tool usage patterns:
 - Use npm scripts for common tasks (ng serve, ng build, ng test)
