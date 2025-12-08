@@ -1,0 +1,902 @@
+[
+  {
+    "id": "strat_0001",
+    "term_translation": "Unternehmensbereich",
+    "definition_translation": "Ein abgegrenzter Teil eines Unternehmens, der als separate Geschäftseinheit operiert, oft mit eigener Gewinn- und Verlustverantwortung.",
+    "example_translation": "Der pharmazeutische Unternehmensbereich erzielte in diesem Quartal den höchsten Umsatz."
+  },
+  {
+    "id": "strat_0002",
+    "term_translation": "Unterlassung",
+    "definition_translation": "Das Versäumnis, etwas in Finanzberichten oder Meldungen anzugeben, was zu Compliance-Problemen führen kann.",
+    "example_translation": "Der Wirtschaftsprüfer vermerkte eine wesentliche Unterlassung bezüglich der Verbindlichkeiten aus dem laufenden Rechtsstreit."
+  },
+  {
+    "id": "strat_0003",
+    "term_translation": "Rückstellung",
+    "definition_translation": "Ein in den Büchern einer Organisation für eine bekannte Verbindlichkeit von ungewisser Zeit oder Höhe reservierter Betrag.",
+    "example_translation": "Das Unternehmen bildete eine spezifische Rückstellung für Forderungsausfälle in Erwartung der Rezession."
+  },
+  {
+    "id": "strat_0004",
+    "term_translation": "Visionsentwicklung",
+    "definition_translation": "Der strategische Prozess der Entwicklung eines klaren mentalen Bildes von der zukünftigen Richtung und den Zielen einer Organisation.",
+    "example_translation": "Der Vorstand verbrachte die Klausurtagung mit der Visionsentwicklung darüber, wie das Unternehmen in zehn Jahren aussehen soll."
+  },
+  {
+    "id": "strat_0005",
+    "term_translation": "Unternehmensverfassung",
+    "definition_translation": "Das System von Regeln, Praktiken und Prozessen, durch das ein Unternehmen geleitet und kontrolliert wird.",
+    "example_translation": "Eine gute Unternehmensverfassung gewährleistet Transparenz und Rechenschaftspflicht gegenüber den Aktionären."
+  },
+  {
+    "id": "strat_0006",
+    "term_translation": "Prämiensystem",
+    "definition_translation": "Ein Vergütungssystem, das Mitarbeiter für das Erreichen bestimmter Leistungsziele belohnt.",
+    "example_translation": "Der neue Bonusplan ist an Kundenzufriedenheitswerte gekoppelt und nicht nur an das Verkaufsvolumen."
+  },
+  {
+    "id": "strat_0007",
+    "term_translation": "Provision",
+    "definition_translation": "Eine variable Zahlung an Mitarbeiter, die auf dem Wert der von ihnen getätigten Verkäufe basiert.",
+    "example_translation": "Makler erhalten eine fünfprozentige Provision auf jede Immobilientransaktion."
+  },
+  {
+    "id": "strat_0008",
+    "term_translation": "Maßnahmenplan",
+    "definition_translation": "Eine detaillierte Abfolge von Schritten, die unternommen werden müssen, um eine bestimmte Strategie oder ein Ziel zu erreichen.",
+    "example_translation": "Wir müssen diese Strategie in einen konkreten Maßnahmenplan mit Fristen umsetzen."
+  },
+  {
+    "id": "strat_0009",
+    "term_translation": "Einzelkosten",
+    "definition_translation": "Ausgaben, die direkt der Produktion bestimmter Waren oder Dienstleistungen zugeordnet werden können.",
+    "example_translation": "Rohstoffe und Arbeitslöhne sind die primären Einzelkosten für diese Produktlinie."
+  },
+  {
+    "id": "strat_0010",
+    "term_translation": "Veräußerungsplan",
+    "definition_translation": "Eine strategische Vereinbarung zum Verkauf oder zur Beseitigung von Vermögenswerten, die nicht mehr benötigt werden.",
+    "example_translation": "Der Veräußerungsplan für die alte Fabrikausrüstung wird nächsten Monat ausgeführt."
+  },
+  {
+    "id": "strat_0011",
+    "term_translation": "Zielvermögen",
+    "definition_translation": "Spezifische Ressourcen oder Immobilien, die ein Unternehmen im Rahmen einer Fusion oder Übernahme erwerben möchte.",
+    "example_translation": "Die Due Diligence deckte versteckte Verbindlichkeiten im Zielvermögen auf."
+  },
+  {
+    "id": "strat_0012",
+    "term_translation": "Grenzertragsbetrieb",
+    "definition_translation": "Eine Produktionsstätte, die an der Grenze der Rentabilität arbeitet und in Abschwungphasen oft als erste geschlossen wird.",
+    "example_translation": "Wir beschlossen, den Grenzertragsbetrieb zu schließen, da die Instandhaltungskosten die Einnahmen überstiegen."
+  },
+  {
+    "id": "strat_0013",
+    "term_translation": "Notfallplan",
+    "definition_translation": "Eine Vorgehensweise, die entwickelt wurde, um den Schaden potenzieller negativer Ereignisse zu mindern.",
+    "example_translation": "Der Notfallplan wurde unmittelbar nach dem Cyberangriff aktiviert."
+  },
+  {
+    "id": "strat_0014",
+    "term_translation": "Prüfungsstrategie",
+    "definition_translation": "Der übergreifende Ansatz, der Umfang, Zeitplan und Richtung eines Inspektionsprozesses umreißt.",
+    "example_translation": "Unsere Prüfungsstrategie konzentriert sich auf Hochrisikobereiche wie Bargeldverkehr und Beschaffung."
+  },
+  {
+    "id": "strat_0015",
+    "term_translation": "Aufnahmegebühren",
+    "definition_translation": "Kosten, die mit dem Zugang zu einem bestimmten Markt, einer Organisation oder einer Handelsgruppe verbunden sind.",
+    "example_translation": "Hohe Eintrittsgebühren hindern kleinere Wettbewerber daran, dem Industriekonsortium beizutreten."
+  },
+  {
+    "id": "strat_0016",
+    "term_translation": "Gemeinkosten",
+    "definition_translation": "Ausgaben, die nicht direkt einem Kostenträger zugeordnet werden können (oft als indirekte Kosten bezeichnet).",
+    "example_translation": "Miete und Nebenkosten werden als Gemeinkosten klassifiziert, da sie das gesamte Büro unterstützen."
+  },
+  {
+    "id": "strat_0017",
+    "term_translation": "Direktgeschäft",
+    "definition_translation": "Transaktionen, die unmittelbar zwischen dem Anbieter und dem Kunden ohne Zwischenhändler abgewickelt werden.",
+    "example_translation": "Der Wechsel zu einem Modell des Direktgeschäfts erhöhte unsere Margen durch das Ausschalten der Händler."
+  },
+  {
+    "id": "strat_0018",
+    "term_translation": "Schadensbegrenzung",
+    "definition_translation": "Die Handlung, die Schwere, Ernsthaftigkeit oder Schmerzhaftigkeit von etwas zu reduzieren.",
+    "example_translation": "Strategien zur Schadensbegrenzung umfassen Diversifizierung und Versicherung."
+  },
+  {
+    "id": "strat_0019",
+    "term_translation": "Aufwand / Ausgaben",
+    "definition_translation": "Der Akt der Ausgabe von Mitteln, oft für langfristige Vorteile aktiviert.",
+    "example_translation": "Der Kapitalaufwand für die neue Fabrik war beträchtlich."
+  },
+  {
+    "id": "strat_0020",
+    "term_translation": "Wirtschaftsprüfung",
+    "definition_translation": "Eine offizielle Inspektion der Konten einer Person oder Organisation, typischerweise durch eine unabhängige Stelle.",
+    "example_translation": "Die jährliche Wirtschaftsprüfung fand keine Unregelmäßigkeiten in der Buchhaltung."
+  },
+  {
+    "id": "strat_0021",
+    "term_translation": "Vermögenswert",
+    "definition_translation": "Eine Ressource mit wirtschaftlichem Wert, die eine Person oder ein Unternehmen besitzt, in der Erwartung eines zukünftigen Nutzens.",
+    "example_translation": "Der Markenruf ist unser wertvollster immaterieller Vermögenswert."
+  },
+  {
+    "id": "strat_0022",
+    "term_translation": "Gewinn",
+    "definition_translation": "Ein finanzieller Vorteil, insbesondere die Differenz zwischen dem verdienten und dem ausgegebenen Betrag.",
+    "example_translation": "Das Unternehmen erzielte trotz des wirtschaftlichen Abschwungs einen gesunden Gewinn."
+  },
+  {
+    "id": "strat_0023",
+    "term_translation": "Vermögen",
+    "definition_translation": "Das gesamte Eigentum einer Person oder Gesellschaft, das zur Begleichung von Schulden herangezogen werden kann.",
+    "example_translation": "Das Gericht ordnete das Einfrieren des gesamten Unternehmensvermögens an."
+  },
+  {
+    "id": "strat_0024",
+    "term_translation": "Prognose",
+    "definition_translation": "Eine Schätzung einer zukünftigen Situation oder Entwicklung basierend auf aktuellen Trends.",
+    "example_translation": "Die Umsatzprognose für das vierte Quartal sieht aufgrund aktueller Pipeline-Daten optimistisch aus."
+  },
+  {
+    "id": "strat_0025",
+    "term_translation": "Umsatzerlöse",
+    "definition_translation": "Das Gesamteinkommen, das aus einer bestimmten Quelle erzielt wird.",
+    "example_translation": "Werbung ist die Haupteinnahmequelle für diesen Social-Media-Giganten."
+  },
+  {
+    "id": "strat_0026",
+    "term_translation": "Entsorgungskosten",
+    "definition_translation": "Ausgaben, die mit der Stilllegung eines Produkts oder Vermögenswerts verbunden sind.",
+    "example_translation": "Wir müssen die Recycling- und Beseitigungsgebühren als Teil der Entsorgungskosten einkalkulieren."
+  },
+  {
+    "id": "strat_0027",
+    "term_translation": "IT-Revision",
+    "definition_translation": "Eine Prüfung der Managementkontrollen innerhalb einer Informationstechnologie-Infrastruktur.",
+    "example_translation": "Die IT-Revision deckte mehrere Schwachstellen in unserer Firewall-Konfiguration auf."
+  },
+  {
+    "id": "strat_0028",
+    "term_translation": "Wagnis / Unternehmung",
+    "definition_translation": "Eine riskante oder gewagte Reise oder Unternehmung, insbesondere eine, die neue kommerzielle Risiken birgt.",
+    "example_translation": "Das gemeinsame Wagnis der beiden Tech-Giganten zielt darauf ab, Quantenprozessoren zu entwickeln."
+  },
+  {
+    "id": "strat_0029",
+    "term_translation": "Steuerprüfung",
+    "definition_translation": "Eine Untersuchung einer Steuererklärung durch die Finanzbehörde, um die Richtigkeit von Einnahmen und Abzügen zu überprüfen.",
+    "example_translation": "Bewahren Sie alle Belege für den Fall einer Steuerprüfung auf."
+  },
+  {
+    "id": "strat_0030",
+    "term_translation": "Nettogewinn",
+    "definition_translation": "Der tatsächliche Gewinn nach Abzug der Betriebskosten und Steuern.",
+    "example_translation": "Nach Abzug von Steuern und Gehältern war unser Nettogewinn niedriger als erwartet."
+  },
+  {
+    "id": "strat_0031",
+    "term_translation": "Prüfungsakte",
+    "definition_translation": "Der Ordner oder Speicherort, der die Dokumentation für einen bestimmten Prüfungsauftrag enthält.",
+    "example_translation": "Der Junior-Buchhalter war für die Organisation der Prüfungsakte verantwortlich."
+  },
+  {
+    "id": "strat_0032",
+    "term_translation": "Prüfstelle",
+    "definition_translation": "Eine Organisation oder ein Gremium, das offiziell zur Durchführung von Inspektionen ernannt wurde.",
+    "example_translation": "Die europäische Prüfstelle überprüft die Verwendung der Fördergelder."
+  },
+  {
+    "id": "strat_0033",
+    "term_translation": "Regeleinhaltung",
+    "definition_translation": "Die Handlung oder Tatsache, einem Wunsch oder Befehl zu entsprechen, insbesondere gesetzlichen Vorschriften (Compliance).",
+    "example_translation": "Die regulatorische Regeleinhaltung ist ein großer Kostenfaktor für Bankinstitute."
+  },
+  {
+    "id": "strat_0034",
+    "term_translation": "Wirtschaftsprüfungsgesellschaft",
+    "definition_translation": "Ein Dienstleistungsunternehmen, das Prüfungs- und Bestätigungsleistungen erbringt.",
+    "example_translation": "Wir haben eine Wirtschaftsprüfungsgesellschaft der \"Big Four\" beauftragt, unseren Börsengang vorzubereiten."
+  },
+  {
+    "id": "strat_0035",
+    "term_translation": "Preisrisiko",
+    "definition_translation": "Das Risiko eines Wertverlusts eines Wertpapiers oder Portfolios.",
+    "example_translation": "Rohstoffhändler nutzen Absicherungsgeschäfte, um das Preisrisiko zu steuern."
+  },
+  {
+    "id": "strat_0036",
+    "term_translation": "Reinvermögen",
+    "definition_translation": "Die Gesamtaktiva eines Unternehmens abzüglich seiner Gesamtverbindlichkeiten.",
+    "example_translation": "Der Buchwert des Unternehmens entspricht im Wesentlichen seinem Reinvermögen."
+  },
+  {
+    "id": "strat_0037",
+    "term_translation": "Steuerliche Beihilfe",
+    "definition_translation": "Finanzielle Unterstützung durch die Regierung oder andere Institutionen.",
+    "example_translation": "Der angeschlagene Sektor bat um steuerliche Beihilfe, um die Krise zu überstehen."
+  },
+  {
+    "id": "strat_0038",
+    "term_translation": "Kreditaktivum",
+    "definition_translation": "Ein Kredit, der für den Kreditgeber (die Bank) als Vermögenswert gilt, da er Zinseinnahmen generiert.",
+    "example_translation": "Die Bank verkaufte einen Teil ihres Portfolios an Kreditaktiva, um die Liquidität zu erhöhen."
+  },
+  {
+    "id": "strat_0039",
+    "term_translation": "Prüfungsrisiko",
+    "definition_translation": "Das Risiko, dass ein Prüfer ein unangemessenes Prüfungsurteil abgibt, wenn der Jahresabschluss wesentlich falsch dargestellt ist.",
+    "example_translation": "Um das Prüfungsrisiko zu minimieren, haben wir den Stichprobenumfang unserer Tests erhöht."
+  },
+  {
+    "id": "strat_0040",
+    "term_translation": "Vermögenskauf",
+    "definition_translation": "Eine Art der Übernahme, bei der der Käufer einzelne Vermögenswerte eines Unternehmens anstelle seiner Anteile erwirbt.",
+    "example_translation": "Bei einem Asset Deal kann der Käufer genau wählen, welche Verbindlichkeiten er übernimmt."
+  },
+  {
+    "id": "strat_0041",
+    "term_translation": "Verkäuflich",
+    "definition_translation": "Fähig, verkauft oder vermarktet zu werden.",
+    "example_translation": "Wir müssen diesen Prototyp bis zum dritten Quartal in ein verkäufliches Produkt verwandeln."
+  },
+  {
+    "id": "strat_0042",
+    "term_translation": "Vermögenspool",
+    "definition_translation": "Eine Gruppe von Vermögenswerten, die zum Zweck der Schaffung eines Wertpapiers kombiniert werden.",
+    "example_translation": "Das hypothekenbesicherte Wertpapier wurde aus einem großen Vermögenspool von Wohnungsbaudarlehen abgeleitet."
+  },
+  {
+    "id": "strat_0043",
+    "term_translation": "Versunkene Kosten",
+    "definition_translation": "Kosten, die bereits angefallen sind und nicht zurückgewonnen werden können.",
+    "example_translation": "Wir sollten versunkene Kosten ignorieren, wenn wir entscheiden, ob wir das Projekt fortsetzen."
+  },
+  {
+    "id": "strat_0044",
+    "term_translation": "Marktplatz",
+    "definition_translation": "Eine Arena für Wettbewerbs- oder Handelsgeschäfte; die Welt des Handels.",
+    "example_translation": "Auf dem heutigen globalen Marktplatz ist digitale Präsenz obligatorisch."
+  },
+  {
+    "id": "strat_0045",
+    "term_translation": "Prüfungsfeld",
+    "definition_translation": "Der spezifische Bereich oder Umfang innerhalb einer Organisation, der einer Inspektion unterliegt.",
+    "example_translation": "Das Prüfungsfeld für dieses Jahr umfasst ausländische Tochtergesellschaften."
+  },
+  {
+    "id": "strat_0046",
+    "term_translation": "Toxisches Asset",
+    "definition_translation": "Ein Vermögenswert, der illiquide wird, wenn sein Sekundärmarkt verschwindet.",
+    "example_translation": "Die Bilanz der Bank wurde durch Bestände an toxischen Assets aus dem Immobiliencrash belastet."
+  },
+  {
+    "id": "strat_0047",
+    "term_translation": "Gemeinschaftsprüfung",
+    "definition_translation": "Eine Prüfung, die von zwei oder mehr Prüfungsgesellschaften durchgeführt wird.",
+    "example_translation": "Eine Gemeinschaftsprüfung ist oft für massive multinationale Konzerne erforderlich."
+  },
+  {
+    "id": "strat_0048",
+    "term_translation": "Anlagevermögen",
+    "definition_translation": "Vermögenswerte, die für den langfristigen Gebrauch gekauft wurden (z. B. Grundstücke, Gebäude, Ausrüstung).",
+    "example_translation": "Ein Anlagevermögen kann wahrscheinlich nicht schnell in Bargeld umgewandelt werden."
+  },
+  {
+    "id": "strat_0049",
+    "term_translation": "Fixkosten",
+    "definition_translation": "Geschäftskosten, wie z. B. Miete, die unabhängig von der Menge der produzierten Waren konstant bleiben.",
+    "example_translation": "Startups sollten ihre Fixkosten niedrig halten, um ihre Überlebensdauer zu verlängern."
+  },
+  {
+    "id": "strat_0050",
+    "term_translation": "Prüfpfad",
+    "definition_translation": "Eine schrittweise Aufzeichnung, mit der Buchhaltungs- oder Handelsdaten bis zu ihrer Quelle zurückverfolgt werden können.",
+    "example_translation": "Die Blockchain bietet einen unveränderlichen Prüfpfad für jede Transaktion."
+  },
+  {
+    "id": "strat_0051",
+    "term_translation": "Leitmarkt",
+    "definition_translation": "Ein Markt, auf dem eine bestimmte Innovation erstmals breit angenommen wird.",
+    "example_translation": "Skandinavien gilt oft als Leitmarkt für Elektrofahrzeuge."
+  },
+  {
+    "id": "strat_0052",
+    "term_translation": "Eingangskosten",
+    "definition_translation": "Die Kosten im Zusammenhang mit den Ressourcen, die zur Herstellung einer Ware oder Dienstleistung verwendet werden.",
+    "example_translation": "Steigende Energiepreise haben unsere Eingangskosten erheblich erhöht."
+  },
+  {
+    "id": "strat_0053",
+    "term_translation": "Kreditrisiko",
+    "definition_translation": "Das Risiko eines Zahlungsausfalls, das entstehen kann, wenn ein Kreditnehmer erforderliche Zahlungen nicht leistet.",
+    "example_translation": "Banken analysieren Ihre Historie, um das Kreditrisiko vor der Kreditvergabe zu bewerten."
+  },
+  {
+    "id": "strat_0054",
+    "term_translation": "Angenommene Anschaffungskosten",
+    "definition_translation": "Ein Betrag, der als Ersatz für Anschaffungskosten oder fortgeführte Anschaffungskosten an einem bestimmten Datum verwendet wird.",
+    "example_translation": "Wir haben den beizulegenden Zeitwert des Grundstücks als angenommene Anschaffungskosten beim Übergang zu IFRS verwendet."
+  },
+  {
+    "id": "strat_0055",
+    "term_translation": "Anschaffungskostenmethode",
+    "definition_translation": "Eine Methode zur Bilanzierung einer Investition, bei der diese zum gezahlten Preis erfasst wird.",
+    "example_translation": "Nach der Anschaffungskostenmethode werden Dividenden als Ertrag verbucht."
+  },
+  {
+    "id": "strat_0056",
+    "term_translation": "Faktorkosten",
+    "definition_translation": "Die Kosten der Produktionsfaktoren (Land, Arbeit, Kapital), die zur Herstellung von Waren verwendet werden.",
+    "example_translation": "Ökonomen analysieren Faktorkosten, um Inflationstreiber zu verstehen."
+  },
+  {
+    "id": "strat_0057",
+    "term_translation": "Prüfungsumfang",
+    "definition_translation": "Die Tiefe und Reichweite einer Prüfung, einschließlich dessen, was abgedeckt ist und was nicht.",
+    "example_translation": "Der Prüfungsumfang war nur auf die inländischen Operationen beschränkt."
+  },
+  {
+    "id": "strat_0058",
+    "term_translation": "Interessengruppe",
+    "definition_translation": "Eine Partei, die ein Interesse an einem Unternehmen hat und das Geschäft beeinflussen oder davon betroffen sein kann.",
+    "example_translation": "Wir müssen die Erwartungen jeder Interessengruppe bezüglich des Projektzeitplans managen."
+  },
+  {
+    "id": "strat_0059",
+    "term_translation": "IKT-Projekt",
+    "definition_translation": "Ein Projekt, das Informations- und Kommunikationstechnologie beinhaltet.",
+    "example_translation": "Die Regierung startete ein massives IKT-Projekt zur Digitalisierung von Gesundheitsakten."
+  },
+  {
+    "id": "strat_0060",
+    "term_translation": "Marktmacht",
+    "definition_translation": "Die Fähigkeit eines Unternehmens, den Marktpreis einer Ware profitabel über die Grenzkosten anzuheben.",
+    "example_translation": "Das Monopol hat übermäßige Marktmacht und kann Preise diktieren."
+  },
+  {
+    "id": "strat_0061",
+    "term_translation": "Markteintritt",
+    "definition_translation": "Die Bewegung eines Unternehmens in einen neuen Markt.",
+    "example_translation": "Barrieren für den Markteintritt umfassen hohe Kapitalanforderungen und Patente."
+  },
+  {
+    "id": "strat_0062",
+    "term_translation": "Risikoteilung",
+    "definition_translation": "Eine Strategie, bei der das Risiko auf mehrere Teilnehmer verteilt wird.",
+    "example_translation": "Versicherungen sind eine klassische Form der Risikoteilung."
+  },
+  {
+    "id": "strat_0063",
+    "term_translation": "Aktienanteil",
+    "definition_translation": "Ein Anteil, der dem Inhaber ein Stimmrecht und Anspruch auf Dividenden gibt.",
+    "example_translation": "Die Investition in einen Aktienanteil bietet höhere potenzielle Renditen als Anleihen."
+  },
+  {
+    "id": "strat_0064",
+    "term_translation": "Dienstleistungskosten",
+    "definition_translation": "Die Kosten, die mit der Erbringung einer Dienstleistung für einen Kunden verbunden sind.",
+    "example_translation": "Automatisierung half, die Dienstleistungskosten pro Ticket zu senken."
+  },
+  {
+    "id": "strat_0065",
+    "term_translation": "Tageswert",
+    "definition_translation": "Die Kosten, die erforderlich wären, um einen Vermögenswert in der aktuellen Periode zu ersetzen.",
+    "example_translation": "Eine Buchführung auf Basis des Tageswerts spiegelt die Inflation besser wider als historische Daten."
+  },
+  {
+    "id": "strat_0066",
+    "term_translation": "Aktienemission",
+    "definition_translation": "Der Akt, Aktien des Unternehmens der Öffentlichkeit oder Investoren anzubieten.",
+    "example_translation": "Das Unternehmen plante eine neue Aktienemission, um seine Expansion zu finanzieren."
+  },
+  {
+    "id": "strat_0067",
+    "term_translation": "Implizite Kosten",
+    "definition_translation": "Opportunitätskosten, die keine direkte Geldausgabe darstellen.",
+    "example_translation": "Die impliziten Kosten dafür, die Position unbesetzt zu lassen, sind die verlorene Produktivität."
+  },
+  {
+    "id": "strat_0068",
+    "term_translation": "Kontrollrisiko",
+    "definition_translation": "Das Risiko, dass eine wesentliche Falschdarstellung durch die internen Kontrollen nicht verhindert oder entdeckt wird.",
+    "example_translation": "Schwache Passwortrichtlinien erhöhen das Kontrollrisiko für das IT-System."
+  },
+  {
+    "id": "strat_0069",
+    "term_translation": "Systemprüfung",
+    "definition_translation": "Eine Prüfung der Systeme und Verfahren, die zur Aufzeichnung von Transaktionen verwendet werden.",
+    "example_translation": "Eine Systemprüfung bestätigte, dass die Backup-Verfahren korrekt funktionierten."
+  },
+  {
+    "id": "strat_0070",
+    "term_translation": "Risikoprofil",
+    "definition_translation": "Eine Bewertung der Bereitschaft und Fähigkeit einer Person oder Organisation, Risiken einzugehen.",
+    "example_translation": "Ein konservativer Investor hat typischerweise ein niedriges Risikoprofil."
+  },
+  {
+    "id": "strat_0071",
+    "term_translation": "Gesamtvermögen",
+    "definition_translation": "Die Summe aller kurz- und langfristigen Vermögenswerte im Besitz einer Organisation.",
+    "example_translation": "Das Gesamtvermögen des Unternehmens überstieg letztes Jahr eine Milliarde Dollar."
+  },
+  {
+    "id": "strat_0072",
+    "term_translation": "Risikofinanzierung",
+    "definition_translation": "Das Management der finanziellen Auswirkungen von Risiken, oft durch Versicherung oder Selbstbehalt.",
+    "example_translation": "Captive-Versicherungen sind eine anspruchsvolle Form der Risikofinanzierung."
+  },
+  {
+    "id": "strat_0073",
+    "term_translation": "Prüfungsbericht",
+    "definition_translation": "Ein von einem Prüfer erstelltes Dokument, das angibt, ob die Finanzberichte korrekt sind.",
+    "example_translation": "Die Aktionäre waren erleichtert, einen sauberen Prüfungsbericht zu sehen."
+  },
+  {
+    "id": "strat_0074",
+    "term_translation": "Aktienindex",
+    "definition_translation": "Ein statistisches Maß für die Veränderungen in einem Aktienportfolio, das einen Teil des Gesamtmarktes repräsentiert.",
+    "example_translation": "Der S&P 500 ist ein bekannter Aktienindex."
+  },
+  {
+    "id": "strat_0075",
+    "term_translation": "Abgesicherter Vermögenswert",
+    "definition_translation": "Ein Vermögenswert, der durch eine Gegeninvestition vor Risiko geschützt wurde.",
+    "example_translation": "Obwohl der Markt einbrach, blieb der Wert des abgesicherten Vermögenswerts stabil."
+  },
+  {
+    "id": "strat_0076",
+    "term_translation": "Geleaster Vermögenswert",
+    "definition_translation": "Eigentum oder Ausrüstung, die von einem Leasingnehmer gegen Zahlungen an den Leasinggeber genutzt wird.",
+    "example_translation": "Die Fluggesellschaft besitzt ihre Flugzeuge nicht; jedes ist ein geleaster Vermögenswert."
+  },
+  {
+    "id": "strat_0077",
+    "term_translation": "Marktanteil",
+    "definition_translation": "Der Anteil eines Marktes, der von einem bestimmten Unternehmen oder Produkt kontrolliert wird.",
+    "example_translation": "Aggressive Preisgestaltung half ihnen, einen signifikanten Marktanteil zu erobern."
+  },
+  {
+    "id": "strat_0078",
+    "term_translation": "Marktpreis",
+    "definition_translation": "Der aktuelle Preis, zu dem ein Vermögenswert oder eine Dienstleistung gekauft oder verkauft werden kann.",
+    "example_translation": "Das Angebot lag weit unter dem aktuellen Marktpreis."
+  },
+  {
+    "id": "strat_0079",
+    "term_translation": "Prüfungsumfang",
+    "definition_translation": "Die Menge der erhaltenen Prüfungsnachweise, typischerweise bestimmt durch die Stichprobengröße.",
+    "example_translation": "Wir haben den Prüfungsumfang erhöht, nachdem wir anfängliche Diskrepanzen gefunden hatten."
+  },
+  {
+    "id": "strat_0080",
+    "term_translation": "Zwischenprüfung",
+    "definition_translation": "Eine Prüfung, die vor dem Ende des Geschäftsjahres durchgeführt wird.",
+    "example_translation": "Die Zwischenprüfung half, Probleme vor dem Jahresabschluss zu identifizieren."
+  },
+  {
+    "id": "strat_0081",
+    "term_translation": "Anteilseigner",
+    "definition_translation": "Eine Person oder Körperschaft, die Aktien eines Unternehmens besitzt.",
+    "example_translation": "Als Anteilseigner haben Sie das Recht, über Vorstandsbestellungen abzustimmen."
+  },
+  {
+    "id": "strat_0082",
+    "term_translation": "Restkosten",
+    "definition_translation": "Die verbleibenden Kosten eines Vermögenswerts nach Ablauf seiner Nutzungsdauer.",
+    "example_translation": "Die Restkosten waren vernachlässigbar, da die Maschine vollständig verschrottet wurde."
+  },
+  {
+    "id": "strat_0083",
+    "term_translation": "Risikoanalyse",
+    "definition_translation": "Der Prozess der Identifizierung und Analyse potenzieller Probleme, die wichtige Geschäftsinitiativen negativ beeinflussen könnten.",
+    "example_translation": "Eine gründliche Risikoanalyse ist erforderlich, bevor der neue Standort genehmigt wird."
+  },
+  {
+    "id": "strat_0084",
+    "term_translation": "Geschäftsdaten",
+    "definition_translation": "Informationen bezüglich kommerzieller Operationen, Verkäufe und Kundenverhalten.",
+    "example_translation": "Der Schutz sensibler Geschäftsdaten hat oberste Priorität für die IT-Sicherheit."
+  },
+  {
+    "id": "strat_0085",
+    "term_translation": "Firmenname",
+    "definition_translation": "Der Name, unter dem ein Unternehmen operiert.",
+    "example_translation": "Sie müssen Ihren Firmennamen bei den örtlichen Behörden registrieren."
+  },
+  {
+    "id": "strat_0086",
+    "term_translation": "Umsatzerlöse",
+    "definition_translation": "Einkommen aus dem Verkauf von Waren oder Dienstleistungen.",
+    "example_translation": "Die Umsatzerlöse im vierten Quartal übertrafen die Prognosen um zwanzig Prozent."
+  },
+  {
+    "id": "strat_0087",
+    "term_translation": "Konzernabschlussprüfer",
+    "definition_translation": "Der Prüfer, der für die Berichterstattung über den konsolidierten Jahresabschluss einer Gruppe verantwortlich ist.",
+    "example_translation": "Der Konzernabschlussprüfer koordiniert sich mit lokalen Prüfern in jedem Tochterland."
+  },
+  {
+    "id": "strat_0088",
+    "term_translation": "Staatlicher Rechnungsprüfer",
+    "definition_translation": "Ein öffentlicher Beamter, der für die Prüfung von Regierungsbehörden verantwortlich ist.",
+    "example_translation": "Der staatliche Rechnungsprüfer veröffentlichte einen Bericht, der die Ausgaben der Abteilung kritisierte."
+  },
+  {
+    "id": "strat_0089",
+    "term_translation": "Bestätigungsvermerk",
+    "definition_translation": "Eine Bescheinigung, die dem Jahresabschluss beigefügt ist, basierend auf einer Prüfung der Verfahren und Aufzeichnungen.",
+    "example_translation": "Ein eingeschränkter Bestätigungsvermerk kann den Aktienkurs eines Unternehmens schwer schädigen."
+  },
+  {
+    "id": "strat_0090",
+    "term_translation": "Anschaffungskosten",
+    "definition_translation": "Der Gesamtpreis, der für den Erwerb eines Vermögenswerts gezahlt wurde, einschließlich Installation und Transport.",
+    "example_translation": "Die Anschaffungskosten des Gebäudes waren viel niedriger als sein aktueller Marktwert."
+  },
+  {
+    "id": "strat_0091",
+    "term_translation": "Gewinnspanne",
+    "definition_translation": "Der Betrag, um den die Verkaufserlöse die Kosten in einem Unternehmen übersteigen.",
+    "example_translation": "Luxusgüter haben typischerweise eine sehr hohe Gewinnspanne."
+  },
+  {
+    "id": "strat_0092",
+    "term_translation": "Veräußerungskosten",
+    "definition_translation": "Inkrementelle Kosten, die direkt der Veräußerung eines Vermögenswerts zuzurechnen sind.",
+    "example_translation": "Wir haben die Veräußerungskosten vom beizulegenden Zeitwert abgezogen, um den Nettoveräußerungswert zu ermitteln."
+  },
+  {
+    "id": "strat_0093",
+    "term_translation": "Umlaufvermögen",
+    "definition_translation": "Bargeld und andere Vermögenswerte, die voraussichtlich innerhalb eines Jahres in Bargeld umgewandelt werden.",
+    "example_translation": "Lagerbestände gelten als Umlaufvermögen."
+  },
+  {
+    "id": "strat_0094",
+    "term_translation": "Stichprobenrisiko",
+    "definition_translation": "Die Möglichkeit, dass die Schlussfolgerung des Prüfers basierend auf einer Stichprobe anders ausfällt, als wenn die gesamte Grundgesamtheit geprüft würde.",
+    "example_translation": "Die Verwendung eines größeren Datensatzes hilft, das Stichprobenrisiko zu reduzieren."
+  },
+  {
+    "id": "strat_0095",
+    "term_translation": "Risikowert",
+    "definition_translation": "Eine Statistik, die das Niveau des finanziellen Risikos innerhalb einer Firma über einen bestimmten Zeitraum misst und quantifiziert.",
+    "example_translation": "Banken verwenden Value-at-Risk-Modelle, um zu bestimmen, wie viel Kapital sie halten müssen."
+  },
+  {
+    "id": "strat_0096",
+    "term_translation": "Gesättigter Markt",
+    "definition_translation": "Ein Markt, in dem die Industrie einen Gleichgewichtszustand erreicht hat und das Wachstum langsam ist.",
+    "example_translation": "Es ist schwierig, in einem so gesättigten Markt neue Kunden zu finden."
+  },
+  {
+    "id": "strat_0097",
+    "term_translation": "Beobachtete Prüfung",
+    "definition_translation": "Eine Prüfung, bei der ein Beobachter einem anderen Prüfer bei der Ausführung seiner Aufgaben zuschaut, um die Qualität zu sichern.",
+    "example_translation": "Die Akkreditierungsstelle führte eine beobachtete Prüfung unseres Zertifizierungsprozesses durch."
+  },
+  {
+    "id": "strat_0098",
+    "term_translation": "Zinskosten",
+    "definition_translation": "Der kumulierte Betrag an Zinsen, den ein Kreditnehmer für ein Darlehen zahlt.",
+    "example_translation": "Eine Umschuldung half, die jährlichen Zinskosten erheblich zu senken."
+  },
+  {
+    "id": "strat_0099",
+    "term_translation": "Equity-Methode",
+    "definition_translation": "Eine Buchhaltungstechnik, die von Firmen verwendet wird, um die Gewinne aus ihren Investitionen in andere Unternehmen zu bewerten.",
+    "example_translation": "Da wir 30% des verbundenen Unternehmens besitzen, wenden wir die Equity-Methode an."
+  },
+  {
+    "id": "strat_0100",
+    "term_translation": "Risikoexposition",
+    "definition_translation": "Das Maß für den potenziellen zukünftigen Verlust, der aus einer bestimmten Aktivität oder einem Ereignis resultiert.",
+    "example_translation": "Absicherungsstrategien sind darauf ausgelegt, die Risikoexposition zu begrenzen."
+  },
+  {
+    "id": "strat_0101",
+    "term_translation": "Prüfungsmüdigkeit",
+    "definition_translation": "Die Erschöpfung, die Mitarbeiter erleben, die häufigen oder kontinuierlichen Prüfungen ausgesetzt sind.",
+    "example_translation": "Um Prüfungsmüdigkeit vorzubeugen, haben wir die Sicherheits- und Qualitätsinspektionen zusammengelegt."
+  },
+  {
+    "id": "strat_0102",
+    "term_translation": "Ex-ante-Prüfung",
+    "definition_translation": "Eine Prüfung, die vor einer Transaktion oder Aktivität durchgeführt wird.",
+    "example_translation": "Die Ex-ante-Prüfung stellt sicher, dass das Projektbudget vor der Genehmigung realistisch ist."
+  },
+  {
+    "id": "strat_0103",
+    "term_translation": "Prüfungsvorschau",
+    "definition_translation": "Eine vorläufige Durchsicht von Dokumenten, bevor die offizielle Prüfung beginnt.",
+    "example_translation": "Die Prüfungsvorschau half uns, die notwendigen Akten im Voraus zu organisieren."
+  },
+  {
+    "id": "strat_0104",
+    "term_translation": "Inhärentes Risiko",
+    "definition_translation": "Das Risiko eines Fehlers in einem Finanzbericht aufgrund eines Faktors, der nicht auf ein Versagen der internen Kontrolle zurückzuführen ist.",
+    "example_translation": "Bargeldverkehr birgt ein hohes inhärentes Risiko für Diebstahl."
+  },
+  {
+    "id": "strat_0105",
+    "term_translation": "Aktiver Markt",
+    "definition_translation": "Ein Markt, in dem Transaktionen für den Vermögenswert oder die Verbindlichkeit mit ausreichender Häufigkeit und Volumen stattfinden.",
+    "example_translation": "Es gibt keinen aktiven Markt für diese Art von Spezialmaschinen."
+  },
+  {
+    "id": "strat_0106",
+    "term_translation": "Geschäftseinheit",
+    "definition_translation": "Ein logisches Segment eines Unternehmens, das eine bestimmte Geschäftsfunktion repräsentiert.",
+    "example_translation": "Jede Geschäftseinheit hat ihren eigenen Personalvertreter."
+  },
+  {
+    "id": "strat_0107",
+    "term_translation": "Selbstprüfung",
+    "definition_translation": "Der Prozess der Überprüfung der eigenen Arbeit oder Abteilung.",
+    "example_translation": "Selbstprüfung wird ermutigt, kann aber eine unabhängige Verifizierung nicht ersetzen."
+  },
+  {
+    "id": "strat_0108",
+    "term_translation": "Geschäftsregel",
+    "definition_translation": "Eine Regel, die einen Aspekt des Geschäfts definiert oder einschränkt und immer als wahr oder falsch aufgelöst wird.",
+    "example_translation": "Eine Geschäftsregel verhindert, dass das System Bestellungen ohne gültige Adresse verarbeitet."
+  },
+  {
+    "id": "strat_0109",
+    "term_translation": "Prüfungsanfrage",
+    "definition_translation": "Eine spezifische Frage oder Anforderung von Informationen durch einen Prüfer.",
+    "example_translation": "Wir erhielten eine Prüfungsanfrage bezüglich der Reisekosten im März."
+  },
+  {
+    "id": "strat_0110",
+    "term_translation": "Ausgewählte Prüfung",
+    "definition_translation": "Eine Prüfung, die an einer spezifischen Teilmenge von Daten oder einer spezifischen Abteilung durchgeführt wird.",
+    "example_translation": "Die Steuerbehörde führte eine ausgewählte Prüfung unserer Gehaltsunterlagen durch."
+  },
+  {
+    "id": "strat_0111",
+    "term_translation": "Prüfungsansatz",
+    "definition_translation": "Die Strategie, die ein Prüfer zur Durchführung der Prüfung anwendet.",
+    "example_translation": "Wir haben einen risikobasierten Prüfungsansatz gewählt, um uns auf die kritischsten Bereiche zu konzentrieren."
+  },
+  {
+    "id": "strat_0112",
+    "term_translation": "Software-Asset",
+    "definition_translation": "Eine Softwarelizenz oder Anwendung, die einen Wert für die Organisation darstellt.",
+    "example_translation": "Die Verwaltung jedes Software-Assets ist entscheidend, um Lizenzstrafen zu vermeiden."
+  },
+  {
+    "id": "strat_0113",
+    "term_translation": "Öko-Audit",
+    "definition_translation": "Eine Bewertung der Umweltauswirkungen einer Organisation.",
+    "example_translation": "Das Öko-Audit hilft Unternehmen, ihre Nachhaltigkeitsnachweise zu verbessern."
+  },
+  {
+    "id": "strat_0114",
+    "term_translation": "Interne Revision",
+    "definition_translation": "Eine unabhängige, objektive Prüfungs- und Beratungsaktivität, die darauf ausgelegt ist, Mehrwert zu schaffen und Geschäftsprozesse zu verbessern.",
+    "example_translation": "Die Abteilung für interne Revision berichtet direkt an den Prüfungsausschuss."
+  },
+  {
+    "id": "strat_0115",
+    "term_translation": "Geldvermögen",
+    "definition_translation": "Vermögenswerte, die in Währung fixiert sind, wie Bargeld oder Forderungen.",
+    "example_translation": "Inflation verringert die Kaufkraft von Geldvermögen."
+  },
+  {
+    "id": "strat_0116",
+    "term_translation": "Externe Prüfung",
+    "definition_translation": "Eine Prüfung, die von einem unabhängigen Buchhalter durchgeführt wird, der kein Angestellter des Unternehmens ist.",
+    "example_translation": "Die externe Prüfung ist für alle börsennotierten Unternehmen vorgeschrieben."
+  },
+  {
+    "id": "strat_0117",
+    "term_translation": "Finanzrisiko",
+    "definition_translation": "Die Gefahr, dass ein Unternehmen seinen finanziellen Verpflichtungen nicht nachkommen kann.",
+    "example_translation": "Hohe Verschuldung erhöht das Finanzrisiko während eines wirtschaftlichen Abschwungs."
+  },
+  {
+    "id": "strat_0118",
+    "term_translation": "Geschäftsmodell",
+    "definition_translation": "Ein Plan für den erfolgreichen Betrieb eines Unternehmens, der Einnahmequellen, Kundenstamm und Produkte identifiziert.",
+    "example_translation": "Das Abonnement-Geschäftsmodell bietet vorhersehbare wiederkehrende Einnahmen."
+  },
+  {
+    "id": "strat_0119",
+    "term_translation": "Prüfungsnachweis",
+    "definition_translation": "Informationen, die vom Prüfer gesammelt wurden, um das Prüfungsurteil zu stützen.",
+    "example_translation": "Rechnungen und Kontoauszüge dienen als primärer Prüfungsnachweis."
+  },
+  {
+    "id": "strat_0120",
+    "term_translation": "Eigenkapital",
+    "definition_translation": "Die Rechte des Eigentümers an den Vermögenswerten des Unternehmens.",
+    "example_translation": "Einbehaltene Gewinne trugen zum Wachstum des Eigenkapitals bei."
+  },
+  {
+    "id": "strat_0121",
+    "term_translation": "Kalkulatorische Kosten",
+    "definition_translation": "Kosten, die keine tatsächliche Geldzahlung beinhalten, wie z. B. die Nutzung eigener Räumlichkeiten.",
+    "example_translation": "Wir haben die Miete als kalkulatorische Kosten einbezogen, um die Rentabilität genau zu vergleichen."
+  },
+  {
+    "id": "strat_0122",
+    "term_translation": "Stichprobenprüfung",
+    "definition_translation": "Die Anwendung von Prüfungsverfahren auf weniger als 100% der Elemente in einer Grundgesamtheit.",
+    "example_translation": "Die Stichprobenprüfung ermöglicht es uns, Schlussfolgerungen zu ziehen, ohne jeden einzelnen Beleg zu prüfen."
+  },
+  {
+    "id": "strat_0123",
+    "term_translation": "Wahrgenommenes Risiko",
+    "definition_translation": "Die subjektive Beurteilung, die Menschen über die Eigenschaften und die Schwere eines Risikos treffen.",
+    "example_translation": "Das wahrgenommene Risiko des Fliegens ist oft höher als das des Autofahrens, trotz Statistiken."
+  },
+  {
+    "id": "strat_0124",
+    "term_translation": "Variable Kosten",
+    "definition_translation": "Unternehmensausgaben, die sich proportional zur Produktionsleistung ändern.",
+    "example_translation": "Verpackung und Versand sind typische variable Kosten."
+  },
+  {
+    "id": "strat_0125",
+    "term_translation": "Versicherungsrisiko",
+    "definition_translation": "Die Verlustmöglichkeit, die eine Versicherungsgesellschaft abzudecken bereit ist.",
+    "example_translation": "Der Versicherer bewertete das Versicherungsrisiko vor Ausstellung der Police."
+  },
+  {
+    "id": "strat_0126",
+    "term_translation": "Forensische Prüfung",
+    "definition_translation": "Eine Untersuchung und Bewertung der Finanzinformationen einer Firma oder Person zur Verwendung als Beweismittel vor Gericht.",
+    "example_translation": "Eine forensische Prüfung wurde angeordnet, nachdem Betrugsvorwürfe aufgetaucht waren."
+  },
+  {
+    "id": "strat_0127",
+    "term_translation": "Abgegrenzter Vermögenswert",
+    "definition_translation": "Eine Ausgabe, die als Vermögenswert vorgetragen wird, um in zukünftigen Perioden abgeschrieben zu werden.",
+    "example_translation": "Die vorausbezahlte Versicherung wurde als abgegrenzter Vermögenswert verbucht."
+  },
+  {
+    "id": "strat_0128",
+    "term_translation": "Entdeckungsrisiko",
+    "definition_translation": "Das Risiko, dass die vom Prüfer durchgeführten Verfahren eine Falschdarstellung nicht entdecken.",
+    "example_translation": "Das Entdeckungsrisiko kann durch strengere Tests gesenkt werden."
+  },
+  {
+    "id": "strat_0129",
+    "term_translation": "Bodenschätze",
+    "definition_translation": "Nachgewiesene Reserven an Mineralvorkommen, die sich unter der Erde befinden.",
+    "example_translation": "Der Reichtum der Nation hängt stark von ihren Bodenschätzen wie Öl und Gas ab."
+  },
+  {
+    "id": "strat_0130",
+    "term_translation": "Natürliche Ressourcen",
+    "definition_translation": "Vermögenswerte der natürlichen Umwelt wie Wasser, Luft und lebende Organismen.",
+    "example_translation": "Naturschutzbemühungen zielen darauf ab, natürliche Ressourcen für zukünftige Generationen zu schützen."
+  },
+  {
+    "id": "strat_0131",
+    "term_translation": "Gewinnbeteiligung",
+    "definition_translation": "Ein Anreizplan, bei dem Mitarbeiter einen direkten Anteil am Gewinn des Unternehmens erhalten.",
+    "example_translation": "Der Scheck über die Gewinnbeteiligung am Ende des Jahres steigerte die Arbeitsmoral."
+  },
+  {
+    "id": "strat_0132",
+    "term_translation": "Fortgeführte Anschaffungskosten",
+    "definition_translation": "Der Anfangswert eines Vermögenswerts abzüglich der kumulierten Abschreibungen.",
+    "example_translation": "Die Anleihe wird in der Bilanz zu fortgeführten Anschaffungskosten gehalten."
+  },
+  {
+    "id": "strat_0133",
+    "term_translation": "Steuerpflichtiger Gewinn",
+    "definition_translation": "Der Teil des Gewinns, der gemäß den Steuergesetzen der Besteuerung unterliegt.",
+    "example_translation": "Abzüge können den steuerpflichtigen Gewinn erheblich reduzieren."
+  },
+  {
+    "id": "strat_0134",
+    "term_translation": "Produktmarkt",
+    "definition_translation": "Der Marktplatz, auf dem Endgüter oder Dienstleistungen an Unternehmen und den öffentlichen Sektor verkauft werden.",
+    "example_translation": "Wir führen das neue Modell in einen hart umkämpften Produktmarkt ein."
+  },
+  {
+    "id": "strat_0135",
+    "term_translation": "Gründungskosten",
+    "definition_translation": "Einmalige Kosten, die mit der Gründung eines Unternehmens verbunden sind.",
+    "example_translation": "Anwaltskosten und Lizenzen sind typische Gründungskosten."
+  },
+  {
+    "id": "strat_0136",
+    "term_translation": "Liquiditätsrisiko",
+    "definition_translation": "Das Risiko, dass ein Unternehmen oder eine Bank kurzfristigen finanziellen Forderungen nicht nachkommen kann.",
+    "example_translation": "Der schnelle Verkauf von Vermögenswerten mit Verlust ist ein Symptom für Liquiditätsrisiko."
+  },
+  {
+    "id": "strat_0137",
+    "term_translation": "Risikolandschaft",
+    "definition_translation": "Die vollständige Ansicht potenzieller Risiken, denen eine Organisation ausgesetzt ist.",
+    "example_translation": "Die Risikolandschaft hat sich mit dem Anstieg von Cyberbedrohungen dramatisch verändert."
+  },
+  {
+    "id": "strat_0138",
+    "term_translation": "Explorationskosten",
+    "definition_translation": "Kosten, die bei der Suche nach neuen Geschäftsmöglichkeiten oder Ressourcen anfallen.",
+    "example_translation": "Die Explorationskosten für den neuen Bergbaustandort waren beträchtlich."
+  },
+  {
+    "id": "strat_0139",
+    "term_translation": "Segmentvermögen",
+    "definition_translation": "Diejenigen Betriebsvermögenswerte, die von einem Segment in seiner betrieblichen Tätigkeit eingesetzt werden.",
+    "example_translation": "Wir weisen Segmentvermögen basierend auf dem Umsatzbeitrag der Division zu."
+  },
+  {
+    "id": "strat_0140",
+    "term_translation": "Captive-Markt",
+    "definition_translation": "Ein Markt, auf dem Verbraucher nur begrenzte Auswahlmöglichkeiten haben und bei einem bestimmten Anbieter kaufen müssen.",
+    "example_translation": "Flughäfen operieren als Captive-Markt für Speisen und Getränke."
+  },
+  {
+    "id": "strat_0141",
+    "term_translation": "Cashflow-Risiko",
+    "definition_translation": "Das Risiko von Schwankungen in der Höhe der ein- und ausgehenden Geldmittel.",
+    "example_translation": "Saisonale Geschäfte sind in der Nebensaison oft einem hohen Cashflow-Risiko ausgesetzt."
+  },
+  {
+    "id": "strat_0142",
+    "term_translation": "Anschaffungskostenprinzip",
+    "definition_translation": "Der ursprüngliche nominale Geldwert eines Wirtschaftsguts.",
+    "example_translation": "Land wird normalerweise nach dem Anschaffungskostenprinzip erfasst, nicht zum aktuellen Marktwert."
+  },
+  {
+    "id": "strat_0143",
+    "term_translation": "Reine Prüfungsgesellschaft",
+    "definition_translation": "Eine Firma, die sich ausschließlich auf Prüfungsdienstleistungen spezialisiert hat, ohne Beratung anzubieten.",
+    "example_translation": "Um Interessenkonflikte zu vermeiden, haben wir eine reine Prüfungsgesellschaft gewählt."
+  },
+  {
+    "id": "strat_0144",
+    "term_translation": "Prüfungsbehörde",
+    "definition_translation": "Eine offizielle Stelle, die befugt ist, Prüfungen durchzuführen.",
+    "example_translation": "Die Prüfungsbehörde verlangte Zugang zu allen E-Mail-Kommunikationen."
+  },
+  {
+    "id": "strat_0145",
+    "term_translation": "Lebenszykluskosten",
+    "definition_translation": "Die Gesamtkosten des Eigentums über die Lebensdauer eines Vermögenswerts.",
+    "example_translation": "Der Kauf billiger Ausrüstung führt aufgrund von Reparaturen oft zu höheren Lebenszykluskosten."
+  },
+  {
+    "id": "strat_0146",
+    "term_translation": "Eigenständiger Markt",
+    "definition_translation": "Ein separates und identifizierbares Marktsegment.",
+    "example_translation": "Luxus-SUVs haben sich zu einem eigenständigen Markt gegenüber Standard-Geländewagen entwickelt."
+  },
+  {
+    "id": "strat_0147",
+    "term_translation": "Gewinnrücklage",
+    "definition_translation": "Der Gewinn, der im Unternehmen behalten wird, anstatt als Dividende ausgezahlt zu werden.",
+    "example_translation": "Wir haben die Gewinnrücklage genutzt, um das neue Labor zu finanzieren."
+  },
+  {
+    "id": "strat_0148",
+    "term_translation": "Konformitätsprüfung",
+    "definition_translation": "Ein Test, um festzustellen, ob Kontrollen in einer Weise angewendet werden, die den Richtlinien und Verfahren des Managements entspricht.",
+    "example_translation": "Die Konformitätsprüfung zeigte, dass Sicherheitsprotokolle ignoriert wurden."
+  },
+  {
+    "id": "strat_0149",
+    "term_translation": "Physische Vermögenswerte",
+    "definition_translation": "Greifbare Gegenstände von Wert, wie Inventar, Maschinen und Gebäude.",
+    "example_translation": "Physische Vermögenswerte erfordern regelmäßige Wartung und Versicherung."
+  },
+  {
+    "id": "strat_0150",
+    "term_translation": "Kostenverrechnung",
+    "definition_translation": "Der Prozess der Identifizierung, Zusammenfassung und Zuordnung von Kosten zu Kostenträgern.",
+    "example_translation": "Eine ordnungsgemäße Kostenverrechnung hilft uns zu verstehen, welche Produkte tatsächlich rentabel sind."
+  }
+]

@@ -5,6 +5,21 @@ import { FirestoreService } from './firestore.service';
 import { MigrationService } from './migration.service';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
+// Mock Firebase Auth functions
+vi.mock('@angular/fire/auth', () => ({
+  Auth: Symbol('Auth'), // Mock injection token
+  onAuthStateChanged: vi.fn((auth, callback) => {
+    // Don't call callback immediately - let tests control the auth state
+    // Return unsubscribe function
+    return vi.fn();
+  }),
+  signInWithPopup: vi.fn(),
+  GoogleAuthProvider: vi.fn(),
+  signOut: vi.fn(),
+  signInWithEmailAndPassword: vi.fn(),
+  createUserWithEmailAndPassword: vi.fn()
+}));
+
 describe('AuthService', () => {
   let service: AuthService;
   let mockAuth: any;
@@ -12,11 +27,18 @@ describe('AuthService', () => {
   let mockMigrationService: any;
 
   beforeEach(() => {
-    mockAuth = {};
+    mockAuth = {
+      // Minimal Firebase Auth mock to avoid onAuthStateChanged errors
+      app: {},
+      config: {},
+      name: 'mock-auth'
+    };
+
     mockFirestoreService = {
       ensureUserExists: vi.fn(),
       getUserProfile: vi.fn()
     };
+
     mockMigrationService = {
       hasLocalDataToMigrate: vi.fn(),
       migrateGuestDataToUser: vi.fn(),

@@ -1,4 +1,4 @@
-import { Component, input, output, inject, HostListener, computed, ChangeDetectionStrategy, signal, effect } from '@angular/core';
+import { Component, input, output, inject, computed, ChangeDetectionStrategy, signal, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../services/theme.service';
 import { LanguageService, SupportedLanguage } from '../../services/language.service';
@@ -11,7 +11,10 @@ import { EmailSigninModal } from '../email-signin-modal/email-signin-modal';
   imports: [CommonModule, EmailSigninModal],
   templateUrl: './settings-menu.html',
   styleUrl: './settings-menu.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '(document:keydown.escape)': 'onEscapeKey($event)'
+  }
 })
 export class SettingsMenu {
   themeService = inject(ThemeService);
@@ -50,7 +53,6 @@ export class SettingsMenu {
   });
 
   // Host listener for escape key
-  @HostListener('document:keydown.escape', ['$event'])
   onEscapeKey(event: Event) {
     if (this.isOpen()) {
       (event as KeyboardEvent).preventDefault();

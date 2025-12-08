@@ -25,16 +25,16 @@ export class GameService {
     const topicLower = topic.toLowerCase();
     console.log('[GameService] Using static vocabulary for topic:', topicLower);
 
-    // Always use static vocabulary for MVP
-    if (topicLower === 'hr' || topicLower === 'pm') {
-      const languageField = this.mapLanguageToField(this.languageService.currentLanguage());
+    // Always use static vocabulary
+    try {
+      const languageField = this.mapLanguageCodeToName(this.languageService.currentLanguage());
       console.log('[GameService] Loading translated vocabulary for:', topicLower, 'with language:', languageField);
       const observable = this.staticVocab.generateTranslatedWords(topicLower, languageField, GAME_CONSTANTS.CARDS_PER_GAME, difficulty ?? undefined);
       cards = await firstValueFrom(observable) || [];
       console.log('[GameService] Translated vocabulary loaded:', cards.length, 'cards');
-    } else {
-      console.log('[GameService] No static vocabulary for topic, using fallback');
-      // Use static fallback words for other topics
+    } catch (error) {
+      console.error('[GameService] Failed to load translated vocabulary, using fallback:', error);
+      // Use static fallback words as safety net
       cards = this.getStaticFallbackWords(topic, GAME_CONSTANTS.CARDS_PER_GAME, difficulty);
     }
 
@@ -167,16 +167,15 @@ export class GameService {
   }
 
   /**
-   * Maps the new language codes to the old LanguageField types ('polish', 'spanish')
+   * Maps language codes to full language names for StaticVocabularyService
    */
-  private mapLanguageToField(language: string): string {
-    switch (language) {
+  private mapLanguageCodeToName(code: string): string {
+    switch (code) {
       case 'pl': return 'polish';
       case 'es': return 'spanish';
-      case 'en':
-      case 'de':
-      case 'fr':
-      default: return 'polish'; // fallback to polish for unsupported languages
+      case 'de': return 'german';
+      case 'fr': return 'french';
+      default: return 'polish'; // fallback
     }
   }
 }

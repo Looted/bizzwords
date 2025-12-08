@@ -1,62 +1,46 @@
+import { TestBed } from '@angular/core/testing';
 import { VocabularyStatsService } from './vocabulary-stats.service';
 import { StorageService } from './storage.service';
 import { AuthService } from './auth.service';
 import { FirestoreService } from './firestore.service';
-import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
-
-class MockStorageService {
-  getItem = vi.fn().mockReturnValue(null);
-  setItem = vi.fn();
-  removeItem = vi.fn();
-  clear = vi.fn();
-}
-
-class MockAuthService {
-  currentUser = vi.fn().mockReturnValue(null);
-  userProfileReady = vi.fn().mockReturnValue(true);
-  isAuthenticated = vi.fn().mockReturnValue(false);
-}
-
-class MockFirestoreService {
-  saveUserProgress = vi.fn();
-}
+import { vi } from 'vitest';
 
 describe('VocabularyStatsService', () => {
   let service: VocabularyStatsService;
-  let storageService: StorageService;
-  let authService: AuthService;
-  let firestoreService: FirestoreService;
+  let storageService: any;
+  let authService: any;
+  let firestoreService: any;
 
   beforeEach(() => {
-    storageService = new MockStorageService() as any;
-    authService = new MockAuthService() as any;
-    firestoreService = new MockFirestoreService() as any;
+    const storageSpy = {
+      getItem: vi.fn().mockReturnValue(null),
+      setItem: vi.fn(),
+      removeItem: vi.fn(),
+      clear: vi.fn()
+    };
+    const authSpy = {
+      currentUser: vi.fn().mockReturnValue(null),
+      userProfileReady: vi.fn().mockReturnValue(true),
+      isAuthenticated: vi.fn().mockReturnValue(false)
+    };
+    const firestoreSpy = {
+      saveUserProgress: vi.fn(),
+      getUserProgress: vi.fn().mockResolvedValue(null)
+    };
 
-    // Mock the inject function globally for this test
-    const mockInject = vi.fn((token: any) => {
-      if (token === StorageService) return storageService;
-      if (token === AuthService) return authService;
-      if (token === FirestoreService) return firestoreService;
-      return undefined;
+    TestBed.configureTestingModule({
+      providers: [
+        VocabularyStatsService,
+        { provide: StorageService, useValue: storageSpy },
+        { provide: AuthService, useValue: authSpy },
+        { provide: FirestoreService, useValue: firestoreSpy }
+      ]
     });
 
-    // Mock signal, computed, effect to return simple objects
-    vi.doMock('@angular/core', () => ({
-      inject: mockInject,
-      signal: vi.fn((initial) => ({
-        set: vi.fn(),
-        update: vi.fn(),
-        asReadonly: () => ({})
-      })),
-      computed: vi.fn((fn) => fn()),
-      effect: vi.fn(() => {}),
-    }));
-
-    service = new VocabularyStatsService();
-  });
-
-  afterEach(() => {
-    vi.clearAllMocks();
+    service = TestBed.inject(VocabularyStatsService);
+    storageService = TestBed.inject(StorageService);
+    authService = TestBed.inject(AuthService);
+    firestoreService = TestBed.inject(FirestoreService);
   });
 
   it('should be created', () => {

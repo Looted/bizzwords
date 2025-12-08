@@ -8,6 +8,8 @@ import { signal } from '@angular/core';
 import { vi } from 'vitest';
 import { ThemeService } from '../../services/theme.service';
 import { EnvironmentService } from '../../services/environment.service';
+import { Auth } from '@angular/fire/auth';
+import { Firestore } from '@angular/fire/firestore';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -75,22 +77,37 @@ describe('HeaderComponent', () => {
       isAiModeEnabled: true
     };
 
+    const mockAuth = {
+      // Minimal Firebase Auth mock to avoid onAuthStateChanged errors
+      app: {},
+      config: {},
+      name: 'mock-auth',
+      onAuthStateChanged: vi.fn().mockImplementation(() => {
+        // Return a function to unsubscribe
+        return () => {};
+      })
+    };
+
+    const mockFirestore = {
+      // Minimal Firestore mock
+      app: {},
+      config: {},
+      name: 'mock-firestore'
+    };
+
     await TestBed.configureTestingModule({
       imports: [HeaderComponent],
-    }).overrideComponent(HeaderComponent, {
-      set: {
-        providers: [
+      providers: [
         { provide: PwaService, useValue: pwaServiceMock },
         { provide: Router, useValue: routerMock },
         { provide: StorageService, useValue: storageServiceMock },
+        { provide: Auth, useValue: mockAuth },
+        { provide: Firestore, useValue: mockFirestore },
         { provide: PLATFORM_ID, useValue: 'browser' },
         { provide: ThemeService, useValue: themeServiceMock },
         { provide: EnvironmentService, useValue: environmentServiceMock }
-        ]
-      }
-    }
-    )
-    .compileComponents();
+      ]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;

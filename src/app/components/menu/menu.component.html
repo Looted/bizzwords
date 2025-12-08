@@ -52,16 +52,17 @@
     </div>
     }
 
-    <!-- Category Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <!-- Category Grid (Bento Grid Layout) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       @for (category of categoryStats(); track category.id) {
         <button (click)="selectCategory(category.id)"
           class="group relative flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-sm ring-1 ring-slate-200 dark:ring-white/5 transition-all hover:shadow-md hover:ring-blue-500/50 hover:bg-slate-50 dark:hover:bg-slate-700 text-center h-full"
           [disabled]="isLoading()"
+          [class]="category.id === 'tech' ? 'md:col-span-2 md:row-span-1' : ''"
           [attr.data-testid]="'category-' + category.id">
 
           <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl text-3xl shadow-sm transition-transform group-hover:scale-110 group-hover:rotate-3"
-               [class]="category.id === 'hr' ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300' : 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300'">
+               [class]="category.bgClass + ' ' + category.textClass">
             {{ category.icon }}
           </div>
 

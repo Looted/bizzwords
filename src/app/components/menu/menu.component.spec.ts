@@ -62,22 +62,43 @@ describe('MenuComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have categories array with HR and PM categories', () => {
-    expect(component.categories).toHaveLength(2);
+  it('should have categories array with all available categories', () => {
+    expect(component.categories).toHaveLength(5);
 
     const hrCategory = component.categories.find(cat => cat.id === 'hr');
     expect(hrCategory).toBeDefined();
-    expect(hrCategory!.name).toBe('HR Words');
+    expect(hrCategory!.name).toBe('HR');
     expect(hrCategory!.icon).toBe('👥');
     expect(hrCategory!.bgClass).toBe('bg-purple-50 hover:bg-purple-100');
     expect(hrCategory!.textClass).toBe('text-purple-700');
 
-    const pmCategory = component.categories.find(cat => cat.id === 'pm');
-    expect(pmCategory).toBeDefined();
-    expect(pmCategory!.name).toBe('Project Management');
-    expect(pmCategory!.icon).toBe('📊');
-    expect(pmCategory!.bgClass).toBe('bg-blue-50 hover:bg-blue-100');
-    expect(pmCategory!.textClass).toBe('text-blue-700');
+    const techCategory = component.categories.find(cat => cat.id === 'tech');
+    expect(techCategory).toBeDefined();
+    expect(techCategory!.name).toBe('Tech');
+    expect(techCategory!.icon).toBe('💻');
+    expect(techCategory!.bgClass).toBe('bg-indigo-50 hover:bg-indigo-100');
+    expect(techCategory!.textClass).toBe('text-indigo-700');
+
+    const financeCategory = component.categories.find(cat => cat.id === 'finance');
+    expect(financeCategory).toBeDefined();
+    expect(financeCategory!.name).toBe('Finance');
+    expect(financeCategory!.icon).toBe('💰');
+    expect(financeCategory!.bgClass).toBe('bg-emerald-50 hover:bg-emerald-100');
+    expect(financeCategory!.textClass).toBe('text-emerald-700');
+
+    const salesCategory = component.categories.find(cat => cat.id === 'sales');
+    expect(salesCategory).toBeDefined();
+    expect(salesCategory!.name).toBe('Sales');
+    expect(salesCategory!.icon).toBe('📈');
+    expect(salesCategory!.bgClass).toBe('bg-orange-50 hover:bg-orange-100');
+    expect(salesCategory!.textClass).toBe('text-orange-700');
+
+    const strategyCategory = component.categories.find(cat => cat.id === 'strategy');
+    expect(strategyCategory).toBeDefined();
+    expect(strategyCategory!.name).toBe('Strategy');
+    expect(strategyCategory!.icon).toBe('🎯');
+    expect(strategyCategory!.bgClass).toBe('bg-slate-50 hover:bg-slate-100');
+    expect(strategyCategory!.textClass).toBe('text-slate-700');
   });
 
   it('should initialize selectedCategory signal', () => {
@@ -422,12 +443,16 @@ describe('MenuComponent', () => {
   describe('template helper methods', () => {
     describe('getCategoryName', () => {
       it('should return category name for valid category id', () => {
-        expect(component.getCategoryName('hr')).toBe('HR Words');
-        expect(component.getCategoryName('pm')).toBe('Project Management');
+        expect(component.getCategoryName('hr')).toBe('HR');
+        expect(component.getCategoryName('tech')).toBe('Tech');
+        expect(component.getCategoryName('finance')).toBe('Finance');
+        expect(component.getCategoryName('sales')).toBe('Sales');
+        expect(component.getCategoryName('strategy')).toBe('Strategy');
       });
 
       it('should return empty string for invalid category id', () => {
         expect(component.getCategoryName('invalid')).toBe('');
+        expect(component.getCategoryName('pm')).toBe('');
         expect(component.getCategoryName(null)).toBe('');
       });
     });

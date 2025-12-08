@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "sls_0001",
+    "term": "A/B Testing",
+    "definition": "Comparing two versions of a webpage or app against each other to determine which one performs better.",
+    "example": "We used A/B testing to see if a red or green button resulted in more sign-ups.",
+    "difficulty": 2,
+    "tags": ["optimization", "testing"]
+  },
+  {
+    "id": "sls_0002",
+    "term": "Above the Fold",
+    "definition": "The portion of a webpage that is visible without scrolling.",
+    "example": "Place the most important call-to-action above the fold to ensure maximum visibility.",
+    "difficulty": 2,
+    "tags": ["web design", "ux"]
+  },
+  {
+    "id": "sls_0003",
+    "term": "Affiliate Marketing",
+    "definition": "A performance-based marketing strategy where a business rewards partners for each customer brought by the partner's efforts.",
+    "example": "Many bloggers earn revenue through affiliate marketing by recommending products they use.",
+    "difficulty": 2,
+    "tags": ["strategy", "digital"]
+  },
+  {
+    "id": "sls_0004",
+    "term": "Algorithm",
+    "definition": "A set of rules used by social platforms to determine which content to display to users.",
+    "example": "The Instagram algorithm favors posts with high engagement rates.",
+    "difficulty": 2,
+    "tags": ["tech", "social media"]
+  },
+  {
+    "id": "sls_0005",
+    "term": "Ambient Marketing",
+    "definition": "Placing ads on unusual items or in unusual places where you wouldn't normally expect to see an ad.",
+    "example": "Advertising on the back of theatre tickets is a form of ambient marketing.",
+    "difficulty": 2,
+    "tags": ["creative", "advertising"]
+  },
+  {
+    "id": "sls_0006",
+    "term": "Anchoring",
+    "definition": "A cognitive bias where an individual depends too heavily on an initial piece of information (the 'anchor') when making decisions.",
+    "example": "Displaying the original price of $100 next to the sale price of $70 uses anchoring to make the deal look better.",
+    "difficulty": 3,
+    "tags": ["psychology", "pricing"]
+  },
+  {
+    "id": "sls_0007",
+    "term": "Attribution Model",
+    "definition": "A rule or set of rules that determines how credit for sales and conversions is assigned to touchpoints in conversion paths.",
+    "example": "We switched to a multi-touch attribution model to understand how our blog contributes to final sales.",
+    "difficulty": 3,
+    "tags": ["analytics", "strategy"]
+  },
+  {
+    "id": "sls_0008",
+    "term": "Average Order Value (AOV)",
+    "definition": "The average amount spent each time a customer places an order.",
+    "example": "Offering free shipping on orders over $50 is a common tactic to increase AOV.",
+    "difficulty": 2,
+    "tags": ["metrics", "ecommerce"]
+  },
+  {
+    "id": "sls_0009",
+    "term": "B2B (Business-to-Business)",
+    "definition": "A form of transaction between businesses, such as one involving a manufacturer and wholesaler.",
+    "example": "LinkedIn is the primary channel for B2B marketing.",
+    "difficulty": 1,
+    "tags": ["business", "strategy"]
+  },
+  {
+    "id": "sls_0010",
+    "term": "B2C (Business-to-Consumer)",
+    "definition": "The process of selling products and services directly between a business and consumers.",
+    "example": "Coca-Cola is a classic example of a B2C company.",
+    "difficulty": 1,
+    "tags": ["business", "strategy"]
+  },
+  {
+    "id": "sls_0011",
+    "term": "Backlink",
+    "definition": "A hyperlink on one website that points to another website.",
+    "example": "Earning a backlink from a reputable news site significantly boosted our SEO ranking.",
+    "difficulty": 2,
+    "tags": ["seo", "digital"]
+  },
+  {
+    "id": "sls_0012",
+    "term": "Bandwagon Effect",
+    "definition": "The tendency for people to adopt certain behaviors, styles, or attitudes simply because others are doing so.",
+    "example": "Marketing campaigns often use phrases like 'Join millions of satisfied customers' to trigger the bandwagon effect.",
+    "difficulty": 2,
+    "tags": ["psychology", "social"]
+  },
+  {
+    "id": "sls_0013",
+    "term": "Banner Blindness",
+    "definition": "A phenomenon in web usability where visitors to a website consciously or subconsciously ignore banner-like information.",
+    "example": "Native ads were developed as a solution to banner blindness.",
+    "difficulty": 2,
+    "tags": ["ux", "advertising"]
+  },
+  {
+    "id": "sls_0014",
+    "term": "Behavioral Targeting",
+    "definition": "A technique used by online advertisers to increase the effectiveness of their campaigns by using data collected on an individual's web-browsing behavior.",
+    "example": "Behavioral targeting showed me ads for hiking boots after I read an article about camping.",
+    "difficulty": 2,
+    "tags": ["ads", "tech"]
+  },
+  {
+    "id": "sls_0015",
+    "term": "Blue Ocean Strategy",
+    "definition": "Creating a new, uncontested market space that makes competitors irrelevant.",
+    "example": "Cirque du Soleil used a Blue Ocean Strategy to reinvent the circus industry.",
+    "difficulty": 3,
+    "tags": ["strategy", "innovation"]
+  },
+  {
+    "id": "sls_0016",
+    "term": "Bounce Rate",
+    "definition": "The percentage of visitors to a particular website who navigate away from the site after viewing only one page.",
+    "example": "A high bounce rate on the homepage suggests the content isn't relevant to the visitors.",
+    "difficulty": 2,
+    "tags": ["metrics", "analytics"]
+  },
+  {
+    "id": "sls_0017",
+    "term": "Brand Ambassador",
+    "definition": "A person who is hired by an organization or company to represent a brand in a positive light.",
+    "example": "The company hired a famous athlete as their global brand ambassador.",
+    "difficulty": 1,
+    "tags": ["pr", "branding"]
+  },
+  {
+    "id": "sls_0018",
+    "term": "Brand Archetype",
+    "definition": "A universally familiar character or situation that transcends time, place, culture, gender, and age, used to define a brand's personality.",
+    "example": "Nike uses the 'Hero' brand archetype to inspire customers.",
+    "difficulty": 3,
+    "tags": ["branding", "psychology"]
+  },
+  {
+    "id": "sls_0019",
+    "term": "Brand Awareness",
+    "definition": "The extent to which consumers are familiar with the distinctive qualities or image of a particular brand of goods or services.",
+    "example": "Our new billboard campaign is designed to increase local brand awareness.",
+    "difficulty": 1,
+    "tags": ["branding", "metrics"]
+  },
+  {
+    "id": "sls_0020",
+    "term": "Brand Equity",
+    "definition": "The commercial value that derives from consumer perception of the brand name of a particular product or service, rather than from the product or service itself.",
+    "example": "Apple has massive brand equity, allowing them to charge a premium for their devices.",
+    "difficulty": 2,
+    "tags": ["branding", "value"]
+  },
+  {
+    "id": "sls_0021",
+    "term": "Brand Loyalty",
+    "definition": "The tendency of consumers to continuously purchase one brand's products over another.",
+    "example": "Loyalty programs are a key tool for building long-term brand loyalty.",
+    "difficulty": 1,
+    "tags": ["branding", "retention"]
+  },
+  {
+    "id": "sls_0022",
+    "term": "Brand Personality",
+    "definition": "A set of human characteristics that are attributed to a brand name.",
+    "example": "Red Bull's brand personality is energetic, daring, and adventurous.",
+    "difficulty": 2,
+    "tags": ["branding", "psychology"]
+  },
+  {
+    "id": "sls_0023",
+    "term": "Buyer Persona",
+    "definition": "A semi-fictional representation of your ideal customer based on market research and real data.",
+    "example": "We created a buyer persona named 'Manager Mike' to help focus our B2B messaging.",
+    "difficulty": 2,
+    "tags": ["strategy", "inbound"]
+  },
+  {
+    "id": "sls_0024",
+    "term": "Call to Action (CTA)",
+    "definition": "A prompt on a website that tells the user to take some specified action.",
+    "example": "The 'Sign Up Free' button is the primary CTA on our landing page.",
+    "difficulty": 1,
+    "tags": ["digital", "web"]
+  },
+  {
+    "id": "sls_0025",
+    "term": "Cannibalization",
+    "definition": "A reduction in sales volume, sales revenue, or market share of one product as a result of the introduction of a new product by the same producer.",
+    "example": "Launching a cheaper version of the software risked cannibalization of our premium product sales.",
+    "difficulty": 3,
+    "tags": ["strategy", "risk"]
+  },
+  {
+    "id": "sls_0026",
+    "term": "Canonical Tag",
+    "definition": "An HTML element that helps webmasters prevent duplicate content issues by specifying the 'preferred' version of a web page.",
+    "example": "We added a canonical tag to the product page to tell Google which URL to index.",
+    "difficulty": 3,
+    "tags": ["seo", "tech"]
+  },
+  {
+    "id": "sls_0027",
+    "term": "Choice Paralysis",
+    "definition": "Overthinking a decision to the point that a choice never gets made, often due to too many options.",
+    "example": "Reducing the number of subscription plans helped eliminate choice paralysis for new users.",
+    "difficulty": 2,
+    "tags": ["psychology", "ux"]
+  },
+  {
+    "id": "sls_0028",
+    "term": "Churn Rate",
+    "definition": "The percentage of subscribers who discontinue their subscriptions within a given time period.",
+    "example": "We need to lower our churn rate to improve long-term revenue.",
+    "difficulty": 2,
+    "tags": ["metrics", "retention"]
+  },
+  {
+    "id": "sls_0029",
+    "term": "Clickbait",
+    "definition": "Content whose main purpose is to attract attention and encourage visitors to click on a link to a particular web page.",
+    "example": "The headline was pure clickbait and didn't deliver on its promise.",
+    "difficulty": 1,
+    "tags": ["content", "ethics"]
+  },
+  {
+    "id": "sls_0030",
+    "term": "Click-Through Rate (CTR)",
+    "definition": "The ratio of users who click on a specific link to the number of total users who view a page, email, or advertisement.",
+    "example": "A low CTR on the ad suggests the image or copy isn't engaging enough.",
+    "difficulty": 2,
+    "tags": ["metrics", "digital"]
+  },
+  {
+    "id": "sls_0031",
+    "term": "Cognitive Dissonance",
+    "definition": "The state of having inconsistent thoughts, beliefs, or attitudes, especially as relating to behavioral decisions and attitude change.",
+    "example": "After buying an expensive car, the customer felt cognitive dissonance and sought reassurance from reviews.",
+    "difficulty": 3,
+    "tags": ["psychology", "theory"]
+  },
+  {
+    "id": "sls_0032",
+    "term": "Cohort Analysis",
+    "definition": "A behavioral analytics tool that breaks the data in a data set down into related groups for analysis.",
+    "example": "Cohort analysis revealed that users who signed up during the holiday sale had lower retention.",
+    "difficulty": 3,
+    "tags": ["analytics", "data"]
+  },
+  {
+    "id": "sls_0033",
+    "term": "Cold Calling",
+    "definition": "The solicitation of business from potential customers who have had no prior contact with the salesperson conducting the call.",
+    "example": "Cold calling is challenging but remains a staple of B2B sales strategies.",
+    "difficulty": 2,
+    "tags": ["sales", "outbound"]
+  },
+  {
+    "id": "sls_0034",
+    "term": "Competitive Advantage",
+    "definition": "A condition or circumstance that puts a company in a favorable or superior business position.",
+    "example": "Our proprietary technology gives us a distinct competitive advantage.",
+    "difficulty": 2,
+    "tags": ["strategy", "business"]
+  },
+  {
+    "id": "sls_0035",
+    "term": "Confirmation Bias",
+    "definition": "The tendency to search for, interpret, favor, and recall information in a way that confirms or supports one's prior beliefs or values.",
+    "example": "Marketing copy often appeals to confirmation bias to make the customer feel understood.",
+    "difficulty": 3,
+    "tags": ["psychology", "theory"]
+  },
+  {
+    "id": "sls_0036",
+    "term": "Content Management System (CMS)",
+    "definition": "Software that helps users create, manage, and modify content on a website without the need for specialized technical knowledge.",
+    "example": "WordPress is the most popular CMS used by marketing teams.",
+    "difficulty": 2,
+    "tags": ["tech", "web"]
+  },
+  {
+    "id": "sls_0037",
+    "term": "Content Marketing",
+    "definition": "A strategic marketing approach focused on creating and distributing valuable, relevant, and consistent content.",
+    "example": "Our blog is the hub of our content marketing efforts.",
+    "difficulty": 1,
+    "tags": ["content", "strategy"]
+  },
+  {
+    "id": "sls_0038",
+    "term": "Conversion Rate Optimization (CRO)",
+    "definition": "The systematic process of increasing the percentage of website visitors who take a desired action.",
+    "example": "We improved our CRO by simplifying the checkout form.",
+    "difficulty": 2,
+    "tags": ["digital", "analytics"]
+  },
+  {
+    "id": "sls_0039",
+    "term": "Copywriting",
+    "definition": "The act of writing text for the purpose of advertising or other forms of marketing.",
+    "example": "Great copywriting focuses on benefits rather than just features.",
+    "difficulty": 2,
+    "tags": ["content", "creative"]
+  },
+  {
+    "id": "sls_0040",
+    "term": "Corporate Social Responsibility (CSR)",
+    "definition": "A self-regulating business model that helps a company be socially accountable to itself, its stakeholders, and the public.",
+    "example": "Our CSR program supports local educational initiatives.",
+    "difficulty": 2,
+    "tags": ["branding", "ethics"]
+  },
+  {
+    "id": "sls_0041",
+    "term": "Cost Per Acquisition (CPA)",
+    "definition": "The aggregate cost to acquire one paying customer on a campaign or channel level.",
+    "example": "We stopped the campaign because the CPA was higher than the product price.",
+    "difficulty": 2,
+    "tags": ["metrics", "finance"]
+  },
+  {
+    "id": "sls_0042",
+    "term": "Cost Per Lead (CPL)",
+    "definition": "The amount it costs your marketing organization to acquire a lead.",
+    "example": "LinkedIn ads have a higher CPL, but the lead quality is generally better.",
+    "difficulty": 2,
+    "tags": ["metrics", "finance"]
+  },
+  {
+    "id": "sls_0043",
+    "term": "Cost Per Mille (CPM)",
+    "definition": "Cost per thousand impressions; a pricing model used in advertising.",
+    "example": "Brand awareness campaigns often use CPM billing to maximize reach.",
+    "difficulty": 2,
+    "tags": ["metrics", "ads"]
+  },
+  {
+    "id": "sls_0044",
+    "term": "Cross-selling",
+    "definition": "The action or practice of selling an additional product or service to an existing customer.",
+    "example": "Suggesting a phone case when someone buys a smartphone is cross-selling.",
+    "difficulty": 2,
+    "tags": ["sales", "strategy"]
+  },
+  {
+    "id": "sls_0045",
+    "term": "Customer Acquisition Cost (CAC)",
+    "definition": "The cost of winning a customer to purchase a product/service.",
+    "example": "Startups must carefully monitor the ratio between CAC and LTV.",
+    "difficulty": 2,
+    "tags": ["metrics", "finance"]
+  },
+  {
+    "id": "sls_0046",
+    "term": "Customer Centricity",
+    "definition": "An approach to doing business that focuses on providing a positive customer experience both at the point of sale and after the sale.",
+    "example": "Amazon's success is largely attributed to its extreme customer centricity.",
+    "difficulty": 2,
+    "tags": ["strategy", "cx"]
+  },
+  {
+    "id": "sls_0047",
+    "term": "Customer Journey Map",
+    "definition": "A visual representation of every experience your customers have with you.",
+    "example": "The customer journey map helped us identify a pain point during the onboarding process.",
+    "difficulty": 2,
+    "tags": ["cx", "strategy"]
+  },
+  {
+    "id": "sls_0048",
+    "term": "Customer Lifetime Value (CLV / LTV)",
+    "definition": "The total worth to a business of a customer over the whole period of their relationship.",
+    "example": "Increasing customer retention is the most effective way to boost CLV.",
+    "difficulty": 2,
+    "tags": ["metrics", "finance"]
+  },
+  {
+    "id": "sls_0049",
+    "term": "Customer Segmentation",
+    "definition": "The process of dividing customers into groups based on common characteristics.",
+    "example": "Customer segmentation allows us to send personalized emails to different groups.",
+    "difficulty": 2,
+    "tags": ["analytics", "strategy"]
+  },
+  {
+    "id": "sls_0050",
+    "term": "Dark Pattern",
+    "definition": "A user interface that has been carefully crafted to trick users into doing things.",
+    "example": "Making the 'unsubscribe' link nearly invisible is an unethical dark pattern.",
+    "difficulty": 2,
+    "tags": ["ethics", "ux"]
+  },
+  {
+    "id": "sls_0051",
+    "term": "Dark Social",
+    "definition": "Social sharing that occurs via private channels like email or messaging apps, which is hard to track.",
+    "example": "Much of our 'direct traffic' is actually dark social sharing on WhatsApp.",
+    "difficulty": 3,
+    "tags": ["social", "analytics"]
+  },
+  {
+    "id": "sls_0052",
+    "term": "Decoy Effect",
+    "definition": "The phenomenon whereby consumers will tend to have a specific change in preference between two options when also presented with a third option that is asymmetrically dominated.",
+    "example": "The medium popcorn size is often a decoy to make the large size look like a better deal.",
+    "difficulty": 3,
+    "tags": ["psychology", "pricing"]
+  },
+  {
+    "id": "sls_0053",
+    "term": "Direct Mail",
+    "definition": "A marketing effort that uses a mail service to deliver a promotional printed piece to your target audience.",
+    "example": "Real estate agents still use direct mail effectively in local markets.",
+    "difficulty": 1,
+    "tags": ["traditional", "marketing"]
+  },
+  {
+    "id": "sls_0054",
+    "term": "Domain Authority (DA)",
+    "definition": "A search engine ranking score that predicts how likely a website is to rank on search engine result pages.",
+    "example": "We are trying to increase our Domain Authority by getting backlinks from universities.",
+    "difficulty": 3,
+    "tags": ["seo", "metrics"]
+  },
+  {
+    "id": "sls_0055",
+    "term": "Drip Campaign",
+    "definition": "A series of automated emails sent to people who take a specific action.",
+    "example": "New subscribers receive a welcome drip campaign over the course of two weeks.",
+    "difficulty": 2,
+    "tags": ["email", "automation"]
+  },
+  {
+    "id": "sls_0056",
+    "term": "Earned Media",
+    "definition": "Publicity gained through promotional efforts other than paid media advertising.",
+    "example": "A positive review in a major newspaper is valuable earned media.",
+    "difficulty": 2,
+    "tags": ["pr", "media"]
+  },
+  {
+    "id": "sls_0057",
+    "term": "Editorial Calendar",
+    "definition": "A visual workflow that helps a team of content creators schedule their work on a daily, weekly, or monthly basis.",
+    "example": "We use Trello as our editorial calendar to track blog posts.",
+    "difficulty": 2,
+    "tags": ["content", "planning"]
+  },
+  {
+    "id": "sls_0058",
+    "term": "Engagement Rate",
+    "definition": "A metric that measures the level of engagement that a piece of created content receives from an audience.",
+    "example": "Micro-influencers often have a higher engagement rate than celebrities.",
+    "difficulty": 2,
+    "tags": ["metrics", "social"]
+  },
+  {
+    "id": "sls_0059",
+    "term": "Evergreen Content",
+    "definition": "Content that is always relevant and stays fresh for readers over a long period of time.",
+    "example": "A guide on 'How to tie a tie' is perfect evergreen content.",
+    "difficulty": 1,
+    "tags": ["content", "strategy"]
+  },
+  {
+    "id": "sls_0060",
+    "term": "Experiential Marketing",
+    "definition": "A marketing strategy that engages consumers using branded experiences.",
+    "example": "The pop-up store offered an immersive VR experience as part of its experiential marketing.",
+    "difficulty": 2,
+    "tags": ["strategy", "event"]
+  },
+  {
+    "id": "sls_0061",
+    "term": "Focus Group",
+    "definition": "A diverse group of people assembled to participate in a guided discussion about a particular product before it is launched.",
+    "example": "The focus group feedback led us to change the product packaging.",
+    "difficulty": 2,
+    "tags": ["research", "product"]
+  },
+  {
+    "id": "sls_0062",
+    "term": "FOMO (Fear Of Missing Out)",
+    "definition": "Anxiety that an exciting or interesting event may currently be happening elsewhere, often aroused by posts seen on social media.",
+    "example": "Flash sales leverage FOMO to encourage impulse buying.",
+    "difficulty": 1,
+    "tags": ["psychology", "social"]
+  },
+  {
+    "id": "sls_0063",
+    "term": "Franchise",
+    "definition": "A type of license that a party (franchisee) acquires to allow them to have access to a business's (franchisor) proprietary knowledge, processes, and trademarks.",
+    "example": "Opening a franchise is a lower-risk way to start a business.",
+    "difficulty": 2,
+    "tags": ["business", "model"]
+  },
+  {
+    "id": "sls_0064",
+    "term": "Freemium",
+    "definition": "A pricing strategy by which a product or service is provided free of charge, but money (premium) is charged for additional features.",
+    "example": "Spotify uses a freemium model to convert free listeners into paid subscribers.",
+    "difficulty": 2,
+    "tags": ["pricing", "business"]
+  },
+  {
+    "id": "sls_0065",
+    "term": "Frequency",
+    "definition": "The average number of times a person sees your ad.",
+    "example": "We capped the frequency at 3 per week to avoid annoying the audience.",
+    "difficulty": 2,
+    "tags": ["metrics", "ads"]
+  },
+  {
+    "id": "sls_0066",
+    "term": "Friction",
+    "definition": "Anything that prevents users from accomplishing a goal or getting things done.",
+    "example": "Requiring a phone number during checkout adds unnecessary friction.",
+    "difficulty": 2,
+    "tags": ["ux", "psychology"]
+  },
+  {
+    "id": "sls_0067",
+    "term": "Funnel Drop-off",
+    "definition": "The point in the sales funnel where a potential customer leaves without converting.",
+    "example": "We noticed a huge funnel drop-off at the shipping information page.",
+    "difficulty": 2,
+    "tags": ["analytics", "funnel"]
+  },
+  {
+    "id": "sls_0068",
+    "term": "Gamification",
+    "definition": "The application of game-design elements and game principles in non-game contexts.",
+    "example": "The fitness app uses gamification like badges and leaderboards to keep users engaged.",
+    "difficulty": 2,
+    "tags": ["psychology", "engagement"]
+  },
+  {
+    "id": "sls_0069",
+    "term": "Gatekeeper",
+    "definition": "A person who controls access to something or someone.",
+    "example": "In B2B sales, the executive assistant often acts as the gatekeeper.",
+    "difficulty": 2,
+    "tags": ["sales", "b2b"]
+  },
+  {
+    "id": "sls_0070",
+    "term": "Gated Content",
+    "definition": "Online materials, such as white papers, articles, and videos, that require users to fill out a form before they can access them.",
+    "example": "We put the industry report behind a form as gated content to generate leads.",
+    "difficulty": 2,
+    "tags": ["content", "lead-gen"]
+  },
+  {
+    "id": "sls_0071",
+    "term": "Geofencing",
+    "definition": "The use of GPS or RFID technology to create a virtual geographic boundary, enabling software to trigger a response when a mobile device enters or leaves a particular area.",
+    "example": "The store used geofencing to send a discount code to anyone walking within 100 meters.",
+    "difficulty": 3,
+    "tags": ["tech", "mobile"]
+  },
+  {
+    "id": "sls_0072",
+    "term": "Go-to-Market Strategy (GTM)",
+    "definition": "An action plan that specifies how a company will reach target customers and achieve competitive advantage.",
+    "example": "Our GTM strategy for the new product involves heavy influencer marketing.",
+    "difficulty": 3,
+    "tags": ["strategy", "business"]
+  },
+  {
+    "id": "sls_0073",
+    "term": "Growth Hacking",
+    "definition": "Strategies focused solely on growth, usually used by early-stage startups.",
+    "example": "Dropbox's referral program is a classic example of growth hacking.",
+    "difficulty": 2,
+    "tags": ["startup", "strategy"]
+  },
+  {
+    "id": "sls_0074",
+    "term": "Guerrilla Marketing",
+    "definition": "An advertisement strategy in which a company uses surprise and/or unconventional interactions in order to promote a product or service.",
+    "example": "The flash mob in the central station was a great piece of guerrilla marketing.",
+    "difficulty": 2,
+    "tags": ["strategy", "creative"]
+  },
+  {
+    "id": "sls_0075",
+    "term": "Halo Effect",
+    "definition": "The tendency for positive impressions of a person, company, brand, or product in one area to positively influence one's opinion or feelings in other areas.",
+    "example": "The success of the iPod created a halo effect that boosted Mac computer sales.",
+    "difficulty": 3,
+    "tags": ["psychology", "branding"]
+  },
+  {
+    "id": "sls_0076",
+    "term": "Hashtag",
+    "definition": "A word or phrase preceded by a hash sign (#), used on social media to identify messages on a specific topic.",
+    "example": "Create a unique hashtag for your event to track social media conversations.",
+    "difficulty": 1,
+    "tags": ["social", "tech"]
+  },
+  {
+    "id": "sls_0077",
+    "term": "Heatmap",
+    "definition": "A data visualization tool that shows how users interact with a webpage using color-coded systems.",
+    "example": "The heatmap revealed that nobody was clicking the sidebar links.",
+    "difficulty": 2,
+    "tags": ["analytics", "ux"]
+  },
+  {
+    "id": "sls_0078",
+    "term": "Horizontal Market",
+    "definition": "A market in which a product or service meets the needs of a wide range of buyers across different sectors.",
+    "example": "Office furniture is sold in a horizontal market.",
+    "difficulty": 3,
+    "tags": ["strategy", "market"]
+  },
+  {
+    "id": "sls_0079",
+    "term": "Impressions",
+    "definition": "The number of times an advertisement or content is displayed, no matter if it was clicked or not.",
+    "example": "Our campaign generated one million impressions but very few clicks.",
+    "difficulty": 1,
+    "tags": ["metrics", "ads"]
+  },
+  {
+    "id": "sls_0080",
+    "term": "Impulse Buying",
+    "definition": "The buying of goods without planning to do so in advance, as a result of a sudden urge or impulse.",
+    "example": "Candy bars at the checkout are placed there to trigger impulse buying.",
+    "difficulty": 1,
+    "tags": ["behavior", "retail"]
+  },
+  {
+    "id": "sls_0081",
+    "term": "Inbound Marketing",
+    "definition": "A business methodology that attracts customers by creating valuable content and experiences tailored to them.",
+    "example": "HubSpot is the pioneer of inbound marketing.",
+    "difficulty": 2,
+    "tags": ["strategy", "methodology"]
+  },
+  {
+    "id": "sls_0082",
+    "term": "Influencer Marketing",
+    "definition": "A form of social media marketing involving endorsements and product placement from people who have a purported expert level of knowledge or social influence.",
+    "example": "We partnered with gaming influencers to promote the new console.",
+    "difficulty": 1,
+    "tags": ["social", "strategy"]
+  },
+  {
+    "id": "sls_0083",
+    "term": "Infographic",
+    "definition": "A visual representation of information or data.",
+    "example": "We created an infographic to explain the complex survey results simply.",
+    "difficulty": 1,
+    "tags": ["content", "design"]
+  },
+  {
+    "id": "sls_0084",
+    "term": "Key Performance Indicator (KPI)",
+    "definition": "A measurable value that demonstrates how effectively a company is achieving key business objectives.",
+    "example": "Website traffic is a primary KPI for the content team.",
+    "difficulty": 1,
+    "tags": ["metrics", "business"]
+  },
+  {
+    "id": "sls_0085",
+    "term": "Landing Page",
+    "definition": "A standalone web page created specifically for a marketing or advertising campaign.",
+    "example": "The ad directs users to a specific landing page, not the homepage.",
+    "difficulty": 1,
+    "tags": ["digital", "web"]
+  },
+  {
+    "id": "sls_0086",
+    "term": "Lead Generation",
+    "definition": "The initiation of consumer interest or inquiry into products or services of a business.",
+    "example": "Offering a free webinar is an effective lead generation tactic.",
+    "difficulty": 1,
+    "tags": ["sales", "strategy"]
+  },
+  {
+    "id": "sls_0087",
+    "term": "Lead Magnet",
+    "definition": "A free item or service given away for the purpose of gathering contact details.",
+    "example": "The downloadable checklist served as a lead magnet to grow our email list.",
+    "difficulty": 2,
+    "tags": ["strategy", "inbound"]
+  },
+  {
+    "id": "sls_0088",
+    "term": "Lead Nurturing",
+    "definition": "The process of developing relationships with buyers at every stage of the sales funnel and through every step of the buyer's journey.",
+    "example": "We use automated email sequences for lead nurturing until they are ready to buy.",
+    "difficulty": 2,
+    "tags": ["inbound", "sales"]
+  },
+  {
+    "id": "sls_0089",
+    "term": "Lead Scoring",
+    "definition": "A methodology used to rank prospects against a scale that represents the perceived value of each lead.",
+    "example": "Leads who visit the pricing page get a higher lead scoring points.",
+    "difficulty": 3,
+    "tags": ["automation", "sales"]
+  },
+  {
+    "id": "sls_0090",
+    "term": "Long-tail Keyword",
+    "definition": "A highly specific search phrase that contains three or more words.",
+    "example": "Long-tail keywords have less competition and higher conversion rates.",
+    "difficulty": 2,
+    "tags": ["seo", "digital"]
+  },
+  {
+    "id": "sls_0091",
+    "term": "Lookalike Audience",
+    "definition": "A targeting option that lets advertisers reach new people who are likely to be interested in their business because they're similar to existing customers.",
+    "example": "We created a lookalike audience on Facebook based on our email subscribers list.",
+    "difficulty": 3,
+    "tags": ["digital", "social"]
+  },
+  {
+    "id": "sls_0092",
+    "term": "Loss Aversion",
+    "definition": "The tendency to prefer avoiding losses to acquiring equivalent gains.",
+    "example": "Marketing messages like 'Don't lose your spot' trigger loss aversion.",
+    "difficulty": 3,
+    "tags": ["psychology", "behavior"]
+  },
+  {
+    "id": "sls_0093",
+    "term": "Loss Leader",
+    "definition": "A product sold at a loss to attract customers.",
+    "example": "The grocery store sells milk as a loss leader to get shoppers in the door.",
+    "difficulty": 2,
+    "tags": ["retail", "pricing"]
+  },
+  {
+    "id": "sls_0094",
+    "term": "Market Segmentation",
+    "definition": "The process of dividing a target market into smaller, more defined categories.",
+    "example": "Market segmentation helps us tailor our messaging to different age groups.",
+    "difficulty": 1,
+    "tags": ["strategy", "market"]
+  },
+  {
+    "id": "sls_0095",
+    "term": "Market Share",
+    "definition": "The percent of total sales in an industry generated by a particular company.",
+    "example": "Our goal is to capture 15% market share by the end of the year.",
+    "difficulty": 2,
+    "tags": ["metrics", "business"]
+  },
+  {
+    "id": "sls_0096",
+    "term": "Marketing Automation",
+    "definition": "Software platforms and technologies designed for marketing departments and organizations to more effectively market on multiple channels online.",
+    "example": "Marketing automation tools help us send birthday emails to thousands of customers.",
+    "difficulty": 2,
+    "tags": ["tech", "tools"]
+  },
+  {
+    "id": "sls_0097",
+    "term": "Marketing Mix (4Ps)",
+    "definition": "A foundation model for businesses, historically centered around Product, Price, Place, and Promotion.",
+    "example": "We revisited our marketing mix to better compete in the digital age.",
+    "difficulty": 1,
+    "tags": ["strategy", "theory"]
+  },
+  {
+    "id": "sls_0098",
+    "term": "Meme Marketing",
+    "definition": "Using internet memes to market a product or service.",
+    "example": "Wendy's Twitter account is a famous example of meme marketing.",
+    "difficulty": 1,
+    "tags": ["social", "content"]
+  },
+  {
+    "id": "sls_0099",
+    "term": "Merchandising",
+    "definition": "The activity of promoting the sale of goods, especially by their presentation in retail outlets.",
+    "example": "Good merchandising can increase sales by making products visually appealing.",
+    "difficulty": 2,
+    "tags": ["retail", "sales"]
+  },
+  {
+    "id": "sls_0100",
+    "term": "Meta Description",
+    "definition": "A snippet of up to about 155 characters – a tag in HTML – which summarizes a page's content.",
+    "example": "A compelling meta description can improve the click-through rate from Google.",
+    "difficulty": 2,
+    "tags": ["seo", "tech"]
+  },
+  {
+    "id": "sls_0101",
+    "term": "Micro-moment",
+    "definition": "An intent-rich moment when a person turns to a device to act on a need – to know, go, do, or buy.",
+    "example": "Searching for 'pizza near me' is a classic micro-moment.",
+    "difficulty": 3,
+    "tags": ["mobile", "behavior"]
+  },
+  {
+    "id": "sls_0102",
+    "term": "Monthly Recurring Revenue (MRR)",
+    "definition": "Income that a business can reliably anticipate every 30 days.",
+    "example": "SaaS companies focus on MRR as a key health metric.",
+    "difficulty": 2,
+    "tags": ["metrics", "finance"]
+  },
+  {
+    "id": "sls_0103",
+    "term": "Mystery Shopper",
+    "definition": "A person employed to visit a shop or restaurant incognito in order to assess the quality of the goods or services.",
+    "example": "The mystery shopper gave the store a low score on cleanliness.",
+    "difficulty": 2,
+    "tags": ["research", "retail"]
+  },
+  {
+    "id": "sls_0104",
+    "term": "Native Advertising",
+    "definition": "Paid advertising where the ad matches the form, feel, and function of the media format in which it appears.",
+    "example": "Sponsored articles in a news feed are a common form of native advertising.",
+    "difficulty": 2,
+    "tags": ["ads", "content"]
+  },
+  {
+    "id": "sls_0105",
+    "term": "Net Promoter Score (NPS)",
+    "definition": "A metric used to measure customer loyalty and satisfaction, asking how likely they are to recommend the brand.",
+    "example": "An NPS score above 50 is considered excellent.",
+    "difficulty": 2,
+    "tags": ["metrics", "cx"]
+  },
+  {
+    "id": "sls_0106",
+    "term": "Neuromarketing",
+    "definition": "The application of neuroscience to marketing.",
+    "example": "Neuromarketing research showed that red packaging triggers excitement.",
+    "difficulty": 3,
+    "tags": ["science", "research"]
+  },
+  {
+    "id": "sls_0107",
+    "term": "Newsjacking",
+    "definition": "The practice of aligning a brand with a current event or news story in an attempt to generate media attention.",
+    "example": "Oreo's tweet during the Super Bowl blackout is a textbook example of newsjacking.",
+    "difficulty": 3,
+    "tags": ["pr", "content"]
+  },
+  {
+    "id": "sls_0108",
+    "term": "Niche Market",
+    "definition": "A small, specialized market for a particular product or service.",
+    "example": "Selling left-handed guitars is a profitable niche market.",
+    "difficulty": 1,
+    "tags": ["strategy", "market"]
+  },
+  {
+    "id": "sls_0109",
+    "term": "Organic Reach",
+    "definition": "The number of people who see your content without paid distribution.",
+    "example": "Facebook's algorithm changes have drastically reduced organic reach for pages.",
+    "difficulty": 2,
+    "tags": ["social", "metrics"]
+  },
+  {
+    "id": "sls_0110",
+    "term": "Outbound Marketing",
+    "definition": "A traditional method of marketing seeking to push messaging out to potential customers.",
+    "example": "Billboards and TV commercials are forms of outbound marketing.",
+    "difficulty": 2,
+    "tags": ["strategy", "methodology"]
+  },
+  {
+    "id": "sls_0111",
+    "term": "Paid Media",
+    "definition": "Marketing that you pay for.",
+    "example": "Google Ads and Facebook Ads are channels for paid media.",
+    "difficulty": 1,
+    "tags": ["ads", "media"]
+  },
+  {
+    "id": "sls_0112",
+    "term": "Pain Point",
+    "definition": "A specific problem that prospective customers of your business are experiencing.",
+    "example": "Our marketing copy addresses the customer's main pain point: lack of time.",
+    "difficulty": 1,
+    "tags": ["sales", "product"]
+  },
+  {
+    "id": "sls_0113",
+    "term": "Pay-Per-Click (PPC)",
+    "definition": "An advertising model where advertisers pay a fee each time their ad is clicked.",
+    "example": "PPC can generate immediate traffic, unlike SEO which takes time.",
+    "difficulty": 2,
+    "tags": ["digital", "ads"]
+  },
+  {
+    "id": "sls_0114",
+    "term": "Planogram",
+    "definition": "A diagram that indicates the placement of retail products on shelves in order to maximize sales.",
+    "example": "The store manager followed the planogram to reset the shampoo aisle.",
+    "difficulty": 3,
+    "tags": ["retail", "ops"]
+  },
+  {
+    "id": "sls_0115",
+    "term": "Point of Sale (POS)",
+    "definition": "The time and place where a retail transaction is completed.",
+    "example": "We placed small, low-cost items at the point of sale to encourage impulse buys.",
+    "difficulty": 1,
+    "tags": ["retail", "sales"]
+  },
+  {
+    "id": "sls_0116",
+    "term": "Positioning",
+    "definition": "The place a brand occupies in the minds of the customers and how it is distinguished from the products of the competitors.",
+    "example": "Volvo's positioning has always been centered around safety.",
+    "difficulty": 2,
+    "tags": ["branding", "strategy"]
+  },
+  {
+    "id": "sls_0117",
+    "term": "Price Sensitivity",
+    "definition": "The degree to which the price of a product affects consumers' purchasing behaviors.",
+    "example": "Students generally have high price sensitivity.",
+    "difficulty": 2,
+    "tags": ["economics", "pricing"]
+  },
+  {
+    "id": "sls_0118",
+    "term": "Priming",
+    "definition": "A phenomenon whereby exposure to one stimulus influences a response to a subsequent stimulus, without conscious guidance or intention.",
+    "example": "Playing French music in a wine store is a way of priming customers to buy French wine.",
+    "difficulty": 3,
+    "tags": ["psychology", "neuro"]
+  },
+  {
+    "id": "sls_0119",
+    "term": "Private Label",
+    "definition": "A product that is manufactured by one company but sold under another company's brand.",
+    "example": "Amazon Basics is a massive private label brand.",
+    "difficulty": 2,
+    "tags": ["product", "retail"]
+  },
+  {
+    "id": "sls_0120",
+    "term": "Product Life Cycle",
+    "definition": "The cycle through which every product goes from introduction to withdrawal or eventual demise.",
+    "example": "DVD players are currently in the decline stage of the product life cycle.",
+    "difficulty": 2,
+    "tags": ["theory", "product"]
+  },
+  {
+    "id": "sls_0121",
+    "term": "Product-Market Fit",
+    "definition": "Being in a good market with a product that can satisfy that market.",
+    "example": "Startups should prioritize finding product-market fit before scaling.",
+    "difficulty": 2,
+    "tags": ["strategy", "product"]
+  },
+  {
+    "id": "sls_0122",
+    "term": "Psychographics",
+    "definition": "The study and classification of people according to their attitudes, aspirations, and other psychological criteria.",
+    "example": "Our marketing targets the psychographics of 'adventure seekers' rather than just age or gender.",
+    "difficulty": 2,
+    "tags": ["research", "segmentation"]
+  },
+  {
+    "id": "sls_0123",
+    "term": "Public Relations (PR)",
+    "definition": "The practice of managing the spread of information between an individual or an organization and the public.",
+    "example": "The PR team worked hard to mitigate the fallout from the scandal.",
+    "difficulty": 1,
+    "tags": ["pr", "comms"]
+  },
+  {
+    "id": "sls_0124",
+    "term": "Rebranding",
+    "definition": "The process of changing the corporate image of an organization.",
+    "example": "The company announced a rebranding to modernize its look.",
+    "difficulty": 1,
+    "tags": ["branding", "strategy"]
+  },
+  {
+    "id": "sls_0125",
+    "term": "Reciprocity",
+    "definition": "A social norm of responding to a positive action with another positive action.",
+    "example": "Offering a free ebook creates a sense of reciprocity, making users more likely to subscribe.",
+    "difficulty": 3,
+    "tags": ["psychology", "persuasion"]
+  },
+  {
+    "id": "sls_0126",
+    "term": "Referral Traffic",
+    "definition": "Google's method of reporting visits that came to your site from sources outside of its search engine.",
+    "example": "Being featured on a popular news site drove a lot of referral traffic.",
+    "difficulty": 2,
+    "tags": ["analytics", "web"]
+  },
+  {
+    "id": "sls_0127",
+    "term": "Relationship Marketing",
+    "definition": "A strategy designed to foster customer loyalty, interaction, and long-term engagement.",
+    "example": "Sending birthday cards to clients is a simple form of relationship marketing.",
+    "difficulty": 2,
+    "tags": ["strategy", "retention"]
+  },
+  {
+    "id": "sls_0128",
+    "term": "Remarketing",
+    "definition": "Targeting users who have previously visited your website with ads to encourage them to return.",
+    "example": "I kept seeing ads for the shoes I looked at yesterday because of remarketing.",
+    "difficulty": 2,
+    "tags": ["digital", "ads"]
+  },
+  {
+    "id": "sls_0129",
+    "term": "Responsive Design",
+    "definition": "An approach to web design that makes web pages render well on a variety of devices and window or screen sizes.",
+    "example": "With mobile usage rising, responsive design is no longer optional.",
+    "difficulty": 2,
+    "tags": ["tech", "web"]
+  },
+  {
+    "id": "sls_0130",
+    "term": "Retention Rate",
+    "definition": "The percentage of customers who continue paying for a product over a given timeframe.",
+    "example": "A high retention rate means customers are happy and loyal.",
+    "difficulty": 2,
+    "tags": ["metrics", "retention"]
+  },
+  {
+    "id": "sls_0131",
+    "term": "Retargeting",
+    "definition": "A form of online advertising that can help you keep your brand in front of bounced traffic after they leave your website.",
+    "example": "Retargeting is very effective for e-commerce sites to recover abandoned carts.",
+    "difficulty": 2,
+    "tags": ["ads", "tech"]
+  },
+  {
+    "id": "sls_0132",
+    "term": "Return on Ad Spend (ROAS)",
+    "definition": "A marketing metric that measures the efficacy of a digital advertising campaign.",
+    "example": "For every $1 spent on ads, we made $4, giving us a ROAS of 400%.",
+    "difficulty": 3,
+    "tags": ["metrics", "ads"]
+  },
+  {
+    "id": "sls_0133",
+    "term": "Return on Investment (ROI)",
+    "definition": "A performance measure used to evaluate the efficiency of an investment.",
+    "example": "The ROI of our email marketing campaign was incredibly high.",
+    "difficulty": 1,
+    "tags": ["metrics", "finance"]
+  },
+  {
+    "id": "sls_0134",
+    "term": "Sales Funnel",
+    "definition": "A consumer-focused marketing model that illustrates the theoretical customer journey towards the purchase of a good or service.",
+    "example": "We need to fix the leak at the bottom of our sales funnel.",
+    "difficulty": 1,
+    "tags": ["sales", "model"]
+  },
+  {
+    "id": "sls_0135",
+    "term": "Scarcity",
+    "definition": "The principle that people attach more value to things that are few in quantity.",
+    "example": "Limited edition products use scarcity to drive demand.",
+    "difficulty": 2,
+    "tags": ["psychology", "persuasion"]
+  },
+  {
+    "id": "sls_0136",
+    "term": "Search Engine Marketing (SEM)",
+    "definition": "A form of Internet marketing that involves the promotion of websites by increasing their visibility in search engine results pages primarily through paid advertising.",
+    "example": "We increased our SEM budget to appear at the top of Google for holiday keywords.",
+    "difficulty": 2,
+    "tags": ["digital", "ads"]
+  },
+  {
+    "id": "sls_0137",
+    "term": "Search Engine Optimization (SEO)",
+    "definition": "The process of improving a website's visibility on search engines to drive organic traffic.",
+    "example": "Good SEO requires both quality content and technical website optimization.",
+    "difficulty": 1,
+    "tags": ["digital", "seo"]
+  },
+  {
+    "id": "sls_0138",
+    "term": "Sentiment Analysis",
+    "definition": "The process of computationally identifying and categorizing opinions expressed in a piece of text.",
+    "example": "Sentiment analysis of tweets showed that the new ad campaign was poorly received.",
+    "difficulty": 3,
+    "tags": ["analytics", "tech"]
+  },
+  {
+    "id": "sls_0139",
+    "term": "SERP (Search Engine Results Page)",
+    "definition": "The page displayed by a search engine in response to a query by a searcher.",
+    "example": "Ranking on page 2 of the SERP is effectively invisible.",
+    "difficulty": 2,
+    "tags": ["seo", "digital"]
+  },
+  {
+    "id": "sls_0140",
+    "term": "Share of Voice (SOV)",
+    "definition": "A measure of the market your brand owns compared to your competitors.",
+    "example": "Our SOV increased after we launched the viral video campaign.",
+    "difficulty": 3,
+    "tags": ["metrics", "branding"]
+  },
+  {
+    "id": "sls_0141",
+    "term": "Social Listening",
+    "definition": "The process of monitoring digital conversations to understand what customers are saying about a brand and industry online.",
+    "example": "Social listening tools alerted us to a complaint before it went viral.",
+    "difficulty": 2,
+    "tags": ["social", "research"]
+  },
+  {
+    "id": "sls_0142",
+    "term": "Social Proof",
+    "definition": "A psychological phenomenon where people assume the actions of others in an attempt to reflect correct behavior.",
+    "example": "Displaying '5-star reviews' is a powerful form of social proof.",
+    "difficulty": 2,
+    "tags": ["psychology", "content"]
+  },
+  {
+    "id": "sls_0143",
+    "term": "Storytelling",
+    "definition": "Using a narrative to communicate a message.",
+    "example": "The brand used storytelling to connect emotionally with its audience.",
+    "difficulty": 1,
+    "tags": ["content", "branding"]
+  },
+  {
+    "id": "sls_0144",
+    "term": "Supply Chain",
+    "definition": "The network of all the individuals, organizations, resources, activities, and technology involved in the creation and sale of a product.",
+    "example": "Marketing must coordinate with the supply chain to ensure products are in stock for the promotion.",
+    "difficulty": 2,
+    "tags": ["operations", "business"]
+  },
+  {
+    "id": "sls_0145",
+    "term": "SWOT Analysis",
+    "definition": "A strategic planning technique used to help identify Strengths, Weaknesses, Opportunities, and Threats.",
+    "example": "We performed a SWOT analysis to decide whether to launch the new product.",
+    "difficulty": 1,
+    "tags": ["strategy", "analysis"]
+  },
+  {
+    "id": "sls_0146",
+    "term": "Target Audience",
+    "definition": "The specific group of consumers most likely to want your product or service.",
+    "example": "Our target audience is women aged 25-34 who are interested in fitness.",
+    "difficulty": 1,
+    "tags": ["strategy", "market"]
+  },
+  {
+    "id": "sls_0147",
+    "term": "Thought Leader",
+    "definition": "An individual or firm that is recognized as an authority in a specialized field and whose expertise is sought and often rewarded.",
+    "example": "Publishing insightful white papers helped the CEO become a thought leader in the industry.",
+    "difficulty": 2,
+    "tags": ["pr", "branding"]
+  },
+  {
+    "id": "sls_0148",
+    "term": "Tone of Voice",
+    "definition": "How the character of your business comes through in your words, both written and spoken.",
+    "example": "The brand's tone of voice is consistently witty and irreverent across all channels.",
+    "difficulty": 2,
+    "tags": ["branding", "content"]
+  },
+  {
+    "id": "sls_0149",
+    "term": "Touchpoint",
+    "definition": "Any point of contact between a buyer and a seller.",
+    "example": "Every customer service email is a critical brand touchpoint.",
+    "difficulty": 2,
+    "tags": ["cx", "branding"]
+  },
+  {
+    "id": "sls_0150",
+    "term": "Unique Selling Proposition (USP)",
+    "definition": "The factor or consideration presented by a seller as the reason that one product or service is different from and better than that of the competition.",
+    "example": "Our USP is that we are the only eco-friendly option on the market.",
+    "difficulty": 1,
+    "tags": ["branding", "strategy"]
+  }
+]

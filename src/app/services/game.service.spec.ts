@@ -44,12 +44,17 @@ describe('GameService', () => {
       })
     };
 
+    const vocabStatsServiceMock = {
+      getStats: vi.fn().mockReturnValue(undefined), // Mock returns undefined for new words
+      getWordsNeedingPractice: vi.fn().mockReturnValue([])
+    };
+
     TestBed.configureTestingModule({
       providers: [
         GameService,
         { provide: GameStore, useValue: gameStoreMock },
         { provide: StaticVocabularyService, useValue: staticVocabMock },
-        { provide: VocabularyStatsService, useValue: {} },
+        { provide: VocabularyStatsService, useValue: vocabStatsServiceMock },
         { provide: GameModeService, useValue: gameModeServiceMock },
         { provide: LanguageService, useValue: languageServiceMock }
       ]

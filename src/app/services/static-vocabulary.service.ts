@@ -2,11 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map, tap, catchError, throwError, switchMap, of } from 'rxjs';
 
-export interface VocabularyItem {
-  english: string;
-  polish: string;
-  difficulty: number;
-}
+
 
 export interface TranslationItem {
   id: string;
@@ -29,30 +25,23 @@ export interface TranslatedItem extends TranslationItem {
   providedIn: 'root'
 })
 export class StaticVocabularyService {
+  // Map category IDs to file prefixes (most use ID directly, but some differ)
+  private readonly categoryToPrefix: Record<string, string> = {
+    'finance': 'fin',
+    // others use the category ID as prefix
+  };
+
   constructor(private http: HttpClient) {}
 
-  loadVocabulary(topic: string): Observable<VocabularyItem[]> {
-    const topicMap: Record<string, string> = {
-      'hr': 'hr_eng_pl/vocabulary.json',
-      'pm': 'pm_eng_pl/vocabulary.json' // For future PM vocabulary
-    };
-
-    const url = topicMap[topic.toLowerCase()] || 'hr_eng_pl/vocabulary.json';
-    console.log('[StaticVocabulary] Loading from URL:', url);
-
-    return this.http.get<VocabularyItem[]>(url).pipe(
-      tap(data => console.log('[StaticVocabulary] Successfully loaded', data.length, 'items')),
-      catchError(error => {
-        console.error('[StaticVocabulary] Failed to load from:', url);
-        console.error('[StaticVocabulary] Error:', error);
-        return throwError(() => error);
-      })
-    );
+  private getFilePrefix(topic: string): string {
+    return this.categoryToPrefix[topic.toLowerCase()] || topic.toLowerCase();
   }
 
+
+
   loadTranslationData(topic: string, language: string): Observable<TranslatedItem[]> {
-    // Map topic to filename: hr -> hr, pm -> pm
-    const topicPrefix = topic.toLowerCase();
+    // Map topic to file prefix
+    const topicPrefix = this.getFilePrefix(topic);
 
     // Always load English base data first
     const baseFilename = `${topicPrefix}_en.json`;
@@ -69,7 +58,7 @@ export class StaticVocabularyService {
         }
 
         // For other languages, load translation data and merge
-        const langSuffix = language === 'polish' ? 'pl' : 'es';
+        const langSuffix = language === 'polish' ? 'pl' : language === 'spanish' ? 'es' : language === 'german' ? 'de' : 'fr';
         const translationFilename = `${topicPrefix}_${langSuffix}.json`;
         const translationUrl = `/i18n/${translationFilename}`;
 
@@ -116,40 +105,7 @@ export class StaticVocabularyService {
     });
   }
 
-  generateWords(theme: string, count: number, difficulty?: number): Observable<{english: string, translations: Record<string, string>}[]> {
-    console.log('[StaticVocabulary] generateWords called:', { theme, count, difficulty });
 
-    return this.loadVocabulary(theme).pipe(
-      map(vocab => {
-        console.log('[StaticVocabulary] Processing vocab:', vocab.length, 'items');
-
-        // Filter by theme if needed, but since it's HR, just return random
-        let filtered = vocab;
-
-        // Filter by difficulty if specified
-        if (difficulty !== undefined) {
-          filtered = vocab.filter(item => item.difficulty === difficulty);
-          console.log('[StaticVocabulary] Filtered by difficulty', difficulty, ':', filtered.length, 'items');
-        }
-
-        // If no words match the difficulty, fall back to all words
-        if (filtered.length === 0) {
-          console.warn('[StaticVocabulary] No words match difficulty, using all words');
-          filtered = vocab;
-        }
-
-        const shuffled = [...filtered].sort(() => Math.random() - 0.5);
-        const selected = shuffled.slice(0, count);
-
-        console.log('[StaticVocabulary] Returning', selected.length, 'cards');
-
-        return selected.map(item => ({
-          english: item.english,
-          translations: { polish: item.polish }
-        }));
-      })
-    );
-  }
 
   generateTranslatedWords(theme: string, language: string, count: number, difficulty?: number): Observable<{english: string, translations: Record<string, string>}[]> {
     console.log('[StaticVocabulary] generateTranslatedWords called:', { theme, language, count, difficulty });
@@ -181,7 +137,9 @@ export class StaticVocabularyService {
           const translations: Record<string, string> = {
             english: item.term,
             polish: item.term_translation || item.term,
-            spanish: item.term_translation || item.term
+            spanish: item.term_translation || item.term,
+            german: item.term_translation || item.term,
+            french: item.term_translation || item.term
           };
 
           // Always add English definition from base data

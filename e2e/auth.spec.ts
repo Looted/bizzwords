@@ -31,7 +31,7 @@ test.describe("Authentication User Stories", () => {
     });
 
     // Play a short game session as a guest (3 rounds)
-    await startGameSession(page, "HR Words", "Classic");
+    await startGameSession(page, "HR", "Classic");
     await playCompleteClassicGame(page, "hello");
 
     // Go to summary screen
@@ -155,7 +155,7 @@ test.describe("Authentication User Stories", () => {
 
     await test.step('Play game session', async () => {
       // Play a game session (3 rounds)
-      await startGameSession(page, "HR Words", "Classic");
+      await startGameSession(page, "HR", "Classic");
       await playCompleteClassicGame(page, "hello");
     });
 

@@ -1,0 +1,902 @@
+[
+  {
+    "id": "sls_0001",
+    "term_translation": "Test A/B",
+    "definition_translation": "Comparaison de deux versions d'une page web ou d'une application pour déterminer laquelle performe le mieux.",
+    "example_translation": "Nous avons utilisé cette méthode pour voir si le bouton rouge générait plus d'inscriptions que le vert."
+  },
+  {
+    "id": "sls_0002",
+    "term_translation": "Au-dessus de la ligne de flottaison",
+    "definition_translation": "La partie d'une page web qui est visible pour l'utilisateur sans avoir besoin de faire défiler l'écran.",
+    "example_translation": "Placez l'appel à l'action le plus important dans cette zone pour assurer une visibilité maximale."
+  },
+  {
+    "id": "sls_0003",
+    "term_translation": "Marketing d'affiliation",
+    "definition_translation": "Stratégie basée sur la performance où une entreprise récompense des partenaires pour chaque client apporté par leurs efforts.",
+    "example_translation": "De nombreux blogueurs gagnent des revenus en recommandant des produits qu'ils utilisent."
+  },
+  {
+    "id": "sls_0004",
+    "term_translation": "Algorithme",
+    "definition_translation": "Ensemble de règles utilisées par les plateformes sociales pour décider quel contenu afficher aux utilisateurs.",
+    "example_translation": "Ce mécanisme d'Instagram favorise les publications ayant un fort taux d'engagement."
+  },
+  {
+    "id": "sls_0005",
+    "term_translation": "Marketing ambiant",
+    "definition_translation": "Placement de publicités sur des objets inhabituels ou dans des endroits surprenants.",
+    "example_translation": "La publicité au dos des billets de théâtre ou sur les poignées de bus est un exemple de cette stratégie."
+  },
+  {
+    "id": "sls_0006",
+    "term_translation": "Effet d'ancrage",
+    "definition_translation": "Biais cognitif où un individu se fie trop à la première information reçue (le prix initial) pour prendre une décision.",
+    "example_translation": "Afficher le prix d'origine barré à côté du prix promotionnel utilise ce phénomène."
+  },
+  {
+    "id": "sls_0007",
+    "term_translation": "Modèle d'attribution",
+    "definition_translation": "Ensemble de règles déterminant comment assigner le crédit des ventes et conversions aux différents points de contact.",
+    "example_translation": "Nous sommes passés à une approche multi-touch pour comprendre comment notre blog contribue aux ventes finales."
+  },
+  {
+    "id": "sls_0008",
+    "term_translation": "Panier moyen",
+    "definition_translation": "Le montant moyen dépensé par un client lors de chaque commande.",
+    "example_translation": "Offrir la livraison gratuite au-dessus d'un certain montant est une tactique courante pour augmenter ce chiffre."
+  },
+  {
+    "id": "sls_0009",
+    "term_translation": "B2B (Commerce interentreprises)",
+    "definition_translation": "Transactions commerciales effectuées entre deux entreprises.",
+    "example_translation": "LinkedIn est le canal principal pour ce type de marketing professionnel."
+  },
+  {
+    "id": "sls_0010",
+    "term_translation": "B2C (Commerce entreprise-consommateur)",
+    "definition_translation": "Vente de produits et services directement par une entreprise au consommateur final.",
+    "example_translation": "Les supermarchés et la vente au détail sont des exemples classiques de ce modèle."
+  },
+  {
+    "id": "sls_0011",
+    "term_translation": "Lien entrant",
+    "definition_translation": "Un hyperlien sur un site web externe qui pointe vers votre propre site.",
+    "example_translation": "Obtenir un lien depuis un site d'actualités réputé a considérablement amélioré notre référencement."
+  },
+  {
+    "id": "sls_0012",
+    "term_translation": "Effet de mode",
+    "definition_translation": "Tendance des gens à adopter certains comportements ou styles simplement parce que d'autres le font.",
+    "example_translation": "Les campagnes utilisant des slogans comme 'Rejoignez des millions de clients satisfaits' exploitent cet effet."
+  },
+  {
+    "id": "sls_0013",
+    "term_translation": "Aveuglement aux bannières",
+    "definition_translation": "Phénomène où les visiteurs d'un site web ignorent consciemment ou inconsciemment les zones ressemblant à de la publicité.",
+    "example_translation": "La publicité native a été développée comme une solution à la résistance croissante aux formats classiques."
+  },
+  {
+    "id": "sls_0014",
+    "term_translation": "Ciblage comportemental",
+    "definition_translation": "Technique publicitaire utilisant les données de navigation antérieure pour personnaliser le message.",
+    "example_translation": "Après avoir lu un article sur le camping, j'ai vu des publicités pour des chaussures de randonnée."
+  },
+  {
+    "id": "sls_0015",
+    "term_translation": "Stratégie Océan Bleu",
+    "definition_translation": "Création d'un nouvel espace de marché inexploré qui rend la concurrence non pertinente.",
+    "example_translation": "Le Cirque du Soleil a utilisé cette approche pour réinventer l'industrie du cirque."
+  },
+  {
+    "id": "sls_0016",
+    "term_translation": "Taux de rebond",
+    "definition_translation": "Le pourcentage de visiteurs qui quittent le site web après avoir vu une seule page.",
+    "example_translation": "Un score élevé sur la page d'accueil suggère que le contenu n'est pas pertinent pour les visiteurs."
+  },
+  {
+    "id": "sls_0017",
+    "term_translation": "Ambassadeur de marque",
+    "definition_translation": "Personne engagée pour représenter une marque sous un jour positif.",
+    "example_translation": "L'entreprise a engagé un athlète célèbre pour être le visage de sa nouvelle campagne."
+  },
+  {
+    "id": "sls_0018",
+    "term_translation": "Archétype de marque",
+    "definition_translation": "Personnage ou situation universellement reconnu utilisé pour définir la personnalité d'une marque.",
+    "example_translation": "Nike utilise la figure du 'Héros' pour inspirer ses clients."
+  },
+  {
+    "id": "sls_0019",
+    "term_translation": "Notoriété de la marque",
+    "definition_translation": "Le degré de connaissance qu'ont les consommateurs des qualités distinctives ou de l'image d'une marque.",
+    "example_translation": "Notre nouvelle campagne d'affichage vise à accroître la connaissance locale de notre entreprise."
+  },
+  {
+    "id": "sls_0020",
+    "term_translation": "Capital de marque",
+    "definition_translation": "La valeur commerciale découlant de la perception de la marque par le consommateur, au-delà du produit lui-même.",
+    "example_translation": "Apple possède une énorme valeur dans ce domaine, ce qui lui permet de pratiquer des prix plus élevés."
+  },
+  {
+    "id": "sls_0021",
+    "term_translation": "Fidélité à la marque",
+    "definition_translation": "Tendance des consommateurs à acheter continuellement les produits d'une même marque plutôt que ceux des concurrents.",
+    "example_translation": "Les programmes de points sont un outil clé pour construire une relation à long terme."
+  },
+  {
+    "id": "sls_0022",
+    "term_translation": "Personnalité de la marque",
+    "definition_translation": "Ensemble de traits humains attribués à un nom de marque pour créer une connexion.",
+    "example_translation": "L'image de Red Bull est définie comme énergique, audacieuse et aventureuse."
+  },
+  {
+    "id": "sls_0023",
+    "term_translation": "Portrait robot du client",
+    "definition_translation": "Représentation semi-fictive du client idéal, basée sur des études de marché.",
+    "example_translation": "Nous avons créé le profil 'Manager Michel' pour mieux cibler nos messages B2B."
+  },
+  {
+    "id": "sls_0024",
+    "term_translation": "Incitation à l'action",
+    "definition_translation": "Élément sur une page web (bouton ou texte) qui pousse l'utilisateur à effectuer une action spécifique.",
+    "example_translation": "Le bouton 'Inscrivez-vous gratuitement' est l'élément le plus important de ce type sur notre page."
+  },
+  {
+    "id": "sls_0025",
+    "term_translation": "Cannibalisation",
+    "definition_translation": "Baisse des ventes d'un produit due à l'introduction d'un nouveau produit par le même fabricant.",
+    "example_translation": "Lancer une version moins chère du logiciel a réduit les ventes de notre version premium."
+  },
+  {
+    "id": "sls_0026",
+    "term_translation": "Balise canonique",
+    "definition_translation": "Élément HTML qui indique aux moteurs de recherche la version 'préférée' d'une page en cas de contenu dupliqué.",
+    "example_translation": "Nous avons ajouté ce code pour dire à Google quelle URL indexer comme originale."
+  },
+  {
+    "id": "sls_0027",
+    "term_translation": "Paralysie de l'analyse",
+    "definition_translation": "Incapacité à prendre une décision, souvent causée par un trop grand nombre d'options.",
+    "example_translation": "Réduire le nombre de plans d'abonnement a aidé à éliminer ce blocage chez les nouveaux utilisateurs."
+  },
+  {
+    "id": "sls_0028",
+    "term_translation": "Taux d'attrition",
+    "definition_translation": "Pourcentage d'abonnés qui résilient leur contrat sur une période donnée.",
+    "example_translation": "Nous devons réduire ce chiffre car acquérir de nouveaux clients coûte plus cher que de les fidéliser."
+  },
+  {
+    "id": "sls_0029",
+    "term_translation": "Piège à clics",
+    "definition_translation": "Contenu dont le but principal est d'attirer l'attention et d'encourager les clics, souvent trompeur.",
+    "example_translation": "Le titre sensationnaliste était un pur leurre et l'article ne tenait pas ses promesses."
+  },
+  {
+    "id": "sls_0030",
+    "term_translation": "Taux de clics",
+    "definition_translation": "Rapport entre le nombre d'utilisateurs qui cliquent sur un lien et le nombre total d'utilisateurs qui le voient.",
+    "example_translation": "Un score bas sur la publicité suggère que l'image ou le texte ne sont pas assez attrayants."
+  },
+  {
+    "id": "sls_0031",
+    "term_translation": "Dissonance cognitive",
+    "definition_translation": "État de tension interne dû à des pensées contradictoires, fréquent après un achat coûteux (regret d'achat).",
+    "example_translation": "Après l'achat de la voiture de luxe, le client cherchait une validation dans les avis pour se rassurer."
+  },
+  {
+    "id": "sls_0032",
+    "term_translation": "Analyse de cohorte",
+    "definition_translation": "Méthode analytique qui divise les données en groupes partageant une caractéristique commune sur une période.",
+    "example_translation": "L'étude a montré que les utilisateurs inscrits à Noël se désabonnent plus vite."
+  },
+  {
+    "id": "sls_0033",
+    "term_translation": "Démarchage téléphonique",
+    "definition_translation": "Sollicitation de clients potentiels qui n'ont eu aucun contact préalable avec le vendeur.",
+    "example_translation": "Cette méthode est difficile et impopulaire, mais reste un standard dans la vente B2B."
+  },
+  {
+    "id": "sls_0034",
+    "term_translation": "Avantage concurrentiel",
+    "definition_translation": "Condition ou circonstance qui place une entreprise dans une position commerciale supérieure.",
+    "example_translation": "Notre technologie brevetée nous donne une position que les rivaux ne peuvent pas copier facilement."
+  },
+  {
+    "id": "sls_0035",
+    "term_translation": "Biais de confirmation",
+    "definition_translation": "Tendance à chercher et interpréter l'information de manière à confirmer ses propres croyances.",
+    "example_translation": "Une bonne publicité fait appel à ce mécanisme pour que le client se sente compris."
+  },
+  {
+    "id": "sls_0036",
+    "term_translation": "Système de gestion de contenu",
+    "definition_translation": "Logiciel permettant de créer et gérer du contenu web sans connaissances techniques.",
+    "example_translation": "WordPress est l'outil le plus populaire de ce type dans les équipes marketing."
+  },
+  {
+    "id": "sls_0037",
+    "term_translation": "Marketing de contenu",
+    "definition_translation": "Approche stratégique centrée sur la création de contenu de valeur pour attirer une audience.",
+    "example_translation": "Notre blog d'experts est la pièce maîtresse de notre stratégie dans ce domaine."
+  },
+  {
+    "id": "sls_0038",
+    "term_translation": "Optimisation des conversions",
+    "definition_translation": "Processus systématique pour augmenter le pourcentage de visiteurs effectuant une action désirée.",
+    "example_translation": "Nous avons amélioré nos résultats en simplifiant le formulaire de paiement."
+  },
+  {
+    "id": "sls_0039",
+    "term_translation": "Rédaction publicitaire",
+    "definition_translation": "L'art d'écrire des textes à des fins promotionnelles pour inciter le lecteur à l'action.",
+    "example_translation": "Un bon texte de vente se concentre sur les bénéfices plutôt que sur les fonctionnalités."
+  },
+  {
+    "id": "sls_0040",
+    "term_translation": "Responsabilité sociétale des entreprises",
+    "definition_translation": "Concept où les entreprises intègrent les préoccupations sociales et environnementales à leurs activités.",
+    "example_translation": "Notre programme de soutien aux écoles locales fait partie de notre stratégie éthique."
+  },
+  {
+    "id": "sls_0041",
+    "term_translation": "Coût par acquisition",
+    "definition_translation": "Le coût total pour obtenir un client payant via une campagne spécifique.",
+    "example_translation": "Nous avons arrêté la campagne car obtenir un client coûtait plus cher que le produit lui-même."
+  },
+  {
+    "id": "sls_0042",
+    "term_translation": "Coût par prospect",
+    "definition_translation": "Le montant dépensé pour acquérir un contact qualifié.",
+    "example_translation": "Les publicités LinkedIn sont plus chères, mais fournissent des contacts de meilleure qualité."
+  },
+  {
+    "id": "sls_0043",
+    "term_translation": "Coût pour mille",
+    "definition_translation": "Modèle de facturation publicitaire basé sur le coût pour 1000 affichages.",
+    "example_translation": "Les campagnes de notoriété utilisent souvent ce modèle pour maximiser la portée."
+  },
+  {
+    "id": "sls_0044",
+    "term_translation": "Vente croisée",
+    "definition_translation": "Pratique consistant à vendre un produit complémentaire à un client existant.",
+    "example_translation": "Proposer une coque lors de l'achat d'un smartphone est un exemple classique."
+  },
+  {
+    "id": "sls_0045",
+    "term_translation": "Coût d'acquisition client",
+    "definition_translation": "Le coût moyen pour amener un nouveau client à acheter un produit ou service.",
+    "example_translation": "Les startups doivent veiller à ce que ce coût soit inférieur à la valeur vie du client."
+  },
+  {
+    "id": "sls_0046",
+    "term_translation": "Centré sur le client",
+    "definition_translation": "Approche commerciale plaçant l'expérience positive du client au cœur des décisions.",
+    "example_translation": "Le succès d'Amazon est souvent attribué à son obsession pour la satisfaction de l'acheteur."
+  },
+  {
+    "id": "sls_0047",
+    "term_translation": "Parcours client",
+    "definition_translation": "Représentation visuelle de toutes les interactions qu'un client a avec une entreprise.",
+    "example_translation": "Ce graphique nous a aidés à identifier un point de friction critique avant l'achat."
+  },
+  {
+    "id": "sls_0048",
+    "term_translation": "Valeur vie client",
+    "definition_translation": "Le profit total qu'une entreprise attend d'un client tout au long de leur relation.",
+    "example_translation": "Augmenter la rétention est le moyen le plus efficace d'accroître cette métrique financière."
+  },
+  {
+    "id": "sls_0049",
+    "term_translation": "Segmentation client",
+    "definition_translation": "Processus de division des clients en groupes basés sur des caractéristiques communes.",
+    "example_translation": "Cela nous permet d'envoyer des emails personnalisés à différents groupes démographiques."
+  },
+  {
+    "id": "sls_0050",
+    "term_translation": "Interface truquée",
+    "definition_translation": "Design d'interface conçu pour tromper l'utilisateur (ex: désabonnement caché).",
+    "example_translation": "Rendre le lien de désinscription presque invisible est une pratique contraire à l'éthique."
+  },
+  {
+    "id": "sls_0051",
+    "term_translation": "Partage social privé",
+    "definition_translation": "Trafic web provenant de canaux privés (email, messagerie) difficile à tracer.",
+    "example_translation": "Une grande partie de notre 'trafic direct' est en réalité des liens partagés sur WhatsApp."
+  },
+  {
+    "id": "sls_0052",
+    "term_translation": "Effet de leurre",
+    "definition_translation": "Phénomène où l'introduction d'une troisième option peu attrayante change la préférence entre deux autres options.",
+    "example_translation": "Le pop-corn de taille moyenne sert souvent uniquement à faire paraître le grand comme une bonne affaire."
+  },
+  {
+    "id": "sls_0053",
+    "term_translation": "Publipostage",
+    "definition_translation": "Marketing envoyant physiquement du matériel promotionnel par la poste.",
+    "example_translation": "Les agents immobiliers utilisent encore cette méthode classique efficacement."
+  },
+  {
+    "id": "sls_0054",
+    "term_translation": "Autorité de domaine",
+    "definition_translation": "Score prédisant la capacité d'un site web à se classer dans les moteurs de recherche.",
+    "example_translation": "Nous essayons d'augmenter cet indicateur en obtenant des liens d'universités."
+  },
+  {
+    "id": "sls_0055",
+    "term_translation": "Campagne au goutte-à-goutte",
+    "definition_translation": "Série d'emails automatisés envoyés selon un calendrier précis après une action.",
+    "example_translation": "Les nouveaux abonnés reçoivent une séquence de bienvenue préprogrammée sur deux semaines."
+  },
+  {
+    "id": "sls_0056",
+    "term_translation": "Médias gagnés",
+    "definition_translation": "Publicité obtenue par le bouche-à-oreille ou la couverture médiatique (non payée).",
+    "example_translation": "Un article positif dans un grand journal est une forme précieuse de promotion gratuite."
+  },
+  {
+    "id": "sls_0057",
+    "term_translation": "Calendrier éditorial",
+    "definition_translation": "Planning utilisé pour contrôler la publication de contenu sur différents médias.",
+    "example_translation": "Nous utilisons Trello pour organiser les sujets du blog pour le trimestre à venir."
+  },
+  {
+    "id": "sls_0058",
+    "term_translation": "Taux d'engagement",
+    "definition_translation": "Mesure de l'interaction qu'un contenu reçoit (J'aime, commentaires, partages).",
+    "example_translation": "Les micro-influenceurs ont souvent un meilleur score que les grandes célébrités."
+  },
+  {
+    "id": "sls_0059",
+    "term_translation": "Contenu impérissable",
+    "definition_translation": "Contenu qui reste pertinent et génère du trafic sur une longue période.",
+    "example_translation": "Un guide comme 'Comment faire un nœud de cravate' est un exemple parfait."
+  },
+  {
+    "id": "sls_0060",
+    "term_translation": "Marketing expérientiel",
+    "definition_translation": "Stratégie engageant les consommateurs via des expériences directes et des événements.",
+    "example_translation": "Le magasin éphémère offrait une expérience VR pour connecter émotionnellement avec les clients."
+  },
+  {
+    "id": "sls_0061",
+    "term_translation": "Groupe de discussion",
+    "definition_translation": "Groupe de personnes rassemblées pour donner leur avis sur un produit.",
+    "example_translation": "Les retours de ce panel nous ont poussés à changer l'emballage du produit."
+  },
+  {
+    "id": "sls_0062",
+    "term_translation": "Peur de manquer quelque chose",
+    "definition_translation": "Anxiété qu'un événement intéressant se produise ailleurs, utilisée pour pousser à l'achat.",
+    "example_translation": "Les offres à durée limitée utilisent ce sentiment d'urgence pour forcer la décision."
+  },
+  {
+    "id": "sls_0063",
+    "term_translation": "Franchise",
+    "definition_translation": "Accord permettant d'utiliser le concept et la marque d'une entreprise contre redevance.",
+    "example_translation": "McDonald's est l'exemple le plus célèbre de ce modèle commercial."
+  },
+  {
+    "id": "sls_0064",
+    "term_translation": "Modèle Freemium",
+    "definition_translation": "Stratégie où le service de base est gratuit, mais les fonctions avancées sont payantes.",
+    "example_translation": "Spotify utilise ce modèle pour convertir les auditeurs gratuits en abonnés payants."
+  },
+  {
+    "id": "sls_0065",
+    "term_translation": "Fréquence",
+    "definition_translation": "Le nombre moyen de fois qu'une personne voit votre publicité.",
+    "example_translation": "Nous avons limité l'affichage à 3 fois par semaine pour ne pas agacer les utilisateurs."
+  },
+  {
+    "id": "sls_0066",
+    "term_translation": "Friction",
+    "definition_translation": "Tout obstacle qui empêche l'utilisateur d'atteindre son objectif ou de finaliser un achat.",
+    "example_translation": "Demander un numéro de téléphone lors du paiement est un obstacle inutile."
+  },
+  {
+    "id": "sls_0067",
+    "term_translation": "Fuite du tunnel",
+    "definition_translation": "Le point dans le processus de vente où un client potentiel abandonne.",
+    "example_translation": "Nous avons remarqué beaucoup d'abandons sur la page des frais de port."
+  },
+  {
+    "id": "sls_0068",
+    "term_translation": "Ludification",
+    "definition_translation": "Utilisation de mécanismes de jeu dans des contextes non ludiques pour motiver.",
+    "example_translation": "L'application de langue utilise des badges et des niveaux pour motiver les utilisateurs."
+  },
+  {
+    "id": "sls_0069",
+    "term_translation": "Barrage secrétaire",
+    "definition_translation": "Personne qui contrôle l'accès à un décideur.",
+    "example_translation": "En vente B2B, c'est souvent le premier obstacle pour réussir à parler au directeur."
+  },
+  {
+    "id": "sls_0070",
+    "term_translation": "Contenu verrouillé",
+    "definition_translation": "Contenu accessible uniquement après avoir fourni des coordonnées.",
+    "example_translation": "Nous avons placé le rapport sectoriel derrière un formulaire pour générer des contacts."
+  },
+  {
+    "id": "sls_0071",
+    "term_translation": "Géorepérage",
+    "definition_translation": "Utilisation du GPS pour créer une frontière virtuelle déclenchant une action sur mobile.",
+    "example_translation": "Le magasin envoyait un bon de réduction à toute personne passant à moins de 100 mètres."
+  },
+  {
+    "id": "sls_0072",
+    "term_translation": "Stratégie de mise sur le marché",
+    "definition_translation": "Plan d'action détaillant comment une entreprise va atteindre ses clients et vendre son produit.",
+    "example_translation": "Notre plan pour le nouveau produit implique des influenceurs et de la vente directe."
+  },
+  {
+    "id": "sls_0073",
+    "term_translation": "Piratage de croissance",
+    "definition_translation": "Stratégies créatives et peu coûteuses visant une croissance rapide (souvent chez les startups).",
+    "example_translation": "Le programme de parrainage de Dropbox est un exemple légendaire de cette approche."
+  },
+  {
+    "id": "sls_0074",
+    "term_translation": "Marketing guérilla",
+    "definition_translation": "Stratégie publicitaire utilisant des interactions surprises et non conventionnelles.",
+    "example_translation": "Le flashmob à la gare était une excellente action promotionnelle à petit budget."
+  },
+  {
+    "id": "sls_0075",
+    "term_translation": "Effet de halo",
+    "definition_translation": "Biais où l'impression positive d'un produit influence l'opinion sur toute la marque.",
+    "example_translation": "Le succès de l'iPod a créé une image positive qui a boosté les ventes de Mac."
+  },
+  {
+    "id": "sls_0076",
+    "term_translation": "Mot-dièse",
+    "definition_translation": "Mot ou phrase précédé du symbole #, utilisé pour catégoriser le contenu sur les réseaux sociaux.",
+    "example_translation": "Créez un tag unique pour votre événement afin de suivre les discussions."
+  },
+  {
+    "id": "sls_0077",
+    "term_translation": "Carte de chaleur",
+    "definition_translation": "Visualisation de données montrant où les utilisateurs cliquent et regardent sur une page.",
+    "example_translation": "L'analyse a montré que personne ne cliquait sur les liens de la barre latérale."
+  },
+  {
+    "id": "sls_0078",
+    "term_translation": "Marché horizontal",
+    "definition_translation": "Marché où un produit répond aux besoins d'un large éventail d'industries différentes.",
+    "example_translation": "Les fournitures de bureau sont vendues sur ce type de marché très large."
+  },
+  {
+    "id": "sls_0079",
+    "term_translation": "Impressions",
+    "definition_translation": "Nombre de fois qu'une publicité ou un contenu s'affiche à l'écran.",
+    "example_translation": "Notre campagne a été vue un million de fois, mais a eu peu de clics."
+  },
+  {
+    "id": "sls_0080",
+    "term_translation": "Achat impulsif",
+    "definition_translation": "Achat non planifié effectué sous le coup d'une envie soudaine.",
+    "example_translation": "Les bonbons à la caisse sont placés là pour déclencher ce comportement."
+  },
+  {
+    "id": "sls_0081",
+    "term_translation": "Marketing entrant",
+    "definition_translation": "Méthodologie attirant les clients avec du contenu utile plutôt que de les solliciter.",
+    "example_translation": "Un blog utile est un élément central pour que les clients viennent à nous."
+  },
+  {
+    "id": "sls_0082",
+    "term_translation": "Marketing d'influence",
+    "definition_translation": "Forme de marketing utilisant la notoriété de personnes sur les réseaux sociaux.",
+    "example_translation": "Nous avons collaboré avec des YouTubeurs gaming pour promouvoir la nouvelle console."
+  },
+  {
+    "id": "sls_0083",
+    "term_translation": "Infographie",
+    "definition_translation": "Représentation visuelle d'informations ou de données pour les rendre compréhensibles.",
+    "example_translation": "Nous avons créé une image pour expliquer simplement les résultats complexes du sondage."
+  },
+  {
+    "id": "sls_0084",
+    "term_translation": "Indicateur clé de performance",
+    "definition_translation": "Valeur mesurable montrant l'efficacité avec laquelle une entreprise atteint ses objectifs.",
+    "example_translation": "La croissance du trafic est la métrique principale de notre équipe contenu."
+  },
+  {
+    "id": "sls_0085",
+    "term_translation": "Page d'atterrissage",
+    "definition_translation": "Page web spécifique où l'utilisateur arrive après avoir cliqué sur une publicité.",
+    "example_translation": "La publicité dirige vers une page d'offre spéciale, pas vers la page d'accueil."
+  },
+  {
+    "id": "sls_0086",
+    "term_translation": "Génération de prospects",
+    "definition_translation": "Processus pour attirer et convertir des inconnus en personnes intéressées par le produit.",
+    "example_translation": "Les webinaires gratuits sont efficaces pour collecter des adresses en B2B."
+  },
+  {
+    "id": "sls_0087",
+    "term_translation": "Aimant à prospects",
+    "definition_translation": "Offre gratuite (ex: ebook) donnée en échange de coordonnées de contact.",
+    "example_translation": "La liste de contrôle servait d'incitation pour faire grandir notre liste email."
+  },
+  {
+    "id": "sls_0088",
+    "term_translation": "Élevage de prospects",
+    "definition_translation": "Processus de développement de la relation avec les acheteurs à chaque étape de l'entonnoir.",
+    "example_translation": "Nous utilisons des séquences d'emails pour éduquer le contact jusqu'à l'achat."
+  },
+  {
+    "id": "sls_0089",
+    "term_translation": "Notation des prospects",
+    "definition_translation": "Méthodologie pour classer les contacts selon leur maturité à l'achat.",
+    "example_translation": "Les contacts visitant la page 'Tarifs' reçoivent plus de points et sont appelés en priorité."
+  },
+  {
+    "id": "sls_0090",
+    "term_translation": "Longue traîne",
+    "definition_translation": "Expression de recherche très spécifique composée de trois mots ou plus.",
+    "example_translation": "Ces mots-clés ont moins de volume mais souvent de meilleurs taux de conversion."
+  },
+  {
+    "id": "sls_0091",
+    "term_translation": "Audience similaire",
+    "definition_translation": "Option de ciblage pour atteindre de nouvelles personnes ressemblant à vos clients actuels.",
+    "example_translation": "Nous avons créé un groupe Facebook basé sur les profils de nos abonnés newsletter."
+  },
+  {
+    "id": "sls_0092",
+    "term_translation": "Aversion à la perte",
+    "definition_translation": "Tendance à préférer éviter les pertes plutôt qu'acquérir des gains équivalents.",
+    "example_translation": "Les messages comme 'Ne manquez pas votre chance' exploitent ce biais psychologique."
+  },
+  {
+    "id": "sls_0093",
+    "term_translation": "Produit d'appel",
+    "definition_translation": "Produit vendu à perte pour attirer les clients dans le magasin.",
+    "example_translation": "Le supermarché vend le lait très bas, espérant que les clients feront le reste de leurs courses."
+  },
+  {
+    "id": "sls_0094",
+    "term_translation": "Segmentation du marché",
+    "definition_translation": "Division d'un marché cible en groupes plus petits et définis.",
+    "example_translation": "Ce processus nous a permis d'adapter nos messages aux ados et aux parents séparément."
+  },
+  {
+    "id": "sls_0095",
+    "term_translation": "Part de marché",
+    "definition_translation": "Le pourcentage des ventes totales d'une industrie détenu par une entreprise.",
+    "example_translation": "Notre objectif est de capturer 15% du secteur d'ici la fin de l'année."
+  },
+  {
+    "id": "sls_0096",
+    "term_translation": "Automatisation du marketing",
+    "definition_translation": "Logiciel conçu pour exécuter des tâches marketing répétitives efficacement.",
+    "example_translation": "Ces outils nous aident à envoyer des vœux d'anniversaire à des milliers de clients."
+  },
+  {
+    "id": "sls_0097",
+    "term_translation": "Mix marketing",
+    "definition_translation": "Combinaison Produit, Prix, Place et Promotion (4P) pour atteindre les objectifs.",
+    "example_translation": "Nous avons dû revoir notre stratégie 4P pour mieux réussir en e-commerce."
+  },
+  {
+    "id": "sls_0098",
+    "term_translation": "Marketing mémétique",
+    "definition_translation": "Utilisation d'images virales d'internet pour promouvoir une marque.",
+    "example_translation": "Le compte Twitter de Wendy's est célèbre pour son usage de l'humour internet."
+  },
+  {
+    "id": "sls_0099",
+    "term_translation": "Marchandisage",
+    "definition_translation": "Techniques de présentation des produits en magasin pour augmenter les ventes.",
+    "example_translation": "Une bonne disposition en rayon peut augmenter significativement les achats."
+  },
+  {
+    "id": "sls_0100",
+    "term_translation": "Méta-description",
+    "definition_translation": "Court résumé dans le code HTML décrivant le contenu d'une page pour les moteurs de recherche.",
+    "example_translation": "Un résumé accrocheur peut améliorer le taux de clic depuis Google."
+  },
+  {
+    "id": "sls_0101",
+    "term_translation": "Micro-moment",
+    "definition_translation": "Instant où un utilisateur saisit son appareil pour répondre à un besoin immédiat.",
+    "example_translation": "La recherche 'pizzeria à proximité' est un exemple classique de cette situation."
+  },
+  {
+    "id": "sls_0102",
+    "term_translation": "Revenu récurrent mensuel",
+    "definition_translation": "Revenu qu'une entreprise peut anticiper de manière fiable chaque mois (modèle abonnement).",
+    "example_translation": "Pour les logiciels SaaS, c'est l'indicateur principal de santé financière."
+  },
+  {
+    "id": "sls_0103",
+    "term_translation": "Client mystère",
+    "definition_translation": "Personne payée pour se faire passer pour un acheteur et évaluer la qualité du service.",
+    "example_translation": "L'évaluateur anonyme a noté très bas la propreté du magasin."
+  },
+  {
+    "id": "sls_0104",
+    "term_translation": "Publicité native",
+    "definition_translation": "Publicité payante qui imite l'apparence et le style du contenu éditorial du site.",
+    "example_translation": "Les articles sponsorisés sur les sites d'infos ressemblent souvent à des reportages normaux."
+  },
+  {
+    "id": "sls_0105",
+    "term_translation": "Taux de recommandation net",
+    "definition_translation": "Métrique mesurant la fidélité client basée sur la probabilité de recommandation.",
+    "example_translation": "Un score au-dessus de 50 à cette enquête est considéré comme excellent."
+  },
+  {
+    "id": "sls_0106",
+    "term_translation": "Neuromarketing",
+    "definition_translation": "Application des neurosciences au marketing pour comprendre le comportement.",
+    "example_translation": "Les études ont montré que l'emballage rouge stimule le centre de la récompense."
+  },
+  {
+    "id": "sls_0107",
+    "term_translation": "Détournement d'actualité",
+    "definition_translation": "Pratique consistant à aligner une marque sur un événement d'actualité pour attirer l'attention.",
+    "example_translation": "Le tweet rapide d'Oreo pendant la panne du Super Bowl en est un exemple célèbre."
+  },
+  {
+    "id": "sls_0108",
+    "term_translation": "Marché de niche",
+    "definition_translation": "Segment de marché petit et spécialisé pour un produit particulier.",
+    "example_translation": "Vendre des guitares pour gauchers est un segment étroit mais rentable."
+  },
+  {
+    "id": "sls_0109",
+    "term_translation": "Portée organique",
+    "definition_translation": "Nombre de personnes qui voient votre contenu sans distribution payante.",
+    "example_translation": "Les changements d'algorithme ont réduit la visibilité gratuite sur Facebook."
+  },
+  {
+    "id": "sls_0110",
+    "term_translation": "Marketing sortant",
+    "definition_translation": "Méthode traditionnelle 'poussant' le message vers les clients (TV, affichage).",
+    "example_translation": "Les panneaux publicitaires et les spots TV sont des formes classiques de cette stratégie."
+  },
+  {
+    "id": "sls_0111",
+    "term_translation": "Médias payants",
+    "definition_translation": "Actions marketing pour lesquelles vous devez payer (ex: Google Ads).",
+    "example_translation": "Notre budget pour les campagnes sponsorisées a été augmenté avant Noël."
+  },
+  {
+    "id": "sls_0112",
+    "term_translation": "Point de douleur",
+    "definition_translation": "Problème ou frustration spécifique que le client rencontre et que le produit doit résoudre.",
+    "example_translation": "Notre publicité adresse directement la frustration principale du client : le manque de temps."
+  },
+  {
+    "id": "sls_0113",
+    "term_translation": "Paiement par clic",
+    "definition_translation": "Modèle publicitaire où l'annonceur paie pour chaque clic sur son annonce.",
+    "example_translation": "Ce modèle apporte du trafic immédiat, contrairement au référencement naturel qui prend du temps."
+  },
+  {
+    "id": "sls_0114",
+    "term_translation": "Planogramme",
+    "definition_translation": "Schéma indiquant l'emplacement exact des produits sur les étagères.",
+    "example_translation": "Le gérant du magasin a suivi le plan visuel pour organiser le rayon shampoings."
+  },
+  {
+    "id": "sls_0115",
+    "term_translation": "Point de vente",
+    "definition_translation": "Moment et lieu où une transaction de détail est complétée (caisse).",
+    "example_translation": "Nous avons placé de petits articles près de la caisse pour encourager l'achat impulsif."
+  },
+  {
+    "id": "sls_0116",
+    "term_translation": "Positionnement",
+    "definition_translation": "Place qu'occupe une marque dans l'esprit des clients par rapport à la concurrence.",
+    "example_translation": "La stratégie de Volvo s'est toujours construite sur l'idée de sécurité."
+  },
+  {
+    "id": "sls_0117",
+    "term_translation": "Sensibilité au prix",
+    "definition_translation": "Degré auquel le prix d'un produit affecte la décision d'achat.",
+    "example_translation": "Les étudiants réagissent généralement très fortement à toute hausse de tarif."
+  },
+  {
+    "id": "sls_0118",
+    "term_translation": "Amorçage",
+    "definition_translation": "Phénomène où l'exposition à un stimulus influence la réponse à un stimulus suivant.",
+    "example_translation": "La musique française chez le caviste incite les clients à choisir du vin français."
+  },
+  {
+    "id": "sls_0119",
+    "term_translation": "Marque de distributeur",
+    "definition_translation": "Produit fabriqué par un tiers mais vendu sous la marque d'un détaillant.",
+    "example_translation": "Les produits 'Marque Repère' chez Leclerc sont un exemple de cette pratique."
+  },
+  {
+    "id": "sls_0120",
+    "term_translation": "Cycle de vie du produit",
+    "definition_translation": "Les étapes traversées par un produit de son introduction à son retrait du marché.",
+    "example_translation": "Les lecteurs DVD sont actuellement dans la phase de déclin."
+  },
+  {
+    "id": "sls_0121",
+    "term_translation": "Adéquation produit-marché",
+    "definition_translation": "Être sur un bon marché avec un produit capable de satisfaire ce marché.",
+    "example_translation": "Les startups échouent souvent car elles grandissent avant d'avoir trouvé cet équilibre."
+  },
+  {
+    "id": "sls_0122",
+    "term_translation": "Psychographie",
+    "definition_translation": "Étude des consommateurs basée sur leurs attitudes, valeurs et modes de vie.",
+    "example_translation": "La démographie dit 'qui', cette méthode explique 'pourquoi' ils achètent."
+  },
+  {
+    "id": "sls_0123",
+    "term_translation": "Relations publiques",
+    "definition_translation": "Gestion de la communication entre une organisation et le public.",
+    "example_translation": "L'équipe a travaillé dur pour limiter les dégâts d'image après le scandale."
+  },
+  {
+    "id": "sls_0124",
+    "term_translation": "Changement de marque",
+    "definition_translation": "Processus de modification de l'image corporative ou du logo d'une organisation.",
+    "example_translation": "L'entreprise a annoncé une nouvelle identité visuelle pour paraître plus moderne."
+  },
+  {
+    "id": "sls_0125",
+    "term_translation": "Réciprocité",
+    "definition_translation": "Norme sociale consistant à répondre à une action positive par une autre action positive.",
+    "example_translation": "Donner un échantillon gratuit crée un sentiment de dette, favorisant l'achat."
+  },
+  {
+    "id": "sls_0126",
+    "term_translation": "Trafic référent",
+    "definition_translation": "Visites arrivant sur votre site depuis des liens sur d'autres sites (hors moteurs de recherche).",
+    "example_translation": "Une mention sur un blog populaire a amené beaucoup de visiteurs via ce canal."
+  },
+  {
+    "id": "sls_0127",
+    "term_translation": "Marketing relationnel",
+    "definition_translation": "Stratégie conçue pour favoriser la fidélité client sur le long terme.",
+    "example_translation": "Envoyer des cartes d'anniversaire aux clients est une méthode simple de connexion."
+  },
+  {
+    "id": "sls_0128",
+    "term_translation": "Reciblage publicitaire",
+    "definition_translation": "Afficher des publicités aux utilisateurs ayant déjà visité votre site web.",
+    "example_translation": "Je vois tout le temps des pubs pour les chaussures que j'ai regardées hier."
+  },
+  {
+    "id": "sls_0129",
+    "term_translation": "Design adaptatif",
+    "definition_translation": "Approche de conception web où les pages s'adaptent automatiquement à la taille de l'écran.",
+    "example_translation": "Avec le trafic mobile dominant, le site doit s'afficher correctement sur téléphone."
+  },
+  {
+    "id": "sls_0130",
+    "term_translation": "Taux de rétention",
+    "definition_translation": "Le pourcentage de clients qui restent fidèles à l'entreprise sur une période donnée.",
+    "example_translation": "Un score élevé signifie que les clients sont satisfaits et ne partent pas chez la concurrence."
+  },
+  {
+    "id": "sls_0131",
+    "term_translation": "Relance publicitaire",
+    "definition_translation": "Forme de publicité en ligne pour ramener les visiteurs partis sans acheter.",
+    "example_translation": "C'est très efficace pour récupérer les paniers abandonnés en e-commerce."
+  },
+  {
+    "id": "sls_0132",
+    "term_translation": "Retour sur les dépenses publicitaires",
+    "definition_translation": "Métrique mesurant l'efficacité d'une campagne publicitaire digitale.",
+    "example_translation": "Pour chaque euro dépensé en pub, nous en avons gagné quatre."
+  },
+  {
+    "id": "sls_0133",
+    "term_translation": "Retour sur investissement",
+    "definition_translation": "Mesure de performance utilisée pour évaluer la rentabilité d'une dépense.",
+    "example_translation": "La campagne email a généré un énorme profit par rapport à son faible coût."
+  },
+  {
+    "id": "sls_0134",
+    "term_translation": "Entonnoir de vente",
+    "definition_translation": "Modèle illustrant le parcours théorique du client vers l'achat.",
+    "example_translation": "Nous devons élargir le haut du processus avec plus de campagnes de notoriété."
+  },
+  {
+    "id": "sls_0135",
+    "term_translation": "Rareté",
+    "definition_translation": "Principe selon lequel les gens accordent plus de valeur aux choses en quantité limitée.",
+    "example_translation": "Les éditions limitées utilisent ce principe pour stimuler la demande."
+  },
+  {
+    "id": "sls_0136",
+    "term_translation": "Marketing des moteurs de recherche",
+    "definition_translation": "Promotion des sites web en augmentant leur visibilité dans les moteurs (souvent payant).",
+    "example_translation": "Nous avons augmenté le budget pour apparaître tout en haut de Google."
+  },
+  {
+    "id": "sls_0137",
+    "term_translation": "Référencement naturel",
+    "definition_translation": "Processus d'amélioration de la visibilité d'un site web dans les résultats de recherche gratuits.",
+    "example_translation": "Une bonne position demande du contenu de qualité et une optimisation technique."
+  },
+  {
+    "id": "sls_0138",
+    "term_translation": "Analyse des sentiments",
+    "definition_translation": "Processus automatisé pour identifier les opinions (positives, négatives) dans un texte.",
+    "example_translation": "L'étude des tweets a montré que les clients étaient frustrés par la mise à jour."
+  },
+  {
+    "id": "sls_0139",
+    "term_translation": "Page de résultats de recherche",
+    "definition_translation": "La page affichée par un moteur de recherche en réponse à une requête.",
+    "example_translation": "Être sur la deuxième page de Google équivaut à être invisible."
+  },
+  {
+    "id": "sls_0140",
+    "term_translation": "Part de voix",
+    "definition_translation": "Mesure de la visibilité de votre marque par rapport à vos concurrents sur le marché.",
+    "example_translation": "Notre visibilité sur les réseaux sociaux a grimpé après la vidéo virale."
+  },
+  {
+    "id": "sls_0141",
+    "term_translation": "Écoute sociale",
+    "definition_translation": "Surveillance des conversations numériques pour comprendre ce que les clients disent d'une marque.",
+    "example_translation": "Ces outils nous ont alertés d'une crise potentielle avant qu'elle n'éclate."
+  },
+  {
+    "id": "sls_0142",
+    "term_translation": "Preuve sociale",
+    "definition_translation": "Phénomène psychologique où les gens copient les actions des autres.",
+    "example_translation": "Afficher 'Avis 5 étoiles' est un moyen puissant de générer de la confiance."
+  },
+  {
+    "id": "sls_0143",
+    "term_translation": "Narration",
+    "definition_translation": "Utilisation d'un récit pour communiquer un message et connecter émotionnellement.",
+    "example_translation": "La marque a utilisé une histoire touchante pour créer un lien avec son audience."
+  },
+  {
+    "id": "sls_0144",
+    "term_translation": "Chaîne d'approvisionnement",
+    "definition_translation": "Réseau de toutes les entités impliquées dans la création et la livraison d'un produit.",
+    "example_translation": "Le marketing doit se coordonner avec la logistique pour assurer le stock pendant la promo."
+  },
+  {
+    "id": "sls_0145",
+    "term_translation": "Analyse FFPM",
+    "definition_translation": "Méthode de planification stratégique évaluant Forces, Faiblesses, Possibilités et Menaces.",
+    "example_translation": "Nous avons réalisé cette analyse avant d'entrer sur le marché asiatique."
+  },
+  {
+    "id": "sls_0146",
+    "term_translation": "Public cible",
+    "definition_translation": "Groupe spécifique de consommateurs les plus susceptibles de vouloir votre produit.",
+    "example_translation": "Nos clients idéaux sont des citadines actives de 25 à 40 ans."
+  },
+  {
+    "id": "sls_0147",
+    "term_translation": "Leader d'opinion",
+    "definition_translation": "Individu reconnu comme une autorité dans un domaine spécialisé.",
+    "example_translation": "Écrire des articles experts a aidé le PDG à devenir une référence dans l'industrie."
+  },
+  {
+    "id": "sls_0148",
+    "term_translation": "Ton de voix",
+    "definition_translation": "La manière dont le caractère de votre entreprise transparaît à travers vos mots.",
+    "example_translation": "Le style de notre marque est professionnel mais amical dans tous nos canaux."
+  },
+  {
+    "id": "sls_0149",
+    "term_translation": "Point de contact",
+    "definition_translation": "Tout moment d'interaction entre un acheteur et une entreprise.",
+    "example_translation": "Les appels au service client sont un moment critique pour l'image de marque."
+  },
+  {
+    "id": "sls_0150",
+    "term_translation": "Proposition de valeur unique",
+    "definition_translation": "Le facteur présenté par un vendeur comme la raison pour laquelle son produit est différent et meilleur.",
+    "example_translation": "Notre facteur différenciant est que nous sommes la seule option écologique du marché."
+  }
+]

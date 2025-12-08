@@ -327,8 +327,14 @@ export async function playCompleteClassicGame(page: Page, expectedAnswer: string
  * Helper function to start a game session
  */
 export async function startGameSession(page: Page, category: string = "HR", mode: string = "Classic"): Promise<void> {
+  // Map category names for backward compatibility
+  const categoryMap: Record<string, string> = {
+    "HR Words": "HR"
+  };
+  const mappedCategory = categoryMap[category] || category;
+
   // Wait for the category to be visible and stable before clicking
-  const categoryLocator = page.locator(`text=${category}`);
+  const categoryLocator = page.locator(`text=${mappedCategory}`);
   await expect(categoryLocator).toBeVisible();
   await categoryLocator.click();
   await page.click(`text=${mode}`);

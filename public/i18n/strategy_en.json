@@ -1,0 +1,1952 @@
+[
+  {
+    "id": "strat_0001",
+    "term": "Division",
+    "definition": "A distinct part of a company that operates as a separate business unit, often with its own profit and loss responsibility.",
+    "example": "The pharmaceutical Division generated the highest revenue this quarter.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "structure",
+        "organization"
+      ]
+    }
+  },
+  {
+    "id": "strat_0002",
+    "term": "Omission",
+    "definition": "The failure to include or mention something in financial statements or reports, which can lead to compliance issues.",
+    "example": "The auditor noted a material Omission regarding the pending lawsuit liabilities.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "compliance",
+        "reporting"
+      ]
+    }
+  },
+  {
+    "id": "strat_0003",
+    "term": "Provision",
+    "definition": "An amount set aside in an organization's accounts for a known liability of uncertain timing or amount.",
+    "example": "The company made a specific Provision for bad debts in anticipation of the recession.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "finance",
+        "accounting"
+      ]
+    }
+  },
+  {
+    "id": "strat_0004",
+    "term": "Visioning",
+    "definition": "The strategic process of developing a clear mental picture of the future direction and goals of an organization.",
+    "example": "The board spent the retreat Visioning what the company should look like in ten years.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "leadership",
+        "planning"
+      ]
+    }
+  },
+  {
+    "id": "strat_0005",
+    "term": "Governance",
+    "definition": "The system of rules, practices, and processes by which a firm is directed and controlled.",
+    "example": "Good corporate governance ensures transparency and accountability to shareholders.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "leadership",
+        "compliance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0006",
+    "term": "Bonus plan",
+    "definition": "A compensation scheme that rewards employees for achieving specific performance targets.",
+    "example": "The new Bonus plan is tied to customer satisfaction scores rather than just sales volume.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "hr",
+        "incentives"
+      ]
+    }
+  },
+  {
+    "id": "strat_0007",
+    "term": "Commission",
+    "definition": "A variable payment made to employees based on the value of sales they have closed.",
+    "example": "Agents earn a 5% Commission on every real estate transaction.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "sales",
+        "compensation"
+      ]
+    }
+  },
+  {
+    "id": "strat_0008",
+    "term": "Action plan",
+    "definition": "A detailed sequence of steps that must be taken to achieve a specific strategy or goal.",
+    "example": "We need to convert this strategy into a concrete Action plan with deadlines.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "planning",
+        "execution"
+      ]
+    }
+  },
+  {
+    "id": "strat_0009",
+    "term": "Direct costs",
+    "definition": "Expenses that can be directly traced to the production of specific goods or services.",
+    "example": "Raw materials and labor are the primary Direct costs for this product line.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "finance",
+        "accounting"
+      ]
+    }
+  },
+  {
+    "id": "strat_0010",
+    "term": "Disposal plan",
+    "definition": "A strategic arrangement for selling off or removing assets that are no longer needed.",
+    "example": "The Disposal plan for the old factory equipment will be executed next month.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "operations",
+        "assets"
+      ]
+    }
+  },
+  {
+    "id": "strat_0011",
+    "term": "Target assets",
+    "definition": "Specific resources or properties that a company intends to acquire during a merger or acquisition.",
+    "example": "Due diligence revealed hidden liabilities in the Target assets.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "mergers",
+        "acquisition"
+      ]
+    }
+  },
+  {
+    "id": "strat_0012",
+    "term": "Marginal plant",
+    "definition": "A production facility that operates at the edge of profitability, often the first to close during downturns.",
+    "example": "We decided to shut down the Marginal plant because maintenance costs exceeded revenue.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "operations",
+        "production"
+      ]
+    }
+  },
+  {
+    "id": "strat_0013",
+    "term": "Emergency plan",
+    "definition": "A course of action designed to mitigate the damage of potential negative events.",
+    "example": "The Emergency plan was activated immediately after the cyberattack.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "risk management",
+        "safety"
+      ]
+    }
+  },
+  {
+    "id": "strat_0014",
+    "term": "Audit strategy",
+    "definition": "The overall approach outlining the scope, timing, and direction of an inspection process.",
+    "example": "Our Audit strategy focuses on high-risk areas like cash handling and procurement.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "planning"
+      ]
+    }
+  },
+  {
+    "id": "strat_0015",
+    "term": "Admission fees",
+    "definition": "Costs associated with gaining entry to a specific market, organization, or trade group.",
+    "example": "High Admission fees prevent smaller competitors from joining the industry consortium.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "market",
+        "barriers"
+      ]
+    }
+  },
+  {
+    "id": "strat_0016",
+    "term": "Indirect costs",
+    "definition": "Expenses that are not directly accountable to a cost object, often called overheads.",
+    "example": "Rent and utilities are classified as Indirect costs because they support the whole office.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "accounting",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0017",
+    "term": "Direct business",
+    "definition": "Transactions conducted immediately between the provider and the customer without intermediaries.",
+    "example": "Moving to a Direct business model increased our margins by cutting out the distributors.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "sales",
+        "model"
+      ]
+    }
+  },
+  {
+    "id": "strat_0018",
+    "term": "Mitigation",
+    "definition": "The action of reducing the severity, seriousness, or painfulness of something.",
+    "example": "Risk mitigation strategies include diversification and insurance.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "risk management",
+        "strategy"
+      ]
+    }
+  },
+  {
+    "id": "strat_0019",
+    "term": "Expenditure",
+    "definition": "The act of spending funds or an amount of money spent, often capitalized for long-term benefits.",
+    "example": "The capital expenditure for the new manufacturing plant was significant.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "finance",
+        "accounting"
+      ]
+    }
+  },
+  {
+    "id": "strat_0020",
+    "term": "Audit",
+    "definition": "An official inspection of an individual's or organization's accounts, typically by an independent body.",
+    "example": "The annual Audit found no irregularities in the bookkeeping.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "compliance",
+        "basics"
+      ]
+    }
+  },
+  {
+    "id": "strat_0021",
+    "term": "Asset",
+    "definition": "A resource with economic value that an individual or corporation owns with the expectation of future benefit.",
+    "example": "Brand reputation is our most valuable intangible Asset.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "finance",
+        "basics"
+      ]
+    }
+  },
+  {
+    "id": "strat_0022",
+    "term": "Profit",
+    "definition": "A financial gain, especially the difference between the amount earned and the amount spent.",
+    "example": "The company turned a healthy Profit despite the economic downturn.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "finance",
+        "basics"
+      ]
+    }
+  },
+  {
+    "id": "strat_0023",
+    "term": "Assets",
+    "definition": "The entire property of a person, association, corporation, or estate applicable or subject to the payment of debts.",
+    "example": "The court ordered the freezing of all corporate Assets.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "legal",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0024",
+    "term": "Projection",
+    "definition": "An estimate or forecast of a future situation or trend based on present trends.",
+    "example": "The sales Projection for Q4 looks optimistic based on current pipeline data.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "analysis",
+        "planning"
+      ]
+    }
+  },
+  {
+    "id": "strat_0025",
+    "term": "Revenue",
+    "definition": "The total income produced by a given source.",
+    "example": "Advertising is the primary source of Revenue for the social media giant.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "finance",
+        "metrics"
+      ]
+    }
+  },
+  {
+    "id": "strat_0026",
+    "term": "EOL cost",
+    "definition": "End-of-Life cost; expenses associated with retiring a product or asset.",
+    "example": "We must factor in the recycling and disposal fees as part of the EOL cost.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "product management",
+        "lifecycle"
+      ]
+    }
+  },
+  {
+    "id": "strat_0027",
+    "term": "IT audit",
+    "definition": "An examination of the management controls within an Information technology infrastructure.",
+    "example": "The IT audit revealed several vulnerabilities in our firewall configuration.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "technology",
+        "compliance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0028",
+    "term": "Venture",
+    "definition": "A risky or daring journey or undertaking, especially one involving new commercial risks.",
+    "example": "The joint venture between the two tech giants aims to develop quantum processors.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "business",
+        "strategy"
+      ]
+    }
+  },
+  {
+    "id": "strat_0029",
+    "term": "Tax audit",
+    "definition": "An examination of a tax return by the IRS or other tax authority to verify that income and deductions are accurate.",
+    "example": "Keep all your receipts in case of a Tax audit.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "legal",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0030",
+    "term": "Net profit",
+    "definition": "The actual profit after working expenses not included in the calculation of gross profit have been paid.",
+    "example": "After paying taxes and salaries, our Net profit was lower than expected.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "finance",
+        "accounting"
+      ]
+    }
+  },
+  {
+    "id": "strat_0031",
+    "term": "Audit file",
+    "definition": "The folder or storage location containing the documentation for a specific audit engagement.",
+    "example": "The junior accountant was responsible for organizing the Audit file.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "admin",
+        "audit"
+      ]
+    }
+  },
+  {
+    "id": "strat_0032",
+    "term": "Audit body",
+    "definition": "An organization or committee officially appointed to conduct inspections.",
+    "example": "The European Audit body is reviewing the usage of the grant money.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "governance",
+        "institutions"
+      ]
+    }
+  },
+  {
+    "id": "strat_0033",
+    "term": "Compliance",
+    "definition": "The action or fact of complying with a wish or command, especially legal regulations.",
+    "example": "Regulatory Compliance is a major cost center for banking institutions.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "legal",
+        "governance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0034",
+    "term": "Audit firm",
+    "definition": "A professional services company that provides audit and assurance services.",
+    "example": "We hired a \"Big Four\" Audit firm to handle our IPO preparations.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "business services",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0035",
+    "term": "Price risk",
+    "definition": "The risk of a decline in the value of a security or a portfolio.",
+    "example": "Commodity traders use hedging to manage Price risk.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "risk management",
+        "markets"
+      ]
+    }
+  },
+  {
+    "id": "strat_0036",
+    "term": "Net assets",
+    "definition": "The total assets of a company minus its total liabilities.",
+    "example": "The book value of the company is essentially its Net assets.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "accounting",
+        "valuation"
+      ]
+    }
+  },
+  {
+    "id": "strat_0037",
+    "term": "Fiscal aid",
+    "definition": "Financial assistance provided by the government or other institutions.",
+    "example": "The struggling sector requested Fiscal aid to survive the crisis.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "economics",
+        "policy"
+      ]
+    }
+  },
+  {
+    "id": "strat_0038",
+    "term": "Loan asset",
+    "definition": "A loan considered as an asset to the lender (the bank) because it generates interest income.",
+    "example": "The bank sold a portion of its Loan asset portfolio to raise liquidity.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "banking",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0039",
+    "term": "Audit risk",
+    "definition": "The risk that an auditor expresses an inappropriate audit opinion when the financial statements are materially misstated.",
+    "example": "To minimize Audit risk, we increased the sample size of our testing.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "audit",
+        "theory"
+      ]
+    }
+  },
+  {
+    "id": "strat_0040",
+    "term": "Asset deal",
+    "definition": "A type of acquisition where the buyer purchases individual assets of a company rather than its shares.",
+    "example": "In an Asset deal, the buyer can choose exactly which liabilities to assume.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "m&a",
+        "law"
+      ]
+    }
+  },
+  {
+    "id": "strat_0041",
+    "term": "Marketable",
+    "definition": "Able to be sold or marketed.",
+    "example": "We need to make this prototype into a Marketable product by Q3.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "sales",
+        "product"
+      ]
+    }
+  },
+  {
+    "id": "strat_0042",
+    "term": "Asset pool",
+    "definition": "A group of assets that are combined for the purpose of creating a financial security.",
+    "example": "The mortgage-backed security was derived from a large Asset pool of residential loans.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "finance",
+        "investing"
+      ]
+    }
+  },
+  {
+    "id": "strat_0043",
+    "term": "Sunk costs",
+    "definition": "Costs that have already been incurred and cannot be recovered.",
+    "example": "We should ignore Sunk costs when deciding whether to continue the project.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "economics",
+        "decision making"
+      ]
+    }
+  },
+  {
+    "id": "strat_0044",
+    "term": "Marketplace",
+    "definition": "An arena of competitive or commercial dealings; the world of trade.",
+    "example": "In today's global Marketplace, digital presence is mandatory.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "general",
+        "commerce"
+      ]
+    }
+  },
+  {
+    "id": "strat_0045",
+    "term": "Audit field",
+    "definition": "The specific area or scope within an organization that is subject to inspection.",
+    "example": "The Audit field for this year includes overseas subsidiaries.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "scope"
+      ]
+    }
+  },
+  {
+    "id": "strat_0046",
+    "term": "Toxic asset",
+    "definition": "An asset that becomes illiquid when its secondary market disappears.",
+    "example": "The bank's balance sheet was weighed down by Toxic asset holdings from the housing crash.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "banking",
+        "crisis"
+      ]
+    }
+  },
+  {
+    "id": "strat_0047",
+    "term": "Joint audit",
+    "definition": "An audit performed by two or more auditing firms.",
+    "example": "A Joint audit is often required for massive multinational corporations.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "collaboration"
+      ]
+    }
+  },
+  {
+    "id": "strat_0048",
+    "term": "Fixed asset",
+    "definition": "Assets purchased for long-term use (e.g., land, buildings, equipment).",
+    "example": "A Fixed asset is not likely to be converted quickly into cash.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "accounting",
+        "assets"
+      ]
+    }
+  },
+  {
+    "id": "strat_0049",
+    "term": "Fixed costs",
+    "definition": "Business costs, such as rent, that remain constant regardless of the quantity of goods or services produced.",
+    "example": "Startups should keep their Fixed costs low to extend their runway.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "finance",
+        "operations"
+      ]
+    }
+  },
+  {
+    "id": "strat_0050",
+    "term": "Audit trail",
+    "definition": "A step-by-step record by which accounting, trade details, or other financial data can be traced to their source.",
+    "example": "The blockchain provides an immutable Audit trail for every transaction.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "compliance",
+        "data"
+      ]
+    }
+  },
+  {
+    "id": "strat_0051",
+    "term": "Lead market",
+    "definition": "A market where a specific innovation is first widely adopted.",
+    "example": "Scandinavia is often considered a Lead market for electric vehicles.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "innovation",
+        "marketing"
+      ]
+    }
+  },
+  {
+    "id": "strat_0052",
+    "term": "Input costs",
+    "definition": "The costs related to the resources used to produce a good or service.",
+    "example": "Rising energy prices have significantly increased our Input costs.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "production",
+        "economics"
+      ]
+    }
+  },
+  {
+    "id": "strat_0053",
+    "term": "Credit risk",
+    "definition": "The risk of default on a debt that may arise from a borrower failing to make required payments.",
+    "example": "Banks analyze your history to assess the Credit risk before issuing a loan.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "banking",
+        "risk"
+      ]
+    }
+  },
+  {
+    "id": "strat_0054",
+    "term": "Deemed cost",
+    "definition": "An amount used as a surrogate for cost or depreciated cost at a given date.",
+    "example": "We used the fair value of the land as its Deemed cost upon transition to IFRS.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "accounting",
+        "standards"
+      ]
+    }
+  },
+  {
+    "id": "strat_0055",
+    "term": "Cost method",
+    "definition": "A method of accounting for an investment where it is recorded at price paid.",
+    "example": "Under the Cost method, dividends are recorded as income.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "accounting",
+        "investing"
+      ]
+    }
+  },
+  {
+    "id": "strat_0056",
+    "term": "Factor cost",
+    "definition": "The cost of the factors of production (land, labor, capital) used to produce goods.",
+    "example": "Economists analyze Factor cost to understand inflation drivers.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "economics",
+        "production"
+      ]
+    }
+  },
+  {
+    "id": "strat_0057",
+    "term": "Audit scope",
+    "definition": "The depth and range of an audit, including what is and isn't covered.",
+    "example": "The Audit scope was limited to the domestic operations only.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "planning"
+      ]
+    }
+  },
+  {
+    "id": "strat_0058",
+    "term": "Stakeholder",
+    "definition": "A party that has an interest in a company and can either affect or be affected by the business.",
+    "example": "We need to manage Stakeholder expectations regarding the project timeline.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "management",
+        "strategy"
+      ]
+    }
+  },
+  {
+    "id": "strat_0059",
+    "term": "ICT project",
+    "definition": "A project involving Information and Communication Technology.",
+    "example": "The government launched a massive ICT project to digitize health records.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "technology",
+        "management"
+      ]
+    }
+  },
+  {
+    "id": "strat_0060",
+    "term": "Market power",
+    "definition": "The ability of a firm to profitably raise the market price of a good or service over marginal cost.",
+    "example": "The monopoly has excessive Market power and can dictate prices.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "economics",
+        "competition"
+      ]
+    }
+  },
+  {
+    "id": "strat_0061",
+    "term": "Market entry",
+    "definition": "The movement of a company into a new market.",
+    "example": "Barriers to Market entry include high capital requirements and patents.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "strategy",
+        "growth"
+      ]
+    }
+  },
+  {
+    "id": "strat_0062",
+    "term": "Risk sharing",
+    "definition": "A strategy where risk is distributed among several participants.",
+    "example": "Insurance is a classic form of Risk sharing.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "insurance",
+        "risk"
+      ]
+    }
+  },
+  {
+    "id": "strat_0063",
+    "term": "Equity share",
+    "definition": "A share that gives the holder a right to vote and receive dividends.",
+    "example": "Investing in an Equity share offers higher potential returns than bonds.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "investing",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0064",
+    "term": "Service cost",
+    "definition": "The cost associated with providing a service to a customer.",
+    "example": "Automation helped reduce the Service cost per ticket.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "operations",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0065",
+    "term": "Current cost",
+    "definition": "The cost that would be required to replace an asset in the current period.",
+    "example": "Accounting based on Current cost reflects inflation better than historical data.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "accounting",
+        "valuation"
+      ]
+    }
+  },
+  {
+    "id": "strat_0066",
+    "term": "Equity issue",
+    "definition": "The act of offering shares of the company to the public or investors.",
+    "example": "The company planned a new Equity issue to fund its expansion.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "finance",
+        "corporate"
+      ]
+    }
+  },
+  {
+    "id": "strat_0067",
+    "term": "Implied cost",
+    "definition": "An opportunity cost that is not a direct monetary expense.",
+    "example": "The Implied cost of leaving the position vacant is the lost productivity.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "economics",
+        "hr"
+      ]
+    }
+  },
+  {
+    "id": "strat_0068",
+    "term": "Control risk",
+    "definition": "The risk that a material misstatement will not be prevented or detected by the entity's internal controls.",
+    "example": "Weak password policies increase the Control risk for the IT system.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "audit",
+        "risk"
+      ]
+    }
+  },
+  {
+    "id": "strat_0069",
+    "term": "System audit",
+    "definition": "An audit of the systems and procedures used to record transactions.",
+    "example": "A System audit verified that the backup procedures were functioning correctly.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "it",
+        "audit"
+      ]
+    }
+  },
+  {
+    "id": "strat_0070",
+    "term": "Risk profile",
+    "definition": "An evaluation of an individual or organization's willingness and ability to take risks.",
+    "example": "A conservative investor typically has a low Risk profile.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "investing",
+        "psychology"
+      ]
+    }
+  },
+  {
+    "id": "strat_0071",
+    "term": "Total assets",
+    "definition": "The sum of all current and non-current assets owned by an organization.",
+    "example": "The company's Total assets exceeded one billion dollars last year.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "accounting",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0072",
+    "term": "Risk finance",
+    "definition": "The management of the financial impact of risk, often through insurance or retention.",
+    "example": "Captive insurance is a sophisticated form of Risk finance.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "finance",
+        "risk"
+      ]
+    }
+  },
+  {
+    "id": "strat_0073",
+    "term": "Audit report",
+    "definition": "A document prepared by an auditor stating whether the financial statements are accurate.",
+    "example": "The shareholders were relieved to see a clean Audit report.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "compliance",
+        "documents"
+      ]
+    }
+  },
+  {
+    "id": "strat_0074",
+    "term": "Equity index",
+    "definition": "A statistical measure of the changes in a portfolio of stocks representing a portion of the overall market.",
+    "example": "The S&P 500 is a well-known Equity index.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "markets",
+        "investing"
+      ]
+    }
+  },
+  {
+    "id": "strat_0075",
+    "term": "Hedged asset",
+    "definition": "An asset that has been protected against risk through an offsetting investment.",
+    "example": "Even though the market crashed, the value of the Hedged asset remained stable.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "investing",
+        "risk"
+      ]
+    }
+  },
+  {
+    "id": "strat_0076",
+    "term": "Leased asset",
+    "definition": "Property or equipment that is used by a lessee in exchange for payments to the lessor.",
+    "example": "The airline does not own its planes; each is a Leased asset.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "finance",
+        "operations"
+      ]
+    }
+  },
+  {
+    "id": "strat_0077",
+    "term": "Market share",
+    "definition": "The portion of a market controlled by a particular company or product.",
+    "example": "Aggressive pricing helped them capture a significant Market share.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "marketing",
+        "competition"
+      ]
+    }
+  },
+  {
+    "id": "strat_0078",
+    "term": "Market price",
+    "definition": "The current price at which an asset or service can be bought or sold.",
+    "example": "The offer was well below the current Market price.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "sales",
+        "trading"
+      ]
+    }
+  },
+  {
+    "id": "strat_0079",
+    "term": "Audit extent",
+    "definition": "The amount of audit evidence obtained, typically determined by sample size.",
+    "example": "We increased the Audit extent after finding initial discrepancies.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "audit",
+        "methodology"
+      ]
+    }
+  },
+  {
+    "id": "strat_0080",
+    "term": "Interim audit",
+    "definition": "An audit conducted before the end of the accounting period.",
+    "example": "The Interim audit helped identify issues before the year-end close.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "timing"
+      ]
+    }
+  },
+  {
+    "id": "strat_0081",
+    "term": "Equity holder",
+    "definition": "A person or entity that owns shares in a company.",
+    "example": "As an Equity holder, you are entitled to vote on board appointments.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "corporate",
+        "governance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0082",
+    "term": "Residual cost",
+    "definition": "The remaining cost of an asset after its useful life is over.",
+    "example": "The Residual cost was negligible since the machine was fully scrapped.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "accounting",
+        "depreciation"
+      ]
+    }
+  },
+  {
+    "id": "strat_0083",
+    "term": "Risk analysis",
+    "definition": "The process of identifying and analyzing potential issues that could negatively impact key business initiatives.",
+    "example": "A thorough Risk analysis is required before approving the new plant location.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "risk management",
+        "planning"
+      ]
+    }
+  },
+  {
+    "id": "strat_0084",
+    "term": "Business data",
+    "definition": "Information relating to commercial operations, sales, and customer behavior.",
+    "example": "Protecting sensitive Business data is a top priority for IT security.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "data",
+        "operations"
+      ]
+    }
+  },
+  {
+    "id": "strat_0085",
+    "term": "Business name",
+    "definition": "The name under which a business operates.",
+    "example": "You need to register your Business name with the local authorities.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "legal",
+        "branding"
+      ]
+    }
+  },
+  {
+    "id": "strat_0086",
+    "term": "Sales revenue",
+    "definition": "Income received from selling goods or services.",
+    "example": "Q4 Sales revenue exceeded projections by twenty percent.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "sales",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0087",
+    "term": "Group auditor",
+    "definition": "The auditor responsible for reporting on the consolidated financial statements of a group.",
+    "example": "The Group auditor coordinates with local auditors in each subsidiary country.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "corporate"
+      ]
+    }
+  },
+  {
+    "id": "strat_0088",
+    "term": "State auditor",
+    "definition": "A public official responsible for auditing government agencies.",
+    "example": "The State auditor released a report criticizing the department's spending.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "public sector",
+        "audit"
+      ]
+    }
+  },
+  {
+    "id": "strat_0089",
+    "term": "Audit opinion",
+    "definition": "A certification that accompanies financial statements, based on an audit of the procedures and records.",
+    "example": "An adverse Audit opinion can severely damage a company's stock price.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "compliance",
+        "outcomes"
+      ]
+    }
+  },
+  {
+    "id": "strat_0090",
+    "term": "Original cost",
+    "definition": "The total price paid to acquire an asset, including installation and transport.",
+    "example": "The Original cost of the building was much lower than its current market value.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "accounting",
+        "valuation"
+      ]
+    }
+  },
+  {
+    "id": "strat_0091",
+    "term": "Profit margin",
+    "definition": "The amount by which revenue from sales exceeds costs in a business.",
+    "example": "Luxury goods typically have a very high Profit margin.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "finance",
+        "metrics"
+      ]
+    }
+  },
+  {
+    "id": "strat_0092",
+    "term": "Costs to sell",
+    "definition": "Incremental costs directly attributable to the disposal of an asset.",
+    "example": "We deducted the Costs to sell from the fair value to determine the net realizable value.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "accounting",
+        "sales"
+      ]
+    }
+  },
+  {
+    "id": "strat_0093",
+    "term": "Current asset",
+    "definition": "Cash and other assets that are expected to be converted to cash within a year.",
+    "example": "Inventory is considered a Current asset.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "accounting",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0094",
+    "term": "Sampling risk",
+    "definition": "The possibility that the auditor's conclusion based on a sample may be different from the conclusion if the entire population were subjected to the same audit procedure.",
+    "example": "Using a larger dataset helps reduce Sampling risk.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "audit",
+        "statistics"
+      ]
+    }
+  },
+  {
+    "id": "strat_0095",
+    "term": "Value-at-risk",
+    "definition": "A statistic that measures and quantifies the level of financial risk within a firm over a specific time frame.",
+    "example": "Banks use Value-at-risk models to determine how much capital they need to hold.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "risk management",
+        "metrics"
+      ]
+    }
+  },
+  {
+    "id": "strat_0096",
+    "term": "Mature market",
+    "definition": "A market where the industry has reached a state of equilibrium and growth is slow.",
+    "example": "It is difficult to find new customers in such a Mature market.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "strategy",
+        "market"
+      ]
+    }
+  },
+  {
+    "id": "strat_0097",
+    "term": "Witness audit",
+    "definition": "An audit where an observer watches another auditor perform their duties to ensure quality.",
+    "example": "The accreditation body performed a Witness audit on our certification process.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "quality assurance",
+        "audit"
+      ]
+    }
+  },
+  {
+    "id": "strat_0098",
+    "term": "Interest cost",
+    "definition": "The cumulative amount of interest a borrower pays on a loan.",
+    "example": "Refinancing helped lower the annual Interest cost significantly.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "finance",
+        "debt"
+      ]
+    }
+  },
+  {
+    "id": "strat_0099",
+    "term": "Equity method",
+    "definition": "An accounting technique used by firms to assess the profits earned by their investments in other companies.",
+    "example": "Since we own 30% of the affiliate, we use the Equity method.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "accounting",
+        "investing"
+      ]
+    }
+  },
+  {
+    "id": "strat_0100",
+    "term": "Risk exposure",
+    "definition": "The measure of potential future loss resulting from a specific activity or event.",
+    "example": "Hedging strategies are designed to limit Risk exposure.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "risk management",
+        "strategy"
+      ]
+    }
+  },
+  {
+    "id": "strat_0101",
+    "term": "Audit fatigue",
+    "definition": "The weariness experienced by employees who are subjected to frequent or continuous auditing.",
+    "example": "To prevent Audit fatigue, we combined the safety and quality inspections.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "hr",
+        "audit"
+      ]
+    }
+  },
+  {
+    "id": "strat_0102",
+    "term": "Ex ante audit",
+    "definition": "An audit conducted before a transaction or activity takes place.",
+    "example": "The Ex ante audit ensures that the project budget is realistic before approval.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "audit",
+        "planning"
+      ]
+    }
+  },
+  {
+    "id": "strat_0103",
+    "term": "Audit preview",
+    "definition": "A preliminary review of documents before the official audit begins.",
+    "example": "The Audit preview helped us organize the necessary files beforehand.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "preparation"
+      ]
+    }
+  },
+  {
+    "id": "strat_0104",
+    "term": "Inherent risk",
+    "definition": "The risk posed by an error or omission in a financial statement due to a factor other than a failure of internal control.",
+    "example": "Cash handling has a high Inherent risk of theft.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "risk",
+        "audit"
+      ]
+    }
+  },
+  {
+    "id": "strat_0105",
+    "term": "Active market",
+    "definition": "A market in which transactions for the asset or liability take place with sufficient frequency and volume.",
+    "example": "There is no Active market for this type of specialized machinery.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "market",
+        "valuation"
+      ]
+    }
+  },
+  {
+    "id": "strat_0106",
+    "term": "Business unit",
+    "definition": "A logical segment of a company representing a specific business function.",
+    "example": "Each Business unit has its own HR representative.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "structure",
+        "organization"
+      ]
+    }
+  },
+  {
+    "id": "strat_0107",
+    "term": "Self-auditing",
+    "definition": "The process of reviewing one's own work or department.",
+    "example": "Self-auditing is encouraged, but it cannot replace independent verification.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "quality"
+      ]
+    }
+  },
+  {
+    "id": "strat_0108",
+    "term": "Business rule",
+    "definition": "A rule that defines or constrains some aspect of business and always resolves to either true or false.",
+    "example": "A Business rule prevents the system from processing orders without a valid address.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "operations",
+        "systems"
+      ]
+    }
+  },
+  {
+    "id": "strat_0109",
+    "term": "Audit enquiry",
+    "definition": "A specific question or request for information made by an auditor.",
+    "example": "We received an Audit enquiry regarding the travel expenses in March.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "communication"
+      ]
+    }
+  },
+  {
+    "id": "strat_0110",
+    "term": "Selected audit",
+    "definition": "An audit performed on a specific subset of data or a specific department.",
+    "example": "The tax authority performed a Selected audit on our payroll records.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "types"
+      ]
+    }
+  },
+  {
+    "id": "strat_0111",
+    "term": "Audit approach",
+    "definition": "The strategy used by an auditor to conduct the audit.",
+    "example": "We adopted a risk-based Audit approach to focus on the most critical areas.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "strategy"
+      ]
+    }
+  },
+  {
+    "id": "strat_0112",
+    "term": "Software asset",
+    "definition": "A software license or application that has value to the organization.",
+    "example": "Managing every Software asset is crucial to avoid licensing penalties.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "it",
+        "assets"
+      ]
+    }
+  },
+  {
+    "id": "strat_0113",
+    "term": "Green auditing",
+    "definition": "An assessment of an organization's environmental impact.",
+    "example": "Green auditing helps companies improve their sustainability credentials.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "environment",
+        "audit"
+      ]
+    }
+  },
+  {
+    "id": "strat_0114",
+    "term": "Internal audit",
+    "definition": "An independent, objective assurance activity designed to add value and improve an organization's operations.",
+    "example": "The Internal audit department reports directly to the Audit Committee.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "governance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0115",
+    "term": "Monetary asset",
+    "definition": "Assets that are fixed in terms of currency, such as cash or accounts receivable.",
+    "example": "Inflation reduces the purchasing power of a Monetary asset.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "economics",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0116",
+    "term": "External audit",
+    "definition": "An audit conducted by an independent accountant who is not an employee of the company.",
+    "example": "The External audit is required for all public companies.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "audit",
+        "compliance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0117",
+    "term": "Financial risk",
+    "definition": "The danger that a company will not be able to meet its financial obligations.",
+    "example": "High leverage increases the Financial risk during an economic downturn.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "finance",
+        "risk"
+      ]
+    }
+  },
+  {
+    "id": "strat_0118",
+    "term": "Business model",
+    "definition": "A plan for the successful operation of a business, identifying sources of revenue, the intended customer base, products, and details of financing.",
+    "example": "The subscription Business model provides predictable recurring revenue.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "strategy",
+        "planning"
+      ]
+    }
+  },
+  {
+    "id": "strat_0119",
+    "term": "Audit evidence",
+    "definition": "Information collected by the auditor to support the audit opinion.",
+    "example": "Invoices and bank statements serve as primary Audit evidence.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "documents"
+      ]
+    }
+  },
+  {
+    "id": "strat_0120",
+    "term": "Owners' equity",
+    "definition": "The owner's rights to the assets of the business.",
+    "example": "Retained earnings contributed to the growth of Owners' equity.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "accounting",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0121",
+    "term": "Notional costs",
+    "definition": "Costs that do not involve an actual payment of money, such as the use of one's own premises.",
+    "example": "We included rent as a Notional cost to compare profitability accurately.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "accounting",
+        "theory"
+      ]
+    }
+  },
+  {
+    "id": "strat_0122",
+    "term": "Audit sampling",
+    "definition": "The application of audit procedures to less than 100% of items in a population.",
+    "example": "Audit sampling allows us to draw conclusions without checking every single receipt.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "methodology"
+      ]
+    }
+  },
+  {
+    "id": "strat_0123",
+    "term": "Perceived risk",
+    "definition": "The subjective judgment that people make about the characteristics and severity of a risk.",
+    "example": "The Perceived risk of flying is often higher than driving, despite statistics.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "psychology",
+        "risk"
+      ]
+    }
+  },
+  {
+    "id": "strat_0124",
+    "term": "Variable costs",
+    "definition": "Corporate expenses that change in proportion to production output.",
+    "example": "Packaging and shipping are Variable costs.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "finance",
+        "operations"
+      ]
+    }
+  },
+  {
+    "id": "strat_0125",
+    "term": "Insurance risk",
+    "definition": "The possibility of loss that an insurance company agrees to cover.",
+    "example": "The insurer assessed the Insurance risk before issuing the policy.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "insurance",
+        "risk"
+      ]
+    }
+  },
+  {
+    "id": "strat_0126",
+    "term": "Forensic audit",
+    "definition": "An examination and evaluation of a firm's or individual's financial information for use as evidence in court.",
+    "example": "A Forensic audit was ordered after allegations of fraud surfaced.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "legal",
+        "audit"
+      ]
+    }
+  },
+  {
+    "id": "strat_0127",
+    "term": "Deferred asset",
+    "definition": "An expenditure that is carried forward as an asset to be amortized in future periods.",
+    "example": "The prepaid insurance was recorded as a Deferred asset.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "accounting",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0128",
+    "term": "Detection risk",
+    "definition": "The risk that the procedures performed by the auditor will not detect a misstatement.",
+    "example": "Detection risk can be lowered by more rigorous testing.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "audit",
+        "theory"
+      ]
+    }
+  },
+  {
+    "id": "strat_0129",
+    "term": "Subsoil assets",
+    "definition": "Proven reserves of mineral deposits located underground.",
+    "example": "The nation's wealth depends heavily on its Subsoil assets like oil and gas.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "resources",
+        "economics"
+      ]
+    }
+  },
+  {
+    "id": "strat_0130",
+    "term": "Natural assets",
+    "definition": "Assets of the natural environment like water, air, and living organisms.",
+    "example": "Conservation efforts aim to protect Natural assets for future generations.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "environment",
+        "economics"
+      ]
+    }
+  },
+  {
+    "id": "strat_0131",
+    "term": "Profit sharing",
+    "definition": "An incentive plan where employees receive a direct share of the company's profits.",
+    "example": "The Profit sharing check at the end of the year boosted morale.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "hr",
+        "incentives"
+      ]
+    }
+  },
+  {
+    "id": "strat_0132",
+    "term": "Amortised cost",
+    "definition": "The initial value of an asset minus accumulated amortization.",
+    "example": "The bond is held at Amortised cost on the balance sheet.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "accounting",
+        "valuation"
+      ]
+    }
+  },
+  {
+    "id": "strat_0133",
+    "term": "Taxable profit",
+    "definition": "The portion of profit that is subject to taxation according to tax laws.",
+    "example": "Deductions can significantly reduce the Taxable profit.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "tax",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0134",
+    "term": "Product market",
+    "definition": "The marketplace where final goods or services are sold to businesses and the public sector.",
+    "example": "We are launching the new model into a highly competitive Product market.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "marketing",
+        "sales"
+      ]
+    }
+  },
+  {
+    "id": "strat_0135",
+    "term": "Start-up costs",
+    "definition": "Non-recurring costs associated with setting up a business.",
+    "example": "Legal fees and licensing are typical Start-up costs.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "entrepreneurship",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0136",
+    "term": "Liquidity risk",
+    "definition": "The risk that a company or bank may be unable to meet short term financial demands.",
+    "example": "Selling assets quickly at a loss is a symptom of Liquidity risk.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "finance",
+        "risk"
+      ]
+    }
+  },
+  {
+    "id": "strat_0137",
+    "term": "Risk landscape",
+    "definition": "The complete view of potential risks that an organization faces.",
+    "example": "The Risk landscape has changed dramatically with the rise of cyber threats.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "risk management",
+        "strategy"
+      ]
+    }
+  },
+  {
+    "id": "strat_0138",
+    "term": "Scouting costs",
+    "definition": "Costs incurred while searching for new business opportunities or resources.",
+    "example": "The Scouting costs for the new mining site were substantial.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "operations",
+        "development"
+      ]
+    }
+  },
+  {
+    "id": "strat_0139",
+    "term": "Segment assets",
+    "definition": "Those operating assets that are employed by a segment in its operating activities.",
+    "example": "We allocate Segment assets based on the division's revenue contribution.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "accounting",
+        "reporting"
+      ]
+    }
+  },
+  {
+    "id": "strat_0140",
+    "term": "Captive market",
+    "definition": "A market where consumers have limited choice and must buy from a specific supplier.",
+    "example": "Airports operate as a Captive market for food and beverages.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "economics",
+        "sales"
+      ]
+    }
+  },
+  {
+    "id": "strat_0141",
+    "term": "Cash flow risk",
+    "definition": "The risk of fluctuations in the amount of cash coming in and going out.",
+    "example": "Seasonal businesses often face high Cash flow risk in the off-season.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "finance",
+        "risk"
+      ]
+    }
+  },
+  {
+    "id": "strat_0142",
+    "term": "Historical cost",
+    "definition": "The original nominal monetary value of an economic item.",
+    "example": "Land is usually recorded at Historical cost, not current market value.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "accounting",
+        "valuation"
+      ]
+    }
+  },
+  {
+    "id": "strat_0143",
+    "term": "Pure audit firm",
+    "definition": "A firm that specializes solely in audit services without offering consulting.",
+    "example": "To avoid conflicts of interest, we chose a Pure audit firm.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "business services",
+        "ethics"
+      ]
+    }
+  },
+  {
+    "id": "strat_0144",
+    "term": "Audit authority",
+    "definition": "An official body empowered to conduct audits.",
+    "example": "The Audit authority demanded access to all email communications.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "governance",
+        "legal"
+      ]
+    }
+  },
+  {
+    "id": "strat_0145",
+    "term": "Whole life cost",
+    "definition": "The total cost of ownership over the life of an asset.",
+    "example": "Buying cheap equipment often results in a higher Whole life cost due to repairs.",
+    "metadata": {
+      "difficulty": 3,
+      "tags": [
+        "procurement",
+        "finance"
+      ]
+    }
+  },
+  {
+    "id": "strat_0146",
+    "term": "Distinct market",
+    "definition": "A separate and identifiable market segment.",
+    "example": "Luxury SUVs have become a Distinct market from standard off-road vehicles.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "marketing",
+        "segmentation"
+      ]
+    }
+  },
+  {
+    "id": "strat_0147",
+    "term": "Retained profit",
+    "definition": "The profit kept in the company rather than paid out as dividends.",
+    "example": "We used Retained profit to finance the new laboratory.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "finance",
+        "corporate"
+      ]
+    }
+  },
+  {
+    "id": "strat_0148",
+    "term": "Compliance test",
+    "definition": "A test to determine if controls are being applied in a manner that complies with management policies and procedures.",
+    "example": "The Compliance test showed that safety protocols were being ignored.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "audit",
+        "testing"
+      ]
+    }
+  },
+  {
+    "id": "strat_0149",
+    "term": "Physical assets",
+    "definition": "Tangible items of value, such as inventory, machinery, and buildings.",
+    "example": "Physical assets require regular maintenance and insurance.",
+    "metadata": {
+      "difficulty": 1,
+      "tags": [
+        "assets",
+        "operations"
+      ]
+    }
+  },
+  {
+    "id": "strat_0150",
+    "term": "Cost allocation",
+    "definition": "The process of identifying, aggregating, and assigning costs to cost objects.",
+    "example": "Proper Cost allocation helps us understand which products are actually profitable.",
+    "metadata": {
+      "difficulty": 2,
+      "tags": [
+        "accounting",
+        "management"
+      ]
+    }
+  }
+]

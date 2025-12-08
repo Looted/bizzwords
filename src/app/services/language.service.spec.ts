@@ -85,7 +85,7 @@ describe('LanguageService', () => {
 
     it('should default to pl for unknown browser language', () => {
       mockLocalStorage.getItem.mockReturnValue(null);
-      mockNavigator.language = 'fr-FR';
+      mockNavigator.language = 'zh-CN';
 
       TestBed.resetTestingModule();
       TestBed.configureTestingModule({

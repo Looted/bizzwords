@@ -1,0 +1,902 @@
+[
+  {
+    "id": "hr_0001",
+    "term_translation": "Talentgewinnung",
+    "definition_translation": "Ein fortlaufender strategischer Prozess zur Identifizierung und Anstellung von Fachkräften, deren Fähigkeiten den langfristigen Zielen der Organisation entsprechen.",
+    "example_translation": "Unsere zuständige Abteilung baut Beziehungen zu Nischen-Communities auf, lange bevor eine offene Stelle entsteht."
+  },
+  {
+    "id": "hr_0002",
+    "term_translation": "Arbeitgebermarkenbildung",
+    "definition_translation": "Maßnahmen, die darauf abzielen, die Wahrnehmung der Organisation als Arbeitsplatz durch aktuelle und potenzielle Mitarbeiter zu formen.",
+    "example_translation": "Die Verbesserung unseres Rufs in diesem Bereich verringerte die Zahl der Bewerber, die Angebote in letzter Minute ablehnten."
+  },
+  {
+    "id": "hr_0003",
+    "term_translation": "Arbeitgeberversprechen",
+    "definition_translation": "Einzigartiges Set aus Vorteilen, Kultur und Werten, das die Organisation im Austausch für die Fähigkeiten und das Engagement der angestellten Person bietet.",
+    "example_translation": "Wir haben dieses Dokument überarbeitet, um den Schwerpunkt auf Lernmöglichkeiten und flexible Arbeit zu legen."
+  },
+  {
+    "id": "hr_0004",
+    "term_translation": "Personalbedarfsplanung",
+    "definition_translation": "Strukturierter Prozess zur Vorhersage künftiger Besetzungsanforderungen und zur Abstimmung der Kapazitäten auf die Geschäftsziele.",
+    "example_translation": "Durch diesen Vorgang identifizierte die HR-Abteilung Schlüsselpositionen, die innerhalb von drei Jahren Nachfolger benötigen."
+  },
+  {
+    "id": "hr_0005",
+    "term_translation": "Stellenplanung",
+    "definition_translation": "Prozess zur Bestimmung der Anzahl und Art der von der Organisation in einem bestimmten Zeitrahmen benötigten Positionen.",
+    "example_translation": "Finanz- und Personalabteilung arbeiten bei dieser Aufgabe während des jährlichen Budgetzyklus zusammen."
+  },
+  {
+    "id": "hr_0006",
+    "term_translation": "Bewerberpipeline",
+    "definition_translation": "Gruppe vorqualifizierter Kontakte, die aktuelle und künftige Vakanzen mit minimaler Verzögerung besetzen können.",
+    "example_translation": "Die Pflege einer starken Gruppe solcher Kontakte half uns, den ausscheidenden Direktor innerhalb weniger Wochen zu ersetzen."
+  },
+  {
+    "id": "hr_0007",
+    "term_translation": "Nachwuchspool",
+    "definition_translation": "Ausgewählte Gruppe von Personen mit geeigneten Fähigkeiten, die Interesse an einer Mitarbeit in der Organisation bekundet haben.",
+    "example_translation": "Wir haben ehemalige Praktikanten in unserer Datenbank markiert, damit Recruiter sie leicht wieder kontaktieren können."
+  },
+  {
+    "id": "hr_0008",
+    "term_translation": "Beschaffungsstrategie",
+    "definition_translation": "Plan, der festlegt, wo und wie Recruiter nach geeigneten Personen für bestimmte Positionen suchen werden.",
+    "example_translation": "Für leitende Ingenieure konzentriert sich dieser Ansatz auf Empfehlungen und Fachgemeinschaften statt auf Jobbörsen."
+  },
+  {
+    "id": "hr_0009",
+    "term_translation": "Hochschulmarketing",
+    "definition_translation": "Gezielte Einstellungsaktivitäten an Universitäten, um Absolventen und Praktikanten zu gewinnen.",
+    "example_translation": "Unser Programm zur Zusammenarbeit mit Universitäten umfasst Fallstudien-Workshops und Probeinterviews."
+  },
+  {
+    "id": "hr_0010",
+    "term_translation": "Interne Mobilität",
+    "definition_translation": "Besetzung von Vakanzen durch Versetzung aktueller Mitarbeiter zwischen Rollen, Teams oder Standorten.",
+    "example_translation": "Die Förderung dieser Lösung erhöhte die Bindung von leistungsstarken Fachkräften."
+  },
+  {
+    "id": "hr_0011",
+    "term_translation": "Personalanforderung",
+    "definition_translation": "Interner Antrag, der den Einstellungsprozess für eine bestimmte Position formal einleitet.",
+    "example_translation": "Die Führungskraft reichte dieses Dokument ein und spezifizierte darin Aufgaben und Budget für die Rolle."
+  },
+  {
+    "id": "hr_0012",
+    "term_translation": "Ausschreibungsstrategie",
+    "definition_translation": "Bewusster Ansatz zur Entscheidung, wo, wann und wie Informationen über Vakanzen veröffentlicht werden.",
+    "example_translation": "Wir haben unseren Ansatz überarbeitet, um Nischenplattformen gegenüber allgemeinen Jobportalen zu priorisieren."
+  },
+  {
+    "id": "hr_0013",
+    "term_translation": "Bewerbererfahrung",
+    "definition_translation": "Art und Weise, wie Interessenten alle Interaktionen mit dem Arbeitgeber während des Auswahlverfahrens wahrnehmen.",
+    "example_translation": "Die Vereinfachung des Bewerbungsformulars verbesserte den Gesamteindruck der Arbeitssuchenden erheblich."
+  },
+  {
+    "id": "hr_0014",
+    "term_translation": "Rekrutierungstrichter",
+    "definition_translation": "Stufenweise Ansicht des Einstellungsprozesses, die den Fluss der Kandidaten von der Ansprache bis zur Zusage verfolgt.",
+    "example_translation": "Bei der Analyse dieses Schemas entdeckte HR, dass viele Bewerber nach dem Telefoninterview absprangen."
+  },
+  {
+    "id": "hr_0015",
+    "term_translation": "Besetzungsdauer",
+    "definition_translation": "Kennzahl, die die Anzahl der Tage von der Stelleneröffnung bis zur Annahme des Angebots durch den Kandidaten misst.",
+    "example_translation": "Die Verkürzung dieser Zeitspanne um zwei Wochen verschaffte uns einen Vorteil auf dem umkämpften Arbeitsmarkt."
+  },
+  {
+    "id": "hr_0016",
+    "term_translation": "Einstellungskosten",
+    "definition_translation": "Durchschnittlicher Betrag, der für die Besetzung einer Vakanz ausgegeben wird, einschließlich Werbung und internem Aufwand.",
+    "example_translation": "Wir berechneten diesen Indikator, um die Investition in ein internes Sourcing-Team zu rechtfertigen."
+  },
+  {
+    "id": "hr_0017",
+    "term_translation": "Bewerbermanagementsystem",
+    "definition_translation": "Software zur Verwaltung von Bewerbungen, Automatisierung von Arbeitsabläufen und Speicherung von Kandidatendaten.",
+    "example_translation": "Unser Programm prüft Lebensläufe automatisch auf obligatorische Qualifikationen."
+  },
+  {
+    "id": "hr_0018",
+    "term_translation": "Auswahlfrage",
+    "definition_translation": "Definierte Abfrage in einem frühen Stadium, um Kandidaten, die Basiskriterien nicht erfüllen, schnell auszuschließen.",
+    "example_translation": "Das Hinzufügen der Sprachüberprüfung ersparte den Recruitern stundenlange Telefonate."
+  },
+  {
+    "id": "hr_0019",
+    "term_translation": "Strukturiertes Interview",
+    "definition_translation": "Gespräch, bei dem allen Kandidaten dieselben arbeitsbezogenen Fragen gestellt werden.",
+    "example_translation": "Die Verwendung dieses Gesprächsformats erhöhte die Konsistenz unserer Einstellungsentscheidungen."
+  },
+  {
+    "id": "hr_0020",
+    "term_translation": "Kompetenzbasiertes Interview",
+    "definition_translation": "Gesprächsformat, das vergangenes Verhalten untersucht, um zu bewerten, ob der Kandidat spezifische Fähigkeiten besitzt.",
+    "example_translation": "In dieser Art von Gespräch beschreiben Bewerber konkrete Situationen statt hypothetische Antworten zu geben."
+  },
+  {
+    "id": "hr_0021",
+    "term_translation": "Verhaltensinterview",
+    "definition_translation": "Gesprächsstil, der sich darauf konzentriert, wie Kandidaten reale Situationen bewältigt haben, um künftige Leistungen vorherzusagen.",
+    "example_translation": "Der Recruiter nutzte Fragen dieser Methode, um zu prüfen, wie der Bewerber Konflikte managt."
+  },
+  {
+    "id": "hr_0022",
+    "term_translation": "Auswahlverfahren",
+    "definition_translation": "Mehrstufiger Bewertungsprozess mit Simulationen, Tests und Gruppenübungen zur Prüfung von Fähigkeiten.",
+    "example_translation": "Die Absolventen durchliefen eine ganztägige Sitzung mit Rollenspielen und Fallstudien vor den Angeboten."
+  },
+  {
+    "id": "hr_0023",
+    "term_translation": "Hintergrundüberprüfung",
+    "definition_translation": "Kontrolle der Identität, Qualifikationen und Historie des Kandidaten vor Abschluss der Einstellung.",
+    "example_translation": "Dieser Vorgang deckte Unstimmigkeiten bei den vom Bewerber angegebenen Beschäftigungsdaten auf."
+  },
+  {
+    "id": "hr_0024",
+    "term_translation": "Referenzprüfung",
+    "definition_translation": "Kontaktaufnahme mit früheren Vorgesetzten zur Bestätigung der Erfahrung und des Verhaltens des Kandidaten.",
+    "example_translation": "Eine strukturierte Vorlage hilft Führungskräften, konsistente Fragen über den ehemaligen Mitarbeiter zu stellen."
+  },
+  {
+    "id": "hr_0025",
+    "term_translation": "Angebotsmanagement",
+    "definition_translation": "Koordination von Inhalt, Genehmigung und Kommunikation der Arbeitsvorschläge an ausgewählte Kandidaten.",
+    "example_translation": "Digitale Signaturen machten diesen Prozess sowohl für HR als auch für Kandidaten schneller."
+  },
+  {
+    "id": "hr_0026",
+    "term_translation": "Einarbeitungsprogramm",
+    "definition_translation": "Strukturierte Aktivitäten, die neuen Mitarbeitern helfen, sich zu integrieren und produktiv zu werden.",
+    "example_translation": "Unser Integrationssystem weist jedem Neuling für den ersten Monat einen Paten (Buddy) zu."
+  },
+  {
+    "id": "hr_0027",
+    "term_translation": "Probezeit",
+    "definition_translation": "Anfangsphase der Beschäftigung, in der Eignung und Leistung vor der Bestätigung des unbefristeten Vertrags bewertet werden.",
+    "example_translation": "Der Vorgesetzte verlängerte diese Zeitspanne, um dem Mitarbeiter mehr Chancen zur Besserung zu geben."
+  },
+  {
+    "id": "hr_0028",
+    "term_translation": "Einführungsschulung",
+    "definition_translation": "Sitzungen, die neue Mitarbeiter mit Richtlinien, Werkzeugen und der Firmenkultur vertraut machen.",
+    "example_translation": "Alle Neueinstellungen nehmen an Kursen zu Arbeitsplatzethik und Sicherheitsregeln teil."
+  },
+  {
+    "id": "hr_0029",
+    "term_translation": "Austrittsprozess",
+    "definition_translation": "Formale und informelle Schritte, die unternommen werden, wenn eine Person die Organisation verlässt.",
+    "example_translation": "Ein gut gestalteter Abgang schützt Wissen und reduziert rechtliche Risiken."
+  },
+  {
+    "id": "hr_0030",
+    "term_translation": "Austrittsinterview",
+    "definition_translation": "Strukturiertes Gespräch mit einem scheidenden Mitarbeiter, um Feedback und Kündigungsgründe zu sammeln.",
+    "example_translation": "Erkenntnisse aus diesem Gespräch führten zu Verbesserungen in unserer Führungskräfteentwicklung."
+  },
+  {
+    "id": "hr_0031",
+    "term_translation": "Nachfolgeplanung",
+    "definition_translation": "Proaktiver Ansatz zur Identifizierung und Entwicklung von Personen, die künftig Schlüsselpositionen übernehmen können.",
+    "example_translation": "Diese Maßnahme stellte sicher, dass ein Nachfolger bereitstand, als der Finanzvorstand in den Ruhestand ging."
+  },
+  {
+    "id": "hr_0032",
+    "term_translation": "Karrierepfade",
+    "definition_translation": "Gestaltung und Kommunikation möglicher Entwicklungsstufen, die Mitarbeiter in der Organisation durchlaufen können.",
+    "example_translation": "Das Aufzeigen von Aufstiegsmöglichkeiten half Spezialisten, Wachstumsoptionen außerhalb von Führungsrollen zu sehen."
+  },
+  {
+    "id": "hr_0033",
+    "term_translation": "Leistungsträger mit Potenzial",
+    "definition_translation": "Person, der die Fähigkeit und Motivation zugeschrieben wird, deutlich verantwortungsvollere Rollen zu übernehmen.",
+    "example_translation": "Solche Personen erhalten beschleunigte Entwicklung und ambitionierte Aufgaben jenseits ihrer Standardpflichten."
+  },
+  {
+    "id": "hr_0034",
+    "term_translation": "Führungskräfte-Pipeline",
+    "definition_translation": "Fluss von Mitarbeitern, die auf die Übernahme von Führungsrollen auf verschiedenen Ebenen vorbereitet werden.",
+    "example_translation": "Lücken in der Verfügbarkeit von Nachfolgern wurden sichtbar, als zwei Direktoren gleichzeitig gingen."
+  },
+  {
+    "id": "hr_0035",
+    "term_translation": "Individueller Entwicklungsplan",
+    "definition_translation": "Personalisiertes Dokument, das Lernziele und Maßnahmen des Mitarbeiters für einen definierten Zeitraum festlegt.",
+    "example_translation": "Jede Führungskraft bespricht dieses Dokument zweimal jährlich mit ihren Untergebenen."
+  },
+  {
+    "id": "hr_0036",
+    "term_translation": "Leistungsbeurteilung",
+    "definition_translation": "Formale Evaluierung der Errungenschaften und des Verhaltens des Mitarbeiters in einem bestimmten Zeitintervall.",
+    "example_translation": "Das Unternehmen ersetzte die jährlichen Zusammenfassungen durch häufigere Kontrollgespräche."
+  },
+  {
+    "id": "hr_0037",
+    "term_translation": "Leistungsmanagement-Zyklus",
+    "definition_translation": "Wiederkehrender Zeitplan für Planung, Bewertung und Besprechung der Arbeitsergebnisse.",
+    "example_translation": "Unser Prozess beginnt mit der Zielsetzung im Januar und endet mit der Kalibrierung im Dezember."
+  },
+  {
+    "id": "hr_0038",
+    "term_translation": "Leistungsverbesserungsplan",
+    "definition_translation": "Dokumentierte Vereinbarung, die Erwartungen und Unterstützung für einen Mitarbeiter mit schwachen Ergebnissen festlegt.",
+    "example_translation": "Dieses Programm umfasste klare Ziele und wöchentliche Coaching-Sitzungen."
+  },
+  {
+    "id": "hr_0039",
+    "term_translation": "Ziele und Schlüsselergebnisse",
+    "definition_translation": "Zielsetzungsrahmen, der ambitionierte qualitative Ansprüche mit messbaren Resultaten verbindet.",
+    "example_translation": "Das HR-Team nutzt diese Methodik, um seine Projekte auf die Geschäftsprioritäten auszurichten."
+  },
+  {
+    "id": "hr_0040",
+    "term_translation": "360-Grad-Feedback",
+    "definition_translation": "Methode, bei der Mitarbeiter Rückmeldungen von Vorgesetzten, Kollegen und manchmal Kunden erhalten.",
+    "example_translation": "Die Einführung dieser Bewertungsform deckte blinde Flecken in der Kommunikation der Führungskräfte auf."
+  },
+  {
+    "id": "hr_0041",
+    "term_translation": "Kalibrierungssitzung",
+    "definition_translation": "Treffen, bei dem Manager Leistungsbewertungen vergleichen, um Fairness zwischen Teams zu gewährleisten.",
+    "example_translation": "Während dieser Diskussion wurden mehrere Bewertungen angepasst, um einheitliche Standards zu wahren."
+  },
+  {
+    "id": "hr_0042",
+    "term_translation": "Personalentwicklung",
+    "definition_translation": "Funktion, die Bildungslösungen entwirft, um Fähigkeiten aufzubauen und die Firmenstrategie zu unterstützen.",
+    "example_translation": "Investitionen in diesen Bereich stiegen, als das Unternehmen auf ein digitales Modell umstellte."
+  },
+  {
+    "id": "hr_0043",
+    "term_translation": "Bildungsbedarfsanalyse",
+    "definition_translation": "Diagnostischer Prozess, der Lücken zwischen aktuellen und gewünschten Kompetenzen identifiziert.",
+    "example_translation": "Diese Studie enthüllte einen weitverbreiteten Mangel an Fähigkeiten in der Datenanalyse."
+  },
+  {
+    "id": "hr_0044",
+    "term_translation": "Qualifikationsmatrix",
+    "definition_translation": "Visuelles Werkzeug, das Mitarbeiterkompetenzen gegen die Anforderungen für bestimmte Rollen abbildet.",
+    "example_translation": "Diese Übersicht half dabei, Experten kritischen Projektphasen zuzuweisen."
+  },
+  {
+    "id": "hr_0045",
+    "term_translation": "Wissenstransfer",
+    "definition_translation": "Gezieltes Teilen von Expertise, um die Abhängigkeit von einzelnen Spezialisten zu verringern.",
+    "example_translation": "Strukturierte Übergabesitzungen wurden vor dem Abgang des Senior-Analysten geplant."
+  },
+  {
+    "id": "hr_0046",
+    "term_translation": "Arbeitsplatzwechsel",
+    "definition_translation": "Entwicklungspraxis, bei der Mitarbeiter vorübergehend zwischen verschiedenen Rollen oder Abteilungen wechseln.",
+    "example_translation": "Der Austausch von Mitarbeitern zwischen Vertrieb und Betrieb verbesserte das gegenseitige Verständnis."
+  },
+  {
+    "id": "hr_0047",
+    "term_translation": "Abteilungsübergreifende Schulung",
+    "definition_translation": "Mitarbeiter lernen Aufgaben außerhalb ihrer Hauptrolle, um die Flexibilität zu erhöhen.",
+    "example_translation": "Dem Support-Team Aufgaben anderer Abteilungen beizubringen, reduzierte Störungen bei Abwesenheiten."
+  },
+  {
+    "id": "hr_0048",
+    "term_translation": "Mentorenprogramm",
+    "definition_translation": "Strukturierte Initiative, bei der erfahrene Mitarbeiter die Entwicklung weniger erfahrener Kollegen unterstützen.",
+    "example_translation": "Den schnellen Aufstieg verdankt er Ratschlägen, die er durch diese Firmeninitiative erhielt."
+  },
+  {
+    "id": "hr_0049",
+    "term_translation": "Betreuungskultur",
+    "definition_translation": "Umgebung, in der Führungskräfte regelmäßig unterstützende Methoden anwenden, um ihre Teams zu entwickeln.",
+    "example_translation": "Der Aufbau eines solchen Umfelds erforderte, Managern beizubringen, mehr offene Fragen zu stellen."
+  },
+  {
+    "id": "hr_0050",
+    "term_translation": "Talentüberprüfung",
+    "definition_translation": "Treffen, bei dem Führungskräfte Leistung und Potenzial der Mitarbeiter in der gesamten Organisation besprechen.",
+    "example_translation": "Die jährliche Diskussion über das Personal deckte einen Mangel an Nachfolgern für technische Führungspositionen auf."
+  },
+  {
+    "id": "hr_0051",
+    "term_translation": "Gesamtvergütungspaket",
+    "definition_translation": "Vollständiges Portfolio an monetären und nicht-monetären Leistungen, die Mitarbeiter vom Arbeitgeber erhalten.",
+    "example_translation": "Die Strategie in diesem Bereich betont Wohlfahrtsleistungen statt nur ein höheres Gehalt."
+  },
+  {
+    "id": "hr_0052",
+    "term_translation": "Festgehalt",
+    "definition_translation": "Garantierter Teil des Lohnpakets, ohne variable Boni und Zusatzleistungen.",
+    "example_translation": "Obwohl diese Basis unter dem Durchschnitt lag, machten Aktienoptionen das Angebot attraktiv."
+  },
+  {
+    "id": "hr_0053",
+    "term_translation": "Variable Vergütung",
+    "definition_translation": "Teil des Einkommens, der von individuellen, Team- oder Firmenergebnissen abhängt.",
+    "example_translation": "In Vertriebsrollen kann dieser Teil die Hälfte des Gesamteinkommens ausmachen."
+  },
+  {
+    "id": "hr_0054",
+    "term_translation": "Gehaltsband",
+    "definition_translation": "Definierter Bereich von Löhnen, der für Positionen ähnlichen Werts oder Niveaus angewendet wird.",
+    "example_translation": "Manager müssen Angebote innerhalb der für die Rolle genehmigten Grenzen halten."
+  },
+  {
+    "id": "hr_0055",
+    "term_translation": "Gehaltsgruppe",
+    "definition_translation": "Spezifische Stufe in der Lohnstruktur, die Mindest- und Höchstverdienst für eine Rolle festlegt.",
+    "example_translation": "Der Wechsel in eine Führungsposition platziert Sie meist in einen deutlich höheren Finanzbereich."
+  },
+  {
+    "id": "hr_0056",
+    "term_translation": "Entgeltgruppe",
+    "definition_translation": "Vergütungsniveau, das Rollen vergleichbarer Verantwortung und Komplexität bündelt.",
+    "example_translation": "Beförderungen beinhalten oft den Wechsel auf eine höhere Stufe mit einem anderen Leistungspaket."
+  },
+  {
+    "id": "hr_0057",
+    "term_translation": "Stellenbewertung",
+    "definition_translation": "Systematische Methode zur Bestimmung des relativen Werts von Rollen zur Gewährleistung interner Lohngerechtigkeit.",
+    "example_translation": "HR nutzte ein Punktesystem, um Rollen vor der Umgestaltung der Lohntabelle zu bewerten."
+  },
+  {
+    "id": "hr_0058",
+    "term_translation": "Gehaltsstruktur",
+    "definition_translation": "Hierarchie von Lohngruppen, die konsistente Entscheidungen über Vergütungen unterstützt.",
+    "example_translation": "Das neue System der Ebenen vereinheitlichte die Führungsschichten in allen Ländern."
+  },
+  {
+    "id": "hr_0059",
+    "term_translation": "Gehaltsvergleich",
+    "definition_translation": "Gegenüberstellung interner Lohnniveaus mit Marktdaten zur Wahrung der Wettbewerbsfähigkeit.",
+    "example_translation": "Die jährliche Marktanalyse zeigte, dass unsere Ingenieure unter dem Median verdienten."
+  },
+  {
+    "id": "hr_0060",
+    "term_translation": "Marktbewertung",
+    "definition_translation": "Festlegung des Lohnniveaus für eine Rolle primär basierend auf externen Daten aus Vergütungsstudien.",
+    "example_translation": "Bei seltenen Fähigkeiten haben externe Sätze mehr Gewicht als interne Lohnverhältnisse."
+  },
+  {
+    "id": "hr_0061",
+    "term_translation": "Entgeltgleichheit",
+    "definition_translation": "Grundsatz, dass Mitarbeiter mit vergleichbarem Wertbeitrag vergleichbar entlohnt werden sollten.",
+    "example_translation": "Das Unternehmen startete eine Überprüfung, um unerklärliche Lücken in den Verdiensten anzugehen."
+  },
+  {
+    "id": "hr_0062",
+    "term_translation": "Entgelttransparenz",
+    "definition_translation": "Grad, in dem die Organisation Informationen über Lohnstrukturen und -entscheidungen offenlegt.",
+    "example_translation": "Der Schritt zur Offenheit erforderte Schulungen für Manager zur Erklärung von Gehaltserhöhungen."
+  },
+  {
+    "id": "hr_0063",
+    "term_translation": "Gehaltskompression",
+    "definition_translation": "Situation, in der Lohnunterschiede zwischen neuen Mitarbeitern und erfahrenem Personal zu gering werden.",
+    "example_translation": "Rapide Anstiege der Marktsätze verursachten dieses Problem unter Softwareingenieuren."
+  },
+  {
+    "id": "hr_0064",
+    "term_translation": "Gehaltsentwicklung",
+    "definition_translation": "Schema, nach dem sich die Vergütung des Mitarbeiters innerhalb der Bänder über die Zeit verändert.",
+    "example_translation": "Klare Richtlinien zum Anstieg der Verdienste reduzieren das Gefühl von Bevorzugung."
+  },
+  {
+    "id": "hr_0065",
+    "term_translation": "Überstundenzuschlag",
+    "definition_translation": "Erhöhter Satz für Stunden, die außerhalb der Standardarbeitszeit geleistet werden.",
+    "example_translation": "Lagermitarbeiter erhalten diesen Aufschlag für Nachtschichten."
+  },
+  {
+    "id": "hr_0066",
+    "term_translation": "Schichtzulage",
+    "definition_translation": "Zusätzliche Zahlung an Mitarbeiter, die zu weniger begehrten Zeiten oder im Rotationssystem arbeiten.",
+    "example_translation": "Diese Form der Kompensation hilft, Pflegekräfte für Wochenenddienste zu gewinnen."
+  },
+  {
+    "id": "hr_0067",
+    "term_translation": "Halteprämie",
+    "definition_translation": "Einmalige oder periodische Zahlung, um Schlüsselmitarbeiter in kritischen Phasen im Unternehmen zu halten.",
+    "example_translation": "Projektleiter erhielten diesen Anreiz für den Verbleib bis zum Systemstart."
+  },
+  {
+    "id": "hr_0068",
+    "term_translation": "Diskretionärer Bonus",
+    "definition_translation": "Ungeplante Belohnung, die kurz nach einer außergewöhnlichen Leistung gewährt wird.",
+    "example_translation": "Der Manager vergab diesen Preis an den Analysten, der ein schweres Kundenproblem über Nacht löste."
+  },
+  {
+    "id": "hr_0069",
+    "term_translation": "Langfristiger Anreiz",
+    "definition_translation": "System, das Belohnungen über mehrere Jahre an Ergebnisse knüpft, oft mittels Aktien oder aufgeschobenem Bargeld.",
+    "example_translation": "Direktoren nehmen an diesem Programm teil, das an nachhaltiges Gewinnwachstum gebunden ist."
+  },
+  {
+    "id": "hr_0070",
+    "term_translation": "Aufgeschobene Vergütung",
+    "definition_translation": "Verdientes Einkommen, das zu einem späteren Zeitpunkt ausgezahlt wird, meist um den Verbleib zu fördern.",
+    "example_translation": "Ein Teil des Bonus wurde in diese Zahlungsform umgewandelt und wird über drei Jahre fällig."
+  },
+  {
+    "id": "hr_0071",
+    "term_translation": "Aktienoptionsplan",
+    "definition_translation": "Programm, das Mitarbeitern das Recht gibt, Firmenanteile nach einer bestimmten Zeit zu einem Festpreis zu kaufen.",
+    "example_translation": "Dieses System verbindet die Interessen der Führungskräfte mit denen der Aktionäre."
+  },
+  {
+    "id": "hr_0072",
+    "term_translation": "Nicht-monetäre Belohnungen",
+    "definition_translation": "Formen der Anerkennung ohne Direktzahlungen, wie Entwicklungschancen oder zusätzlicher Urlaub.",
+    "example_translation": "Für manche Mitarbeiter können Auszeichnungen in Form von Spezialprojekten motivierender sein als Bargeld."
+  },
+  {
+    "id": "hr_0073",
+    "term_translation": "Anerkennungsprogramm",
+    "definition_translation": "Strukturierter Ansatz zur Wertschätzung erwünschter Verhaltensweisen und Leistungen.",
+    "example_translation": "Unsere Initiative basierend auf Mitarbeiternominierungen steigerte die Zusammenarbeit zwischen Teams."
+  },
+  {
+    "id": "hr_0074",
+    "term_translation": "Leistungspaket",
+    "definition_translation": "Sammlung indirekter Belohnungen wie Versicherungen und Altersvorsorge, die der Arbeitgeber bietet.",
+    "example_translation": "Kandidaten vergleichen oft das Set an Extras, nicht nur das Grundgehalt."
+  },
+  {
+    "id": "hr_0075",
+    "term_translation": "Flexible Leistungen",
+    "definition_translation": "System, das Mitarbeitern erlaubt, Optionen aus einer Liste innerhalb eines festen Budgets zu wählen.",
+    "example_translation": "Dank dieser Lösung können Mitarbeiter Fitness-Pässe gegen Zuschüsse zur Kinderbetreuung tauschen."
+  },
+  {
+    "id": "hr_0076",
+    "term_translation": "Cafeteria-System",
+    "definition_translation": "Leistungsmodell, bei dem Mitarbeiter Punkte auf bevorzugte Optionen aus einer definierten Liste verteilen.",
+    "example_translation": "Dieses Modell erlaubt dem Personal, einen Teil des Bonus gegen zusätzliche Urlaubstage zu tauschen."
+  },
+  {
+    "id": "hr_0077",
+    "term_translation": "Gesundheitsbudget",
+    "definition_translation": "Festgelegter Betrag, den Mitarbeiter für gesundheitsbezogene Waren oder Dienstleistungen ausgeben können.",
+    "example_translation": "Mitarbeiter nutzten diese Mittel für Fitnesskurse und ergonomische Ausrüstung."
+  },
+  {
+    "id": "hr_0078",
+    "term_translation": "Mitarbeiterunterstützungsprogramm",
+    "definition_translation": "Vertraulicher Dienst, der Beratung und Orientierung in persönlichen oder beruflichen Fragen bietet.",
+    "example_translation": "Dieser Dienst verzeichnete während der Fusionsankündigung ein erhöhtes Interesse."
+  },
+  {
+    "id": "hr_0079",
+    "term_translation": "Betriebliche Altersvorsorge",
+    "definition_translation": "Vereinbarung, durch die Mitarbeiter Ansprüche auf Einkommen nach dem Ende der Berufstätigkeit erwerben.",
+    "example_translation": "Das Unternehmen bezuschusst die Beiträge des Mitarbeiters bis zu einem festen Prozentsatz."
+  },
+  {
+    "id": "hr_0080",
+    "term_translation": "Abfindung",
+    "definition_translation": "Entschädigung, die Mitarbeitern bei Beendigung des Arbeitsverhältnisses unter bestimmten Bedingungen gewährt wird.",
+    "example_translation": "Der Anspruch auf diese Leistung hängt von der Dienstzeit und lokalem Recht ab."
+  },
+  {
+    "id": "hr_0081",
+    "term_translation": "Sozialplan-Paket",
+    "definition_translation": "Kombination aus finanziellen und nicht-finanziellen Konditionen für Mitarbeiter, deren Stellen gestrichen werden.",
+    "example_translation": "Das Angebot für Ausscheidende umfasste Outplacement-Dienste und verlängerte Krankenversicherung."
+  },
+  {
+    "id": "hr_0082",
+    "term_translation": "Outplacement-Beratung",
+    "definition_translation": "Unterstützung für ausscheidende Mitarbeiter bei der Suche nach einer neuen Beschäftigung.",
+    "example_translation": "Im Rahmen dieser Hilfe wurden Coachings für Lebensläufe und Interviewfähigkeiten angeboten."
+  },
+  {
+    "id": "hr_0083",
+    "term_translation": "Umsetzungsprogramm",
+    "definition_translation": "Organisierte Bemühung, von Entlassung bedrohte Mitarbeiter auf offene Stellen in anderen Bereichen zu versetzen.",
+    "example_translation": "Diese Initiative minimierte die Zahl der betriebsbedingten Kündigungen während der Reorganisation."
+  },
+  {
+    "id": "hr_0084",
+    "term_translation": "Mobilitätszulage",
+    "definition_translation": "Finanzielle Unterstützung für Mitarbeiter, die umziehen oder zur Arbeit pendeln.",
+    "example_translation": "Diese Leistung machte Auslandseinsätze attraktiver."
+  },
+  {
+    "id": "hr_0085",
+    "term_translation": "Spesenerstattung",
+    "definition_translation": "Formaler Antrag eines Mitarbeiters auf Rückzahlung von privat ausgelegten Geschäftskosten.",
+    "example_translation": "Sie müssen alle digitalen Belege diesem Dokument beifügen, bevor die Finanzabteilung es genehmigt."
+  },
+  {
+    "id": "hr_0086",
+    "term_translation": "Lohnabrechnungsprozess",
+    "definition_translation": "Operative Aufgabe der Berechnung von Löhnen, Abzügen und Nettobeträgen für Mitarbeiter.",
+    "example_translation": "Fehler in diesem Vorgang können das Vertrauen untergraben und rechtliche Risiken schaffen."
+  },
+  {
+    "id": "hr_0087",
+    "term_translation": "Lohnkontenabstimmung",
+    "definition_translation": "Kontrolltätigkeit, die Lohndaten gegen Quelldokumente prüft, um Genauigkeit zu sichern.",
+    "example_translation": "Der monatliche Abgleich vergleicht ausgezahlte Beträge mit genehmigten Stundenzetteln."
+  },
+  {
+    "id": "hr_0088",
+    "term_translation": "Zeiterfassung",
+    "definition_translation": "Systeme und Prozesse zum Tracking von Arbeitsstunden, Start- und Endzeiten sowie Pausen.",
+    "example_translation": "Moderne Software zu diesem Zweck integriert sich direkt in das Lohnsystem und reduziert Fehler."
+  },
+  {
+    "id": "hr_0089",
+    "term_translation": "Fehlzeitenmanagement",
+    "definition_translation": "Koordination von Richtlinien und Maßnahmen, um Abwesenheiten von Mitarbeitern effektiv zu handhaben.",
+    "example_translation": "Bessere Kontrolle der Ausfälle reduzierte die Zahl ungeplanter Krankheitstage im Kundenservice."
+  },
+  {
+    "id": "hr_0090",
+    "term_translation": "Urlaubsanspruch",
+    "definition_translation": "Menge und Art der freien Zeit, die ein Mitarbeiter gesetzlich oder vertraglich nutzen darf.",
+    "example_translation": "HR erklärte die Regeln zu den Limits für freie Tage in einer einfachen Infografik für Manager."
+  },
+  {
+    "id": "hr_0091",
+    "term_translation": "Elternzeit",
+    "definition_translation": "Autorisierte Freistellung von der Arbeit für Eltern nach Geburt oder Adoption eines Kindes.",
+    "example_translation": "Die Organisation weitete dieses Recht auf nicht-biologische Elternteile aus."
+  },
+  {
+    "id": "hr_0092",
+    "term_translation": "Krankenstand",
+    "definition_translation": "Zeitraum der Abwesenheit wegen Krankheit oder Verletzung, überwacht auf Häufigkeit.",
+    "example_translation": "Häufige kurzfristige Atteste lösten eine formale Überprüfung durch den Vorgesetzten aus."
+  },
+  {
+    "id": "hr_0093",
+    "term_translation": "Homeoffice-Richtlinie",
+    "definition_translation": "Vorgaben, die das Arbeiten von anderen Orten als dem Firmensitz regeln.",
+    "example_translation": "Dieses Dokument legt Berechtigungen, Ausrüstung und Anforderungen an die Datensicherheit zu Hause fest."
+  },
+  {
+    "id": "hr_0094",
+    "term_translation": "Hybrides Arbeitsmodell",
+    "definition_translation": "Arrangement, bei dem Mitarbeiter ihre Arbeitszeit zwischen Remote-Standorten und Büro aufteilen.",
+    "example_translation": "Diese Lösung wurde um Teamabsprachen herum entworfen, nicht nur nach individuellen Vorlieben."
+  },
+  {
+    "id": "hr_0095",
+    "term_translation": "Gleitzeit",
+    "definition_translation": "Lösung im Zeitplan, die Mitarbeitern erlaubt, Start- und Endzeiten in vereinbarten Grenzen zu wählen.",
+    "example_translation": "Diese Erleichterung reduzierte Verspätungen während der morgendlichen Stoßzeiten erheblich."
+  },
+  {
+    "id": "hr_0096",
+    "term_translation": "Initiative zur Vereinbarkeit von Beruf und Privatleben",
+    "definition_translation": "Programm, das Mitarbeitern helfen soll, berufliche und private Pflichten ausgewogen zu managen.",
+    "example_translation": "Dieses Programm förderte sitzungsfreie Zeitblöcke im Kalender."
+  },
+  {
+    "id": "hr_0097",
+    "term_translation": "Arbeitsschutz",
+    "definition_translation": "Praktiken, Regeln und Kontrollen zur Vermeidung von arbeitsbedingten Verletzungen und Krankheiten.",
+    "example_translation": "Schulungen in diesem Bereich sind für alle Linienvorgesetzten obligatorisch."
+  },
+  {
+    "id": "hr_0098",
+    "term_translation": "Rückkehrgespräch",
+    "definition_translation": "Kurzes Treffen nach einer Abwesenheit, um Gründe und benötigte Unterstützung zu besprechen.",
+    "example_translation": "Vorgesetzte führen eine solche Diskussion nach jedem längeren Attest."
+  },
+  {
+    "id": "hr_0099",
+    "term_translation": "Angemessene Vorkehrung",
+    "definition_translation": "Anpassung des Arbeitsplatzes, die es einer Person mit besonderen Bedürfnissen erlaubt, wesentliche Aufgaben zu erfüllen.",
+    "example_translation": "Die Bereitstellung assistiver Technologie wurde als passende Anpassung für den Mitarbeiter angesehen."
+  },
+  {
+    "id": "hr_0100",
+    "term_translation": "Genesungsurlaub",
+    "definition_translation": "Autorisierte Freistellung aufgrund eines Gesundheitszustands, der die Arbeitsfähigkeit einschränkt.",
+    "example_translation": "Klare Regeln zu dieser Freistellung reduzieren die Angst von Mitarbeitern mit ernsten Erkrankungen."
+  },
+  {
+    "id": "hr_0101",
+    "term_translation": "Mitarbeiterengagement",
+    "definition_translation": "Emotionale und kognitive Bindung, die Mitarbeiter gegenüber ihrer Arbeit und Organisation empfinden.",
+    "example_translation": "Ein hohes Niveau dieses Indikators korreliert oft mit besserer Kundenzufriedenheit."
+  },
+  {
+    "id": "hr_0102",
+    "term_translation": "Mitarbeiterbefragung",
+    "definition_translation": "Strukturierter Fragebogen, der misst, wie engagiert und motiviert sich die Belegschaft fühlt.",
+    "example_translation": "Diese Umfrage enthüllte Bedenken über Arbeitsbelastung und fehlende Anerkennung."
+  },
+  {
+    "id": "hr_0103",
+    "term_translation": "Betriebsklima",
+    "definition_translation": "Gemeinsame Wahrnehmung der Mitarbeiter bezüglich Richtlinien und Praktiken zu einem bestimmten Zeitpunkt.",
+    "example_translation": "Das Vertrauensdefizit gegenüber der Führung wirkte sich negativ auf die Atmosphäre in der Firma aus."
+  },
+  {
+    "id": "hr_0104",
+    "term_translation": "Unternehmenskultur",
+    "definition_translation": "Grundwerte, Normen und Verhaltensweisen, die prägen, wie Arbeit in der Organisation erledigt wird.",
+    "example_translation": "Fusionen scheitern oft, wenn diese fundamentalen Muster inkompatibel sind."
+  },
+  {
+    "id": "hr_0105",
+    "term_translation": "Psychologische Sicherheit",
+    "definition_translation": "Gemeinsame Überzeugung, dass das Team ein sicherer Ort ist, um Risiken einzugehen, z. B. Fragen zu stellen.",
+    "example_translation": "Teams mit hohem Wert bei diesem Faktor melden mehr Fehler, lernen aber schneller daraus."
+  },
+  {
+    "id": "hr_0106",
+    "term_translation": "Mitarbeiter als Markenbotschafter",
+    "definition_translation": "Freiwillige Förderung der Marke und Werte des Arbeitgebers durch die Angestellten.",
+    "example_translation": "Social-Media-Richtlinien ermutigen zur authentischen Werbung für die Firma durch das Personal."
+  },
+  {
+    "id": "hr_0107",
+    "term_translation": "Mitarbeiter-Mitsprache",
+    "definition_translation": "Formaler Kanal, über den Mitarbeiter Meinungen, Vorschläge oder Bedenken äußern können.",
+    "example_translation": "Anonyme Hotlines sind ein Typ dieses Kommunikationskanals."
+  },
+  {
+    "id": "hr_0108",
+    "term_translation": "Beschwerdeverfahren",
+    "definition_translation": "Dokumentierter Prozess, den Mitarbeiter befolgen können, um Missstände zu melden und zu lösen.",
+    "example_translation": "Gewerkschaften verhandelten Änderungen an diesem Reglement nach einem prominenten Fall."
+  },
+  {
+    "id": "hr_0109",
+    "term_translation": "Disziplinarmaßnahme",
+    "definition_translation": "Formale Reaktion auf Fehlverhalten oder Leistungsprobleme, von Abmahnung bis Entlassung.",
+    "example_translation": "Manager müssen jede solche Intervention im HR-System dokumentieren."
+  },
+  {
+    "id": "hr_0110",
+    "term_translation": "Stufenweise Disziplinierung",
+    "definition_translation": "Ansatz, der zunehmend ernstere Konsequenzen anwendet, wenn ein Problem nicht behoben wird.",
+    "example_translation": "Die Firma nutzt dieses steigerbare System, um Mitarbeitern die Chance zur Besserung zu geben."
+  },
+  {
+    "id": "hr_0111",
+    "term_translation": "Anti-Mobbing-Richtlinie",
+    "definition_translation": "Regeln, die inakzeptables Verhalten definieren und den Umgang mit Belästigungsmeldungen festlegen.",
+    "example_translation": "Eine Pflichtschulung erklärt diese Regeln anhand von Beispielen aus dem echten Leben."
+  },
+  {
+    "id": "hr_0112",
+    "term_translation": "Vergeltungsverbot",
+    "definition_translation": "Zusage, dass Mitarbeiter, die Bedenken in gutem Glauben melden, keine negativen Folgen erleiden.",
+    "example_translation": "Diese Schutzregel wird in jeder Mitteilung über Hinweisgeber erwähnt."
+  },
+  {
+    "id": "hr_0113",
+    "term_translation": "Hinweisgeberrichtlinie",
+    "definition_translation": "Vorgaben, die beschreiben, wie Mitarbeiter Verdachtsfälle auf Missstände sicher melden können.",
+    "example_translation": "Eine externe Hotline unterstützt dieses System für sensible Fälle."
+  },
+  {
+    "id": "hr_0114",
+    "term_translation": "Verhaltenskodex",
+    "definition_translation": "Formales Dokument, das Erwartungen an ethisches und professionelles Benehmen festlegt.",
+    "example_translation": "Ein Verstoß gegen dieses Regelwerk kann zu disziplinarischen Mitteln führen."
+  },
+  {
+    "id": "hr_0115",
+    "term_translation": "Betriebliche Mediation",
+    "definition_translation": "Freiwilliger Prozess, bei dem eine neutrale dritte Partei Mitarbeitern hilft, Konflikte zu lösen.",
+    "example_translation": "Die Intervention des Vermittlers verhinderte die Eskalation eines langen Streits."
+  },
+  {
+    "id": "hr_0116",
+    "term_translation": "Konfliktlösungstraining",
+    "definition_translation": "Bildungsmaßnahmen, die Fähigkeiten zum konstruktiven Umgang mit Meinungsverschiedenheiten aufbauen.",
+    "example_translation": "Vorgesetzte nehmen an diesen Workshops im Rahmen der Führungskräfteentwicklung teil."
+  },
+  {
+    "id": "hr_0117",
+    "term_translation": "Tarifverhandlungen",
+    "definition_translation": "Gespräche zwischen Arbeitgebern und Arbeitnehmervertretern über Löhne und Arbeitsbedingungen.",
+    "example_translation": "Runden dieser Gespräche sind in der Branche alle zwei Jahre geplant."
+  },
+  {
+    "id": "hr_0118",
+    "term_translation": "Betriebsrat",
+    "definition_translation": "Gewähltes Gremium, das Mitarbeiter in Konsultationen zu Personalangelegenheiten vertritt.",
+    "example_translation": "Dieses Vertretungsorgan muss vor größeren Umstrukturierungen informiert werden."
+  },
+  {
+    "id": "hr_0119",
+    "term_translation": "Interessenvertretung",
+    "definition_translation": "Gruppe, die formal befugt ist, in Diskussionen mit der Leitung für die Mitarbeiter zu sprechen.",
+    "example_translation": "Die Repräsentanten der Belegschaft analysierten die vorgeschlagenen Schichtplanänderungen."
+  },
+  {
+    "id": "hr_0120",
+    "term_translation": "Gewerkschaftsanerkennung",
+    "definition_translation": "Formale Vereinbarung, in der der Arbeitgeber die Arbeitnehmerorganisation als Verhandlungspartner akzeptiert.",
+    "example_translation": "Dieser Vertrag definiert, welche Mitarbeiter von der Vertretung abgedeckt sind."
+  },
+  {
+    "id": "hr_0121",
+    "term_translation": "Belegschaftsvielfalt",
+    "definition_translation": "Ausmaß der Unterschiede zwischen Menschen in der Organisation, einschließlich Hintergrund und Identität.",
+    "example_translation": "Die Mischung im Team kann die Problemlösung verbessern, indem sie verschiedene Sichtweisen einbringt."
+  },
+  {
+    "id": "hr_0122",
+    "term_translation": "Diversitätsstrategie",
+    "definition_translation": "Langfristiger Plan zum Aufbau einer repräsentativeren Belegschaft und eines inklusiven Umfelds.",
+    "example_translation": "Ziele zur Repräsentation im Management sind Teil dieses Aktionsplans."
+  },
+  {
+    "id": "hr_0123",
+    "term_translation": "Entgeltlückenanalyse",
+    "definition_translation": "Untersuchung von Lohndaten zur Identifizierung unerklärlicher Unterschiede zwischen Gruppen.",
+    "example_translation": "Die jährliche Studie zu Verdienstunterschieden bildet die Basis für Lohnanpassungen."
+  },
+  {
+    "id": "hr_0124",
+    "term_translation": "Entgeltbericht",
+    "definition_translation": "Offenlegung von Statistiken, die durchschnittliche Verdienste von Männern und Frauen vergleichen.",
+    "example_translation": "Die Vorschrift zur Veröffentlichung dieser Daten erhöht den Druck, strukturelle Ungleichheiten zu lösen."
+  },
+  {
+    "id": "hr_0125",
+    "term_translation": "Chancengleichheitsrichtlinie",
+    "definition_translation": "Erklärung, die den Arbeitgeber zur Nichtdiskriminierung bei Einstellung und Beschäftigung verpflichtet.",
+    "example_translation": "Stellenanzeigen werden geprüft, um sicherzustellen, dass sie diesen Leitlinien entsprechen."
+  },
+  {
+    "id": "hr_0126",
+    "term_translation": "Altersmanagement",
+    "definition_translation": "HR-Praktiken, die Bedürfnisse und Stärken von Mitarbeitern in verschiedenen Lebensphasen adressieren.",
+    "example_translation": "Initiativen in diesem Bereich umfassen den gleitenden Ruhestand und Generationen-Mentoring."
+  },
+  {
+    "id": "hr_0127",
+    "term_translation": "Training für inklusive Führung",
+    "definition_translation": "Programme, die Führungskräften helfen, Vorurteile zu erkennen und integrativere Teampraktiken zu schaffen.",
+    "example_translation": "Bildung im Bereich Inklusion ist für alle Manager obligatorisch."
+  },
+  {
+    "id": "hr_0128",
+    "term_translation": "Talent-Analytik",
+    "definition_translation": "Nutzung von Daten und statistischen Methoden zum Verständnis und zur Verbesserung von Personalentscheidungen.",
+    "example_translation": "Dieser Ansatz half vorherzusagen, welche Rollen am stärksten von Kündigungen bedroht waren."
+  },
+  {
+    "id": "hr_0129",
+    "term_translation": "Humankapital-Analytik",
+    "definition_translation": "Breitere Disziplin, die HR-Daten mit Geschäftskennzahlen verbindet, um Erkenntnisse zu generieren.",
+    "example_translation": "Fortgeschrittene Analyse verknüpfte Engagement-Werte mit Kundenverlusten in bestimmten Regionen."
+  },
+  {
+    "id": "hr_0130",
+    "term_translation": "Personalkennzahlen-Cockpit",
+    "definition_translation": "Visuelle Darstellung wichtiger Personalkennzahlen zur Unterstützung von Überwachung und Entscheidungen.",
+    "example_translation": "Dieses Tool zeigt Trends bei Einstellung, Fluktuation und interner Mobilität nach Segmenten."
+  },
+  {
+    "id": "hr_0131",
+    "term_translation": "Vollzeitäquivalent-Analyse",
+    "definition_translation": "Berechnung der Gesamtarbeitslast umgerechnet in eine äquivalente Zahl von Vollzeitbeschäftigten.",
+    "example_translation": "Diese Kalkulation zeigte, dass wir trotz vieler Teilzeitkräfte unterbesetzt sind."
+  },
+  {
+    "id": "hr_0132",
+    "term_translation": "Belegschaftssegmentierung",
+    "definition_translation": "Unterteilung der Mitarbeiter in Gruppen basierend auf Merkmalen, um HR-Praktiken anzupassen.",
+    "example_translation": "Diese Aufteilung erlaubte es, kritische Experten von leicht ersetzbaren Rollen zu unterscheiden."
+  },
+  {
+    "id": "hr_0133",
+    "term_translation": "Schlüsselposition",
+    "definition_translation": "Stelle, deren Vakanz ein unverhältnismäßiges Risiko für die Organisation darstellen würde.",
+    "example_translation": "Nachfolgepläne priorisieren jeden identifizierten kritischen Posten."
+  },
+  {
+    "id": "hr_0134",
+    "term_translation": "Führungsspanne",
+    "definition_translation": "Anzahl der direkten Untergebenen, die ein Manager beaufsichtigt.",
+    "example_translation": "Ein sehr breiter Aufsichtsbereich kann die Qualität des Coachings begrenzen, das ein Manager bieten kann."
+  },
+  {
+    "id": "hr_0135",
+    "term_translation": "Organisationsumbau",
+    "definition_translation": "Gezielte Änderung von Strukturen, Rollen und Berichtslinien zur besseren Unterstützung der Strategie.",
+    "example_translation": "Die Strukturänderung rückte die HR-Business-Partner näher an die Produktteams."
+  },
+  {
+    "id": "hr_0136",
+    "term_translation": "Veränderungskonzept",
+    "definition_translation": "Fahrplan für Kommunikation, Schulung und Unterstützung, der Menschen durch eine Transformation führt.",
+    "example_translation": "Dieser Zeitplan identifizierte wichtige Interessenvertreter und Widerstandspunkte."
+  },
+  {
+    "id": "hr_0137",
+    "term_translation": "Netzwerk der Veränderungsführer",
+    "definition_translation": "Gruppe von Mitarbeitern, die die Transformation in ihren lokalen Teams fördern und unterstützen.",
+    "example_translation": "Diese Gruppe von Botschaftern sammelte während der Einführung Feedback vom Personal an der Basis."
+  },
+  {
+    "id": "hr_0138",
+    "term_translation": "Strategischer Personalpartner",
+    "definition_translation": "Personalfachmann, der eng mit einem Geschäftsbereich arbeitet, um HR-Praktiken auf die Strategie abzustimmen.",
+    "example_translation": "Die Person auf diesem Posten nahm an Leitungssitzungen teil, um Personalbedarf zu antizipieren."
+  },
+  {
+    "id": "hr_0139",
+    "term_translation": "Zentraler Personaldienst",
+    "definition_translation": "Zentralisierte Einheit, die standardisierte Transaktionen und Support für viele Teile der Organisation liefert.",
+    "example_translation": "Die Schaffung eines gemeinsamen Servicezentrums reduzierte Doppelarbeit in den Länderteams."
+  },
+  {
+    "id": "hr_0140",
+    "term_translation": "Personaldienstleistungsverzeichnis",
+    "definition_translation": "Dokumentierte Liste von Personaldienstleistungen mit Beschreibungen, verfügbar für Manager und Mitarbeiter.",
+    "example_translation": "Dieses Verzeichnis klärt, wen man für Lohnfragen und wen für Sozialleistungen kontaktiert."
+  },
+  {
+    "id": "hr_0141",
+    "term_translation": "Kompetenzzentrum",
+    "definition_translation": "Spezialisiertes Team innerhalb von HR, das tiefes Wissen in Bereichen wie Vergütung oder Analytik bietet.",
+    "example_translation": "Das Expertenteam für Belohnung entwarf den neuen Beteiligungsplan."
+  },
+  {
+    "id": "hr_0142",
+    "term_translation": "HR-Technologie-Roadmap",
+    "definition_translation": "Strategischer Plan, der künftige Implementierungen und die Integration von Personalsystemen festlegt.",
+    "example_translation": "Unser Technologieplan priorisiert eine neue Lernplattform und Analysetools."
+  },
+  {
+    "id": "hr_0143",
+    "term_translation": "HR-Systemanalyst",
+    "definition_translation": "Spezialist, der das Personalinformationssystem verwaltet und konfiguriert.",
+    "example_translation": "Die Person auf dieser Stelle ist verantwortlich für neue Berichte und Datensicherung."
+  },
+  {
+    "id": "hr_0144",
+    "term_translation": "Mitarbeiterportal",
+    "definition_translation": "Web-Tool, mit dem Mitarbeiter ihre eigenen Daten, Urlaub und Leistungen verwalten können.",
+    "example_translation": "Die Adressaktualisierung ist über dieses Online-System einfach."
+  },
+  {
+    "id": "hr_0145",
+    "term_translation": "Führungskräfteportal",
+    "definition_translation": "Funktion in HR-Systemen, die Vorgesetzten Aufgaben wie Urlaubsgenehmigung oder Einstellung erlaubt.",
+    "example_translation": "Die Einführung dieses Moduls reduzierte die administrative Last der Personalabteilung."
+  },
+  {
+    "id": "hr_0146",
+    "term_translation": "Datenschutzkonformität",
+    "definition_translation": "Sicherstellung, dass HR-Praktiken zur Sammlung von Mitarbeiterdaten den gesetzlichen Vorgaben entsprechen.",
+    "example_translation": "Das Thema Privatsphäre wurde mit Einführung neuer Vorschriften zur Priorität."
+  },
+  {
+    "id": "hr_0147",
+    "term_translation": "Personalaudit",
+    "definition_translation": "Systematische Überprüfung von HR-Richtlinien und -Praktiken zur Bewertung von Einhaltung und Effektivität.",
+    "example_translation": "Die interne Kontrolle deckte Inkonsistenzen in unserer Rekrutierungsdokumentation auf."
+  },
+  {
+    "id": "hr_0148",
+    "term_translation": "Richtlinie zur globalen Mobilität",
+    "definition_translation": "Rahmenwerk, das die Bedingungen für ins Ausland versetzte Mitarbeiter regelt.",
+    "example_translation": "Dieses Dokument regelt alles, von steuerlicher Unterstützung bis zum kulturellen Training."
+  },
+  {
+    "id": "hr_0149",
+    "term_translation": "Auslandsentsendung",
+    "definition_translation": "Vorübergehende Entsendung eines Mitarbeiters zur Arbeit in ein anderes Land.",
+    "example_translation": "Der Ingenieur erhielt ein Angebot für drei Jahre im neuen Forschungszentrum."
+  },
+  {
+    "id": "hr_0150",
+    "term_translation": "Repatriierungsprozess",
+    "definition_translation": "Aktivitäten, die die Rückkehr des Mitarbeiters ins Heimatland nach dem Auslandseinsatz unterstützen.",
+    "example_translation": "Eine gut gemanagte Rückkehr hilft, die wertvolle, im Ausland gewonnene Erfahrung zu halten."
+  }
+]

@@ -1,7 +1,7 @@
 import { Injectable, inject, signal, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
-export type SupportedLanguage = 'pl' | 'es';
+export type SupportedLanguage = 'pl' | 'es' | 'de' | 'fr';
 
 @Injectable({
   providedIn: 'root'
@@ -38,11 +38,13 @@ export class LanguageService {
   /**
    * Detects user's native language from browser settings.
    * Used to show appropriate translations when learning English business terms.
-   * @returns Native language code: 'pl' (Polish), 'es' (Spanish), defaults to 'pl'
+   * @returns Native language code: 'pl' (Polish), 'es' (Spanish), 'de' (German), 'fr' (French), defaults to 'pl'
    */
   private detectBrowserLanguage(): SupportedLanguage {
     const browserLang = navigator.language.split('-')[0];
     if (browserLang === 'es') return 'es';
+    if (browserLang === 'de') return 'de';
+    if (browserLang === 'fr') return 'fr';
     return 'pl'; // default fallback
   }
 
@@ -63,7 +65,7 @@ export class LanguageService {
    * Check if a language code is valid.
    */
   private isValidLanguage(language: string): language is SupportedLanguage {
-    return ['pl', 'es'].includes(language);
+    return ['pl', 'es', 'de', 'fr'].includes(language);
   }
 
   /**
@@ -73,6 +75,8 @@ export class LanguageService {
     switch (language) {
       case 'pl': return 'Polski';
       case 'es': return 'Español';
+      case 'de': return 'Deutsch';
+      case 'fr': return 'Français';
       default: return 'Polski';
     }
   }
@@ -89,6 +93,6 @@ export class LanguageService {
    * Get all supported languages.
    */
   getSupportedLanguages(): SupportedLanguage[] {
-    return ['pl', 'es'];
+    return ['pl', 'es', 'de', 'fr'];
   }
 }

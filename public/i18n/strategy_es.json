@@ -1,0 +1,902 @@
+[
+  {
+    "id": "strat_0001",
+    "term_translation": "Unidad sectorial",
+    "definition_translation": "Una parte distinta de una empresa que opera como una unidad de negocio separada, a menudo con su propia responsabilidad de pérdidas y ganancias.",
+    "example_translation": "La división farmacéutica generó los mayores ingresos este trimestre."
+  },
+  {
+    "id": "strat_0002",
+    "term_translation": "Falta de inclusión",
+    "definition_translation": "El hecho de no incluir o mencionar algo en los estados financieros o informes, lo que puede conducir a problemas de cumplimiento.",
+    "example_translation": "El auditor señaló una omisión material con respecto a los pasivos de la demanda pendiente."
+  },
+  {
+    "id": "strat_0003",
+    "term_translation": "Provisión",
+    "definition_translation": "Una cantidad reservada en las cuentas de una organización para un pasivo conocido de fecha o importe incierto.",
+    "example_translation": "La empresa hizo una provisión específica para deudas incobrables en previsión de la recesión."
+  },
+  {
+    "id": "strat_0004",
+    "term_translation": "Creación de visión",
+    "definition_translation": "El proceso estratégico de desarrollar una imagen mental clara de la dirección futura y los objetivos de una organización.",
+    "example_translation": "La junta pasó el retiro trabajando en la creación de visión sobre cómo debería ser la empresa en diez años."
+  },
+  {
+    "id": "strat_0005",
+    "term_translation": "Gobernanza",
+    "definition_translation": "El sistema de reglas, prácticas y procesos mediante los cuales se dirige y controla una empresa.",
+    "example_translation": "Una buena gobernanza corporativa asegura transparencia y responsabilidad ante los accionistas."
+  },
+  {
+    "id": "strat_0006",
+    "term_translation": "Plan de bonificación",
+    "definition_translation": "Un esquema de compensación que recompensa a los empleados por lograr objetivos de rendimiento específicos.",
+    "example_translation": "El nuevo plan de bonificación está vinculado a las puntuaciones de satisfacción del cliente en lugar de solo al volumen de ventas."
+  },
+  {
+    "id": "strat_0007",
+    "term_translation": "Comisión",
+    "definition_translation": "Un pago variable hecho a los empleados basado en el valor de las ventas que han cerrado.",
+    "example_translation": "Los agentes ganan una comisión del 5% en cada transacción inmobiliaria."
+  },
+  {
+    "id": "strat_0008",
+    "term_translation": "Plan de acción",
+    "definition_translation": "Una secuencia detallada de pasos que deben tomarse para lograr una estrategia u objetivo específico.",
+    "example_translation": "Necesitamos convertir esta estrategia en un plan de acción concreto con plazos."
+  },
+  {
+    "id": "strat_0009",
+    "term_translation": "Costes directos",
+    "definition_translation": "Gastos que pueden atribuirse directamente a la producción de bienes o servicios específicos.",
+    "example_translation": "Las materias primas y la mano de obra son los principales costes directos para esta línea de productos."
+  },
+  {
+    "id": "strat_0010",
+    "term_translation": "Plan de enajenación",
+    "definition_translation": "Un acuerdo estratégico para vender o eliminar activos que ya no son necesarios.",
+    "example_translation": "El plan de enajenación para el equipo antiguo de la fábrica se ejecutará el próximo mes."
+  },
+  {
+    "id": "strat_0011",
+    "term_translation": "Activos objetivo",
+    "definition_translation": "Recursos o propiedades específicas que una empresa pretende adquirir durante una fusión o adquisición.",
+    "example_translation": "La debida diligencia reveló pasivos ocultos en los activos objetivo."
+  },
+  {
+    "id": "strat_0012",
+    "term_translation": "Planta marginal",
+    "definition_translation": "Una instalación de producción que opera al borde de la rentabilidad, a menudo la primera en cerrar durante las recesiones.",
+    "example_translation": "Decidimos cerrar la planta marginal porque los costes de mantenimiento excedían los ingresos."
+  },
+  {
+    "id": "strat_0013",
+    "term_translation": "Plan de emergencia",
+    "definition_translation": "Un curso de acción diseñado para mitigar el daño de posibles eventos negativos.",
+    "example_translation": "El plan de emergencia se activó inmediatamente después del ciberataque."
+  },
+  {
+    "id": "strat_0014",
+    "term_translation": "Estrategia de auditoría",
+    "definition_translation": "El enfoque general que describe el alcance, el momento y la dirección de un proceso de inspección.",
+    "example_translation": "Nuestra estrategia de auditoría se centra en áreas de alto riesgo como el manejo de efectivo y las adquisiciones."
+  },
+  {
+    "id": "strat_0015",
+    "term_translation": "Cuotas de admisión",
+    "definition_translation": "Costes asociados con obtener entrada a un mercado, organización o grupo comercial específico.",
+    "example_translation": "Las altas cuotas de admisión impiden que los competidores más pequeños se unan al consorcio industrial."
+  },
+  {
+    "id": "strat_0016",
+    "term_translation": "Costes indirectos",
+    "definition_translation": "Gastos que no son directamente atribuibles a un objeto de coste, a menudo llamados gastos generales.",
+    "example_translation": "El alquiler y los servicios públicos se clasifican como costes indirectos porque apoyan a toda la oficina."
+  },
+  {
+    "id": "strat_0017",
+    "term_translation": "Negocio directo",
+    "definition_translation": "Transacciones realizadas inmediatamente entre el proveedor y el cliente sin intermediarios.",
+    "example_translation": "Moverse a un modelo de negocio directo aumentó nuestros márgenes al eliminar a los distribuidores."
+  },
+  {
+    "id": "strat_0018",
+    "term_translation": "Mitigación",
+    "definition_translation": "La acción de reducir la gravedad, seriedad o dolor de algo.",
+    "example_translation": "Las estrategias de mitigación de riesgos incluyen la diversificación y el seguro."
+  },
+  {
+    "id": "strat_0019",
+    "term_translation": "Desembolso",
+    "definition_translation": "El acto de gastar fondos, a menudo capitalizado para beneficios a largo plazo.",
+    "example_translation": "El desembolso de capital para la nueva planta fue significativo."
+  },
+  {
+    "id": "strat_0020",
+    "term_translation": "Auditoría",
+    "definition_translation": "Una inspección oficial de las cuentas de un individuo u organización, típicamente por un organismo independiente.",
+    "example_translation": "La auditoría anual no encontró irregularidades en la contabilidad."
+  },
+  {
+    "id": "strat_0021",
+    "term_translation": "Activo",
+    "definition_translation": "Un recurso con valor económico que un individuo o corporación posee con la expectativa de un beneficio futuro.",
+    "example_translation": "La reputación de la marca es nuestro activo intangible más valioso."
+  },
+  {
+    "id": "strat_0022",
+    "term_translation": "Ganancia",
+    "definition_translation": "Una ganancia financiera, especialmente la diferencia entre la cantidad ganada y la cantidad gastada.",
+    "example_translation": "La empresa obtuvo un beneficio saludable a pesar de la recesión económica."
+  },
+  {
+    "id": "strat_0023",
+    "term_translation": "Bienes",
+    "definition_translation": "La propiedad total de una persona, asociación o corporación sujeta al pago de deudas.",
+    "example_translation": "El tribunal ordenó la congelación de todos los bienes corporativos."
+  },
+  {
+    "id": "strat_0024",
+    "term_translation": "Proyección",
+    "definition_translation": "Una estimación o pronóstico de una situación o tendencia futura basada en tendencias presentes.",
+    "example_translation": "La proyección de ventas para el cuarto trimestre parece optimista según los datos actuales."
+  },
+  {
+    "id": "strat_0025",
+    "term_translation": "Ingresos",
+    "definition_translation": "La renta total producida por una fuente dada.",
+    "example_translation": "La publicidad es la principal fuente de ingresos para el gigante de las redes sociales."
+  },
+  {
+    "id": "strat_0026",
+    "term_translation": "Coste de fin de vida",
+    "definition_translation": "Gastos asociados con el retiro de un producto o activo.",
+    "example_translation": "Debemos tener en cuenta las tarifas de reciclaje y eliminación como parte del coste de fin de vida."
+  },
+  {
+    "id": "strat_0027",
+    "term_translation": "Auditoría informática",
+    "definition_translation": "Un examen de los controles de gestión dentro de una infraestructura de tecnología de la información.",
+    "example_translation": "La auditoría informática reveló varias vulnerabilidades en la configuración de nuestro cortafuegos."
+  },
+  {
+    "id": "strat_0028",
+    "term_translation": "Emprendimiento",
+    "definition_translation": "Una jornada o empresa arriesgada o audaz, especialmente una que implica nuevos riesgos comerciales.",
+    "example_translation": "El emprendimiento conjunto entre los dos gigantes tecnológicos tiene como objetivo desarrollar procesadores cuánticos."
+  },
+  {
+    "id": "strat_0029",
+    "term_translation": "Inspección fiscal",
+    "definition_translation": "Un examen de una declaración de impuestos por parte de la autoridad tributaria para verificar que los ingresos y deducciones sean precisos.",
+    "example_translation": "Guarde todos sus recibos en caso de una inspección fiscal."
+  },
+  {
+    "id": "strat_0030",
+    "term_translation": "Beneficio neto",
+    "definition_translation": "La ganancia real después de pagar los gastos operativos e impuestos.",
+    "example_translation": "Después de pagar impuestos y salarios, nuestro beneficio neto fue menor de lo esperado."
+  },
+  {
+    "id": "strat_0031",
+    "term_translation": "Expediente de auditoría",
+    "definition_translation": "La carpeta o ubicación de almacenamiento que contiene la documentación para un encargo de auditoría específico.",
+    "example_translation": "El contador junior fue responsable de organizar el expediente de auditoría."
+  },
+  {
+    "id": "strat_0032",
+    "term_translation": "Organismo de control",
+    "definition_translation": "Una organización o comité designado oficialmente para realizar inspecciones.",
+    "example_translation": "El organismo de control europeo está revisando el uso del dinero de la subvención."
+  },
+  {
+    "id": "strat_0033",
+    "term_translation": "Cumplimiento normativo",
+    "definition_translation": "La acción o hecho de cumplir con un deseo o mandato, especialmente regulaciones legales.",
+    "example_translation": "El cumplimiento normativo es un centro de costes importante para las instituciones bancarias."
+  },
+  {
+    "id": "strat_0034",
+    "term_translation": "Firma de auditoría",
+    "definition_translation": "Una empresa de servicios profesionales que proporciona servicios de auditoría y aseguramiento.",
+    "example_translation": "Contratamos a una firma de auditoría de las \"Big Four\" para manejar nuestra preparación para la salida a bolsa."
+  },
+  {
+    "id": "strat_0035",
+    "term_translation": "Riesgo de precio",
+    "definition_translation": "El riesgo de una disminución en el valor de un valor o una cartera.",
+    "example_translation": "Los comerciantes de materias primas utilizan coberturas para gestionar el riesgo de precio."
+  },
+  {
+    "id": "strat_0036",
+    "term_translation": "Activos netos",
+    "definition_translation": "Los activos totales de una empresa menos sus pasivos totales.",
+    "example_translation": "El valor contable de la empresa es esencialmente sus activos netos."
+  },
+  {
+    "id": "strat_0037",
+    "term_translation": "Ayuda fiscal",
+    "definition_translation": "Asistencia financiera proporcionada por el gobierno u otras instituciones.",
+    "example_translation": "El sector en dificultades solicitó ayuda fiscal para sobrevivir a la crisis."
+  },
+  {
+    "id": "strat_0038",
+    "term_translation": "Activo crediticio",
+    "definition_translation": "Un préstamo considerado como un activo para el prestamista (el banco) porque genera ingresos por intereses.",
+    "example_translation": "El banco vendió una parte de su cartera de activo crediticio para aumentar la liquidez."
+  },
+  {
+    "id": "strat_0039",
+    "term_translation": "Riesgo de auditoría",
+    "definition_translation": "El riesgo de que un auditor exprese una opinión inapropiada cuando los estados financieros contienen errores materiales.",
+    "example_translation": "Para minimizar el riesgo de auditoría, aumentamos el tamaño de la muestra de nuestras pruebas."
+  },
+  {
+    "id": "strat_0040",
+    "term_translation": "Compra de activos",
+    "definition_translation": "Un tipo de adquisición donde el comprador adquiere activos individuales de una empresa en lugar de sus acciones.",
+    "example_translation": "En una compra de activos, el comprador puede elegir exactamente qué pasivos asumir."
+  },
+  {
+    "id": "strat_0041",
+    "term_translation": "Comerciable",
+    "definition_translation": "Capaz de ser vendido o comercializado.",
+    "example_translation": "Necesitamos convertir este prototipo en un producto comerciable para el tercer trimestre."
+  },
+  {
+    "id": "strat_0042",
+    "term_translation": "Fondo de activos",
+    "definition_translation": "Un grupo de activos que se combinan con el propósito de crear un valor financiero.",
+    "example_translation": "El valor respaldado por hipotecas se derivó de un gran fondo de activos de préstamos residenciales."
+  },
+  {
+    "id": "strat_0043",
+    "term_translation": "Costes hundidos",
+    "definition_translation": "Costes que ya se han incurrido y no se pueden recuperar.",
+    "example_translation": "Deberíamos ignorar los costes hundidos al decidir si continuar con el proyecto."
+  },
+  {
+    "id": "strat_0044",
+    "term_translation": "Mercado",
+    "definition_translation": "Un ámbito de tratos competitivos o comerciales; el mundo del comercio.",
+    "example_translation": "En el mercado global actual, la presencia digital es obligatoria."
+  },
+  {
+    "id": "strat_0045",
+    "term_translation": "Campo de auditoría",
+    "definition_translation": "El área o alcance específico dentro de una organización que está sujeto a inspección.",
+    "example_translation": "El campo de auditoría para este año incluye las filiales en el extranjero."
+  },
+  {
+    "id": "strat_0046",
+    "term_translation": "Activo tóxico",
+    "definition_translation": "Un activo que se vuelve ilíquido cuando su mercado secundario desaparece.",
+    "example_translation": "El balance del banco estaba lastrado por tenencias de activo tóxico de la crisis inmobiliaria."
+  },
+  {
+    "id": "strat_0047",
+    "term_translation": "Auditoría conjunta",
+    "definition_translation": "Una auditoría realizada por dos o más firmas de auditoría.",
+    "example_translation": "A menudo se requiere una auditoría conjunta para corporaciones multinacionales masivas."
+  },
+  {
+    "id": "strat_0048",
+    "term_translation": "Activo fijo",
+    "definition_translation": "Activos comprados para uso a largo plazo (por ejemplo, terrenos, edificios, equipos).",
+    "example_translation": "Un activo fijo no es probable que se convierta rápidamente en efectivo."
+  },
+  {
+    "id": "strat_0049",
+    "term_translation": "Costes fijos",
+    "definition_translation": "Costes comerciales, como el alquiler, que permanecen constantes independientemente de la cantidad de bienes producidos.",
+    "example_translation": "Las startups deben mantener sus costes fijos bajos para extender su tiempo de supervivencia."
+  },
+  {
+    "id": "strat_0050",
+    "term_translation": "Rastro de auditoría",
+    "definition_translation": "Un registro paso a paso mediante el cual los datos contables o comerciales pueden rastrearse hasta su fuente.",
+    "example_translation": "La cadena de bloques proporciona un rastro de auditoría inmutable para cada transacción."
+  },
+  {
+    "id": "strat_0051",
+    "term_translation": "Mercado líder",
+    "definition_translation": "Un mercado donde una innovación específica se adopta ampliamente por primera vez.",
+    "example_translation": "Escandinavia se considera a menudo un mercado líder para los vehículos eléctricos."
+  },
+  {
+    "id": "strat_0052",
+    "term_translation": "Costes de insumos",
+    "definition_translation": "Los costes relacionados con los recursos utilizados para producir un bien o servicio.",
+    "example_translation": "El aumento de los precios de la energía ha incrementado significativamente nuestros costes de insumos."
+  },
+  {
+    "id": "strat_0053",
+    "term_translation": "Riesgo crediticio",
+    "definition_translation": "El riesgo de incumplimiento de una deuda que puede surgir de un prestatario que no realiza los pagos requeridos.",
+    "example_translation": "Los bancos analizan su historial para evaluar el riesgo crediticio antes de emitir un préstamo."
+  },
+  {
+    "id": "strat_0054",
+    "term_translation": "Coste estimado",
+    "definition_translation": "Una cantidad utilizada como sustituto del coste o coste depreciado en una fecha dada.",
+    "example_translation": "Utilizamos el valor razonable del terreno como su coste estimado al hacer la transición a las NIIF."
+  },
+  {
+    "id": "strat_0055",
+    "term_translation": "Método del coste",
+    "definition_translation": "Un método de contabilidad para una inversión donde se registra al precio pagado.",
+    "example_translation": "Bajo el método del coste, los dividendos se registran como ingresos."
+  },
+  {
+    "id": "strat_0056",
+    "term_translation": "Coste de los factores",
+    "definition_translation": "El coste de los factores de producción (tierra, trabajo, capital) utilizados para producir bienes.",
+    "example_translation": "Los economistas analizan el coste de los factores para entender los impulsores de la inflación."
+  },
+  {
+    "id": "strat_0057",
+    "term_translation": "Alcance de la auditoría",
+    "definition_translation": "La profundidad y el rango de una auditoría, incluyendo lo que está y no está cubierto.",
+    "example_translation": "El alcance de la auditoría se limitó únicamente a las operaciones nacionales."
+  },
+  {
+    "id": "strat_0058",
+    "term_translation": "Parte interesada",
+    "definition_translation": "Una parte que tiene un interés en una empresa y puede afectar o verse afectada por el negocio.",
+    "example_translation": "Necesitamos gestionar las expectativas de cada parte interesada con respecto al cronograma del proyecto."
+  },
+  {
+    "id": "strat_0059",
+    "term_translation": "Proyecto TIC",
+    "definition_translation": "Un proyecto que involucra Tecnologías de la Información y la Comunicación.",
+    "example_translation": "El gobierno lanzó un proyecto TIC masivo para digitalizar los registros de salud."
+  },
+  {
+    "id": "strat_0060",
+    "term_translation": "Poder de mercado",
+    "definition_translation": "La capacidad de una empresa para aumentar rentablemente el precio de mercado de un bien por encima del coste marginal.",
+    "example_translation": "El monopolio tiene un poder de mercado excesivo y puede dictar los precios."
+  },
+  {
+    "id": "strat_0061",
+    "term_translation": "Entrada al mercado",
+    "definition_translation": "El movimiento de una empresa hacia un nuevo mercado.",
+    "example_translation": "Las barreras a la entrada al mercado incluyen altos requisitos de capital y patentes."
+  },
+  {
+    "id": "strat_0062",
+    "term_translation": "Riesgo compartido",
+    "definition_translation": "Una estrategia donde el riesgo se distribuye entre varios participantes.",
+    "example_translation": "El seguro es una forma clásica de riesgo compartido."
+  },
+  {
+    "id": "strat_0063",
+    "term_translation": "Participación accionaria",
+    "definition_translation": "Una acción que otorga al titular derecho a voto y a recibir dividendos.",
+    "example_translation": "Invertir en una participación accionaria ofrece rendimientos potenciales más altos que los bonos."
+  },
+  {
+    "id": "strat_0064",
+    "term_translation": "Coste del servicio",
+    "definition_translation": "El coste asociado con la prestación de un servicio a un cliente.",
+    "example_translation": "La automatización ayudó a reducir el coste del servicio por ticket."
+  },
+  {
+    "id": "strat_0065",
+    "term_translation": "Coste corriente",
+    "definition_translation": "El coste que se requeriría para reemplazar un activo en el período actual.",
+    "example_translation": "La contabilidad basada en el coste corriente refleja la inflación mejor que los datos históricos."
+  },
+  {
+    "id": "strat_0066",
+    "term_translation": "Emisión de acciones",
+    "definition_translation": "El acto de ofrecer acciones de la empresa al público o a inversores.",
+    "example_translation": "La empresa planeó una nueva emisión de acciones para financiar su expansión."
+  },
+  {
+    "id": "strat_0067",
+    "term_translation": "Coste implícito",
+    "definition_translation": "Un coste de oportunidad que no es un gasto monetario directo.",
+    "example_translation": "El coste implícito de dejar el puesto vacante es la productividad perdida."
+  },
+  {
+    "id": "strat_0068",
+    "term_translation": "Riesgo de control",
+    "definition_translation": "El riesgo de que un error material no sea prevenido o detectado por los controles internos.",
+    "example_translation": "Las políticas de contraseñas débiles aumentan el riesgo de control para el sistema de TI."
+  },
+  {
+    "id": "strat_0069",
+    "term_translation": "Auditoría de sistemas",
+    "definition_translation": "Una auditoría de los sistemas y procedimientos utilizados para registrar transacciones.",
+    "example_translation": "Una auditoría de sistemas verificó que los procedimientos de respaldo funcionaban correctamente."
+  },
+  {
+    "id": "strat_0070",
+    "term_translation": "Perfil de riesgo",
+    "definition_translation": "Una evaluación de la voluntad y capacidad de un individuo u organización para asumir riesgos.",
+    "example_translation": "Un inversor conservador típicamente tiene un perfil de riesgo bajo."
+  },
+  {
+    "id": "strat_0071",
+    "term_translation": "Activos totales",
+    "definition_translation": "La suma de todos los activos corrientes y no corrientes propiedad de una organización.",
+    "example_translation": "Los activos totales de la empresa superaron los mil millones de dólares el año pasado."
+  },
+  {
+    "id": "strat_0072",
+    "term_translation": "Financiación de riesgos",
+    "definition_translation": "La gestión del impacto financiero del riesgo, a menudo a través de seguros o retención.",
+    "example_translation": "El seguro cautivo es una forma sofisticada de financiación de riesgos."
+  },
+  {
+    "id": "strat_0073",
+    "term_translation": "Informe de auditoría",
+    "definition_translation": "Un documento preparado por un auditor que indica si los estados financieros son precisos.",
+    "example_translation": "Los accionistas se sintieron aliviados al ver un informe de auditoría limpio."
+  },
+  {
+    "id": "strat_0074",
+    "term_translation": "Índice bursátil",
+    "definition_translation": "Una medida estadística de los cambios en una cartera de acciones que representa una parte del mercado general.",
+    "example_translation": "El S&P 500 es un índice bursátil muy conocido."
+  },
+  {
+    "id": "strat_0075",
+    "term_translation": "Activo cubierto",
+    "definition_translation": "Un activo que ha sido protegido contra el riesgo a través de una inversión compensatoria.",
+    "example_translation": "Aunque el mercado se desplomó, el valor del activo cubierto se mantuvo estable."
+  },
+  {
+    "id": "strat_0076",
+    "term_translation": "Activo arrendado",
+    "definition_translation": "Propiedad o equipo que es utilizado por un arrendatario a cambio de pagos al arrendador.",
+    "example_translation": "La aerolínea no es propietaria de sus aviones; cada uno es un activo arrendado."
+  },
+  {
+    "id": "strat_0077",
+    "term_translation": "Cuota de mercado",
+    "definition_translation": "La porción de un mercado controlada por una empresa o producto en particular.",
+    "example_translation": "Los precios agresivos les ayudaron a capturar una cuota de mercado significativa."
+  },
+  {
+    "id": "strat_0078",
+    "term_translation": "Precio de mercado",
+    "definition_translation": "El precio actual al que se puede comprar o vender un activo o servicio.",
+    "example_translation": "La oferta estaba muy por debajo del precio de mercado actual."
+  },
+  {
+    "id": "strat_0079",
+    "term_translation": "Extensión de la auditoría",
+    "definition_translation": "La cantidad de evidencia de auditoría obtenida, típicamente determinada por el tamaño de la muestra.",
+    "example_translation": "Aumentamos la extensión de la auditoría después de encontrar discrepancias iniciales."
+  },
+  {
+    "id": "strat_0080",
+    "term_translation": "Auditoría interina",
+    "definition_translation": "Una auditoría realizada antes del final del período contable.",
+    "example_translation": "La auditoría interina ayudó a identificar problemas antes del cierre del año."
+  },
+  {
+    "id": "strat_0081",
+    "term_translation": "Accionista",
+    "definition_translation": "Una persona o entidad que posee acciones en una empresa.",
+    "example_translation": "Como accionista, tiene derecho a votar sobre los nombramientos de la junta."
+  },
+  {
+    "id": "strat_0082",
+    "term_translation": "Coste residual",
+    "definition_translation": "El coste restante de un activo después de que termina su vida útil.",
+    "example_translation": "El coste residual fue insignificante ya que la máquina fue totalmente desechada."
+  },
+  {
+    "id": "strat_0083",
+    "term_translation": "Análisis de riesgos",
+    "definition_translation": "El proceso de identificar y analizar problemas potenciales que podrían impactar negativamente las iniciativas clave.",
+    "example_translation": "Se requiere un análisis de riesgos exhaustivo antes de aprobar la nueva ubicación de la planta."
+  },
+  {
+    "id": "strat_0084",
+    "term_translation": "Datos comerciales",
+    "definition_translation": "Información relacionada con operaciones comerciales, ventas y comportamiento del cliente.",
+    "example_translation": "Proteger los datos comerciales sensibles es una prioridad máxima para la seguridad de TI."
+  },
+  {
+    "id": "strat_0085",
+    "term_translation": "Nombre comercial",
+    "definition_translation": "El nombre bajo el cual opera una empresa.",
+    "example_translation": "Necesita registrar su nombre comercial ante las autoridades locales."
+  },
+  {
+    "id": "strat_0086",
+    "term_translation": "Ingresos por ventas",
+    "definition_translation": "Ingresos recibidos por la venta de bienes o servicios.",
+    "example_translation": "Los ingresos por ventas del cuarto trimestre superaron las proyecciones en un veinte por ciento."
+  },
+  {
+    "id": "strat_0087",
+    "term_translation": "Auditor del grupo",
+    "definition_translation": "El auditor responsable de informar sobre los estados financieros consolidados de un grupo.",
+    "example_translation": "El auditor del grupo coordina con los auditores locales en cada país subsidiario."
+  },
+  {
+    "id": "strat_0088",
+    "term_translation": "Auditor estatal",
+    "definition_translation": "Un funcionario público responsable de auditar agencias gubernamentales.",
+    "example_translation": "El auditor estatal publicó un informe criticando el gasto del departamento."
+  },
+  {
+    "id": "strat_0089",
+    "term_translation": "Opinión de auditoría",
+    "definition_translation": "Una certificación que acompaña a los estados financieros, basada en una auditoría de los procedimientos y registros.",
+    "example_translation": "Una opinión de auditoría adversa puede dañar gravemente el precio de las acciones de una empresa."
+  },
+  {
+    "id": "strat_0090",
+    "term_translation": "Coste original",
+    "definition_translation": "El precio total pagado para adquirir un activo, incluyendo instalación y transporte.",
+    "example_translation": "El coste original del edificio era mucho menor que su valor de mercado actual."
+  },
+  {
+    "id": "strat_0091",
+    "term_translation": "Margen de beneficio",
+    "definition_translation": "La cantidad por la cual los ingresos de las ventas superan los costes en un negocio.",
+    "example_translation": "Los bienes de lujo suelen tener un margen de beneficio muy alto."
+  },
+  {
+    "id": "strat_0092",
+    "term_translation": "Costes de venta",
+    "definition_translation": "Costes incrementales directamente atribuibles a la enajenación de un activo.",
+    "example_translation": "Dedujimos los costes de venta del valor razonable para determinar el valor neto realizable."
+  },
+  {
+    "id": "strat_0093",
+    "term_translation": "Activo corriente",
+    "definition_translation": "Efectivo y otros activos que se espera convertir en efectivo dentro de un año.",
+    "example_translation": "El inventario se considera un activo corriente."
+  },
+  {
+    "id": "strat_0094",
+    "term_translation": "Riesgo de muestreo",
+    "definition_translation": "La posibilidad de que la conclusión del auditor basada en una muestra sea diferente de la conclusión si toda la población se sometiera al mismo procedimiento.",
+    "example_translation": "Usar un conjunto de datos más grande ayuda a reducir el riesgo de muestreo."
+  },
+  {
+    "id": "strat_0095",
+    "term_translation": "Valor en riesgo",
+    "definition_translation": "Una estadística que mide y cuantifica el nivel de riesgo financiero dentro de una empresa durante un período específico.",
+    "example_translation": "Los bancos utilizan modelos de valor en riesgo para determinar cuánto capital necesitan mantener."
+  },
+  {
+    "id": "strat_0096",
+    "term_translation": "Mercado maduro",
+    "definition_translation": "Un mercado donde la industria ha alcanzado un estado de equilibrio y el crecimiento es lento.",
+    "example_translation": "Es difícil encontrar nuevos clientes en un mercado maduro tan saturado."
+  },
+  {
+    "id": "strat_0097",
+    "term_translation": "Auditoría testifical",
+    "definition_translation": "Una auditoría donde un observador ve a otro auditor realizar sus tareas para garantizar la calidad.",
+    "example_translation": "El organismo de acreditación realizó una auditoría testifical en nuestro proceso de certificación."
+  },
+  {
+    "id": "strat_0098",
+    "term_translation": "Coste de intereses",
+    "definition_translation": "La cantidad acumulada de intereses que un prestatario paga por un préstamo.",
+    "example_translation": "La refinanciación ayudó a reducir significativamente el coste de intereses anual."
+  },
+  {
+    "id": "strat_0099",
+    "term_translation": "Método de participación",
+    "definition_translation": "Una técnica contable utilizada por las empresas para evaluar los beneficios obtenidos por sus inversiones en otras compañías.",
+    "example_translation": "Como poseemos el 30% de la filial, utilizamos el método de participación."
+  },
+  {
+    "id": "strat_0100",
+    "term_translation": "Exposición al riesgo",
+    "definition_translation": "La medida de la pérdida futura potencial resultante de una actividad o evento específico.",
+    "example_translation": "Las estrategias de cobertura están diseñadas para limitar la exposición al riesgo."
+  },
+  {
+    "id": "strat_0101",
+    "term_translation": "Fatiga de auditoría",
+    "definition_translation": "El cansancio experimentado por los empleados que están sujetos a auditorías frecuentes o continuas.",
+    "example_translation": "Para prevenir la fatiga de auditoría, combinamos las inspecciones de seguridad y calidad."
+  },
+  {
+    "id": "strat_0102",
+    "term_translation": "Auditoría ex ante",
+    "definition_translation": "Una auditoría realizada antes de que tenga lugar una transacción o actividad.",
+    "example_translation": "La auditoría ex ante asegura que el presupuesto del proyecto sea realista antes de la aprobación."
+  },
+  {
+    "id": "strat_0103",
+    "term_translation": "Revisión previa",
+    "definition_translation": "Una revisión preliminar de documentos antes de que comience la auditoría oficial.",
+    "example_translation": "La revisión previa nos ayudó a organizar los archivos necesarios de antemano."
+  },
+  {
+    "id": "strat_0104",
+    "term_translation": "Riesgo inherente",
+    "definition_translation": "El riesgo de un error en un estado financiero debido a un factor distinto de una falla del control interno.",
+    "example_translation": "El manejo de efectivo tiene un alto riesgo inherente de robo."
+  },
+  {
+    "id": "strat_0105",
+    "term_translation": "Mercado activo",
+    "definition_translation": "Un mercado en el que las transacciones del activo o pasivo tienen lugar con suficiente frecuencia y volumen.",
+    "example_translation": "No hay un mercado activo para este tipo de maquinaria especializada."
+  },
+  {
+    "id": "strat_0106",
+    "term_translation": "Unidad de negocio",
+    "definition_translation": "Un segmento lógico de una empresa que representa una función comercial específica.",
+    "example_translation": "Cada unidad de negocio tiene su propio representante de Recursos Humanos."
+  },
+  {
+    "id": "strat_0107",
+    "term_translation": "Autoauditoría",
+    "definition_translation": "El proceso de revisar el propio trabajo o departamento.",
+    "example_translation": "Se fomenta la autoauditoría, pero no puede reemplazar la verificación independiente."
+  },
+  {
+    "id": "strat_0108",
+    "term_translation": "Regla de negocio",
+    "definition_translation": "Una regla que define o restringe algún aspecto del negocio y siempre se resuelve como verdadera o falsa.",
+    "example_translation": "Una regla de negocio impide que el sistema procese pedidos sin una dirección válida."
+  },
+  {
+    "id": "strat_0109",
+    "term_translation": "Consulta de auditoría",
+    "definition_translation": "Una pregunta o solicitud específica de información hecha por un auditor.",
+    "example_translation": "Recibimos una consulta de auditoría con respecto a los gastos de viaje en marzo."
+  },
+  {
+    "id": "strat_0110",
+    "term_translation": "Auditoría seleccionada",
+    "definition_translation": "Una auditoría realizada en un subconjunto específico de datos o un departamento específico.",
+    "example_translation": "La autoridad fiscal realizó una auditoría seleccionada en nuestros registros de nómina."
+  },
+  {
+    "id": "strat_0111",
+    "term_translation": "Enfoque de auditoría",
+    "definition_translation": "La estrategia utilizada por un auditor para realizar la auditoría.",
+    "example_translation": "Adoptamos un enfoque de auditoría basado en riesgos para centrarnos en las áreas más críticas."
+  },
+  {
+    "id": "strat_0112",
+    "term_translation": "Activo de software",
+    "definition_translation": "Una licencia de software o aplicación que tiene valor para la organización.",
+    "example_translation": "Gestionar cada activo de software es crucial para evitar multas de licencia."
+  },
+  {
+    "id": "strat_0113",
+    "term_translation": "Auditoría ecológica",
+    "definition_translation": "Una evaluación del impacto ambiental de una organización.",
+    "example_translation": "La auditoría ecológica ayuda a las empresas a mejorar sus credenciales de sostenibilidad."
+  },
+  {
+    "id": "strat_0114",
+    "term_translation": "Auditoría interna",
+    "definition_translation": "Una actividad de aseguramiento independiente y objetiva diseñada para agregar valor y mejorar las operaciones de una organización.",
+    "example_translation": "El departamento de auditoría interna reporta directamente al Comité de Auditoría."
+  },
+  {
+    "id": "strat_0115",
+    "term_translation": "Activo monetario",
+    "definition_translation": "Activos que están fijos en términos de moneda, como efectivo o cuentas por cobrar.",
+    "example_translation": "La inflación reduce el poder adquisitivo de un activo monetario."
+  },
+  {
+    "id": "strat_0116",
+    "term_translation": "Auditoría externa",
+    "definition_translation": "Una auditoría realizada por un contador independiente que no es empleado de la empresa.",
+    "example_translation": "La auditoría externa es obligatoria para todas las empresas públicas."
+  },
+  {
+    "id": "strat_0117",
+    "term_translation": "Riesgo financiero",
+    "definition_translation": "El peligro de que una empresa no pueda cumplir con sus obligaciones financieras.",
+    "example_translation": "El alto apalancamiento aumenta el riesgo financiero durante una recesión económica."
+  },
+  {
+    "id": "strat_0118",
+    "term_translation": "Modelo de negocio",
+    "definition_translation": "Un plan para la operación exitosa de un negocio, identificando fuentes de ingresos, base de clientes y productos.",
+    "example_translation": "El modelo de negocio de suscripción proporciona ingresos recurrentes predecibles."
+  },
+  {
+    "id": "strat_0119",
+    "term_translation": "Evidencia de auditoría",
+    "definition_translation": "Información recopilada por el auditor para respaldar la opinión de auditoría.",
+    "example_translation": "Las facturas y los extractos bancarios sirven como evidencia de auditoría primaria."
+  },
+  {
+    "id": "strat_0120",
+    "term_translation": "Patrimonio de los propietarios",
+    "definition_translation": "Los derechos del propietario sobre los activos del negocio.",
+    "example_translation": "Las ganancias retenidas contribuyeron al crecimiento del patrimonio de los propietarios."
+  },
+  {
+    "id": "strat_0121",
+    "term_translation": "Costes nocionales",
+    "definition_translation": "Costes que no implican un pago real de dinero, como el uso de locales propios.",
+    "example_translation": "Incluimos el alquiler como un coste nocional para comparar la rentabilidad con precisión."
+  },
+  {
+    "id": "strat_0122",
+    "term_translation": "Muestreo de auditoría",
+    "definition_translation": "La aplicación de procedimientos de auditoría a menos del 100% de los elementos en una población.",
+    "example_translation": "El muestreo de auditoría nos permite sacar conclusiones sin verificar cada recibo individual."
+  },
+  {
+    "id": "strat_0123",
+    "term_translation": "Riesgo percibido",
+    "definition_translation": "El juicio subjetivo que las personas hacen sobre las características y gravedad de un riesgo.",
+    "example_translation": "El riesgo percibido de volar es a menudo mayor que el de conducir, a pesar de las estadísticas."
+  },
+  {
+    "id": "strat_0124",
+    "term_translation": "Costes variables",
+    "definition_translation": "Gastos corporativos que cambian en proporción a la producción.",
+    "example_translation": "El embalaje y el envío son costes variables típicos."
+  },
+  {
+    "id": "strat_0125",
+    "term_translation": "Riesgo de seguro",
+    "definition_translation": "La posibilidad de pérdida que una compañía de seguros acuerda cubrir.",
+    "example_translation": "La aseguradora evaluó el riesgo de seguro antes de emitir la póliza."
+  },
+  {
+    "id": "strat_0126",
+    "term_translation": "Auditoría forense",
+    "definition_translation": "Un examen y evaluación de la información financiera de una empresa o individuo para su uso como evidencia en la corte.",
+    "example_translation": "Se ordenó una auditoría forense después de que surgieran acusaciones de fraude."
+  },
+  {
+    "id": "strat_0127",
+    "term_translation": "Activo diferido",
+    "definition_translation": "Un gasto que se traslada como un activo para ser amortizado en períodos futuros.",
+    "example_translation": "El seguro pagado por adelantado se registró como un activo diferido."
+  },
+  {
+    "id": "strat_0128",
+    "term_translation": "Riesgo de detección",
+    "definition_translation": "El riesgo de que los procedimientos realizados por el auditor no detecten un error.",
+    "example_translation": "El riesgo de detección puede reducirse mediante pruebas más rigurosas."
+  },
+  {
+    "id": "strat_0129",
+    "term_translation": "Activos del subsuelo",
+    "definition_translation": "Reservas probadas de depósitos minerales ubicados bajo tierra.",
+    "example_translation": "La riqueza de la nación depende en gran medida de sus activos del subsuelo como el petróleo y el gas."
+  },
+  {
+    "id": "strat_0130",
+    "term_translation": "Activos naturales",
+    "definition_translation": "Activos del entorno natural como el agua, el aire y los organismos vivos.",
+    "example_translation": "Los esfuerzos de conservación tienen como objetivo proteger los activos naturales para las generaciones futuras."
+  },
+  {
+    "id": "strat_0131",
+    "term_translation": "Reparto de utilidades",
+    "definition_translation": "Un plan de incentivos donde los empleados reciben una parte directa de los beneficios de la empresa.",
+    "example_translation": "El cheque de reparto de utilidades al final del año impulsó la moral."
+  },
+  {
+    "id": "strat_0132",
+    "term_translation": "Coste amortizado",
+    "definition_translation": "El valor inicial de un activo menos la amortización acumulada.",
+    "example_translation": "El bono se mantiene al coste amortizado en el balance general."
+  },
+  {
+    "id": "strat_0133",
+    "term_translation": "Beneficio imponible",
+    "definition_translation": "La parte del beneficio que está sujeta a impuestos según las leyes fiscales.",
+    "example_translation": "Las deducciones pueden reducir significativamente el beneficio imponible."
+  },
+  {
+    "id": "strat_0134",
+    "term_translation": "Mercado de productos",
+    "definition_translation": "El mercado donde se venden bienes o servicios finales a empresas y al sector público.",
+    "example_translation": "Estamos lanzando el nuevo modelo en un mercado de productos altamente competitivo."
+  },
+  {
+    "id": "strat_0135",
+    "term_translation": "Costes de puesta en marcha",
+    "definition_translation": "Costes no recurrentes asociados con el establecimiento de un negocio.",
+    "example_translation": "Los honorarios legales y las licencias son costes de puesta en marcha típicos."
+  },
+  {
+    "id": "strat_0136",
+    "term_translation": "Riesgo de liquidez",
+    "definition_translation": "El riesgo de que una empresa o banco no pueda cumplir con las demandas financieras a corto plazo.",
+    "example_translation": "Vender activos rápidamente con pérdidas es un síntoma de riesgo de liquidez."
+  },
+  {
+    "id": "strat_0137",
+    "term_translation": "Panorama de riesgos",
+    "definition_translation": "La vista completa de los riesgos potenciales que enfrenta una organización.",
+    "example_translation": "El panorama de riesgos ha cambiado drásticamente con el aumento de las amenazas cibernéticas."
+  },
+  {
+    "id": "strat_0138",
+    "term_translation": "Costes de exploración",
+    "definition_translation": "Costes incurridos al buscar nuevas oportunidades de negocio o recursos.",
+    "example_translation": "Los costes de exploración para el nuevo sitio minero fueron sustanciales."
+  },
+  {
+    "id": "strat_0139",
+    "term_translation": "Activos del segmento",
+    "definition_translation": "Aquellos activos operativos que son empleados por un segmento en sus actividades operativas.",
+    "example_translation": "Asignamos los activos del segmento basándonos en la contribución de ingresos de la división."
+  },
+  {
+    "id": "strat_0140",
+    "term_translation": "Mercado cautivo",
+    "definition_translation": "Un mercado donde los consumidores tienen opciones limitadas y deben comprar a un proveedor específico.",
+    "example_translation": "Los aeropuertos operan como un mercado cautivo para alimentos y bebidas."
+  },
+  {
+    "id": "strat_0141",
+    "term_translation": "Riesgo de flujo de caja",
+    "definition_translation": "El riesgo de fluctuaciones en la cantidad de efectivo que entra y sale.",
+    "example_translation": "Los negocios estacionales a menudo enfrentan un alto riesgo de flujo de caja en la temporada baja."
+  },
+  {
+    "id": "strat_0142",
+    "term_translation": "Coste histórico",
+    "definition_translation": "El valor monetario nominal original de un elemento económico.",
+    "example_translation": "La tierra generalmente se registra al coste histórico, no al valor de mercado actual."
+  },
+  {
+    "id": "strat_0143",
+    "term_translation": "Firma de auditoría pura",
+    "definition_translation": "Una firma que se especializa únicamente en servicios de auditoría sin ofrecer consultoría.",
+    "example_translation": "Para evitar conflictos de intereses, elegimos una firma de auditoría pura."
+  },
+  {
+    "id": "strat_0144",
+    "term_translation": "Autoridad de auditoría",
+    "definition_translation": "Un organismo oficial facultado para realizar auditorías.",
+    "example_translation": "La autoridad de auditoría exigió acceso a todas las comunicaciones por correo electrónico."
+  },
+  {
+    "id": "strat_0145",
+    "term_translation": "Coste del ciclo de vida",
+    "definition_translation": "El coste total de propiedad durante la vida útil de un activo.",
+    "example_translation": "Comprar equipos baratos a menudo resulta en un mayor coste del ciclo de vida debido a las reparaciones."
+  },
+  {
+    "id": "strat_0146",
+    "term_translation": "Mercado distinto",
+    "definition_translation": "Un segmento de mercado separado e identificable.",
+    "example_translation": "Los SUV de lujo se han convertido en un mercado distinto de los vehículos todoterreno estándar."
+  },
+  {
+    "id": "strat_0147",
+    "term_translation": "Beneficio retenido",
+    "definition_translation": "El beneficio que se mantiene en la empresa en lugar de pagarse como dividendos.",
+    "example_translation": "Utilizamos el beneficio retenido para financiar el nuevo laboratorio."
+  },
+  {
+    "id": "strat_0148",
+    "term_translation": "Prueba de cumplimiento",
+    "definition_translation": "Una prueba para determinar si los controles se están aplicando de manera que cumplan con las políticas y procedimientos de gestión.",
+    "example_translation": "La prueba de cumplimiento mostró que se estaban ignorando los protocolos de seguridad."
+  },
+  {
+    "id": "strat_0149",
+    "term_translation": "Activos físicos",
+    "definition_translation": "Artículos tangibles de valor, como inventario, maquinaria y edificios.",
+    "example_translation": "Los activos físicos requieren mantenimiento regular y seguros."
+  },
+  {
+    "id": "strat_0150",
+    "term_translation": "Asignación de costes",
+    "definition_translation": "El proceso de identificar, agregar y asignar costes a objetos de coste.",
+    "example_translation": "Una asignación de costes adecuada nos ayuda a entender qué productos son realmente rentables."
+  }
+]

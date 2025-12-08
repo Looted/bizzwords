@@ -77,8 +77,35 @@ export class MenuComponent implements OnInit {
 
   categories = [
     {
+      id: 'tech',
+      name: 'Tech',
+      icon: '💻',
+      bgClass: 'bg-indigo-50 hover:bg-indigo-100',
+      borderClass: 'border-indigo-200',
+      textClass: 'text-indigo-700',
+      ringClass: 'ring-indigo-500'
+    },
+    {
+      id: 'finance',
+      name: 'Finance',
+      icon: '💰',
+      bgClass: 'bg-emerald-50 hover:bg-emerald-100',
+      borderClass: 'border-emerald-200',
+      textClass: 'text-emerald-700',
+      ringClass: 'ring-emerald-500'
+    },
+    {
+      id: 'sales',
+      name: 'Sales',
+      icon: '📈',
+      bgClass: 'bg-orange-50 hover:bg-orange-100',
+      borderClass: 'border-orange-200',
+      textClass: 'text-orange-700',
+      ringClass: 'ring-orange-500'
+    },
+    {
       id: 'hr',
-      name: 'HR Words',
+      name: 'HR',
       icon: '👥',
       bgClass: 'bg-purple-50 hover:bg-purple-100',
       borderClass: 'border-purple-200',
@@ -86,13 +113,13 @@ export class MenuComponent implements OnInit {
       ringClass: 'ring-purple-500'
     },
     {
-      id: 'pm',
-      name: 'Project Management',
-      icon: '📊',
-      bgClass: 'bg-blue-50 hover:bg-blue-100',
-      borderClass: 'border-blue-200',
-      textClass: 'text-blue-700',
-      ringClass: 'ring-blue-500'
+      id: 'strategy',
+      name: 'Strategy',
+      icon: '🎯',
+      bgClass: 'bg-slate-50 hover:bg-slate-100',
+      borderClass: 'border-slate-200',
+      textClass: 'text-slate-700',
+      ringClass: 'ring-slate-500'
     }
   ];
 

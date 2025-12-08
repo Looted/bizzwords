@@ -1,4 +1,4 @@
-import { Component, input, output, inject, signal, HostListener, ChangeDetectionStrategy } from '@angular/core';
+import { Component, input, output, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
@@ -12,6 +12,9 @@ type AuthMode = 'signin' | 'signup';
   templateUrl: './email-signin-modal.html',
   styleUrl: './email-signin-modal.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '(document:keydown.escape)': 'onEscapeKey($event)'
+  }
 })
 export class EmailSigninModal {
   private authService = inject(AuthService);
@@ -31,7 +34,6 @@ export class EmailSigninModal {
   error = signal<string | null>(null);
 
   // Host listener for escape key
-  @HostListener('document:keydown.escape', ['$event'])
   onEscapeKey(event: Event) {
     if (this.isOpen()) {
       (event as KeyboardEvent).preventDefault();

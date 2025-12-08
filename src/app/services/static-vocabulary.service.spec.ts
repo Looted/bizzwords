@@ -1,39 +1,49 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { StaticVocabularyService } from './static-vocabulary.service';
-import { StorageService } from './storage.service';
-import { PLATFORM_ID } from '@angular/core';
-import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { firstValueFrom } from 'rxjs';
 
 describe('StaticVocabularyService', () => {
   let service: StaticVocabularyService;
   let httpMock: HttpTestingController;
-  let storageServiceMock: any;
 
-  const mockVocabulary = [
-    { english: 'hello', polish: 'cześć', difficulty: 1 },
-    { english: 'world', polish: 'świat', difficulty: 1 },
-    { english: 'computer', polish: 'komputer', difficulty: 2 },
-    { english: 'algorithm', polish: 'algorytm', difficulty: 3 },
-    { english: 'browser', polish: 'przeglądarka', difficulty: 1 },
+  const mockBaseData = [
+    {
+      id: '1',
+      term: 'employee',
+      definition: 'A person who works for a company',
+      example: 'The employee works 40 hours per week.',
+      metadata: { difficulty: 1, tags: ['hr'] }
+    },
+    {
+      id: '2',
+      term: 'salary',
+      definition: 'Money paid to an employee',
+      example: 'She receives a monthly salary.',
+      metadata: { difficulty: 2, tags: ['hr'] }
+    }
+  ];
+
+  const mockTranslationData = [
+    {
+      id: '1',
+      term_translation: 'pracownik',
+      definition_translation: 'Osoba pracująca w firmie',
+      example_translation: 'Pracownik pracuje 40 godzin tygodniowo.'
+    },
+    {
+      id: '2',
+      term_translation: 'wynagrodzenie',
+      definition_translation: 'Pieniądze wypłacane pracownikowi',
+      example_translation: 'Otrzymuje miesięczne wynagrodzenie.'
+    }
   ];
 
   beforeEach(() => {
-    storageServiceMock = {
-      getItem: vi.fn().mockReturnValue(null),
-      setItem: vi.fn(),
-      removeItem: vi.fn(),
-      clear: vi.fn()
-    };
-
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [
-        StaticVocabularyService,
-        { provide: StorageService, useValue: storageServiceMock },
-        { provide: PLATFORM_ID, useValue: 'browser' }
-      ]
+      providers: [StaticVocabularyService]
     });
     service = TestBed.inject(StaticVocabularyService);
     httpMock = TestBed.inject(HttpTestingController);
@@ -43,118 +53,131 @@ describe('StaticVocabularyService', () => {
     httpMock.verify();
   });
 
-  describe('generateWords', () => {
-    it('should generate vocabulary words from HTTP response', async () => {
-      const resultPromise = firstValueFrom(service.generateWords('HR', 3));
+  describe('getFilePrefix', () => {
+    it('should return correct prefix for finance', () => {
+      expect((service as any).getFilePrefix('finance')).toBe('fin');
+    });
 
-      const req = httpMock.expectOne('hr_eng_pl/vocabulary.json');
+    it('should return lowercase topic for other categories', () => {
+      expect((service as any).getFilePrefix('tech')).toBe('tech');
+      expect((service as any).getFilePrefix('HR')).toBe('hr');
+    });
+  });
+
+  describe('loadTranslationData', () => {
+    it('should load base English data for English language', async () => {
+      const resultPromise = firstValueFrom(service.loadTranslationData('hr', 'english'));
+
+      const req = httpMock.expectOne('/i18n/hr_en.json');
       expect(req.request.method).toBe('GET');
-      req.flush(mockVocabulary);
+      req.flush(mockBaseData);
 
       const result = await resultPromise;
 
-      expect(result).toHaveLength(3);
-      expect(result[0]).toHaveProperty('english');
-      expect(result[0]).toHaveProperty('translations');
-      expect(result[0]).not.toHaveProperty('difficulty'); // difficulty is filtered out
+      expect(result).toEqual(mockBaseData);
     });
 
-    it('should filter by difficulty when specified', async () => {
-      const resultPromise = firstValueFrom(service.generateWords('HR', 10, 2));
+    it('should load and merge translation data for non-English languages', async () => {
+      const resultPromise = firstValueFrom(service.loadTranslationData('hr', 'polish'));
 
-      const req = httpMock.expectOne('hr_eng_pl/vocabulary.json');
-      req.flush(mockVocabulary);
+      // First request for base data
+      const baseReq = httpMock.expectOne('/i18n/hr_en.json');
+      baseReq.flush(mockBaseData);
 
-      const result = await resultPromise;
-
-      expect(result).toHaveLength(1); // Only one word with difficulty 2
-      expect(result[0].english).toBe('computer');
-    });
-
-    it('should fall back to all words when no words match difficulty', async () => {
-      const resultPromise = firstValueFrom(service.generateWords('HR', 2, 99)); // No words have difficulty 99
-
-      const req = httpMock.expectOne('hr_eng_pl/vocabulary.json');
-      req.flush(mockVocabulary);
-
-      const result = await resultPromise;
-
-      expect(result).toHaveLength(2); // Falls back to all words
-    });
-
-    it('should limit results to requested count', async () => {
-      const resultPromise = firstValueFrom(service.generateWords('HR', 2));
-
-      const req = httpMock.expectOne('hr_eng_pl/vocabulary.json');
-      req.flush(mockVocabulary);
+      // Second request for translation data
+      const translationReq = httpMock.expectOne('/i18n/hr_pl.json');
+      translationReq.flush(mockTranslationData);
 
       const result = await resultPromise;
 
       expect(result).toHaveLength(2);
-    });
-
-    it('should return all available words when count exceeds total', async () => {
-      const resultPromise = firstValueFrom(service.generateWords('HR', 50));
-
-      const req = httpMock.expectOne('hr_eng_pl/vocabulary.json');
-      req.flush(mockVocabulary);
-
-      const result = await resultPromise;
-
-      expect(result).toHaveLength(5);
-    });
-
-    it('should return words without difficulty property', async () => {
-      const resultPromise = firstValueFrom(service.generateWords('HR', 1));
-
-      const req = httpMock.expectOne('hr_eng_pl/vocabulary.json');
-      req.flush(mockVocabulary);
-
-      const result = await resultPromise;
-
       expect(result[0]).toEqual({
-        english: expect.any(String),
-        translations: expect.any(Object)
+        ...mockBaseData[0],
+        term_translation: 'pracownik',
+        definition_translation: 'Osoba pracująca w firmie',
+        example_translation: 'Pracownik pracuje 40 godzin tygodniowo.'
       });
-      expect(result[0]).not.toHaveProperty('difficulty');
+    });
+
+    it('should fall back to base data when translation fails', async () => {
+      const resultPromise = firstValueFrom(service.loadTranslationData('hr', 'polish'));
+
+      const baseReq = httpMock.expectOne('/i18n/hr_en.json');
+      baseReq.flush(mockBaseData);
+
+      const translationReq = httpMock.expectOne('/i18n/hr_pl.json');
+      translationReq.error(new ErrorEvent('Network error'));
+
+      const result = await resultPromise;
+
+      expect(result).toEqual(mockBaseData);
+    });
+
+    it('should use correct file prefix for finance category', async () => {
+      const resultPromise = firstValueFrom(service.loadTranslationData('finance', 'english'));
+
+      const req = httpMock.expectOne('/i18n/fin_en.json');
+      req.flush(mockBaseData);
+
+      const result = await resultPromise;
+
+      expect(result).toEqual(mockBaseData);
     });
   });
 
-  describe('loadVocabulary', () => {
-    it('should load vocabulary from JSON file', async () => {
-      const resultPromise = firstValueFrom(service.loadVocabulary('hr'));
+  describe('generateTranslatedWords', () => {
+    it('should generate translated words from merged data', async () => {
+      const resultPromise = firstValueFrom(service.generateTranslatedWords('hr', 'polish', 2));
 
-      const req = httpMock.expectOne('hr_eng_pl/vocabulary.json');
-      expect(req.request.method).toBe('GET');
-      req.flush(mockVocabulary);
+      const baseReq = httpMock.expectOne('/i18n/hr_en.json');
+      baseReq.flush(mockBaseData);
+
+      const translationReq = httpMock.expectOne('/i18n/hr_pl.json');
+      translationReq.flush(mockTranslationData);
 
       const result = await resultPromise;
 
-      expect(result).toEqual(mockVocabulary);
+      expect(result).toHaveLength(2);
+      expect(result[0]).toEqual({
+        english: 'employee',
+        translations: {
+          english: 'employee',
+          polish: 'pracownik',
+          spanish: 'pracownik',
+          german: 'pracownik',
+          french: 'pracownik',
+          definition_english: 'A person who works for a company'
+        }
+      });
     });
 
-    it('should load PM vocabulary from different file', async () => {
-      const resultPromise = firstValueFrom(service.loadVocabulary('pm'));
+    it('should filter by difficulty when specified', async () => {
+      const resultPromise = firstValueFrom(service.generateTranslatedWords('hr', 'polish', 10, 2));
 
-      const req = httpMock.expectOne('pm_eng_pl/vocabulary.json');
-      expect(req.request.method).toBe('GET');
-      req.flush(mockVocabulary);
+      const baseReq = httpMock.expectOne('/i18n/hr_en.json');
+      baseReq.flush(mockBaseData);
+
+      const translationReq = httpMock.expectOne('/i18n/hr_pl.json');
+      translationReq.flush(mockTranslationData);
 
       const result = await resultPromise;
 
-      expect(result).toEqual(mockVocabulary);
+      expect(result).toHaveLength(1);
+      expect(result[0].english).toBe('salary');
     });
 
-    it('should fallback to HR vocabulary for unknown topics', async () => {
-      const resultPromise = firstValueFrom(service.loadVocabulary('unknown'));
+    it('should fall back to all words when no words match difficulty', async () => {
+      const resultPromise = firstValueFrom(service.generateTranslatedWords('hr', 'polish', 2, 99));
 
-      const req = httpMock.expectOne('hr_eng_pl/vocabulary.json');
-      expect(req.request.method).toBe('GET');
-      req.flush(mockVocabulary);
+      const baseReq = httpMock.expectOne('/i18n/hr_en.json');
+      baseReq.flush(mockBaseData);
+
+      const translationReq = httpMock.expectOne('/i18n/hr_pl.json');
+      translationReq.flush(mockTranslationData);
 
       const result = await resultPromise;
 
-      expect(result).toEqual(mockVocabulary);
+      expect(result).toHaveLength(2);
     });
   });
 });

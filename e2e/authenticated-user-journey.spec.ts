@@ -111,7 +111,7 @@ test.describe("Authenticated User Journey", () => {
     await expect(page.locator("app-language-switcher span.md\\:block")).toHaveText("Español");
 
     // Step 4: Play HR game (3 rounds)
-    await startGameSession(page, "HR Words", "Classic");
+    await startGameSession(page, "HR", "Classic");
     await playCompleteClassicGame(page, "meeting");
 
     await expect(page.locator("text=Session Complete!")).toBeVisible();

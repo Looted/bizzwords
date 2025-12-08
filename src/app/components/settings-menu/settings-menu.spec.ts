@@ -32,6 +32,8 @@ describe('SettingsMenu', () => {
       isAuthenticated: signal(false),
       isMigrating: signal(false),
       signInWithGoogle: vi.fn(),
+      signInWithEmail: vi.fn(),
+      signUpWithEmail: vi.fn(),
       signOut: vi.fn()
     };
 

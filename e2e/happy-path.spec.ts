@@ -11,8 +11,8 @@ test.describe("BizzWords Happy Path", () => {
     test("should load the main menu", async ({ page }) => {
       // Just verify the app loads properly
       await expect(page.locator("text=Master Business Lingo")).toBeVisible();
-      await expect(page.locator("text=HR Words")).toBeVisible();
-      await expect(page.locator("text=Project Management")).toBeVisible();
+      await expect(page.locator("text=HR")).toBeVisible();
+      await expect(page.locator("text=Tech")).toBeVisible();
     });
 
     test("should complete a classic game from start to summary", async ({ page }) => {
@@ -88,7 +88,7 @@ test.describe("BizzWords Happy Path", () => {
       await expect(page.locator("text=Master Business Lingo")).toBeVisible();
 
       // Click on HR category to go to config screen
-      await page.click("text=HR Words");
+      await page.click("text=HR");
 
       // Wait for screen transition and verify we're on the config screen
       await page.waitForTimeout(1000); // Allow time for screen transition

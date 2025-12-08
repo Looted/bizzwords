@@ -1,0 +1,902 @@
+[
+  {
+    "id": "strat_0001",
+    "term_translation": "Pion organizacyjny",
+    "definition_translation": "Wyodrębniona część firmy działająca jako oddzielna jednostka biznesowa, często posiadająca własną odpowiedzialność za zyski i straty.",
+    "example_translation": "Farmaceutyczny pion organizacyjny wygenerował w tym kwartale najwyższe przychody."
+  },
+  {
+    "id": "strat_0002",
+    "term_translation": "Zaniechanie",
+    "definition_translation": "Nieuwzględnienie lub niewspomnienie o czymś w sprawozdaniach finansowych, co może prowadzić do problemów ze zgodnością.",
+    "example_translation": "Audytor odnotował istotne zaniechanie dotyczące zobowiązań z tytułu toczących się procesów sądowych."
+  },
+  {
+    "id": "strat_0003",
+    "term_translation": "Rezerwa",
+    "definition_translation": "Kwota odłożona w księgach rachunkowych organizacji na poczet znanego zobowiązania o niepewnym terminie lub wysokości.",
+    "example_translation": "Firma utworzyła celową rezerwę na złe długi w oczekiwaniu na recesję."
+  },
+  {
+    "id": "strat_0004",
+    "term_translation": "Tworzenie wizji",
+    "definition_translation": "Strategiczny proces opracowywania jasnego obrazu przyszłości i celów organizacji.",
+    "example_translation": "Zarząd spędził wyjazd na tworzeniu wizji tego, jak firma powinna wyglądać za dziesięć lat."
+  },
+  {
+    "id": "strat_0005",
+    "term_translation": "Ład korporacyjny",
+    "definition_translation": "System zasad, praktyk i procesów, za pomocą których firma jest kierowana i kontrolowana.",
+    "example_translation": "Dobry ład korporacyjny zapewnia przejrzystość i odpowiedzialność wobec akcjonariuszy."
+  },
+  {
+    "id": "strat_0006",
+    "term_translation": "Plan premiowy",
+    "definition_translation": "System wynagrodzeń nagradzający pracowników za osiągnięcie określonych wyników.",
+    "example_translation": "Nowy plan premiowy jest powiązany z wynikami satysfakcji klientów, a nie tylko z wielkością sprzedaży."
+  },
+  {
+    "id": "strat_0007",
+    "term_translation": "Prowizja",
+    "definition_translation": "Zmienne wynagrodzenie wypłacane pracownikom w oparciu o wartość sfinalizowanej przez nich sprzedaży.",
+    "example_translation": "Agenci otrzymują 5% prowizji od każdej transakcji nieruchomościowej."
+  },
+  {
+    "id": "strat_0008",
+    "term_translation": "Plan działania",
+    "definition_translation": "Szczegółowa sekwencja kroków, które muszą zostać podjęte, aby zrealizować określoną strategię.",
+    "example_translation": "Musimy przekształcić tę strategię w konkretny plan działania z terminami."
+  },
+  {
+    "id": "strat_0009",
+    "term_translation": "Koszty bezpośrednie",
+    "definition_translation": "Wydatki, które można bezpośrednio przypisać do produkcji określonych towarów lub usług.",
+    "example_translation": "Surowce i robocizna to główne koszty bezpośrednie dla tej linii produktów."
+  },
+  {
+    "id": "strat_0010",
+    "term_translation": "Plan zbycia",
+    "definition_translation": "Strategiczne ustalenia dotyczące sprzedaży lub usunięcia aktywów, które nie są już potrzebne.",
+    "example_translation": "Plan zbycia starego wyposażenia fabrycznego zostanie zrealizowany w przyszłym miesiącu."
+  },
+  {
+    "id": "strat_0011",
+    "term_translation": "Aktywa przejmowane",
+    "definition_translation": "Określone zasoby lub nieruchomości, które firma zamierza nabyć w trakcie fuzji lub przejęcia.",
+    "example_translation": "Badanie due diligence ujawniło ukryte zobowiązania w aktywach przejmowanych."
+  },
+  {
+    "id": "strat_0012",
+    "term_translation": "Zakład na granicy rentowności",
+    "definition_translation": "Obiekt produkcyjny działający na krawędzi opłacalności, często zamykany jako pierwszy w czasie kryzysu.",
+    "example_translation": "Zdecydowaliśmy się zamknąć ten zakład na granicy rentowności, ponieważ koszty utrzymania przewyższały przychody."
+  },
+  {
+    "id": "strat_0013",
+    "term_translation": "Plan awaryjny",
+    "definition_translation": "Sposób postępowania opracowany w celu ograniczenia szkód wynikających z potencjalnych negatywnych zdarzeń.",
+    "example_translation": "Plan awaryjny został uruchomiony natychmiast po cyberataku."
+  },
+  {
+    "id": "strat_0014",
+    "term_translation": "Strategia kontroli",
+    "definition_translation": "Ogólne podejście określające zakres, harmonogram i kierunek procesu inspekcji.",
+    "example_translation": "Nasza strategia kontroli koncentruje się na obszarach wysokiego ryzyka, takich jak obrót gotówkowy i zamówienia."
+  },
+  {
+    "id": "strat_0015",
+    "term_translation": "Opłaty wstępne",
+    "definition_translation": "Koszty związane z uzyskaniem dostępu do określonego rynku, organizacji lub grupy handlowej.",
+    "example_translation": "Wysokie opłaty wstępne uniemożliwiają mniejszym konkurentom dołączenie do konsorcjum branżowego."
+  },
+  {
+    "id": "strat_0016",
+    "term_translation": "Koszty pośrednie",
+    "definition_translation": "Wydatki, których nie można bezpośrednio przypisać do obiektu kosztów (często nazywane kosztami ogólnymi).",
+    "example_translation": "Czynsz i media są klasyfikowane jako koszty pośrednie, ponieważ wspierają funkcjonowanie całego biura."
+  },
+  {
+    "id": "strat_0017",
+    "term_translation": "Biznes bezpośredni",
+    "definition_translation": "Transakcje przeprowadzane natychmiastowo między dostawcą a klientem bez pośredników.",
+    "example_translation": "Przejście na model biznesu bezpośredniego zwiększyło nasze marże poprzez wyeliminowanie dystrybutorów."
+  },
+  {
+    "id": "strat_0018",
+    "term_translation": "Ograniczanie skutków",
+    "definition_translation": "Działanie mające na celu zmniejszenie dotkliwości, powagi lub bolesności czegoś.",
+    "example_translation": "Strategie ograniczania skutków ryzyka obejmują dywersyfikację i ubezpieczenia."
+  },
+  {
+    "id": "strat_0019",
+    "term_translation": "Wydatki inwestycyjne",
+    "definition_translation": "Akt wydawania funduszy, często kapitalizowany w celu uzyskania długoterminowych korzyści.",
+    "example_translation": "Nakłady inwestycyjne na nową fabrykę były znaczące."
+  },
+  {
+    "id": "strat_0020",
+    "term_translation": "Rewizja finansowa",
+    "definition_translation": "Oficjalna kontrola ksiąg rachunkowych osoby lub organizacji, zazwyczaj przeprowadzana przez niezależny organ.",
+    "example_translation": "Coroczny audyt nie wykazał żadnych nieprawidłowości w księgowości."
+  },
+  {
+    "id": "strat_0021",
+    "term_translation": "Aktywo",
+    "definition_translation": "Zasób o wartości ekonomicznej, który jednostka lub korporacja posiada w oczekiwaniu na przyszłe korzyści.",
+    "example_translation": "Reputacja marki jest naszym najcenniejszym aktywem niematerialnym."
+  },
+  {
+    "id": "strat_0022",
+    "term_translation": "Zysk",
+    "definition_translation": "Korzyść finansowa, w szczególności różnica między kwotą zarobioną a wydaną.",
+    "example_translation": "Firma wypracowała spory zysk pomimo spowolnienia gospodarczego."
+  },
+  {
+    "id": "strat_0023",
+    "term_translation": "Majątek",
+    "definition_translation": "Całość mienia osoby, stowarzyszenia lub korporacji podlegająca wykorzystaniu na spłatę długów.",
+    "example_translation": "Sąd nakazał zamrożenie całego majątku korporacyjnego."
+  },
+  {
+    "id": "strat_0024",
+    "term_translation": "Projekcja",
+    "definition_translation": "Szacunek lub prognoza przyszłej sytuacji oparta na obecnych trendach.",
+    "example_translation": "Projekcja sprzedaży na czwarty kwartał wygląda optymistycznie w oparciu o obecne dane."
+  },
+  {
+    "id": "strat_0025",
+    "term_translation": "Przychód",
+    "definition_translation": "Całkowity dochód generowany z danego źródła przed odliczeniem kosztów.",
+    "example_translation": "Reklama jest głównym źródłem przychodu dla tego giganta mediów społecznościowych."
+  },
+  {
+    "id": "strat_0026",
+    "term_translation": "Koszt wycofania z eksploatacji",
+    "definition_translation": "Wydatki związane z zakończeniem cyklu życia produktu lub aktywa.",
+    "example_translation": "Musimy uwzględnić opłaty za recykling i utylizację jako część kosztu wycofania z eksploatacji."
+  },
+  {
+    "id": "strat_0027",
+    "term_translation": "Audyt informatyczny",
+    "definition_translation": "Badanie kontroli zarządczych w ramach infrastruktury technologii informacyjnej.",
+    "example_translation": "Audyt informatyczny ujawnił kilka luk w konfiguracji naszej zapory sieciowej."
+  },
+  {
+    "id": "strat_0028",
+    "term_translation": "Przedsięwzięcie",
+    "definition_translation": "Ryzykowne lub śmiałe działanie, zwłaszcza wiążące się z nowym ryzykiem handlowym.",
+    "example_translation": "Wspólne przedsięwzięcie dwóch gigantów technologicznych ma na celu rozwój procesorów kwantowych."
+  },
+  {
+    "id": "strat_0029",
+    "term_translation": "Kontrola skarbowa",
+    "definition_translation": "Badanie deklaracji podatkowej przez organ podatkowy w celu weryfikacji poprawności dochodów i odliczeń.",
+    "example_translation": "Zachowaj wszystkie paragony na wypadek kontroli skarbowej."
+  },
+  {
+    "id": "strat_0030",
+    "term_translation": "Zysk netto",
+    "definition_translation": "Rzeczywisty zysk po opłaceniu kosztów operacyjnych i podatków.",
+    "example_translation": "Po opłaceniu podatków i pensji nasz zysk netto był niższy niż oczekiwano."
+  },
+  {
+    "id": "strat_0031",
+    "term_translation": "Dokumentacja badania",
+    "definition_translation": "Folder lub miejsce przechowywania dokumentów dla konkretnego zlecenia audytowego.",
+    "example_translation": "Młodszy księgowy był odpowiedzialny za uporządkowanie dokumentacji badania."
+  },
+  {
+    "id": "strat_0032",
+    "term_translation": "Organ kontrolny",
+    "definition_translation": "Organizacja lub komitet oficjalnie powołany do przeprowadzania inspekcji.",
+    "example_translation": "Europejski organ kontrolny sprawdza wykorzystanie środków z dotacji."
+  },
+  {
+    "id": "strat_0033",
+    "term_translation": "Zgodność z przepisami",
+    "definition_translation": "Działanie lub fakt stosowania się do życzeń lub poleceń, a w szczególności regulacji prawnych (compliance).",
+    "example_translation": "Regulacyjna zgodność z przepisami jest głównym ośrodkiem kosztów dla instytucji bankowych."
+  },
+  {
+    "id": "strat_0034",
+    "term_translation": "Firma audytorska",
+    "definition_translation": "Przedsiębiorstwo świadczące usługi w zakresie rewizji finansowej i atestacji.",
+    "example_translation": "Zatrudniliśmy firmę audytorską z „Wielkiej Czwórki” do obsługi naszego debiutu giełdowego."
+  },
+  {
+    "id": "strat_0035",
+    "term_translation": "Ryzyko cenowe",
+    "definition_translation": "Ryzyko spadku wartości papieru wartościowego lub portfela inwestycyjnego.",
+    "example_translation": "Handlowcy towarowi stosują hedging, aby zarządzać ryzykiem cenowym."
+  },
+  {
+    "id": "strat_0036",
+    "term_translation": "Aktywa netto",
+    "definition_translation": "Całkowite aktywa firmy pomniejszone o jej całkowite zobowiązania.",
+    "example_translation": "Wartość księgowa firmy to w istocie jej aktywa netto."
+  },
+  {
+    "id": "strat_0037",
+    "term_translation": "Pomoc fiskalna",
+    "definition_translation": "Wsparcie finansowe udzielane przez rząd lub inne instytucje.",
+    "example_translation": "Borykający się z problemami sektor zwrócił się o pomoc fiskalną, aby przetrwać kryzys."
+  },
+  {
+    "id": "strat_0038",
+    "term_translation": "Aktywo pożyczkowe",
+    "definition_translation": "Pożyczka traktowana jako aktywo dla pożyczkodawcy (banku), ponieważ generuje dochód z odsetek.",
+    "example_translation": "Bank sprzedał część swojego portfela aktywów pożyczkowych, aby zwiększyć płynność."
+  },
+  {
+    "id": "strat_0039",
+    "term_translation": "Ryzyko badania",
+    "definition_translation": "Ryzyko, że audytor wyda niewłaściwą opinię, gdy sprawozdanie finansowe jest istotnie zniekształcone.",
+    "example_translation": "Aby zminimalizować ryzyko badania, zwiększyliśmy liczebność próby testowej."
+  },
+  {
+    "id": "strat_0040",
+    "term_translation": "Transakcja nabycia aktywów",
+    "definition_translation": "Rodzaj przejęcia, w którym kupujący nabywa poszczególne składniki majątku firmy, a nie jej udziały.",
+    "example_translation": "W transakcji nabycia aktywów kupujący może wybrać, które zobowiązania chce przejąć."
+  },
+  {
+    "id": "strat_0041",
+    "term_translation": "Zbywalny",
+    "definition_translation": "Możliwy do sprzedania lub wprowadzenia na rynek.",
+    "example_translation": "Musimy przekształcić ten prototyp w produkt zbywalny do trzeciego kwartału."
+  },
+  {
+    "id": "strat_0042",
+    "term_translation": "Pula aktywów",
+    "definition_translation": "Grupa aktywów połączonych w celu stworzenia papieru wartościowego.",
+    "example_translation": "Papier wartościowy zabezpieczony hipoteką powstał z dużej puli aktywów w postaci kredytów mieszkaniowych."
+  },
+  {
+    "id": "strat_0043",
+    "term_translation": "Koszty utopione",
+    "definition_translation": "Koszty, które zostały już poniesione i nie mogą zostać odzyskane.",
+    "example_translation": "Powinniśmy ignorować koszty utopione przy podejmowaniu decyzji o kontynuacji projektu."
+  },
+  {
+    "id": "strat_0044",
+    "term_translation": "Rynek",
+    "definition_translation": "Arena transakcji konkurencyjnych lub handlowych; świat handlu.",
+    "example_translation": "Na dzisiejszym globalnym rynku obecność cyfrowa jest obowiązkowa."
+  },
+  {
+    "id": "strat_0045",
+    "term_translation": "Obszar kontroli",
+    "definition_translation": "Określony zakres lub dział w organizacji podlegający inspekcji.",
+    "example_translation": "Obszar kontroli na ten rok obejmuje zagraniczne spółki zależne."
+  },
+  {
+    "id": "strat_0046",
+    "term_translation": "Toksyczne aktywa",
+    "definition_translation": "Aktywa, które stają się niepłynne, gdy znika ich rynek wtórny.",
+    "example_translation": "Bilans banku był obciążony toksycznymi aktywami po krachu na rynku mieszkaniowym."
+  },
+  {
+    "id": "strat_0047",
+    "term_translation": "Wspólna kontrola",
+    "definition_translation": "Audyt przeprowadzany przez dwie lub więcej firm audytorskich.",
+    "example_translation": "Wspólna kontrola jest często wymagana w przypadku wielkich międzynarodowych korporacji."
+  },
+  {
+    "id": "strat_0048",
+    "term_translation": "Środek trwały",
+    "definition_translation": "Aktywa zakupione do długoterminowego użytkowania (np. grunty, budynki, sprzęt).",
+    "example_translation": "Środek trwały zazwyczaj nie może zostać szybko zamieniony na gotówkę."
+  },
+  {
+    "id": "strat_0049",
+    "term_translation": "Koszty stałe",
+    "definition_translation": "Koszty działalności, takie jak czynsz, które pozostają niezmienne niezależnie od ilości wyprodukowanych towarów.",
+    "example_translation": "Startupy powinny utrzymywać niskie koszty stałe, aby wydłużyć czas swojego funkcjonowania."
+  },
+  {
+    "id": "strat_0050",
+    "term_translation": "Ścieżka audytu",
+    "definition_translation": "Rejestr krok po kroku, dzięki któremu dane księgowe lub handlowe można prześledzić do źródła.",
+    "example_translation": "Blockchain zapewnia niezmienną ścieżkę audytu dla każdej transakcji."
+  },
+  {
+    "id": "strat_0051",
+    "term_translation": "Rynek wiodący",
+    "definition_translation": "Rynek, na którym dana innowacja jest po raz pierwszy szeroko przyjmowana.",
+    "example_translation": "Skandynawia jest często uważana za rynek wiodący dla pojazdów elektrycznych."
+  },
+  {
+    "id": "strat_0052",
+    "term_translation": "Koszty wsadu",
+    "definition_translation": "Koszty związane z zasobami wykorzystywanymi do produkcji towaru lub usługi.",
+    "example_translation": "Rosnące ceny energii znacząco zwiększyły nasze koszty wsadu."
+  },
+  {
+    "id": "strat_0053",
+    "term_translation": "Ryzyko kredytowe",
+    "definition_translation": "Ryzyko niewywiązania się z długu, wynikające z braku spłaty przez pożyczkobiorcę.",
+    "example_translation": "Banki analizują historię klienta, aby ocenić ryzyko kredytowe przed udzieleniem pożyczki."
+  },
+  {
+    "id": "strat_0054",
+    "term_translation": "Koszt przyjęty",
+    "definition_translation": "Kwota używana jako zamiennik kosztu lub kosztu zamortyzowanego na dany dzień.",
+    "example_translation": "Użyliśmy wartości godziwej gruntu jako jego kosztu przyjętego przy przejściu na MSSF."
+  },
+  {
+    "id": "strat_0055",
+    "term_translation": "Metoda kosztowa",
+    "definition_translation": "Metoda księgowania inwestycji, w której jest ona rejestrowana po cenie zakupu.",
+    "example_translation": "Zgodnie z metodą kosztową, dywidendy są księgowane jako dochód."
+  },
+  {
+    "id": "strat_0056",
+    "term_translation": "Koszt czynników produkcji",
+    "definition_translation": "Koszt zasobów (ziemi, pracy, kapitału) wykorzystywanych do produkcji towarów.",
+    "example_translation": "Ekonomiści analizują koszt czynników produkcji, aby zrozumieć przyczyny inflacji."
+  },
+  {
+    "id": "strat_0057",
+    "term_translation": "Zakres kontroli",
+    "definition_translation": "Głębokość i zasięg audytu, w tym to, co jest, a co nie jest objęte badaniem.",
+    "example_translation": "Zakres kontroli został ograniczony wyłącznie do operacji krajowych."
+  },
+  {
+    "id": "strat_0058",
+    "term_translation": "Interesariusz",
+    "definition_translation": "Strona, która ma interes w firmie i może wpływać na biznes lub odczuwać skutki jego działania.",
+    "example_translation": "Musimy zarządzać oczekiwaniami każdego interesariusza odnośnie harmonogramu projektu."
+  },
+  {
+    "id": "strat_0059",
+    "term_translation": "Projekt teleinformatyczny",
+    "definition_translation": "Przedsięwzięcie obejmujące technologie informacyjno-komunikacyjne (ICT).",
+    "example_translation": "Rząd uruchomił ogromny projekt teleinformatyczny mający na celu cyfryzację dokumentacji medycznej."
+  },
+  {
+    "id": "strat_0060",
+    "term_translation": "Siła rynkowa",
+    "definition_translation": "Zdolność firmy do podniesienia ceny rynkowej towaru powyżej kosztu krańcowego z zyskiem.",
+    "example_translation": "Monopol ma nadmierną siłę rynkową i może dyktować ceny."
+  },
+  {
+    "id": "strat_0061",
+    "term_translation": "Wejście na rynek",
+    "definition_translation": "Ruch firmy w kierunku rozpoczęcia działalności w nowym segmencie lub kraju.",
+    "example_translation": "Bariery utrudniające wejście na rynek obejmują wysokie wymogi kapitałowe i patenty."
+  },
+  {
+    "id": "strat_0062",
+    "term_translation": "Podział ryzyka",
+    "definition_translation": "Strategia, w której ryzyko jest rozłożone na kilku uczestników.",
+    "example_translation": "Ubezpieczenie jest klasyczną formą podziału ryzyka."
+  },
+  {
+    "id": "strat_0063",
+    "term_translation": "Udział kapitałowy",
+    "definition_translation": "Akcja lub udział dający posiadaczowi prawo głosu i prawo do dywidendy.",
+    "example_translation": "Inwestowanie w udział kapitałowy oferuje wyższy potencjalny zwrot niż obligacje."
+  },
+  {
+    "id": "strat_0064",
+    "term_translation": "Koszt obsługi",
+    "definition_translation": "Koszt związany ze świadczeniem usługi klientowi.",
+    "example_translation": "Automatyzacja pomogła obniżyć koszt obsługi pojedynczego zgłoszenia."
+  },
+  {
+    "id": "strat_0065",
+    "term_translation": "Koszt bieżący",
+    "definition_translation": "Koszt, który byłby wymagany do odtworzenia aktywa w bieżącym okresie.",
+    "example_translation": "Księgowość oparta na koszcie bieżącym odzwierciedla inflację lepiej niż dane historyczne."
+  },
+  {
+    "id": "strat_0066",
+    "term_translation": "Emisja akcji",
+    "definition_translation": "Akt oferowania udziałów firmy publiczności lub inwestorom.",
+    "example_translation": "Firma zaplanowała nową emisję akcji, aby sfinansować swoją ekspansję."
+  },
+  {
+    "id": "strat_0067",
+    "term_translation": "Koszt ukryty",
+    "definition_translation": "Koszt alternatywny, który nie jest bezpośrednim wydatkiem pieniężnym.",
+    "example_translation": "Koszt ukryty pozostawienia wakatu to utracona produktywność."
+  },
+  {
+    "id": "strat_0068",
+    "term_translation": "Ryzyko kontroli",
+    "definition_translation": "Ryzyko, że istotne zniekształcenie nie zostanie zapobieżone lub wykryte przez kontrolę wewnętrzną.",
+    "example_translation": "Słabe polityki haseł zwiększają ryzyko kontroli dla systemu IT."
+  },
+  {
+    "id": "strat_0069",
+    "term_translation": "Audyt systemowy",
+    "definition_translation": "Kontrola systemów i procedur używanych do rejestrowania transakcji.",
+    "example_translation": "Audyt systemowy potwierdził, że procedury tworzenia kopii zapasowych działają poprawnie."
+  },
+  {
+    "id": "strat_0070",
+    "term_translation": "Profil ryzyka",
+    "definition_translation": "Ocena skłonności i zdolności danej osoby lub organizacji do podejmowania ryzyka.",
+    "example_translation": "Konserwatywny inwestor ma zazwyczaj niski profil ryzyka."
+  },
+  {
+    "id": "strat_0071",
+    "term_translation": "Suma aktywów",
+    "definition_translation": "Łączna wartość wszystkich aktywów obrotowych i trwałych posiadanych przez organizację.",
+    "example_translation": "Suma aktywów firmy przekroczyła w zeszłym roku miliard dolarów."
+  },
+  {
+    "id": "strat_0072",
+    "term_translation": "Finansowanie ryzyka",
+    "definition_translation": "Zarządzanie finansowym wpływem ryzyka, często poprzez ubezpieczenie lub retencję.",
+    "example_translation": "Ubezpieczenia typu captive to zaawansowana forma finansowania ryzyka."
+  },
+  {
+    "id": "strat_0073",
+    "term_translation": "Sprawozdanie z badania",
+    "definition_translation": "Dokument przygotowany przez audytora stwierdzający, czy sprawozdania finansowe są rzetelne.",
+    "example_translation": "Akcjonariusze z ulgą przyjęli czyste sprawozdanie z badania."
+  },
+  {
+    "id": "strat_0074",
+    "term_translation": "Indeks giełdowy",
+    "definition_translation": "Statystyczna miara zmian w portfelu akcji reprezentującym część całego rynku.",
+    "example_translation": "S&P 500 to dobrze znany indeks giełdowy."
+  },
+  {
+    "id": "strat_0075",
+    "term_translation": "Aktywo zabezpieczane",
+    "definition_translation": "Aktywo, które zostało ochronione przed ryzykiem poprzez inwestycję kompensującą.",
+    "example_translation": "Mimo krachu na rynku, wartość aktywa zabezpieczanego pozostała stabilna."
+  },
+  {
+    "id": "strat_0076",
+    "term_translation": "Przedmiot leasingu",
+    "definition_translation": "Nieruchomość lub sprzęt używany przez leasingobiorcę w zamian za płatności na rzecz leasingodawcy.",
+    "example_translation": "Linia lotnicza nie posiada samolotów na własność; każdy z nich to przedmiot leasingu."
+  },
+  {
+    "id": "strat_0077",
+    "term_translation": "Udział w rynku",
+    "definition_translation": "Część rynku kontrolowana przez konkretną firmę lub produkt.",
+    "example_translation": "Agresywna polityka cenowa pomogła im zdobyć znaczący udział w rynku."
+  },
+  {
+    "id": "strat_0078",
+    "term_translation": "Cena rynkowa",
+    "definition_translation": "Aktualna cena, po której można kupić lub sprzedać aktywo lub usługę.",
+    "example_translation": "Oferta była znacznie poniżej aktualnej ceny rynkowej."
+  },
+  {
+    "id": "strat_0079",
+    "term_translation": "Rozległość badania",
+    "definition_translation": "Ilość uzyskanych dowodów badania, zazwyczaj określona wielkością próby.",
+    "example_translation": "Zwiększyliśmy rozległość badania po znalezieniu wstępnych rozbieżności."
+  },
+  {
+    "id": "strat_0080",
+    "term_translation": "Audyt wstępny",
+    "definition_translation": "Kontrola przeprowadzana przed zakończeniem okresu rozliczeniowego.",
+    "example_translation": "Audyt wstępny pomógł zidentyfikować problemy przed zamknięciem roku."
+  },
+  {
+    "id": "strat_0081",
+    "term_translation": "Posiadacz kapitału",
+    "definition_translation": "Osoba lub podmiot posiadający udziały w firmie.",
+    "example_translation": "Jako posiadacz kapitału masz prawo głosować nad powołaniem zarządu."
+  },
+  {
+    "id": "strat_0082",
+    "term_translation": "Koszt resztkowy",
+    "definition_translation": "Pozostała wartość aktywa po zakończeniu jego okresu użytkowania.",
+    "example_translation": "Koszt resztkowy był znikomy, ponieważ maszyna została w całości zezłomowana."
+  },
+  {
+    "id": "strat_0083",
+    "term_translation": "Analiza ryzyka",
+    "definition_translation": "Proces identyfikacji i oceny potencjalnych problemów, które mogą negatywnie wpłynąć na kluczowe inicjatywy biznesowe.",
+    "example_translation": "Dokładna analiza ryzyka jest wymagana przed zatwierdzeniem lokalizacji nowej fabryki."
+  },
+  {
+    "id": "strat_0084",
+    "term_translation": "Dane biznesowe",
+    "definition_translation": "Informacje dotyczące operacji handlowych, sprzedaży i zachowań klientów.",
+    "example_translation": "Ochrona wrażliwych danych biznesowych jest priorytetem dla bezpieczeństwa IT."
+  },
+  {
+    "id": "strat_0085",
+    "term_translation": "Nazwa firmy",
+    "definition_translation": "Nazwa, pod którą przedsiębiorstwo prowadzi działalność.",
+    "example_translation": "Musisz zarejestrować nazwę firmy w lokalnym urzędzie."
+  },
+  {
+    "id": "strat_0086",
+    "term_translation": "Przychody ze sprzedaży",
+    "definition_translation": "Dochód uzyskany ze sprzedaży towarów lub usług.",
+    "example_translation": "Przychody ze sprzedaży w czwartym kwartale przekroczyły prognozy o dwadzieścia procent."
+  },
+  {
+    "id": "strat_0087",
+    "term_translation": "Audytor grupy",
+    "definition_translation": "Biegły rewident odpowiedzialny za raportowanie skonsolidowanych sprawozdań finansowych grupy.",
+    "example_translation": "Audytor grupy koordynuje działania z lokalnymi audytorami w każdym kraju spółki zależnej."
+  },
+  {
+    "id": "strat_0088",
+    "term_translation": "Kontroler państwowy",
+    "definition_translation": "Urzędnik publiczny odpowiedzialny za audyt agencji rządowych.",
+    "example_translation": "Kontroler państwowy opublikował raport krytykujący wydatki departamentu."
+  },
+  {
+    "id": "strat_0089",
+    "term_translation": "Opinia z badania",
+    "definition_translation": "Certyfikat dołączony do sprawozdania finansowego, oparty na kontroli procedur i zapisów.",
+    "example_translation": "Negatywna opinia z badania może poważnie zaszkodzić kursowi akcji firmy."
+  },
+  {
+    "id": "strat_0090",
+    "term_translation": "Cena nabycia",
+    "definition_translation": "Całkowita cena zapłacona za nabycie aktywa, w tym instalacja i transport.",
+    "example_translation": "Koszt historyczny budynku był znacznie niższy niż jego obecna wartość rynkowa."
+  },
+  {
+    "id": "strat_0091",
+    "term_translation": "Marża zysku",
+    "definition_translation": "Kwota, o którą przychody ze sprzedaży przewyższają koszty w przedsiębiorstwie.",
+    "example_translation": "Dobra luksusowe zazwyczaj mają bardzo wysoką marżę zysku."
+  },
+  {
+    "id": "strat_0092",
+    "term_translation": "Koszty sprzedaży",
+    "definition_translation": "Dodatkowe koszty bezpośrednio związane ze zbyciem aktywa.",
+    "example_translation": "Odliczyliśmy koszty sprzedaży od wartości godziwej, aby określić wartość netto możliwą do realizacji."
+  },
+  {
+    "id": "strat_0093",
+    "term_translation": "Aktywa obrotowe",
+    "definition_translation": "Gotówka i inne zasoby, które mają zostać zamienione na gotówkę w ciągu roku.",
+    "example_translation": "Zapasy są uznawane za aktywa obrotowe."
+  },
+  {
+    "id": "strat_0094",
+    "term_translation": "Ryzyko próby",
+    "definition_translation": "Prawdopodobieństwo, że wniosek audytora oparty na próbie będzie inny niż gdyby badaniu poddano całą populację.",
+    "example_translation": "Użycie większego zbioru danych pomaga zmniejszyć ryzyko próby."
+  },
+  {
+    "id": "strat_0095",
+    "term_translation": "Wartość zagrożona",
+    "definition_translation": "Statystyka, która mierzy i kwantyfikuje poziom ryzyka finansowego w firmie w określonym czasie (VaR).",
+    "example_translation": "Banki stosują modele wartości zagrożonej, aby określić, ile kapitału muszą posiadać."
+  },
+  {
+    "id": "strat_0096",
+    "term_translation": "Dojrzały rynek",
+    "definition_translation": "Rynek, na którym branża osiągnęła stan równowagi, a wzrost jest powolny.",
+    "example_translation": "Trudno jest znaleźć nowych klientów na tak dojrzałym rynku."
+  },
+  {
+    "id": "strat_0097",
+    "term_translation": "Audyt obserwowany",
+    "definition_translation": "Kontrola, podczas której obserwator przygląda się pracy audytora, aby zapewnić jakość.",
+    "example_translation": "Organ akredytacyjny przeprowadził audyt obserwowany naszego procesu certyfikacji."
+  },
+  {
+    "id": "strat_0098",
+    "term_translation": "Koszt odsetkowy",
+    "definition_translation": "Skumulowana kwota odsetek, którą pożyczkobiorca płaci od pożyczki.",
+    "example_translation": "Refinansowanie pomogło znacząco obniżyć roczny koszt odsetkowy."
+  },
+  {
+    "id": "strat_0099",
+    "term_translation": "Metoda praw własności",
+    "definition_translation": "Technika księgowa używana przez firmy do oceny zysków uzyskanych z inwestycji w inne spółki.",
+    "example_translation": "Ponieważ posiadamy 30% udziałów w spółce stowarzyszonej, stosujemy metodę praw własności."
+  },
+  {
+    "id": "strat_0100",
+    "term_translation": "Ekspozycja na ryzyko",
+    "definition_translation": "Miara potencjalnej przyszłej straty wynikającej z określonego działania lub zdarzenia.",
+    "example_translation": "Strategie hedgingowe są projektowane w celu ograniczenia ekspozycji na ryzyko."
+  },
+  {
+    "id": "strat_0101",
+    "term_translation": "Zmęczenie audytem",
+    "definition_translation": "Znużenie doświadczane przez pracowników poddawanych częstym lub ciągłym kontrolom.",
+    "example_translation": "Aby zapobiec zmęczeniu audytem, połączyliśmy inspekcje bezpieczeństwa i jakości."
+  },
+  {
+    "id": "strat_0102",
+    "term_translation": "Audyt ex ante",
+    "definition_translation": "Kontrola przeprowadzana przed zawarciem transakcji lub rozpoczęciem działania.",
+    "example_translation": "Audyt ex ante zapewnia, że budżet projektu jest realistyczny przed jego zatwierdzeniem."
+  },
+  {
+    "id": "strat_0103",
+    "term_translation": "Przegląd audytowy",
+    "definition_translation": "Wstępna weryfikacja dokumentów przed rozpoczęciem oficjalnej kontroli.",
+    "example_translation": "Przegląd audytowy pomógł nam zorganizować niezbędne pliki z wyprzedzeniem."
+  },
+  {
+    "id": "strat_0104",
+    "term_translation": "Ryzyko nieodłączne",
+    "definition_translation": "Ryzyko błędu w sprawozdaniu finansowym wynikające z czynników innych niż błąd kontroli wewnętrznej.",
+    "example_translation": "Obrót gotówkowy wiąże się z wysokim ryzykiem nieodłącznym kradzieży."
+  },
+  {
+    "id": "strat_0105",
+    "term_translation": "Aktywny rynek",
+    "definition_translation": "Rynek, na którym transakcje dotyczące danego aktywa odbywają się z wystarczającą częstotliwością i wolumenem.",
+    "example_translation": "Nie ma aktywnego rynku dla tego typu specjalistycznych maszyn."
+  },
+  {
+    "id": "strat_0106",
+    "term_translation": "Jednostka biznesowa",
+    "definition_translation": "Logiczny segment firmy reprezentujący określoną funkcję biznesową.",
+    "example_translation": "Każda jednostka biznesowa ma swojego przedstawiciela HR."
+  },
+  {
+    "id": "strat_0107",
+    "term_translation": "Samokontrola",
+    "definition_translation": "Proces przeglądu własnej pracy lub działu.",
+    "example_translation": "Samokontrola jest zachęcana, ale nie może zastąpić niezależnej weryfikacji."
+  },
+  {
+    "id": "strat_0108",
+    "term_translation": "Reguła biznesowa",
+    "definition_translation": "Zasada, która definiuje lub ogranicza pewien aspekt działalności i zawsze przyjmuje wartość prawda lub fałsz.",
+    "example_translation": "Reguła biznesowa uniemożliwia systemowi przetwarzanie zamówień bez poprawnego adresu."
+  },
+  {
+    "id": "strat_0109",
+    "term_translation": "Zapytanie audytowe",
+    "definition_translation": "Konkretne pytanie lub prośba o informacje skierowana przez audytora.",
+    "example_translation": "Otrzymaliśmy zapytanie audytowe dotyczące wydatków na podróże w marcu."
+  },
+  {
+    "id": "strat_0110",
+    "term_translation": "Wybrana kontrola",
+    "definition_translation": "Audyt przeprowadzany na określonym podzbiorze danych lub w konkretnym dziale.",
+    "example_translation": "Urząd skarbowy przeprowadził wybraną kontrolę naszych list płac."
+  },
+  {
+    "id": "strat_0111",
+    "term_translation": "Podejście do audytu",
+    "definition_translation": "Strategia stosowana przez audytora do przeprowadzenia badania.",
+    "example_translation": "Przyjęliśmy podejście do audytu oparte na ryzyku, aby skupić się na najbardziej krytycznych obszarach."
+  },
+  {
+    "id": "strat_0112",
+    "term_translation": "Zasoby oprogramowania",
+    "definition_translation": "Licencja na oprogramowanie lub aplikacja mająca wartość dla organizacji.",
+    "example_translation": "Zarządzanie każdym zasobem oprogramowania jest kluczowe, aby uniknąć kar licencyjnych."
+  },
+  {
+    "id": "strat_0113",
+    "term_translation": "Audyt środowiskowy",
+    "definition_translation": "Ocena wpływu organizacji na środowisko naturalne.",
+    "example_translation": "Audyt środowiskowy pomaga firmom poprawić ich wizerunek w zakresie zrównoważonego rozwoju."
+  },
+  {
+    "id": "strat_0114",
+    "term_translation": "Audyt wewnętrzny",
+    "definition_translation": "Niezależna działalność doradcza mająca na celu dodanie wartości i usprawnienie operacji organizacji.",
+    "example_translation": "Dział audytu wewnętrznego raportuje bezpośrednio do Komitetu Audytu."
+  },
+  {
+    "id": "strat_0115",
+    "term_translation": "Aktywa pieniężne",
+    "definition_translation": "Zasoby ustalone w walucie, takie jak gotówka lub należności.",
+    "example_translation": "Inflacja zmniejsza siłę nabywczą aktywów pieniężnych."
+  },
+  {
+    "id": "strat_0116",
+    "term_translation": "Audyt zewnętrzny",
+    "definition_translation": "Kontrola przeprowadzana przez niezależnego księgowego, który nie jest pracownikiem firmy.",
+    "example_translation": "Audyt zewnętrzny jest wymagany dla wszystkich spółek publicznych."
+  },
+  {
+    "id": "strat_0117",
+    "term_translation": "Ryzyko finansowe",
+    "definition_translation": "Niebezpieczeństwo, że firma nie będzie w stanie sprostać swoim zobowiązaniom finansowym.",
+    "example_translation": "Wysoka dźwignia zwiększa ryzyko finansowe w czasie spowolnienia gospodarczego."
+  },
+  {
+    "id": "strat_0118",
+    "term_translation": "Model biznesowy",
+    "definition_translation": "Plan skutecznego działania firmy, określający źródła przychodów, grupę docelową i produkty.",
+    "example_translation": "Subskrypcyjny model biznesowy zapewnia przewidywalny, powtarzalny przychód."
+  },
+  {
+    "id": "strat_0119",
+    "term_translation": "Dowody badania",
+    "definition_translation": "Informacje zebrane przez audytora na poparcie jego opinii.",
+    "example_translation": "Faktury i wyciągi bankowe służą jako główne dowody badania."
+  },
+  {
+    "id": "strat_0120",
+    "term_translation": "Kapitał własny",
+    "definition_translation": "Prawa właściciela do aktywów przedsiębiorstwa.",
+    "example_translation": "Zyski zatrzymane przyczyniły się do wzrostu kapitału własnego."
+  },
+  {
+    "id": "strat_0121",
+    "term_translation": "Koszty umowne",
+    "definition_translation": "Koszty, które nie wiążą się z rzeczywistą płatnością pieniężną, np. wykorzystanie własnego lokalu.",
+    "example_translation": "Uwzględniliśmy czynsz jako koszt umowny, aby dokładnie porównać rentowność."
+  },
+  {
+    "id": "strat_0122",
+    "term_translation": "Dobór próby",
+    "definition_translation": "Zastosowanie procedur audytowych do mniej niż 100% pozycji w populacji.",
+    "example_translation": "Dobór próby pozwala nam wyciągać wnioski bez sprawdzania każdego pojedynczego paragonu."
+  },
+  {
+    "id": "strat_0123",
+    "term_translation": "Postrzegane ryzyko",
+    "definition_translation": "Subiektywna ocena, jaką ludzie wydają na temat cech i powagi zagrożenia.",
+    "example_translation": "Postrzegane ryzyko latania jest często wyższe niż jazdy samochodem, pomimo statystyk."
+  },
+  {
+    "id": "strat_0124",
+    "term_translation": "Koszty zmienne",
+    "definition_translation": "Wydatki firmowe, które zmieniają się proporcjonalnie do wielkości produkcji.",
+    "example_translation": "Opakowania i wysyłka to typowe koszty zmienne."
+  },
+  {
+    "id": "strat_0125",
+    "term_translation": "Ryzyko ubezpieczeniowe",
+    "definition_translation": "Możliwość wystąpienia straty, którą firma ubezpieczeniowa zgadza się pokryć.",
+    "example_translation": "Ubezpieczyciel ocenił ryzyko ubezpieczeniowe przed wystawieniem polisy."
+  },
+  {
+    "id": "strat_0126",
+    "term_translation": "Audyt śledczy",
+    "definition_translation": "Badanie i ocena informacji finansowych firmy lub osoby fizycznej do wykorzystania jako dowód w sądzie.",
+    "example_translation": "Audyt śledczy został zlecony po pojawieniu się zarzutów o oszustwo."
+  },
+  {
+    "id": "strat_0127",
+    "term_translation": "Aktywo odroczone",
+    "definition_translation": "Wydatek przeniesiony na przyszłe okresy jako aktywo do amortyzacji.",
+    "example_translation": "Opłacone z góry ubezpieczenie zostało zaksięgowane jako aktywo odroczone."
+  },
+  {
+    "id": "strat_0128",
+    "term_translation": "Ryzyko niewykrycia",
+    "definition_translation": "Ryzyko, że procedury wykonane przez audytora nie wykryją zniekształcenia.",
+    "example_translation": "Ryzyko niewykrycia można obniżyć poprzez bardziej rygorystyczne testy."
+  },
+  {
+    "id": "strat_0129",
+    "term_translation": "Zasoby podziemne",
+    "definition_translation": "Udowodnione rezerwy złóż mineralnych znajdujących się pod ziemią.",
+    "example_translation": "Bogactwo narodu zależy w dużej mierze od jego zasobów podziemnych, takich jak ropa i gaz."
+  },
+  {
+    "id": "strat_0130",
+    "term_translation": "Zasoby naturalne",
+    "definition_translation": "Aktywa środowiska naturalnego, takie jak woda, powietrze i organizmy żywe.",
+    "example_translation": "Działania ochronne mają na celu zabezpieczenie zasobów naturalnych dla przyszłych pokoleń."
+  },
+  {
+    "id": "strat_0131",
+    "term_translation": "Udział w zyskach",
+    "definition_translation": "Plan motywacyjny, w ramach którego pracownicy otrzymują bezpośrednią część zysków firmy.",
+    "example_translation": "Czek z udziałem w zyskach na koniec roku podniósł morale załogi."
+  },
+  {
+    "id": "strat_0132",
+    "term_translation": "Skorygowana cena nabycia",
+    "definition_translation": "Początkowa wartość aktywa pomniejszona o skumulowaną amortyzację (amortised cost).",
+    "example_translation": "Obligacja jest utrzymywana w bilansie według skorygowanej ceny nabycia."
+  },
+  {
+    "id": "strat_0133",
+    "term_translation": "Dochód do opodatkowania",
+    "definition_translation": "Część zysku, która podlega opodatkowaniu zgodnie z prawem podatkowym.",
+    "example_translation": "Odliczenia mogą znacznie zmniejszyć dochód do opodatkowania."
+  },
+  {
+    "id": "strat_0134",
+    "term_translation": "Rynek produktu",
+    "definition_translation": "Rynek, na którym finalne towary lub usługi są sprzedawane firmom i sektorowi publicznemu.",
+    "example_translation": "Wprowadzamy nowy model na wysoce konkurencyjny rynek produktu."
+  },
+  {
+    "id": "strat_0135",
+    "term_translation": "Koszty początkowe",
+    "definition_translation": "Jednorazowe koszty związane z założeniem firmy.",
+    "example_translation": "Opłaty prawne i licencyjne to typowe koszty początkowe."
+  },
+  {
+    "id": "strat_0136",
+    "term_translation": "Ryzyko płynności",
+    "definition_translation": "Niebezpieczeństwo, że firma lub bank nie będą w stanie sprostać krótkoterminowym żądaniom finansowym.",
+    "example_translation": "Szybka sprzedaż aktywów ze stratą jest objawem ryzyka płynności."
+  },
+  {
+    "id": "strat_0137",
+    "term_translation": "Krajobraz ryzyka",
+    "definition_translation": "Pełny obraz potencjalnych zagrożeń, przed którymi stoi organizacja.",
+    "example_translation": "Krajobraz ryzyka zmienił się diametralnie wraz ze wzrostem cyberzagrożeń."
+  },
+  {
+    "id": "strat_0138",
+    "term_translation": "Koszty rozpoznania",
+    "definition_translation": "Wydatki poniesione podczas poszukiwania nowych możliwości biznesowych lub zasobów.",
+    "example_translation": "Koszty rozpoznania dla nowej lokalizacji kopalni były znaczące."
+  },
+  {
+    "id": "strat_0139",
+    "term_translation": "Aktywa segmentu",
+    "definition_translation": "Te aktywa operacyjne, które są wykorzystywane przez dany segment w jego działalności.",
+    "example_translation": "Alokujemy aktywa segmentu w oparciu o wkład dywizji w przychody."
+  },
+  {
+    "id": "strat_0140",
+    "term_translation": "Rynek zamknięty",
+    "definition_translation": "Rynek, na którym konsumenci mają ograniczony wybór i muszą kupować od konkretnego dostawcy.",
+    "example_translation": "Lotniska działają jako rynek zamknięty dla żywności i napojów."
+  },
+  {
+    "id": "strat_0141",
+    "term_translation": "Ryzyko przepływów pieniężnych",
+    "definition_translation": "Ryzyko wahań w ilości gotówki wpływającej i wypływającej.",
+    "example_translation": "Biznesy sezonowe często borykają się z wysokim ryzykiem przepływów pieniężnych poza sezonem."
+  },
+  {
+    "id": "strat_0142",
+    "term_translation": "Koszt historyczny",
+    "definition_translation": "Pierwotna nominalna wartość pieniężna składnika gospodarczego.",
+    "example_translation": "Grunty są zazwyczaj ewidencjonowane według kosztu historycznego, a nie obecnej wartości rynkowej."
+  },
+  {
+    "id": "strat_0143",
+    "term_translation": "Firma wyłącznie audytorska",
+    "definition_translation": "Firma specjalizująca się wyłącznie w usługach audytorskich, nieoferująca doradztwa.",
+    "example_translation": "Aby uniknąć konfliktu interesów, wybraliśmy firmę wyłącznie audytorską."
+  },
+  {
+    "id": "strat_0144",
+    "term_translation": "Instytucja audytowa",
+    "definition_translation": "Oficjalny organ upoważniony do przeprowadzania kontroli.",
+    "example_translation": "Instytucja audytowa zażądała dostępu do całej korespondencji mailowej."
+  },
+  {
+    "id": "strat_0145",
+    "term_translation": "Koszt cyklu życia",
+    "definition_translation": "Całkowity koszt posiadania w całym okresie użytkowania aktywa.",
+    "example_translation": "Zakup taniego sprzętu często skutkuje wyższym kosztem cyklu życia z powodu napraw."
+  },
+  {
+    "id": "strat_0146",
+    "term_translation": "Odrębny rynek",
+    "definition_translation": "Oddzielny i możliwy do zidentyfikowania segment rynku.",
+    "example_translation": "Luksusowe SUV-y stały się odrębnym rynkiem w stosunku do standardowych pojazdów terenowych."
+  },
+  {
+    "id": "strat_0147",
+    "term_translation": "Zysk zatrzymany",
+    "definition_translation": "Zysk pozostawiony w firmie, a nie wypłacony jako dywidenda.",
+    "example_translation": "Wykorzystaliśmy zysk zatrzymany do sfinansowania nowego laboratorium."
+  },
+  {
+    "id": "strat_0148",
+    "term_translation": "Test zgodności",
+    "definition_translation": "Test mający na celu ustalenie, czy kontrole są stosowane w sposób zgodny z polityką i procedurami zarządu.",
+    "example_translation": "Test zgodności wykazał, że protokoły bezpieczeństwa były ignorowane."
+  },
+  {
+    "id": "strat_0149",
+    "term_translation": "Aktywa rzeczowe",
+    "definition_translation": "Namacalne przedmioty o wartości, takie jak zapasy, maszyny i budynki.",
+    "example_translation": "Aktywa rzeczowe wymagają regularnej konserwacji i ubezpieczenia."
+  },
+  {
+    "id": "strat_0150",
+    "term_translation": "Alokacja kosztów",
+    "definition_translation": "Proces identyfikacji, agregacji i przypisywania kosztów do obiektów kosztów.",
+    "example_translation": "Właściwa alokacja kosztów pomaga nam zrozumieć, które produkty są faktycznie dochodowe."
+  }
+]
