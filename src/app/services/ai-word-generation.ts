@@ -1,3 +1,13 @@
+/**
+ * TEMPORARILY DISABLED FOR MVP RELEASE
+ *
+ * This service is disabled for the MVP to ensure a stable release with static vocabulary only.
+ * AI word generation functionality will be re-enabled in a future release.
+ *
+ * The service remains in the codebase to preserve the AI integration path for future development.
+ * When re-enabling, ensure proper error handling, loading states, and user feedback are implemented.
+ */
+
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { createAiWorker } from './ai-worker/worker.factory';

@@ -74,7 +74,7 @@ describe('LanguageSwitcherComponent', () => {
   it('should display current language flag and code', () => {
     const { fixture } = setup();
     const flagSpan = fixture.nativeElement.querySelector('span.text-xl');
-    const codeSpan = fixture.nativeElement.querySelector('span.hidden.sm\\:block');
+    const codeSpan = fixture.nativeElement.querySelector('span.md\\:hidden');
 
     expect(flagSpan?.textContent).toBe('🇵🇱'); // Default is 'pl'
     expect(codeSpan?.textContent.trim()).toBe('pl');

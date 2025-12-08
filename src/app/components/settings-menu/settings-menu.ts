@@ -134,6 +134,7 @@ export class SettingsMenu {
     } catch (error) {
       console.error('Sign out failed:', error);
     }
+    console.log('Sign out clicked');
   }
 
   // Other methods

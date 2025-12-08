@@ -28,15 +28,11 @@ export class MenuComponent implements OnInit {
   currentScreen = signal<'home' | 'config'>('home');
 
   // Game configuration
-  useStatic = signal(true);
   selectedDifficulty = signal<number | null>(null);
   selectedPracticeMode = signal<GameMode>(GameMode.New);
   selectedGameMode = signal<GameModeType>('classic');
   selectedCategory = signal<string | null>(null);
   isLoading = signal(false);
-
-  // Computed signal for AI checkbox - true when AI is enabled
-  useAI = computed(() => !this.useStatic());
 
   // Last session settings for "Continue Learning"
   lastSession = signal<{
@@ -113,10 +109,6 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      if (this.isMobile) {
-        this.useStatic.set(true);
-      }
-
       // Load last session from storage
       const storedSession = this.storageService.getItem('lastSession');
       if (storedSession) {
@@ -128,11 +120,6 @@ export class MenuComponent implements OnInit {
         }
       }
     }
-  }
-
-  onAICheckboxChange(event: Event) {
-    const checked = (event.target as HTMLInputElement).checked;
-    this.useStatic.set(!checked); // checked=true means AI on, so useStatic=false
   }
 
   // Two-screen navigation
@@ -196,7 +183,6 @@ export class MenuComponent implements OnInit {
         category,
         this.selectedPracticeMode(),
         this.selectedGameMode(),
-        this.useStatic(),
         this.selectedDifficulty()
       );
 

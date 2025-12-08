@@ -26,8 +26,10 @@ export class LanguageSwitcherComponent {
 
   // Language options - add more as needed
   availableLanguages = signal<Language[]>([
-    { code: 'es', name: 'Español', nativeName: 'Español', flag: '🇪🇸' },
-    { code: 'pl', name: 'Polski', nativeName: 'Polski', flag: '🇵🇱' },
+    { code: 'es', name: 'Spanish', nativeName: 'Español', flag: '🇪🇸' },
+    { code: 'pl', name: 'Polish', nativeName: 'Polski', flag: '🇵🇱' },
+    { code: 'de', name: 'German', nativeName: 'Deutsch', flag: '🇩🇪' },
+    { code: 'fr', name: 'French', nativeName: 'Français', flag: '🇫🇷' },
   ]);
 
   // Computed to get current language object

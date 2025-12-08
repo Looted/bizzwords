@@ -2,7 +2,6 @@ import { TestBed } from '@angular/core/testing';
 import { GameService } from './game.service';
 import { GameStore } from '../game-store';
 import { StaticVocabularyService } from './static-vocabulary.service';
-import { AiWordGenerationService } from './ai-word-generation';
 import { VocabularyStatsService } from './vocabulary-stats.service';
 import { GameModeService } from './game-mode.service';
 import { LanguageService } from './language.service';
@@ -50,7 +49,6 @@ describe('GameService', () => {
         GameService,
         { provide: GameStore, useValue: gameStoreMock },
         { provide: StaticVocabularyService, useValue: staticVocabMock },
-        { provide: AiWordGenerationService, useValue: {} },
         { provide: VocabularyStatsService, useValue: {} },
         { provide: GameModeService, useValue: gameModeServiceMock },
         { provide: LanguageService, useValue: languageServiceMock }
@@ -78,7 +76,7 @@ describe('GameService', () => {
       vi.spyOn(staticVocabMock, 'generateTranslatedWords').mockReturnValue(of(mockCards));
 
       // Call startGame with static mode
-      await service.startGame('hr', GameMode.New, 'classic', true, null);
+      await service.startGame('hr', GameMode.New, 'classic', null);
 
       // Verify that startGame was called with flashcards containing definitions
       expect(gameStoreMock.startGame).toHaveBeenCalled();
@@ -108,7 +106,7 @@ describe('GameService', () => {
       vi.spyOn(staticVocabMock, 'generateTranslatedWords').mockReturnValue(of(mockCards));
 
       // Call startGame with static mode
-      await service.startGame('hr', GameMode.New, 'classic', true, null);
+      await service.startGame('hr', GameMode.New, 'classic', null);
 
       // Verify that startGame was called with flashcards containing definitions
       expect(gameStoreMock.startGame).toHaveBeenCalled();
@@ -135,7 +133,7 @@ describe('GameService', () => {
       vi.spyOn(staticVocabMock, 'generateTranslatedWords').mockReturnValue(of(mockCards));
 
       // Call startGame with static mode
-      await service.startGame('hr', GameMode.New, 'classic', true, null);
+      await service.startGame('hr', GameMode.New, 'classic', null);
 
       // Verify that startGame was called with flashcards containing empty definition
       expect(gameStoreMock.startGame).toHaveBeenCalled();

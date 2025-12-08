@@ -1,6 +1,5 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { AiWordGenerationService } from './ai-word-generation';
 import { StaticVocabularyService } from './static-vocabulary.service';
 import { VocabularyStatsService } from './vocabulary-stats.service';
 import { GameStore, Flashcard } from '../game-store';
@@ -13,37 +12,30 @@ import { LanguageService } from './language.service';
 })
 export class GameService {
   private store = inject(GameStore);
-  private llm = inject(AiWordGenerationService);
   private staticVocab = inject(StaticVocabularyService);
   private statsService = inject(VocabularyStatsService);
   private gameModeService = inject(GameModeService);
   private languageService = inject(LanguageService);
 
-  async startGame(topic: string, practiceMode: GameMode, gameModeType: GameModeType, useStatic: boolean, difficulty: number | null) {
+  async startGame(topic: string, practiceMode: GameMode, gameModeType: GameModeType, difficulty: number | null) {
     let cards: { english: string, translations: Record<string, string> }[];
 
-    console.log('[GameService] startGame called:', { topic, practiceMode, gameModeType, useStatic, difficulty });
+    console.log('[GameService] startGame called:', { topic, practiceMode, gameModeType, difficulty });
 
-    if (useStatic) {
-      const topicLower = topic.toLowerCase();
-      console.log('[GameService] Using static mode for topic:', topicLower);
+    const topicLower = topic.toLowerCase();
+    console.log('[GameService] Using static vocabulary for topic:', topicLower);
 
-      // Support HR and PM with static vocabulary files
-      if (topicLower === 'hr' || topicLower === 'pm') {
-        const languageField = this.mapLanguageToField(this.languageService.currentLanguage());
-        console.log('[GameService] Loading translated vocabulary for:', topicLower, 'with language:', languageField);
-        const observable = this.staticVocab.generateTranslatedWords(topicLower, languageField, GAME_CONSTANTS.CARDS_PER_GAME, difficulty ?? undefined);
-        cards = await firstValueFrom(observable) || [];
-        console.log('[GameService] Translated vocabulary loaded:', cards.length, 'cards');
-      } else {
-        console.log('[GameService] No static vocabulary for topic, using fallback');
-        // Use static fallback words for other topics when AI is disabled
-        cards = this.getStaticFallbackWords(topic, GAME_CONSTANTS.CARDS_PER_GAME, difficulty);
-      }
+    // Always use static vocabulary for MVP
+    if (topicLower === 'hr' || topicLower === 'pm') {
+      const languageField = this.mapLanguageToField(this.languageService.currentLanguage());
+      console.log('[GameService] Loading translated vocabulary for:', topicLower, 'with language:', languageField);
+      const observable = this.staticVocab.generateTranslatedWords(topicLower, languageField, GAME_CONSTANTS.CARDS_PER_GAME, difficulty ?? undefined);
+      cards = await firstValueFrom(observable) || [];
+      console.log('[GameService] Translated vocabulary loaded:', cards.length, 'cards');
     } else {
-      console.log('[GameService] Using AI generation for topic:', topic);
-      // Use AI generation when enabled
-      cards = await this.llm.generateWords(topic, GAME_CONSTANTS.CARDS_PER_GAME, undefined, difficulty);
+      console.log('[GameService] No static vocabulary for topic, using fallback');
+      // Use static fallback words for other topics
+      cards = this.getStaticFallbackWords(topic, GAME_CONSTANTS.CARDS_PER_GAME, difficulty);
     }
 
     console.log('[GameService] Total cards before filtering:', cards.length);

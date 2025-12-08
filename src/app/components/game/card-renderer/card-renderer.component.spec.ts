@@ -1,10 +1,12 @@
 import { TestBed } from '@angular/core/testing';
+import { signal } from '@angular/core';
 import { MockComponent } from 'ng-mocks';
 import { CardRendererComponent } from './card-renderer.component';
 import { FlashcardComponent } from './flashcard/flashcard.component';
 import { TypingCardComponent } from './typing-card/typing-card.component';
 import { Flashcard } from '../../../game-store';
 import { LayoutPolicy } from '../../../core/models/game-config.model';
+import { LanguageService } from '../../../services/language.service';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
 describe('CardRendererComponent', () => {
@@ -29,8 +31,22 @@ describe('CardRendererComponent', () => {
   };
 
   beforeEach(async () => {
+    const languageServiceMock = {
+      currentLanguage: signal('pl'),
+      getLanguageDisplayName: vi.fn().mockImplementation((lang: string) => {
+        switch (lang) {
+          case 'pl': return 'Polish';
+          case 'es': return 'Spanish';
+          default: return 'English';
+        }
+      })
+    };
+
     await TestBed.configureTestingModule({
-      imports: [CardRendererComponent]
+      imports: [CardRendererComponent],
+      providers: [
+        { provide: LanguageService, useValue: languageServiceMock }
+      ]
     })
     .overrideComponent(CardRendererComponent, {
       set: {

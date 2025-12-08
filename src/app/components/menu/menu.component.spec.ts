@@ -85,43 +85,6 @@ describe('MenuComponent', () => {
   });
 
   describe('ngOnInit', () => {
-    it('should set useStatic to true on mobile devices', () => {
-      // Mock window.innerWidth for mobile
-      const originalInnerWidth = window.innerWidth;
-      Object.defineProperty(window, 'innerWidth', {
-        value: 500, // Mobile width
-        writable: true
-      });
-
-      component.ngOnInit();
-
-      expect(component.useStatic()).toBe(true);
-
-      // Restore original value
-      Object.defineProperty(window, 'innerWidth', {
-        value: originalInnerWidth,
-        writable: true
-      });
-    });
-
-    it('should not change useStatic on desktop devices', () => {
-      // Mock window.innerWidth for desktop
-      const originalInnerWidth = window.innerWidth;
-      Object.defineProperty(window, 'innerWidth', {
-        value: 1024, // Desktop width
-        writable: true
-      });
-
-      component.ngOnInit();
-
-      expect(component.useStatic()).toBe(true); // Initial value
-
-      // Restore original value
-      Object.defineProperty(window, 'innerWidth', {
-        value: originalInnerWidth,
-        writable: true
-      });
-    });
 
     it('should load last session from storage', () => {
       const sessionData = {
@@ -156,9 +119,9 @@ describe('MenuComponent', () => {
       component.selectedCategory.set('IT');
       await component.startSession();
 
-      expect(gameServiceMock.startGame).toHaveBeenCalledWith('IT', GameMode.New, 'classic', true, null);
+      expect(gameServiceMock.startGame).toHaveBeenCalledWith('IT', GameMode.New, 'classic', null);
       expect(routerMock.navigate).toHaveBeenCalledWith(['/game']);
-      expect(component.isLoading).toBe(false);
+      expect(component.isLoading()).toBe(false);
     });
 
     it('should handle errors gracefully', async () => {
@@ -176,7 +139,7 @@ describe('MenuComponent', () => {
 
       await component.startSession();
 
-      expect(component.isLoading).toBe(false);
+      expect(component.isLoading()).toBe(false);
       expect(consoleSpy).toHaveBeenCalledWith('[MenuComponent] Failed to start session:', error);
       expect(alertSpy).toHaveBeenCalledWith('Failed to start session. Please try again.');
       expect(component.currentScreen()).toBe('home');
@@ -187,7 +150,6 @@ describe('MenuComponent', () => {
     });
 
     it('should pass selected options to startGame', async () => {
-      component.useStatic.set(false);
       component.selectedDifficulty.set(3);
       component.selectedPracticeMode.set(GameMode.Practice);
       component.selectedGameMode.set('blitz');
@@ -195,7 +157,7 @@ describe('MenuComponent', () => {
 
       await component.startSession();
 
-      expect(gameServiceMock.startGame).toHaveBeenCalledWith('HR', GameMode.Practice, 'blitz', false, 3);
+      expect(gameServiceMock.startGame).toHaveBeenCalledWith('HR', GameMode.Practice, 'blitz', 3);
     });
 
     it('should set loading state during game start', async () => {
@@ -208,11 +170,11 @@ describe('MenuComponent', () => {
       component.selectedCategory.set('IT');
 
       const startPromise = component.startSession();
-      expect(component.isLoading).toBe(true);
+      expect(component.isLoading()).toBe(true);
 
       resolvePromise!();
       await startPromise;
-      expect(component.isLoading).toBe(false);
+      expect(component.isLoading()).toBe(false);
     });
 
     it('should save last session settings', async () => {
@@ -282,7 +244,7 @@ describe('MenuComponent', () => {
       expect(component.selectedGameMode()).toBe('classic');
       expect(component.selectedDifficulty()).toBe(null);
       expect(component.currentScreen()).toBe('home'); // Should not change to 'config'
-      expect(gameServiceMock.startGame).toHaveBeenCalledWith('hr', GameMode.New, 'classic', true, null);
+      expect(gameServiceMock.startGame).toHaveBeenCalledWith('hr', GameMode.New, 'classic', null);
       expect(routerMock.navigate).toHaveBeenCalledWith(['/game']);
     });
 
@@ -317,7 +279,7 @@ describe('MenuComponent', () => {
       expect(component.selectedGameMode()).toBe('classic');
       expect(component.selectedDifficulty()).toBe(null);
       expect(component.currentScreen()).toBe('home'); // Should not change to 'config'
-      expect(gameServiceMock.startGame).toHaveBeenCalledWith('pm', GameMode.Practice, 'classic', true, null);
+      expect(gameServiceMock.startGame).toHaveBeenCalledWith('pm', GameMode.Practice, 'classic', null);
       expect(routerMock.navigate).toHaveBeenCalledWith(['/game']);
     });
 
@@ -340,19 +302,7 @@ describe('MenuComponent', () => {
     });
   });
 
-  describe('onAICheckboxChange', () => {
-    it('should set useStatic to false when AI checkbox is checked', () => {
-      const event = { target: { checked: true } } as any;
-      component.onAICheckboxChange(event);
-      expect(component.useStatic()).toBe(false);
-    });
 
-    it('should set useStatic to true when AI checkbox is unchecked', () => {
-      const event = { target: { checked: false } } as any;
-      component.onAICheckboxChange(event);
-      expect(component.useStatic()).toBe(true);
-    });
-  });
 
   describe('selectCategory', () => {
     it('should set selectedCategory and change screen to config', () => {
@@ -381,7 +331,7 @@ describe('MenuComponent', () => {
       await component.quickStartNewWords();
 
       expect(component.selectedPracticeMode()).toBe(GameMode.New);
-      expect(gameServiceMock.startGame).toHaveBeenCalledWith('hr', GameMode.New, 'classic', true, null);
+      expect(gameServiceMock.startGame).toHaveBeenCalledWith('hr', GameMode.New, 'classic', null);
     });
 
     it('should do nothing when no category is selected', () => {
@@ -400,7 +350,7 @@ describe('MenuComponent', () => {
       await component.quickStartPractice();
 
       expect(component.selectedPracticeMode()).toBe(GameMode.Practice);
-      expect(gameServiceMock.startGame).toHaveBeenCalledWith('pm', GameMode.Practice, 'classic', true, null);
+      expect(gameServiceMock.startGame).toHaveBeenCalledWith('pm', GameMode.Practice, 'classic', null);
     });
 
     it('should do nothing when no category is selected', () => {
@@ -428,7 +378,7 @@ describe('MenuComponent', () => {
       expect(component.selectedPracticeMode()).toBe(GameMode.Practice);
       expect(component.selectedGameMode()).toBe('blitz');
       expect(component.selectedDifficulty()).toBe(2);
-      expect(gameServiceMock.startGame).toHaveBeenCalledWith('hr', GameMode.Practice, 'blitz', true, 2);
+      expect(gameServiceMock.startGame).toHaveBeenCalledWith('hr', GameMode.Practice, 'blitz', 2);
     });
 
     it('should do nothing when no last session exists', () => {

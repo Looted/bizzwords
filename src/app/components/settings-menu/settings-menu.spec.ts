@@ -4,12 +4,14 @@ import { vi } from 'vitest';
 import { SettingsMenu } from './settings-menu';
 import { ThemeService } from '../../services/theme.service';
 import { LanguageService } from '../../services/language.service';
+import { AuthService } from '../../services/auth.service';
 
 describe('SettingsMenu', () => {
   let component: SettingsMenu;
   let fixture: ComponentFixture<SettingsMenu>;
   let themeServiceMock: any;
   let languageServiceMock: any;
+  let authServiceMock: any;
 
   beforeEach(async () => {
     themeServiceMock = {
@@ -24,11 +26,21 @@ describe('SettingsMenu', () => {
       getLanguageDisplayName: vi.fn().mockImplementation((lang: string) => lang === 'pl' ? 'Polski' : 'Español')
     };
 
+    authServiceMock = {
+      authStatus: signal('guest'),
+      currentUser: signal(null),
+      isAuthenticated: signal(false),
+      isMigrating: signal(false),
+      signInWithGoogle: vi.fn(),
+      signOut: vi.fn()
+    };
+
     await TestBed.configureTestingModule({
       imports: [SettingsMenu],
       providers: [
         { provide: ThemeService, useValue: themeServiceMock },
-        { provide: LanguageService, useValue: languageServiceMock }
+        { provide: LanguageService, useValue: languageServiceMock },
+        { provide: AuthService, useValue: authServiceMock }
       ]
     }).compileComponents();
 
@@ -95,7 +107,7 @@ describe('SettingsMenu', () => {
     expect(closeMenuSpy).not.toHaveBeenCalled();
   });
 
-  it('should log placeholder actions', () => {
+  it('should log placeholder actions', async () => {
     const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
 
     component.onUserProfileClick();
@@ -107,7 +119,7 @@ describe('SettingsMenu', () => {
     component.onPrivacyClick();
     expect(console.log).toHaveBeenCalledWith('Privacy clicked');
 
-    component.onSignOutClick();
+    await component.onSignOutClick();
     expect(console.log).toHaveBeenCalledWith('Sign out clicked');
 
     consoleSpy.mockRestore();
