@@ -2,7 +2,9 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 
 // Mock the @huggingface/transformers module
 vi.mock('@huggingface/transformers', () => {
-  const mockPipeline = vi.fn((task) => {
+  const mockPipeline = vi.fn(async (task) => {
+    // Add a small delay to simulate async behavior and ensure proper mock tracking
+    await new Promise(resolve => setTimeout(resolve, 0));
     if (task === 'text-generation') {
       return 'mock-pipeline-instance';
     } else if (task === 'translation') {
