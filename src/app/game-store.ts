@@ -36,6 +36,14 @@ export class GameStore {
   graduatePile = signal<Flashcard[]>([]);
   skippedPile = signal<Flashcard[]>([]);
 
+  // Session configuration to support "Play again" with same settings
+  sessionConfig = signal<{
+    category: string;
+    practiceMode: GameMode;
+    gameMode: 'classic' | 'blitz';
+    difficulty: number | null;
+  } | null>(null);
+
   // Round-specific progress signals
   roundInitialQueueSize = signal<number>(0);
   roundGraduatedCount = signal<number>(0);

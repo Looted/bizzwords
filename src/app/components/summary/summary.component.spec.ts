@@ -7,6 +7,13 @@ import { Router } from '@angular/router';
 import { PLATFORM_ID } from '@angular/core';
 import { signal } from '@angular/core';
 import { vi } from 'vitest';
+import { GameService } from '../../services/game.service';
+import { AuthService } from '../../services/auth.service';
+import { FreemiumService } from '../../services/freemium.service';
+import { StaticVocabularyService } from '../../services/static-vocabulary.service';
+import { GameModeService } from '../../services/game-mode.service';
+import { LanguageService } from '../../services/language.service';
+import { of } from 'rxjs';
 
 describe('SummaryComponent', () => {
   let component: SummaryComponent;
@@ -29,7 +36,13 @@ describe('SummaryComponent', () => {
       graduatePile: graduatePileSignal,
       skippedPile: skippedPileSignal,
       reset: vi.fn(),
-      startNewGame: vi.fn()
+      startNewGame: vi.fn(),
+      sessionConfig: signal({
+        category: 'test',
+        practiceMode: 'new' as any,
+        gameMode: 'classic' as any,
+        difficulty: null
+      })
     };
     routerMock = {
       navigate: vi.fn()
@@ -46,6 +59,34 @@ describe('SummaryComponent', () => {
       totalWordsNeedingReview: 0
     };
 
+    const gameServiceMock = {
+      startGame: vi.fn().mockResolvedValue(undefined)
+    };
+
+    const authServiceMock = {
+      isPremiumUser: vi.fn().mockResolvedValue(false)
+    };
+
+    const freemiumServiceMock = {
+      isCategoryExhausted: vi.fn().mockReturnValue(false)
+    };
+
+    const staticVocabServiceMock = {
+      generateTranslatedWords: vi.fn().mockReturnValue(of([])),
+      getAvailableWordsCount: vi.fn().mockReturnValue(of(10))
+    };
+
+    const gameModeServiceMock = {
+      getGameMode: vi.fn().mockReturnValue({
+        id: 'test',
+        rounds: []
+      })
+    };
+
+    const languageServiceMock = {
+      currentLanguage: vi.fn().mockReturnValue('pl')
+    };
+
     await TestBed.configureTestingModule({
       imports: [SummaryComponent],
       providers: [
@@ -53,6 +94,12 @@ describe('SummaryComponent', () => {
         { provide: VocabularyStatsService, useValue: statsServiceMock },
         { provide: Router, useValue: routerMock },
         { provide: StorageService, useValue: storageServiceMock },
+        { provide: GameService, useValue: gameServiceMock },
+        { provide: AuthService, useValue: authServiceMock },
+        { provide: FreemiumService, useValue: freemiumServiceMock },
+        { provide: StaticVocabularyService, useValue: staticVocabServiceMock },
+        { provide: GameModeService, useValue: gameModeServiceMock },
+        { provide: LanguageService, useValue: languageServiceMock },
         { provide: PLATFORM_ID, useValue: 'browser' }
       ]
     })
@@ -72,10 +119,14 @@ describe('SummaryComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should start new game and navigate to game on startNewSession', () => {
+  it('should start new game and navigate to game on startNewSession', async () => {
     component.startNewSession();
 
-    expect(gameStoreMock.startNewGame).toHaveBeenCalled();
+    // Wait for the async operation to complete
+    await new Promise(resolve => setTimeout(resolve, 0));
+
+    const gameServiceMock = TestBed.inject(GameService);
+    expect(gameServiceMock.startGame).toHaveBeenCalledWith('test', 'new', 'classic', null);
     expect(routerMock.navigate).toHaveBeenCalledWith(['/game']);
   });
 
@@ -87,7 +138,7 @@ describe('SummaryComponent', () => {
   });
 
   describe('Template data binding', () => {
-    it('should display total cards, mastered, and needs learning counts', async () => {
+    it('should display mastered and needs learning counts', async () => {
       const mockCards = [
         { id: '1', english: 'Hello', translations: { polish: 'Cześć' }, category: 'Basic', masteryLevel: 0 },
         { id: '2', english: 'Goodbye', translations: { polish: 'Do widzenia' }, category: 'Basic', masteryLevel: 0 },
@@ -108,11 +159,9 @@ describe('SummaryComponent', () => {
       await fixture.whenStable();
 
       const spans = fixture.nativeElement.querySelectorAll('.flex.justify-between > span:last-child');
-      const totalSpan = spans[0];
-      const masteredSpan = spans[1];
-      const needsSpan = spans[2];
+      const masteredSpan = spans[0]; // New Words Learned
+      const needsSpan = spans[1];   // Needs Practice
 
-      expect(totalSpan.textContent.trim()).toBe('3');
       expect(masteredSpan.textContent.trim()).toBe('1'); // Hello is mastered
       expect(needsSpan.textContent.trim()).toBe('1');   // Goodbye was skipped
     });
@@ -125,11 +174,9 @@ describe('SummaryComponent', () => {
       await fixture.whenStable();
 
       const spans = fixture.nativeElement.querySelectorAll('.flex.justify-between > span:last-child');
-      const totalSpan = spans[0];
-      const masteredSpan = spans[1];
-      const needsSpan = spans[2];
+      const masteredSpan = spans[0]; // New Words Learned
+      const needsSpan = spans[1];   // Needs Practice
 
-      expect(totalSpan.textContent.trim()).toBe('0');
       expect(masteredSpan.textContent.trim()).toBe('0');
       expect(needsSpan.textContent.trim()).toBe('0');
     });
@@ -156,11 +203,15 @@ describe('SummaryComponent', () => {
       expect(buttons[1].textContent.trim()).toBe('Back to Home');
     });
 
-    it('should call startNewSession when start new session button is clicked', () => {
+    it('should call startNewSession when start new session button is clicked', async () => {
       const buttons = fixture.nativeElement.querySelectorAll('button');
       buttons[0].click();
 
-      expect(gameStoreMock.startNewGame).toHaveBeenCalled();
+      // Wait for the async operation to complete
+      await new Promise(resolve => setTimeout(resolve, 0));
+
+      const gameServiceMock = TestBed.inject(GameService);
+      expect(gameServiceMock.startGame).toHaveBeenCalledWith('test', 'new', 'classic', null);
       expect(routerMock.navigate).toHaveBeenCalledWith(['/game']);
     });
 

@@ -1,0 +1,112 @@
+<div class="paywall-container animate-fade-in">
+  <!-- Already Pro User Message -->
+  @if (isProUser()) {
+    <div class="pro-status animate-scale-in">
+      <div class="pro-badge">
+        <span class="pro-icon">⭐</span>
+        <span class="pro-text">BizzWords Pro</span>
+      </div>
+      <h2>You're all set!</h2>
+      <p>You have unlimited access to all business vocabulary.</p>
+    </div>
+  } @else {
+    <!-- Paywall Content -->
+    <div class="paywall-content animate-slide-up">
+      <div class="header">
+        <h1>Unlock Professional Mastery</h1>
+        <p>Take your business vocabulary to the executive level.</p>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon-container">
+            <span class="feature-icon">📚</span>
+          </div>
+          <span>Unlimited access to all 500+ words</span>
+        </div>
+        <div class="feature">
+          <div class="feature-icon-container">
+            <span class="feature-icon">🎯</span>
+          </div>
+          <span>Advanced difficulty levels & idioms</span>
+        </div>
+        <div class="feature">
+          <div class="feature-icon-container">
+            <span class="feature-icon">📊</span>
+          </div>
+          <span>Detailed progress & mastery analytics</span>
+        </div>
+        <div class="feature">
+          <div class="feature-icon-container">
+            <span class="feature-icon">🔄</span>
+          </div>
+          <span>Sync progress across all devices</span>
+        </div>
+      </div>
+
+      <!-- Lifetime Offer -->
+      @if (lifetimePackage(); as pkg) {
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Lifetime Access</h3>
+            <div class="price">
+              <span class="amount">{{ getPackagePrice(pkg) }}</span>
+            </div>
+          </div>
+
+          <div class="pricing-description">
+            <p>One-time payment. Own it forever.</p>
+          </div>
+
+          <button
+            class="purchase-button"
+            [disabled]="isLoading() || purchaseStatus() === 'purchasing'"
+            (click)="purchaseLifetime()">
+            @if (purchaseStatus() === 'purchasing') {
+              <span class="loading-spinner"></span>
+              Processing...
+            } @else {
+              <span>🚀</span> Upgrade to Pro
+            }
+          </button>
+        </div>
+      } @else {
+        <!-- Loading State -->
+        @if (isLoading()) {
+          <div class="loading-state">
+            <div class="loading-spinner"></div>
+            <p>Loading best offer...</p>
+          </div>
+        } @else {
+          <!-- No packages available -->
+          <div class="error-state">
+            <p>Unable to load pricing. Please check your connection.</p>
+            <button class="retry-button" (click)="resetStatus()">
+              Retry
+            </button>
+          </div>
+        }
+      }
+
+      <!-- Status Messages -->
+      @if (purchaseStatus() !== 'idle') {
+        <div class="status-message"
+             [class.success]="purchaseStatus() === 'success'"
+             [class.error]="purchaseStatus() === 'error'">
+          <p>{{ getStatusMessage() }}</p>
+          @if (purchaseStatus() === 'success' || purchaseStatus() === 'error') {
+            <button class="close-button" (click)="resetStatus()">×</button>
+          }
+        </div>
+      }
+
+      <!-- Error Message -->
+      @if (error(); as err) {
+        <div class="error-message">
+          <p>{{ err }}</p>
+          <button class="close-button" (click)="clearError()">×</button>
+        </div>
+      }
+    </div>
+  }
+</div>

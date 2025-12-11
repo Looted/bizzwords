@@ -42,3 +42,39 @@ When starting a new game, the user can configure the following settings:
 - **Card Repetition on Failure**: If a user marks a card as "I don't know" or answers incorrectly in the text input round, the card will be re-introduced into the deck to be reviewed again after 3 other cards have been shown. This reinforces learning for difficult words.
 - **Card Repetition on Success (Spaced Repetition)**: In Classic mode, even if a user answers a card correctly, it might be shown again later in the same round to reinforce memory. This is especially true for the first time a user sees a word. A correct answer will push the card further back in the queue (e.g., after 10 other cards).
 - **Advancing Rounds**: When all cards in a round have been answered correctly (graduated), the game advances to the next round. The next round can be configured to start with all the initial words, only the words the user failed in the previous round, or only the words the user succeeded with. By default, the next round starts with all the words from the initial deck.
+
+## Freemium Rules
+
+BizzWords implements a freemium model that provides limited content access to free users while offering full access to premium subscribers.
+
+### Content Access Restrictions
+- **Free Users**: Access limited to ~60 words per category (30 Easy, 20 Medium, 10 Hard)
+- **Premium Users**: Access all 150+ words per category without restrictions
+- **Content Tagging**: Words are tagged with `isFree: true` based on difficulty tiers during data processing
+
+### Game Mode Adaptations
+#### Learn New Words Mode
+- **Session Size**: Fixed at 5 words for Classic mode, 20 words for Blitz mode
+- **Free User Behavior**: Sessions contain full word count until the pool of new words is smaller than the session size, at which point the final session will be shortened (e.g., 3 words instead of 5)
+- **Premium User Behavior**: Always full sessions until all words are learned
+- **Word Selection**: All eligible new words are considered, then filtered to exclude previously learned words, then sliced to session size
+
+#### Classic Mode
+- **Normal Play**: Requires minimum 5 words to start
+- **Shortened Rounds**: If fewer than 5 free words available, game starts with available words
+- **Premium Bypass**: Premium users always get full 5-word rounds
+
+#### Blitz Mode
+- **Normal Play**: Requires minimum 20 words to start
+- **Shortened Rounds**: If fewer than 20 free words available, game starts with available words
+- **Premium Bypass**: Premium users always get full 20-word rounds
+
+### User Interface Feedback
+- **Blue Buttons**: Content available - ready to start game
+- **Gold Buttons**: Content exhausted - triggers paywall/upsell flow
+- **Difficulty Pills**: Visual indicators show which difficulty tiers are exhausted for free users
+
+### Premium Benefits
+- **Unlimited Access**: All vocabulary content across all categories
+- **Full Game Modes**: Always start with complete word counts (no shortened rounds)
+- **No Restrictions**: Access to all difficulty levels and categories

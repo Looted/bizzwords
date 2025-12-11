@@ -137,10 +137,14 @@
         <div class="flex gap-2 bg-slate-100 dark:bg-slate-700 p-1.5 rounded-xl">
            @for (level of [1, 2, 3]; track level) {
            <button (click)="selectedDifficulty.set(level)"
-             class="flex-1 py-2 rounded-lg text-sm font-semibold transition-all"
+             class="relative flex-1 py-2 rounded-lg text-sm font-semibold transition-all"
              [class]="selectedDifficulty() === level ? 'bg-white dark:bg-slate-600 text-blue-600 dark:text-blue-300 shadow-sm' : 'text-slate-500 dark:text-slate-300 hover:text-slate-700 dark:hover:text-white'"
-           [attr.data-testid]="'difficulty-level-' + level">
+             [class.opacity-60]="exhaustedDifficulties().has(level)"
+             [attr.data-testid]="'difficulty-level-' + level">
              {{ level === 1 ? 'Easy' : level === 2 ? 'Medium' : 'Hard' }}
+             @if (exhaustedDifficulties().has(level)) {
+               <span class="absolute -top-1 -right-1 text-xs">🔒</span>
+             }
            </button>
            }
            <button (click)="selectedDifficulty.set(null)"
@@ -177,13 +181,22 @@
       </section>
 
       <button (click)="startSession()"
-        class="w-full py-4 px-6 bg-gradient-to-r from-primary to-primary-dark hover:from-primary hover:to-primary-dark text-white font-bold rounded-xl shadow-lg shadow-primary/30 transform transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        class="w-full py-4 px-6 font-bold rounded-xl shadow-lg transform transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        [class]="startButtonState() === 'gold'
+          ? 'bg-gradient-to-r from-amber-400 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-white shadow-amber-500/30'
+          : 'bg-gradient-to-r from-primary to-primary-dark hover:from-primary hover:to-primary-dark text-white shadow-primary/30'"
         [disabled]="isLoading()"
         data-testid="start-session">
         @if (isLoading()) {
-        <span class="animate-spin">⏳</span>
+          <span class="animate-spin">⏳</span>
         }
-        <span>{{ isLoading() ? 'Generating Deck...' : 'Start Session' }}</span>
+        <span>
+          @if (startButtonState() === 'gold') {
+            🔒 Unlock Unlimited Access
+          } @else {
+            {{ isLoading() ? 'Generating Deck...' : 'Start Session' }}
+          }
+        </span>
       </button>
     </div>
   </div>

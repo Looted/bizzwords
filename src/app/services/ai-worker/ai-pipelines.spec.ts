@@ -35,18 +35,20 @@ describe('TextGenerationPipelineFactory', () => {
   });
 
   it('should return the same instance on multiple calls', async () => {
-    mockPipeline.mockResolvedValue('mock-pipeline-instance');
+    const mockInstance = { generate: vi.fn() };
+    mockPipeline.mockResolvedValue(mockInstance);
 
     const instance1 = await TextGenerationPipelineFactory.getInstance();
     const instance2 = await TextGenerationPipelineFactory.getInstance();
 
     expect(instance1).toBe(instance2);
-    expect(instance1).toBe('mock-pipeline-instance');
+    expect(instance1).toBe(mockInstance);
     expect(mockPipeline).toHaveBeenCalledTimes(1); // Should only create once
   });
 
   it('should return existing instance without creating new pipeline', async () => {
-    mockPipeline.mockResolvedValue('mock-pipeline-instance');
+    const mockInstance = { generate: vi.fn() };
+    mockPipeline.mockResolvedValue(mockInstance);
 
     // First call creates the instance
     await TextGenerationPipelineFactory.getInstance();
@@ -56,7 +58,7 @@ describe('TextGenerationPipelineFactory', () => {
     // Second call should return existing instance
     const instance = await TextGenerationPipelineFactory.getInstance();
 
-    expect(instance).toBe('mock-pipeline-instance');
+    expect(instance).toBe(mockInstance);
     expect(mockPipeline).not.toHaveBeenCalled(); // Should not create again
   });
 
@@ -115,18 +117,20 @@ describe('TranslationPipelineFactory', () => {
   });
 
   it('should return the same instance on multiple calls', async () => {
-    mockPipeline.mockResolvedValue('mock-translation-instance');
+    const mockInstance = { translate: vi.fn() };
+    mockPipeline.mockResolvedValue(mockInstance);
 
     const instance1 = await TranslationPipelineFactory.getInstance();
     const instance2 = await TranslationPipelineFactory.getInstance();
 
     expect(instance1).toBe(instance2);
-    expect(instance1).toBe('mock-translation-instance');
+    expect(instance1).toBe(mockInstance);
     expect(mockPipeline).toHaveBeenCalledTimes(1); // Should only create once
   });
 
   it('should return existing instance without creating new pipeline', async () => {
-    mockPipeline.mockResolvedValue('mock-translation-instance');
+    const mockInstance = { translate: vi.fn() };
+    mockPipeline.mockResolvedValue(mockInstance);
 
     // First call creates the instance
     await TranslationPipelineFactory.getInstance();
@@ -136,7 +140,7 @@ describe('TranslationPipelineFactory', () => {
     // Second call should return existing instance
     const instance = await TranslationPipelineFactory.getInstance();
 
-    expect(instance).toBe('mock-translation-instance');
+    expect(instance).toBe(mockInstance);
     expect(mockPipeline).not.toHaveBeenCalled(); // Should not create again
   });
 

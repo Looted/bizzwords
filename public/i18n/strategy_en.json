@@ -11,7 +11,8 @@
         "management",
         "marketing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0002",
@@ -25,7 +26,8 @@
         "innovation",
         "marketing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0003",
@@ -39,7 +41,8 @@
         "competition",
         "marketing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0004",
@@ -55,7 +58,8 @@
         "framework",
         "management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0005",
@@ -71,7 +75,8 @@
         "framework",
         "risk management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0006",
@@ -86,7 +91,8 @@
         "framework",
         "competition"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0007",
@@ -101,7 +107,8 @@
         "operations",
         "management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0008",
@@ -115,7 +122,8 @@
         "management",
         "innovation"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0009",
@@ -131,7 +139,8 @@
         "framework",
         "portfolio management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0010",
@@ -146,7 +155,8 @@
         "framework",
         "marketing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0011",
@@ -162,7 +172,8 @@
         "sales",
         "planning"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0012",
@@ -176,7 +187,8 @@
         "growth",
         "marketing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0013",
@@ -191,7 +203,8 @@
         "marketing",
         "sales"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0014",
@@ -206,7 +219,8 @@
         "product management",
         "innovation"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0015",
@@ -220,7 +234,8 @@
         "growth",
         "risk management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0016",
@@ -234,7 +249,8 @@
         "partnership",
         "management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0017",
@@ -250,7 +266,8 @@
         "finance",
         "legal"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0018",
@@ -266,7 +283,8 @@
         "corporate development",
         "legal"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0019",
@@ -280,7 +298,8 @@
         "finance",
         "corporate development"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0020",
@@ -294,7 +313,8 @@
         "operations",
         "supply chain"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0021",
@@ -308,7 +328,8 @@
         "M&A",
         "corporate development"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0022",
@@ -322,7 +343,8 @@
         "operations",
         "finance"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0023",
@@ -337,7 +359,8 @@
         "branding",
         "product management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0024",
@@ -351,7 +374,8 @@
         "marketing",
         "niche"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0025",
@@ -367,7 +391,8 @@
         "performance",
         "framework"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0026",
@@ -383,7 +408,8 @@
         "analytics",
         "metrics"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0027",
@@ -399,7 +425,8 @@
         "goal setting",
         "framework"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0028",
@@ -413,7 +440,8 @@
         "planning",
         "risk management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0029",
@@ -428,7 +456,8 @@
         "operations",
         "methodology"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0030",
@@ -443,7 +472,8 @@
         "leadership",
         "vision"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0031",
@@ -457,7 +487,8 @@
         "innovation",
         "technology"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0032",
@@ -471,7 +502,8 @@
         "innovation",
         "product management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0033",
@@ -485,7 +517,8 @@
         "competition",
         "marketing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0034",
@@ -500,7 +533,8 @@
         "investment",
         "competition"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0035",
@@ -515,7 +549,8 @@
         "economics",
         "platform"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0036",
@@ -530,7 +565,8 @@
         "technology",
         "platform"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0037",
@@ -545,7 +581,8 @@
         "platform",
         "business model"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0038",
@@ -560,7 +597,8 @@
         "finance",
         "management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0039",
@@ -575,7 +613,8 @@
         "finance",
         "M&A"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0040",
@@ -591,7 +630,8 @@
         "framework",
         "management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0041",
@@ -607,7 +647,8 @@
         "framework",
         "theory"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0042",
@@ -622,7 +663,8 @@
         "innovation",
         "agility"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0043",
@@ -637,7 +679,8 @@
         "agility",
         "operations"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0044",
@@ -652,7 +695,8 @@
         "innovation",
         "organization"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0045",
@@ -668,7 +712,8 @@
         "methodology",
         "startup"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0046",
@@ -684,7 +729,8 @@
         "innovation",
         "methodology"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0047",
@@ -699,7 +745,8 @@
         "management",
         "agility"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0048",
@@ -714,7 +761,8 @@
         "product management",
         "sales"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0049",
@@ -730,7 +778,8 @@
         "planning",
         "startup"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0050",
@@ -746,7 +795,8 @@
         "analytics",
         "metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0051",
@@ -761,7 +811,8 @@
         "corporate development",
         "growth strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0052",
@@ -776,7 +827,8 @@
         "performance",
         "metrics"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0053",
@@ -791,7 +843,8 @@
         "goal setting",
         "framework"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0054",
@@ -806,7 +859,8 @@
         "framework",
         "competitive advantage"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0055",
@@ -821,7 +875,8 @@
         "startups",
         "agile"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0056",
@@ -836,7 +891,8 @@
         "finance",
         "metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0057",
@@ -850,7 +906,8 @@
         "framework",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0058",
@@ -864,7 +921,8 @@
         "decision making",
         "concept"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0059",
@@ -878,7 +936,8 @@
         "management",
         "concept"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0060",
@@ -892,7 +951,8 @@
         "management",
         "concept"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0061",
@@ -906,7 +966,8 @@
         "investment",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0062",
@@ -920,7 +981,8 @@
         "corporate governance",
         "investment"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0063",
@@ -935,7 +997,8 @@
         "performance",
         "metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0064",
@@ -950,7 +1013,8 @@
         "performance",
         "metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0065",
@@ -964,7 +1028,8 @@
         "risk",
         "concept"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0066",
@@ -978,7 +1043,8 @@
         "restructuring",
         "corporate strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0067",
@@ -992,7 +1058,8 @@
         "restructuring",
         "corporate strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0068",
@@ -1006,7 +1073,8 @@
         "corporate strategy",
         "finance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0069",
@@ -1020,7 +1088,8 @@
         "management",
         "portfolio analysis"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0070",
@@ -1034,7 +1103,8 @@
         "risk",
         "concept"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0071",
@@ -1048,7 +1118,8 @@
         "concept",
         "change management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0072",
@@ -1062,7 +1133,8 @@
         "concept",
         "market dynamics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0073",
@@ -1076,7 +1148,8 @@
         "management",
         "concept"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0074",
@@ -1090,7 +1163,8 @@
         "management",
         "concept"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0075",
@@ -1104,7 +1178,8 @@
         "competitive analysis",
         "market structure"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0076",
@@ -1118,7 +1193,8 @@
         "competitive analysis",
         "market structure"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0077",
@@ -1132,7 +1208,8 @@
         "economics",
         "customer retention"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0078",
@@ -1146,7 +1223,8 @@
         "operations",
         "cost advantage"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0079",
@@ -1160,7 +1238,8 @@
         "operations",
         "cost advantage"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0080",
@@ -1174,7 +1253,8 @@
         "cost advantage",
         "concept"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0081",
@@ -1188,7 +1268,8 @@
         "planning",
         "concept"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0082",
@@ -1202,7 +1283,8 @@
         "adaptation",
         "concept"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0083",
@@ -1216,7 +1298,8 @@
         "planning",
         "futurism"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0084",
@@ -1230,7 +1313,8 @@
         "planning",
         "simulation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0085",
@@ -1245,7 +1329,8 @@
         "competitive analysis",
         "data"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0086",
@@ -1260,7 +1345,8 @@
         "framework",
         "visualization"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0087",
@@ -1274,7 +1360,8 @@
         "performance",
         "concept"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0088",
@@ -1288,7 +1375,8 @@
         "alignment",
         "concept"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0089",
@@ -1302,7 +1390,8 @@
         "leadership",
         "operations"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0090",
@@ -1316,7 +1405,8 @@
         "human resources",
         "organizational development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0091",
@@ -1330,7 +1420,8 @@
         "procurement",
         "supply chain"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0092",
@@ -1344,7 +1435,8 @@
         "globalization",
         "cost management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0093",
@@ -1358,7 +1450,8 @@
         "procurement",
         "cost management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0094",
@@ -1373,7 +1466,8 @@
         "management",
         "change management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0095",
@@ -1387,7 +1481,8 @@
         "management",
         "innovation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0096",
@@ -1401,7 +1496,8 @@
         "R&D",
         "collaboration"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0097",
@@ -1415,7 +1511,8 @@
         "marketing",
         "corporate development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0098",
@@ -1429,7 +1526,8 @@
         "innovation",
         "marketing"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0099",
@@ -1444,7 +1542,8 @@
         "framework",
         "marketing"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0100",
@@ -1458,7 +1557,8 @@
         "branding",
         "competitive strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0101",
@@ -1472,7 +1572,8 @@
         "innovation",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0102",
@@ -1486,7 +1587,8 @@
         "innovation",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0103",
@@ -1501,7 +1603,8 @@
         "innovation",
         "technology"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0104",
@@ -1515,7 +1618,8 @@
         "management",
         "analysis"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0105",
@@ -1529,7 +1633,8 @@
         "finance",
         "resource allocation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0106",
@@ -1545,7 +1650,8 @@
         "valuation",
         "analysis"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0107",
@@ -1559,7 +1665,8 @@
         "investment",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0108",
@@ -1573,7 +1680,8 @@
         "finance",
         "analysis"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0109",
@@ -1587,7 +1695,8 @@
         "growth",
         "M&A"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0110",
@@ -1601,7 +1710,8 @@
         "growth",
         "M&A"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0111",
@@ -1615,7 +1725,8 @@
         "supply chain",
         "operations"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0112",
@@ -1629,7 +1740,8 @@
         "supply chain",
         "operations"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0113",
@@ -1643,7 +1755,8 @@
         "strategy",
         "restructuring"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0114",
@@ -1657,7 +1770,8 @@
         "strategy",
         "restructuring"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0115",
@@ -1672,7 +1786,8 @@
         "M&A",
         "private equity"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0116",
@@ -1687,7 +1802,8 @@
         "strategy",
         "CSR"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0117",
@@ -1702,7 +1818,8 @@
         "corporate governance",
         "economics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0118",
@@ -1717,7 +1834,8 @@
         "ethics",
         "corporate finance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0119",
@@ -1731,7 +1849,8 @@
         "management",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0120",
@@ -1745,7 +1864,8 @@
         "economics",
         "innovation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0121",
@@ -1760,7 +1880,8 @@
         "management",
         "knowledge management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0122",
@@ -1774,7 +1895,8 @@
         "innovation",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0123",
@@ -1788,7 +1910,8 @@
         "competition",
         "innovation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0124",
@@ -1802,7 +1925,8 @@
         "management",
         "idiom"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0125",
@@ -1816,7 +1940,8 @@
         "management",
         "corporate culture"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0126",
@@ -1829,7 +1954,8 @@
         "strategy",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0127",
@@ -1844,7 +1970,8 @@
         "strategy",
         "HR"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0128",
@@ -1858,7 +1985,8 @@
         "management",
         "change management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0129",
@@ -1873,7 +2001,8 @@
         "innovation",
         "operations"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0130",
@@ -1887,7 +2016,8 @@
         "strategy",
         "global business"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0131",
@@ -1901,7 +2031,8 @@
         "strategy",
         "product development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0132",
@@ -1916,7 +2047,8 @@
         "technology",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0133",
@@ -1930,7 +2062,8 @@
         "strategy",
         "innovation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0134",
@@ -1944,7 +2077,8 @@
         "strategy",
         "branding"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0135",
@@ -1958,7 +2092,8 @@
         "competition",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0136",
@@ -1972,7 +2107,8 @@
         "competition",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0137",
@@ -1986,7 +2122,8 @@
         "analysis",
         "competition"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0138",
@@ -2000,7 +2137,8 @@
         "management",
         "corporate finance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0139",
@@ -2016,7 +2154,8 @@
         "HR",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0140",
@@ -2030,7 +2169,8 @@
         "strategy",
         "analysis"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0141",
@@ -2045,7 +2185,8 @@
         "lean",
         "problem-solving"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0142",
@@ -2060,7 +2201,8 @@
         "lean",
         "planning"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0143",
@@ -2074,7 +2216,8 @@
         "management",
         "planning"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0144",
@@ -2090,7 +2233,8 @@
         "planning",
         "analysis"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0145",
@@ -2104,7 +2248,8 @@
         "analysis",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0146",
@@ -2120,7 +2265,8 @@
         "strategy",
         "supply chain"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0147",
@@ -2134,7 +2280,8 @@
         "management",
         "marketing"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0148",
@@ -2149,7 +2296,8 @@
         "strategy",
         "customer service"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0149",
@@ -2163,7 +2311,8 @@
         "management",
         "strategy"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0150",
@@ -2178,7 +2327,8 @@
         "marketing",
         "strategy"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0151",
@@ -2193,7 +2343,8 @@
         "innovation",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0152",
@@ -2207,7 +2358,8 @@
         "economics",
         "customer relations"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0153",
@@ -2221,7 +2373,8 @@
         "finance",
         "branding"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0154",
@@ -2235,7 +2388,8 @@
         "market research",
         "analytics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0155",
@@ -2249,7 +2403,8 @@
         "marketing",
         "competitive strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0156",
@@ -2263,7 +2418,8 @@
         "analytics",
         "product management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0157",
@@ -2277,7 +2433,8 @@
         "marketing",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0158",
@@ -2291,7 +2448,8 @@
         "innovation",
         "market entry"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0159",
@@ -2306,7 +2464,8 @@
         "management",
         "idiom"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0160",
@@ -2320,7 +2479,8 @@
         "R&D",
         "technology"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0161",
@@ -2334,7 +2494,8 @@
         "innovation",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0162",
@@ -2348,7 +2509,8 @@
         "growth strategy",
         "market analysis"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0163",
@@ -2362,7 +2524,8 @@
         "innovation",
         "resource management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0164",
@@ -2376,7 +2539,8 @@
         "resilience",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0165",
@@ -2390,7 +2554,8 @@
         "contingency planning",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0166",
@@ -2404,7 +2569,8 @@
         "emerging markets",
         "economics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0167",
@@ -2419,7 +2585,8 @@
         "marketing",
         "customer relations"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0168",
@@ -2433,7 +2600,8 @@
         "M&A",
         "corporate governance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0169",
@@ -2448,7 +2616,8 @@
         "corporate governance",
         "legal"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0170",
@@ -2462,7 +2631,8 @@
         "M&A",
         "corporate governance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0171",
@@ -2477,7 +2647,8 @@
         "corporate governance",
         "legal"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0172",
@@ -2491,7 +2662,8 @@
         "marketing",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0173",
@@ -2505,7 +2677,8 @@
         "marketing",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0174",
@@ -2518,7 +2691,8 @@
         "competitive strategy",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0175",
@@ -2531,7 +2705,8 @@
         "competitive strategy",
         "marketing"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0176",
@@ -2544,7 +2719,8 @@
         "competitive strategy",
         "marketing"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0177",
@@ -2558,7 +2734,8 @@
         "market entry",
         "growth strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0178",
@@ -2572,7 +2749,8 @@
         "marketing",
         "entrepreneurship"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0179",
@@ -2586,7 +2764,8 @@
         "finance",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0180",
@@ -2600,7 +2779,8 @@
         "competitive strategy",
         "entrepreneurship"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0181",
@@ -2614,7 +2794,8 @@
         "business model",
         "legal"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0182",
@@ -2628,7 +2809,8 @@
         "legal",
         "intellectual property"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0183",
@@ -2642,7 +2824,8 @@
         "international business",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0184",
@@ -2656,7 +2839,8 @@
         "international business",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0185",
@@ -2670,7 +2854,8 @@
         "international business",
         "marketing"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0186",
@@ -2684,7 +2869,8 @@
         "international business",
         "market entry"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0187",
@@ -2698,7 +2884,8 @@
         "global strategy",
         "international business"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0188",
@@ -2712,7 +2899,8 @@
         "planning",
         "corporate goals"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0189",
@@ -2726,7 +2914,8 @@
         "planning",
         "forecasting"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0190",
@@ -2740,7 +2929,8 @@
         "planning",
         "decision-making"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0191",
@@ -2754,7 +2944,8 @@
         "project management",
         "risk management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0192",
@@ -2768,7 +2959,8 @@
         "innovation",
         "product management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0193",
@@ -2782,7 +2974,8 @@
         "innovation",
         "product management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0194",
@@ -2796,7 +2989,8 @@
         "e-commerce",
         "supply chain"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0195",
@@ -2810,7 +3004,8 @@
         "e-commerce",
         "supply chain"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0196",
@@ -2824,7 +3019,8 @@
         "management",
         "decision-making"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0197",
@@ -2839,7 +3035,8 @@
         "retail",
         "e-commerce"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0198",
@@ -2854,7 +3051,8 @@
         "corporate strategy",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0199",
@@ -2869,7 +3067,8 @@
         "performance",
         "metrics"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0200",
@@ -2884,7 +3083,8 @@
         "goal setting",
         "performance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0201",
@@ -2899,7 +3099,8 @@
         "theory",
         "competitive advantage"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0202",
@@ -2914,7 +3115,8 @@
         "startups",
         "agile"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0203",
@@ -2929,7 +3131,8 @@
         "finance",
         "metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0204",
@@ -2944,7 +3147,8 @@
         "performance",
         "metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0205",
@@ -2959,7 +3163,8 @@
         "investment",
         "metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0206",
@@ -2974,7 +3179,8 @@
         "operations",
         "transformation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0207",
@@ -2989,7 +3195,8 @@
         "private equity",
         "M&A"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0208",
@@ -3004,7 +3211,8 @@
         "organization",
         "best practices"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0209",
@@ -3019,7 +3227,8 @@
         "planning",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0210",
@@ -3034,7 +3243,8 @@
         "strategy",
         "corporate development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0211",
@@ -3049,7 +3259,8 @@
         "metrics",
         "performance"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "strategy_0212",
@@ -3064,7 +3275,8 @@
         "goal setting",
         "framework"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0213",
@@ -3079,7 +3291,8 @@
         "framework",
         "management theory"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0214",
@@ -3094,7 +3307,8 @@
         "startups",
         "agile"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0215",
@@ -3109,7 +3323,8 @@
         "finance",
         "metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0216",
@@ -3124,7 +3339,8 @@
         "metrics",
         "performance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0217",
@@ -3139,7 +3355,8 @@
         "metrics",
         "investment"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0218",
@@ -3154,7 +3371,8 @@
         "operations",
         "process improvement"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0219",
@@ -3169,7 +3387,8 @@
         "corporate finance",
         "M&A"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0220",
@@ -3184,7 +3403,8 @@
         "organization",
         "best practices"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "strategy_0221",
@@ -3199,6 +3419,7 @@
         "project management",
         "planning"
       ]
-    }
+    },
+    "isFree": false
   }
 ]

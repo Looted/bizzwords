@@ -12,7 +12,8 @@
     "e2e": "playwright test",
     "e2e:safe": "firebase emulators:exec --only auth,firestore --project demo-bizzwords \"npm run e2e\"",
     "serve:ssr:bizzwords": "node dist/bizzwords/server/server.mjs",
-    "deploy:ghpages": "ng deploy --base-href=/bizzwords/"
+    "deploy:ghpages": "ng deploy --base-href=/bizzwords/",
+    "apply-freemium-rules": "node scripts/apply-freemium-rules.mjs"
   },
   "prettier": {
     "printWidth": 100,
@@ -40,6 +41,7 @@
     "@angular/ssr": "^21.0.2",
     "@huggingface/transformers": "^3.8.1",
     "@ngneat/tailwind": "^7.0.3",
+    "@revenuecat/purchases-js": "^1.20.0",
     "@tailwindcss/postcss": "^4.1.17",
     "execa": "^9.6.1",
     "express": "^5.2.1",

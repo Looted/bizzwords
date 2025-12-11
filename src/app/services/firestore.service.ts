@@ -48,7 +48,8 @@ export class FirestoreService {
           nativeLanguage: 'pl',
           themeMode: 'system'
         },
-        schemaVersion: 0 // Default to 0, migration service will upgrade if needed
+        schemaVersion: 0, // Default to 0, migration service will upgrade if needed
+        isPremium: false
       };
 
       await setDoc(userDocRef, { ...defaultProfile, ...userData });

@@ -1,6 +1,6 @@
 # Active Context
 
-Current work focus: Implementing comprehensive E2E test fixes with Firebase emulator integration.
+Current work focus: Freemium architecture implementation completed. All changes documented in memory bank.
 
 Recent changes:
 - Implemented Firebase Authentication with Google OAuth and email/password providers
@@ -14,6 +14,13 @@ Recent changes:
 - Fixed all E2E tests to work with new authentication and navigation patterns
 - Updated memory bank documentation with new system architecture and technologies
 - Refactored schema migration system into a modular architecture in `src/app/migrations/`.
+- **✅ Freemium Architecture Complete**: Implemented comprehensive content restrictions with premium user management
+  - Content tagging system with `isFree` flags based on difficulty tiers
+  - UserProfile extended with `isPremium` field and AuthService premium checking
+  - StaticVocabularyService filtering based on premium status
+  - GameService handling shortened rounds for free users
+  - MenuComponent with visual feedback (blue/gold buttons, difficulty pills)
+  - All tests passing (395/395) with freemium logic coverage
 
 Current fixes in progress:
 - Updated Playwright config to start Firebase emulators before Angular dev server

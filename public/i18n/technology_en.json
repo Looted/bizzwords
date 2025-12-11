@@ -10,7 +10,8 @@
         "software_development",
         "infrastructure"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0002",
@@ -23,7 +24,8 @@
         "cloud_computing",
         "cost_management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0003",
@@ -36,7 +38,8 @@
         "software_development",
         "operations"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0004",
@@ -49,7 +52,8 @@
         "operations",
         "automation"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0005",
@@ -63,7 +67,8 @@
         "software_development",
         "workflow"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0006",
@@ -77,7 +82,8 @@
         "software_development",
         "workflow"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0007",
@@ -91,7 +97,8 @@
         "devops",
         "cloud_computing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0008",
@@ -104,7 +111,8 @@
         "security",
         "culture"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0009",
@@ -117,7 +125,8 @@
         "cybersecurity",
         "policy"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0010",
@@ -131,7 +140,8 @@
         "cybersecurity",
         "administration"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0011",
@@ -144,7 +154,8 @@
         "cybersecurity",
         "compliance"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0012",
@@ -157,7 +168,8 @@
         "fintech",
         "database"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0013",
@@ -170,7 +182,8 @@
         "fintech",
         "legal_tech"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0014",
@@ -184,7 +197,8 @@
         "digital_assets",
         "marketing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0015",
@@ -198,7 +212,8 @@
         "fintech",
         "finance"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0016",
@@ -212,7 +227,8 @@
         "artificial_intelligence",
         "data_science"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0017",
@@ -226,7 +242,8 @@
         "artificial_intelligence",
         "data_science"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0018",
@@ -240,7 +257,8 @@
         "artificial_intelligence",
         "linguistics"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0019",
@@ -253,7 +271,8 @@
         "artificial_intelligence",
         "automation"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0020",
@@ -266,7 +285,8 @@
         "data_analysis",
         "strategy"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0021",
@@ -279,7 +299,8 @@
         "data_management",
         "infrastructure"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0022",
@@ -292,7 +313,8 @@
         "data_management",
         "analytics"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0023",
@@ -306,7 +328,8 @@
         "analytics",
         "management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0024",
@@ -319,7 +342,8 @@
         "simulation",
         "engineering"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0025",
@@ -332,7 +356,8 @@
         "hardware",
         "networking"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0026",
@@ -345,7 +370,8 @@
         "networking",
         "infrastructure"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0027",
@@ -359,7 +385,8 @@
         "hardware",
         "connectivity"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0028",
@@ -373,7 +400,8 @@
         "telecommunications",
         "networking"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0029",
@@ -386,7 +414,8 @@
         "research",
         "future_tech"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0030",
@@ -400,7 +429,8 @@
         "consumer_tech",
         "ux"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0031",
@@ -414,7 +444,8 @@
         "training",
         "simulation"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0032",
@@ -428,7 +459,8 @@
         "design",
         "visualization"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0033",
@@ -442,7 +474,8 @@
         "business_model",
         "cloud"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0034",
@@ -456,7 +489,8 @@
         "development",
         "cloud"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0035",
@@ -470,7 +504,8 @@
         "infrastructure",
         "cloud"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0036",
@@ -484,7 +519,8 @@
         "product_management",
         "startup"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0037",
@@ -497,7 +533,8 @@
         "software_development",
         "project_management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0038",
@@ -510,7 +547,8 @@
         "infrastructure",
         "growth"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0039",
@@ -524,7 +562,8 @@
         "operations",
         "reliability"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0040",
@@ -538,7 +577,8 @@
         "security",
         "risk_management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0041",
@@ -551,7 +591,8 @@
         "networking",
         "performance"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0042",
@@ -564,7 +605,8 @@
         "networking",
         "performance"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0043",
@@ -577,7 +619,8 @@
         "business_model",
         "integration"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0044",
@@ -590,7 +633,8 @@
         "web_development",
         "content_management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0045",
@@ -603,7 +647,8 @@
         "data_analysis",
         "efficiency"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0046",
@@ -617,7 +662,8 @@
         "automation",
         "efficiency"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0047",
@@ -631,7 +677,8 @@
         "artificial_intelligence",
         "content_creation"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0048",
@@ -644,7 +691,8 @@
         "strategy",
         "change_management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0049",
@@ -658,7 +706,8 @@
         "design",
         "product"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0050",
@@ -671,7 +720,8 @@
         "marketing",
         "customer_service"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0051",
@@ -686,7 +736,8 @@
         "software development",
         "system design"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0052",
@@ -701,7 +752,8 @@
         "software development",
         "system design"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0053",
@@ -716,7 +768,8 @@
         "software development",
         "system design"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0054",
@@ -731,7 +784,8 @@
         "networking",
         "software development"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0055",
@@ -746,7 +800,8 @@
         "networking",
         "operations"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0056",
@@ -760,7 +815,8 @@
         "product management",
         "operations"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0057",
@@ -774,7 +830,8 @@
         "software development",
         "quality assurance"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0058",
@@ -789,7 +846,8 @@
         "quality assurance",
         "project management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0059",
@@ -803,7 +861,8 @@
         "software development",
         "management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0060",
@@ -816,7 +875,8 @@
         "software development",
         "code quality"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0061",
@@ -830,7 +890,8 @@
         "software development",
         "architecture"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0062",
@@ -844,7 +905,8 @@
         "software development",
         "architecture"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0063",
@@ -859,7 +921,8 @@
         "strategy",
         "security"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0064",
@@ -873,7 +936,8 @@
         "compliance",
         "analytics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0065",
@@ -888,7 +952,8 @@
         "strategy",
         "operations"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0066",
@@ -903,7 +968,8 @@
         "data engineering",
         "analytics"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0067",
@@ -918,7 +984,8 @@
         "data engineering",
         "cloud computing"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0068",
@@ -932,7 +999,8 @@
         "data engineering",
         "architecture"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0069",
@@ -946,7 +1014,8 @@
         "architecture",
         "cloud computing"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0070",
@@ -960,7 +1029,8 @@
         "architecture",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0071",
@@ -974,7 +1044,8 @@
         "database",
         "software development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0072",
@@ -989,7 +1060,8 @@
         "AI",
         "machine learning"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0073",
@@ -1004,7 +1076,8 @@
         "analytics",
         "UX"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0074",
@@ -1019,7 +1092,8 @@
         "machine learning",
         "analytics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0075",
@@ -1034,7 +1108,8 @@
         "security",
         "analytics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0076",
@@ -1049,7 +1124,8 @@
         "infrastructure",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0077",
@@ -1064,7 +1140,8 @@
         "infrastructure",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0078",
@@ -1078,7 +1155,8 @@
         "software development",
         "architecture"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0079",
@@ -1093,7 +1171,8 @@
         "SRE",
         "testing"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0080",
@@ -1108,7 +1187,8 @@
         "cloud computing",
         "DevOps"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0081",
@@ -1123,7 +1203,8 @@
         "SRE",
         "management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0082",
@@ -1138,7 +1219,8 @@
         "SRE",
         "analytics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0083",
@@ -1154,7 +1236,8 @@
         "management",
         "IT"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0084",
@@ -1168,7 +1251,8 @@
         "cloud computing",
         "DevOps"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0085",
@@ -1182,7 +1266,8 @@
         "DevOps",
         "software development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0086",
@@ -1196,7 +1281,8 @@
         "DevOps",
         "software development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0087",
@@ -1210,7 +1296,8 @@
         "operations",
         "infrastructure"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0088",
@@ -1225,7 +1312,8 @@
         "infrastructure",
         "operations"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0089",
@@ -1240,7 +1328,8 @@
         "web development",
         "infrastructure"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0090",
@@ -1254,7 +1343,8 @@
         "security",
         "IT"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0091",
@@ -1268,7 +1358,8 @@
         "security",
         "IT"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0092",
@@ -1283,7 +1374,8 @@
         "security",
         "operations"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0093",
@@ -1298,7 +1390,8 @@
         "security",
         "networking"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0094",
@@ -1313,7 +1406,8 @@
         "security",
         "compliance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0095",
@@ -1328,7 +1422,8 @@
         "security",
         "IT"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0096",
@@ -1343,7 +1438,8 @@
         "security",
         "networking"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0097",
@@ -1358,7 +1454,8 @@
         "security",
         "IT"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0098",
@@ -1373,7 +1470,8 @@
         "security",
         "IT"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0099",
@@ -1388,7 +1486,8 @@
         "software development",
         "project management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0100",
@@ -1402,7 +1501,8 @@
         "security",
         "software development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0101",
@@ -1417,7 +1517,8 @@
         "cloud computing",
         "infrastructure"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0102",
@@ -1432,7 +1533,8 @@
         "cloud computing",
         "virtualization"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0103",
@@ -1447,7 +1549,8 @@
         "integration",
         "web development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0104",
@@ -1462,7 +1565,8 @@
         "web services",
         "architecture"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0105",
@@ -1476,7 +1580,8 @@
         "API",
         "data management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0106",
@@ -1490,7 +1595,8 @@
         "networking",
         "real-time"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0107",
@@ -1503,7 +1609,8 @@
         "software architecture",
         "distributed systems"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0108",
@@ -1517,7 +1624,8 @@
         "data science",
         "cryptography"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0109",
@@ -1532,7 +1640,8 @@
         "machine learning",
         "data privacy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0110",
@@ -1548,7 +1657,8 @@
         "ethics",
         "compliance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0111",
@@ -1563,7 +1673,8 @@
         "machine learning",
         "DevOps"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0112",
@@ -1578,7 +1689,8 @@
         "business process",
         "productivity"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0113",
@@ -1593,7 +1705,8 @@
         "business process",
         "citizen development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0114",
@@ -1606,7 +1719,8 @@
         "software architecture",
         "enterprise systems"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0115",
@@ -1620,7 +1734,8 @@
         "DevOps",
         "monitoring"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0116",
@@ -1635,7 +1750,8 @@
         "finance",
         "cybersecurity"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0117",
@@ -1650,7 +1766,8 @@
         "data science",
         "data privacy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0118",
@@ -1665,7 +1782,8 @@
         "compliance",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0119",
@@ -1678,7 +1796,8 @@
         "software development",
         "project management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "technology_0120",
@@ -1691,7 +1810,8 @@
         "IT management",
         "enterprise architecture"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0121",
@@ -1705,7 +1825,8 @@
         "strategy",
         "IT management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0122",
@@ -1720,7 +1841,8 @@
         "procurement",
         "IT management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0123",
@@ -1735,7 +1857,8 @@
         "innovation",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0124",
@@ -1750,7 +1873,8 @@
         "operations",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0125",
@@ -1764,7 +1888,8 @@
         "compliance",
         "data management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0126",
@@ -1778,7 +1903,8 @@
         "data management",
         "cloud computing"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0127",
@@ -1791,7 +1917,8 @@
         "software architecture",
         "software development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0128",
@@ -1805,7 +1932,8 @@
         "software architecture",
         "enterprise systems"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0129",
@@ -1819,7 +1947,8 @@
         "legal",
         "investigation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0130",
@@ -1833,7 +1962,8 @@
         "migration",
         "infrastructure"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0131",
@@ -1847,7 +1977,8 @@
         "migration",
         "architecture"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0132",
@@ -1861,7 +1992,8 @@
         "finance",
         "operations"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0133",
@@ -1875,7 +2007,8 @@
         "cloud computing",
         "automation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0134",
@@ -1890,7 +2023,8 @@
         "quality assurance",
         "project management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0135",
@@ -1903,7 +2037,8 @@
         "software architecture",
         "data management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0136",
@@ -1918,7 +2053,8 @@
         "software architecture",
         "database"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0137",
@@ -1933,7 +2069,8 @@
         "data management",
         "software development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0138",
@@ -1947,7 +2084,8 @@
         "scalability",
         "architecture"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0139",
@@ -1961,7 +2099,8 @@
         "infrastructure",
         "high availability"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0140",
@@ -1975,7 +2114,8 @@
         "performance",
         "architecture"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0141",
@@ -1988,7 +2128,8 @@
         "software architecture",
         "distributed systems"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0142",
@@ -2002,7 +2143,8 @@
         "cybersecurity",
         "API"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0143",
@@ -2016,7 +2158,8 @@
         "resilience",
         "distributed systems"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0144",
@@ -2030,7 +2173,8 @@
         "API",
         "distributed systems"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0145",
@@ -2043,7 +2187,8 @@
         "software architecture",
         "web development"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0146",
@@ -2057,7 +2202,8 @@
         "web development",
         "scalability"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0147",
@@ -2072,7 +2218,8 @@
         "mobile",
         "user experience"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0148",
@@ -2086,7 +2233,8 @@
         "web development",
         "user experience"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0149",
@@ -2101,7 +2249,8 @@
         "performance",
         "SEO"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "technology_0150",
@@ -2116,6 +2265,7 @@
         "networking",
         "web development"
       ]
-    }
+    },
+    "isFree": false
   }
 ]

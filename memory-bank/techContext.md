@@ -65,3 +65,47 @@ The Word model represents vocabulary items in the flashcard system with the foll
 - `term_translation`: Polish translation of the term
 - `definition_translation`: Polish translation of the definition
 - `example_translation`: Polish translation of the example sentence
+- `isFree`: Boolean flag indicating if word is accessible to free users (part of freemium system)
+
+### User Model
+The User model extends Firebase Auth user data with application-specific fields:
+
+- `uid`: Firebase user ID
+- `email`: User email address
+- `displayName`: User's display name
+- `photoURL`: Profile photo URL
+- `createdAt`: Account creation timestamp
+- `lastLogin`: Last login timestamp
+- `hasMigratedLocalData`: Flag indicating if local data has been migrated to cloud
+- `settings`: User preferences (native language, theme, etc.)
+- `schemaVersion`: Schema migration version for data compatibility
+- `isPremium`: Boolean flag indicating premium subscription status (freemium system)
+
+### Freemium Architecture
+The application implements a comprehensive freemium model with the following technical components:
+
+**Content Tagging System:**
+- **Script**: `scripts/apply-freemium-rules.mjs` processes all vocabulary JSON files
+- **Logic**: Tags words as `isFree: true` based on difficulty tiers:
+  - 30 Easy words (difficulty: 1)
+  - 20 Medium words (difficulty: 2)
+  - 10 Hard words (difficulty: 3)
+- **Result**: ~60 free words per category, ~180 total free words across all categories
+
+**Service Layer Implementation:**
+- **StaticVocabularyService**: Extended with `isPremium` parameter in `generateTranslatedWords()` and new `getAvailableWordsCount()` method
+- **AuthService**: Added `isPremiumUser()` method to check premium status from Firestore
+- **GameService**: Enhanced `startGame()` to handle premium filtering and shortened rounds
+
+**UI Components:**
+- **MenuComponent**: Added freemium logic with visual feedback:
+  - Blue buttons: Content available (ready to play)
+  - Gold buttons: Content exhausted (paywall/upsell state)
+  - Difficulty pills: Visual indication of exhausted tiers
+
+**Business Logic:**
+- **Content Restrictions**: Non-premium users only see free-tagged words
+- **Shortened Rounds**: Games adapt when insufficient words available:
+  - Classic mode: Requires ≥5 words, otherwise uses available count
+  - Blitz mode: Requires ≥20 words, otherwise uses available count
+- **Premium Bypass**: Premium users access all 150+ words per category without restrictions

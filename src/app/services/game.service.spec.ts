@@ -5,6 +5,8 @@ import { StaticVocabularyService } from './static-vocabulary.service';
 import { VocabularyStatsService } from './vocabulary-stats.service';
 import { GameModeService } from './game-mode.service';
 import { LanguageService } from './language.service';
+import { AuthService } from './auth.service';
+import { FreemiumService } from './freemium.service';
 import { GameMode } from '../shared/constants';
 import { of } from 'rxjs';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
@@ -17,7 +19,10 @@ describe('GameService', () => {
 
   beforeEach(() => {
     gameStoreMock = {
-      startGame: vi.fn()
+      startGame: vi.fn(),
+      sessionConfig: {
+        set: vi.fn()
+      }
     };
 
     staticVocabMock = {
@@ -49,6 +54,20 @@ describe('GameService', () => {
       getWordsNeedingPractice: vi.fn().mockReturnValue([])
     };
 
+    const authServiceMock = {
+      isPremiumUser: vi.fn().mockResolvedValue(false)
+    };
+
+    const freemiumServiceMock = {
+      isCategoryExhausted: vi.fn().mockReturnValue(false),
+      getFreeWordsForCategory: vi.fn().mockReturnValue(new Set()),
+      getEncounteredFreeWordCountForCategory: vi.fn().mockReturnValue(0),
+      getRemainingFreeWordsForCategory: vi.fn().mockReturnValue(60),
+      getTotalFreeWordsForCategory: vi.fn().mockReturnValue(60),
+      isFreeWord: vi.fn().mockReturnValue(true),
+      isLoadingFreemiumData: { asReadonly: vi.fn().mockReturnValue(of(false)) }
+    };
+
     TestBed.configureTestingModule({
       providers: [
         GameService,
@@ -56,7 +75,9 @@ describe('GameService', () => {
         { provide: StaticVocabularyService, useValue: staticVocabMock },
         { provide: VocabularyStatsService, useValue: vocabStatsServiceMock },
         { provide: GameModeService, useValue: gameModeServiceMock },
-        { provide: LanguageService, useValue: languageServiceMock }
+        { provide: LanguageService, useValue: languageServiceMock },
+        { provide: AuthService, useValue: authServiceMock },
+        { provide: FreemiumService, useValue: freemiumServiceMock }
       ]
     });
 
@@ -171,8 +192,9 @@ describe('GameService', () => {
       expect(generateSpy).toHaveBeenCalledWith(
         expect.any(String),
         expect.any(String),
-        5, // Classic count
-        undefined
+        1000, // Load all eligible words first
+        undefined,
+        false // isPremium parameter
       );
     });
 
@@ -184,8 +206,9 @@ describe('GameService', () => {
       expect(generateSpy).toHaveBeenCalledWith(
         expect.any(String),
         expect.any(String),
-        20, // Blitz count
-        undefined
+        1000, // Load all eligible words first
+        undefined,
+        false // isPremium parameter
       );
     });
   });

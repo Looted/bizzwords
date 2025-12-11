@@ -9,6 +9,8 @@ import { GameMode } from '../../shared/constants';
 import { vi } from 'vitest';
 import { SwUpdate } from '@angular/service-worker';
 import { PwaService } from '../../services/pwa.service';
+import { AuthService } from '../../services/auth.service';
+import { FreemiumService } from '../../services/freemium.service';
 
 describe('MenuComponent', () => {
   let component: MenuComponent;
@@ -19,10 +21,13 @@ describe('MenuComponent', () => {
   let storageServiceMock: any;
   let swUpdateMock: any;
   let pwaServiceMock: any;
+  let authServiceMock: any;
+  let freemiumServiceMock: any;
 
   beforeEach(async () => {
     gameServiceMock = {
-      startGame: vi.fn().mockResolvedValue(undefined)
+      startGame: vi.fn().mockResolvedValue(undefined),
+      getAvailableWordsCount: vi.fn().mockResolvedValue(60)
     };
     statsServiceMock = {
       getAllStats: vi.fn().mockReturnValue([]),
@@ -57,6 +62,19 @@ describe('MenuComponent', () => {
         swUpdateMock.activateUpdate();
       })
     };
+    authServiceMock = {
+      isPremiumUser: vi.fn().mockResolvedValue(false)
+    };
+
+    const freemiumServiceMock = {
+      isCategoryExhausted: vi.fn().mockReturnValue(false),
+      getFreeWordsForCategory: vi.fn().mockReturnValue(new Set()),
+      getEncounteredFreeWordCountForCategory: vi.fn().mockReturnValue(0),
+      getRemainingFreeWordsForCategory: vi.fn().mockReturnValue(60),
+      getTotalFreeWordsForCategory: vi.fn().mockReturnValue(60),
+      isFreeWord: vi.fn().mockReturnValue(true),
+      isLoadingFreemiumData: { asReadonly: vi.fn().mockReturnValue({ subscribe: vi.fn() }) }
+    };
 
     await TestBed.configureTestingModule({
       imports: [MenuComponent],
@@ -67,7 +85,9 @@ describe('MenuComponent', () => {
         { provide: PLATFORM_ID, useValue: 'browser' },
         { provide: StorageService, useValue: storageServiceMock },
         { provide: SwUpdate, useValue: swUpdateMock },
-        { provide: PwaService, useValue: pwaServiceMock }
+        { provide: PwaService, useValue: pwaServiceMock },
+        { provide: AuthService, useValue: authServiceMock },
+        { provide: FreemiumService, useValue: freemiumServiceMock }
       ]
     })
     .overrideComponent(MenuComponent, {
@@ -269,7 +289,9 @@ describe('MenuComponent', () => {
           { provide: PLATFORM_ID, useValue: 'server' },
           { provide: StorageService, useValue: storageServiceMock },
           { provide: SwUpdate, useValue: swUpdateMock },
-          { provide: PwaService, useValue: pwaServiceMock }
+          { provide: PwaService, useValue: pwaServiceMock },
+          { provide: AuthService, useValue: authServiceMock },
+          { provide: FreemiumService, useValue: freemiumServiceMock }
         ]
       });
 

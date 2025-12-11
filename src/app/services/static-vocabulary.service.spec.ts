@@ -14,14 +14,16 @@ describe('StaticVocabularyService', () => {
       term: 'employee',
       definition: 'A person who works for a company',
       example: 'The employee works 40 hours per week.',
-      metadata: { difficulty: 1, tags: ['hr'] }
+      metadata: { difficulty: 1, tags: ['hr'] },
+      isFree: true
     },
     {
       id: '2',
       term: 'salary',
       definition: 'Money paid to an employee',
       example: 'She receives a monthly salary.',
-      metadata: { difficulty: 2, tags: ['hr'] }
+      metadata: { difficulty: 2, tags: ['hr'] },
+      isFree: true
     }
   ];
 

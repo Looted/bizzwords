@@ -12,7 +12,8 @@
         "valuation",
         "investing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0002",
@@ -27,7 +28,8 @@
         "accounting",
         "capital budgeting"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0003",
@@ -42,7 +44,8 @@
         "investing",
         "metrics"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0004",
@@ -57,7 +60,8 @@
         "corporate finance",
         "valuation"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0005",
@@ -72,7 +76,8 @@
         "investing",
         "risk management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0006",
@@ -87,7 +92,8 @@
         "valuation",
         "M&A"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0007",
@@ -102,7 +108,8 @@
         "private equity",
         "M&A"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0008",
@@ -116,7 +123,8 @@
         "corporate finance",
         "funding"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0009",
@@ -130,7 +138,8 @@
         "investing",
         "banking"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0010",
@@ -144,7 +153,8 @@
         "trading",
         "investing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0011",
@@ -158,7 +168,8 @@
         "risk management",
         "investing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0012",
@@ -172,7 +183,8 @@
         "derivatives",
         "risk management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0013",
@@ -186,7 +198,8 @@
         "derivatives",
         "corporate finance"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0014",
@@ -201,7 +214,8 @@
         "derivatives",
         "risk management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0015",
@@ -216,7 +230,8 @@
         "structured finance",
         "investing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0016",
@@ -231,7 +246,8 @@
         "economics",
         "monetary policy"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0017",
@@ -245,7 +261,8 @@
         "economics",
         "investing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0018",
@@ -260,7 +277,8 @@
         "options trading",
         "risk"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0019",
@@ -274,7 +292,8 @@
         "options trading",
         "quantitative finance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0020",
@@ -288,7 +307,8 @@
         "risk management",
         "statistics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0021",
@@ -302,7 +322,8 @@
         "management",
         "accounting"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0022",
@@ -316,7 +337,8 @@
         "accounting",
         "M&A"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0023",
@@ -330,7 +352,8 @@
         "accounting",
         "personal finance"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0024",
@@ -344,7 +367,8 @@
         "accounting",
         "business operations"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0025",
@@ -359,7 +383,8 @@
         "valuation",
         "accounting"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0026",
@@ -374,7 +399,8 @@
         "valuation",
         "investing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0027",
@@ -389,7 +415,8 @@
         "valuation",
         "M&A"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0028",
@@ -404,7 +431,8 @@
         "valuation",
         "M&A"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0029",
@@ -418,7 +446,8 @@
         "corporate finance",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0030",
@@ -432,7 +461,8 @@
         "corporate finance",
         "debt"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0031",
@@ -446,7 +476,8 @@
         "corporate finance",
         "debt"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0032",
@@ -460,7 +491,8 @@
         "risk management",
         "treasury"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0033",
@@ -475,7 +507,8 @@
         "risk management",
         "investing"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0034",
@@ -489,7 +522,8 @@
         "bonds",
         "investing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0035",
@@ -503,7 +537,8 @@
         "investing",
         "risk management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0036",
@@ -517,7 +552,8 @@
         "investing",
         "risk management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0037",
@@ -531,7 +567,8 @@
         "investing",
         "risk"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0038",
@@ -545,7 +582,8 @@
         "investing",
         "performance metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0039",
@@ -559,7 +597,8 @@
         "investing",
         "performance metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0040",
@@ -573,7 +612,8 @@
         "investing",
         "performance metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0041",
@@ -587,7 +627,8 @@
         "M&A",
         "legal"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0042",
@@ -601,7 +642,8 @@
         "accounting",
         "planning"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0043",
@@ -615,7 +657,8 @@
         "economics",
         "decision-making"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0044",
@@ -629,7 +672,8 @@
         "economics",
         "strategy"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0045",
@@ -644,7 +688,8 @@
         "economics",
         "investing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0046",
@@ -659,7 +704,8 @@
         "accounting",
         "business operations"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0047",
@@ -674,7 +720,8 @@
         "metrics",
         "investing"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0048",
@@ -688,7 +735,8 @@
         "corporate finance",
         "decision-making"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0049",
@@ -702,7 +750,8 @@
         "investing",
         "metrics"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0050",
@@ -717,7 +766,8 @@
         "valuation",
         "corporate finance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0051",
@@ -731,7 +781,8 @@
         "M&A",
         "investment banking"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0052",
@@ -745,7 +796,8 @@
         "investment",
         "portfolio management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0053",
@@ -759,7 +811,8 @@
         "trading",
         "technology"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0054",
@@ -773,7 +826,8 @@
         "venture capital",
         "legal"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0055",
@@ -788,7 +842,8 @@
         "securitization",
         "investment"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0056",
@@ -803,7 +858,8 @@
         "quantitative analysis",
         "statistics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0057",
@@ -818,7 +874,8 @@
         "regulation",
         "risk management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0058",
@@ -832,7 +889,8 @@
         "risk management",
         "derivatives"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0059",
@@ -846,7 +904,8 @@
         "debt",
         "lending"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0060",
@@ -860,7 +919,8 @@
         "private equity",
         "investment"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0061",
@@ -875,7 +935,8 @@
         "portfolio management",
         "theory"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0062",
@@ -889,7 +950,8 @@
         "private equity",
         "investment"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0063",
@@ -904,7 +966,8 @@
         "accounting",
         "management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0064",
@@ -918,7 +981,8 @@
         "quantitative analysis",
         "statistics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0065",
@@ -932,7 +996,8 @@
         "private equity",
         "venture capital"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0066",
@@ -947,7 +1012,8 @@
         "M&A",
         "investment banking"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0067",
@@ -960,7 +1026,8 @@
         "finance",
         "accounting"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0068",
@@ -975,7 +1042,8 @@
         "bonds",
         "banking"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0069",
@@ -989,7 +1057,8 @@
         "M&A",
         "valuation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0070",
@@ -1003,7 +1072,8 @@
         "bonds",
         "risk management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0071",
@@ -1017,7 +1087,8 @@
         "valuation",
         "corporate finance"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0072",
@@ -1031,7 +1102,8 @@
         "risk management",
         "trading"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0073",
@@ -1045,7 +1117,8 @@
         "debt",
         "lending"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0074",
@@ -1059,7 +1132,8 @@
         "risk management",
         "bonds"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0075",
@@ -1074,7 +1148,8 @@
         "risk management",
         "derivatives"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0076",
@@ -1088,7 +1163,8 @@
         "portfolio management",
         "foreign exchange"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0077",
@@ -1102,7 +1178,8 @@
         "bonds",
         "debt"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0078",
@@ -1117,7 +1194,8 @@
         "accounting",
         "lending"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0079",
@@ -1131,7 +1209,8 @@
         "finance",
         "accounting"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0080",
@@ -1145,7 +1224,8 @@
         "finance",
         "accounting"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0081",
@@ -1160,7 +1240,8 @@
         "M&A",
         "legal"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0082",
@@ -1175,7 +1256,8 @@
         "trading",
         "risk management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0083",
@@ -1189,7 +1271,8 @@
         "investment",
         "debt"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0084",
@@ -1203,7 +1286,8 @@
         "private equity",
         "real estate"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0085",
@@ -1217,7 +1301,8 @@
         "private equity",
         "corporate finance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0086",
@@ -1232,7 +1317,8 @@
         "legal",
         "M&A"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0087",
@@ -1247,7 +1333,8 @@
         "venture capital",
         "idiom"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0088",
@@ -1261,7 +1348,8 @@
         "bonds",
         "risk management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0089",
@@ -1275,7 +1363,8 @@
         "M&A",
         "legal"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0090",
@@ -1290,7 +1379,8 @@
         "management",
         "corporate finance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0091",
@@ -1304,7 +1394,8 @@
         "portfolio management",
         "theory"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0092",
@@ -1317,7 +1408,8 @@
         "finance",
         "accounting"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0093",
@@ -1332,7 +1424,8 @@
         "investment",
         "valuation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0094",
@@ -1346,7 +1439,8 @@
         "M&A",
         "investment banking"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0095",
@@ -1360,7 +1454,8 @@
         "portfolio management",
         "theory"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0096",
@@ -1374,7 +1469,8 @@
         "debt",
         "lending"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0097",
@@ -1388,7 +1484,8 @@
         "valuation",
         "investment banking"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0098",
@@ -1402,7 +1499,8 @@
         "derivatives",
         "trading"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0099",
@@ -1417,7 +1515,8 @@
         "private equity",
         "venture capital"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0100",
@@ -1432,7 +1531,8 @@
         "quantitative analysis",
         "derivatives"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0101",
@@ -1448,7 +1548,8 @@
         "trading",
         "technology"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0102",
@@ -1463,7 +1564,8 @@
         "contracts",
         "risk management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0103",
@@ -1479,7 +1581,8 @@
         "portfolio management",
         "performance metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0104",
@@ -1494,7 +1597,8 @@
         "derivatives",
         "mathematics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0105",
@@ -1509,7 +1613,8 @@
         "risk management",
         "modeling"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0106",
@@ -1526,7 +1631,8 @@
         "investing",
         "legal"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0107",
@@ -1542,7 +1648,8 @@
         "legal",
         "M&A"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0108",
@@ -1558,7 +1665,8 @@
         "real estate",
         "lending"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0109",
@@ -1573,7 +1681,8 @@
         "fees",
         "portfolio management"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0110",
@@ -1589,7 +1698,8 @@
         "valuation",
         "reporting"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0111",
@@ -1605,7 +1715,8 @@
         "portfolio management",
         "theory"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0112",
@@ -1621,7 +1732,8 @@
         "securities",
         "real estate"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0113",
@@ -1636,7 +1748,8 @@
         "banking",
         "real estate"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0114",
@@ -1652,7 +1765,8 @@
         "M&A",
         "reporting"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0115",
@@ -1666,7 +1780,8 @@
         "accounting",
         "reporting"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0116",
@@ -1681,7 +1796,8 @@
         "valuation",
         "analysis"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0117",
@@ -1696,7 +1812,8 @@
         "swaps",
         "risk management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0118",
@@ -1712,7 +1829,8 @@
         "risk management",
         "trading"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0119",
@@ -1728,7 +1846,8 @@
         "debt",
         "bonds"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0120",
@@ -1743,7 +1862,8 @@
         "stocks",
         "corporate finance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0121",
@@ -1759,7 +1879,8 @@
         "M&A",
         "valuation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0122",
@@ -1774,7 +1895,8 @@
         "regulation",
         "risk management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0123",
@@ -1789,7 +1911,8 @@
         "reporting",
         "GAAP"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0124",
@@ -1804,7 +1927,8 @@
         "regulation",
         "risk management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0125",
@@ -1819,7 +1943,8 @@
         "debt",
         "lending"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0126",
@@ -1836,7 +1961,8 @@
         "theory",
         "CAPM"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0127",
@@ -1851,7 +1977,8 @@
         "portfolio management",
         "analysis"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0128",
@@ -1866,7 +1993,8 @@
         "reporting",
         "analysis"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0129",
@@ -1881,7 +2009,8 @@
         "bonds",
         "debt"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0130",
@@ -1897,7 +2026,8 @@
         "legal",
         "securitization"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0131",
@@ -1912,7 +2042,8 @@
         "risk management",
         "fixed income"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0132",
@@ -1926,7 +2057,8 @@
         "investment banking",
         "M&A"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0133",
@@ -1940,7 +2072,8 @@
         "accounting",
         "reporting"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0134",
@@ -1956,7 +2089,8 @@
         "trading",
         "investing"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0135",
@@ -1971,7 +2105,8 @@
         "modeling",
         "derivatives"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0136",
@@ -1986,7 +2121,8 @@
         "portfolio management",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0137",
@@ -2001,7 +2137,8 @@
         "banking",
         "regulation"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0138",
@@ -2017,7 +2154,8 @@
         "analysis",
         "corporate finance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0139",
@@ -2033,7 +2171,8 @@
         "options",
         "risk management"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0140",
@@ -2048,7 +2187,8 @@
         "valuation",
         "strategy"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0141",
@@ -2063,7 +2203,8 @@
         "legal",
         "M&A"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0142",
@@ -2079,7 +2220,8 @@
         "legal",
         "M&A"
       ]
-    }
+    },
+    "isFree": true
   },
   {
     "id": "finance_0143",
@@ -2094,7 +2236,8 @@
         "options",
         "trading"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0144",
@@ -2109,7 +2252,8 @@
         "portfolio management",
         "performance metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0145",
@@ -2124,7 +2268,8 @@
         "portfolio management",
         "performance metrics"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0146",
@@ -2139,7 +2284,8 @@
         "debt",
         "corporate finance"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0147",
@@ -2155,7 +2301,8 @@
         "risk management",
         "trading"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0148",
@@ -2171,7 +2318,8 @@
         "investing",
         "fixed income"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0149",
@@ -2187,7 +2335,8 @@
         "investing",
         "fixed income"
       ]
-    }
+    },
+    "isFree": false
   },
   {
     "id": "finance_0150",
@@ -2202,6 +2351,7 @@
         "investing",
         "fixed income"
       ]
-    }
+    },
+    "isFree": true
   }
 ]

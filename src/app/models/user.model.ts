@@ -17,4 +17,5 @@ export interface UserProfile {
   hasMigratedLocalData: boolean;
   settings: UserSettings;
   schemaVersion?: number; // For schema migrations
+  isPremium?: boolean;
 }

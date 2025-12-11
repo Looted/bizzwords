@@ -6,6 +6,8 @@ import { GameStore, Flashcard } from '../game-store';
 import { GameMode, GAME_CONSTANTS } from '../shared/constants';
 import { GameModeService, GameModeType } from './game-mode.service';
 import { LanguageService } from './language.service';
+import { AuthService } from './auth.service';
+import { FreemiumService } from './freemium.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,16 +18,28 @@ export class GameService {
   private statsService = inject(VocabularyStatsService);
   private gameModeService = inject(GameModeService);
   private languageService = inject(LanguageService);
+  private authService = inject(AuthService);
+  private freemiumService = inject(FreemiumService);
 
   async startGame(topic: string, practiceMode: GameMode, gameModeType: GameModeType, difficulty: number | null) {
     let cards: { english: string, translations: Record<string, string> }[];
 
+    // Check if user is premium
+    const isPremium = await this.authService.isPremiumUser();
+    console.log('[GameService] User premium status:', isPremium);
+
+    // Check if freemium limit is exhausted for non-premium users for this category
+    if (!isPremium && this.freemiumService.isCategoryExhausted(topic)) {
+      console.log('[GameService] Freemium limit exhausted for category', topic, 'redirecting to paywall');
+      throw new Error('FREEMIUM_LIMIT_EXHAUSTED');
+    }
+
     // Determine word count based on game mode
-    const wordCount = gameModeType === 'blitz'
+    let wordCount = gameModeType === 'blitz'
       ? GAME_CONSTANTS.BLITZ_WORD_COUNT
       : GAME_CONSTANTS.CLASSIC_WORD_COUNT;
 
-    console.log('[GameService] startGame called:', { topic, practiceMode, gameModeType, difficulty, wordCount });
+    console.log('[GameService] startGame called:', { topic, practiceMode, gameModeType, difficulty, wordCount, isPremium });
 
     const topicLower = topic.toLowerCase();
     console.log('[GameService] Using static vocabulary for topic:', topicLower);
@@ -33,31 +47,68 @@ export class GameService {
     // Always use static vocabulary
     try {
       const languageField = this.mapLanguageCodeToName(this.languageService.currentLanguage());
-      console.log('[GameService] Loading translated vocabulary for:', topicLower, 'with language:', languageField);
-      const observable = this.staticVocab.generateTranslatedWords(topicLower, languageField, wordCount, difficulty ?? undefined);
-      cards = await firstValueFrom(observable) || [];
-      console.log('[GameService] Translated vocabulary loaded:', cards.length, 'cards');
+      console.log('[GameService] Loading translated vocabulary for:', topicLower, 'with language:', languageField, 'isPremium:', isPremium);
+
+      // Get all eligible words first, then filter out learned ones
+      const allEligibleWordsObservable = this.staticVocab.generateTranslatedWords(topicLower, languageField, 1000, difficulty ?? undefined, isPremium);
+      const allEligibleCards = await firstValueFrom(allEligibleWordsObservable) || [];
+      console.log('[GameService] All eligible translated vocabulary loaded:', allEligibleCards.length, 'cards');
+
+      // Filter cards based on selected practice mode
+      if (practiceMode === GameMode.New) {
+        // Show only words never seen before
+        cards = allEligibleCards.filter(card => !this.statsService.getStats(card.english));
+        console.log('[GameService] New words filter - cards with no stats:', cards.length);
+
+        // If no new words available, fall back to all eligible cards
+        if (cards.length === 0) {
+          console.log('[GameService] No new words available, falling back to all eligible cards');
+          cards = [...allEligibleCards];
+        }
+
+        // Slice to the desired word count
+        cards = cards.slice(0, wordCount);
+      } else if (practiceMode === GameMode.Practice) {
+        // Show words that need practice from the stats service
+        const practiceWords = new Set(this.statsService.getWordsNeedingPractice()
+          .filter(stat => stat.category === topic)
+          .map(s => s.english.toLowerCase()));
+
+        cards = allEligibleCards.filter(c => practiceWords.has(c.english.toLowerCase()))
+                     .slice(0, wordCount);
+
+        // If no practice words available, fall back to all eligible cards
+        if (cards.length === 0) {
+          console.log('[GameService] No practice words available, falling back to all eligible cards');
+          cards = [...allEligibleCards].slice(0, wordCount);
+        }
+      } else {
+        // For other modes, slice to word count
+        cards = allEligibleCards.slice(0, wordCount);
+      }
+
+      console.log('[GameService] Cards after mode filtering:', cards.length, 'cards');
+
+      // Handle shortened rounds for non-premium users (after filtering)
+      if (!isPremium) {
+        const minWordsForClassic = 5;
+        const minWordsForBlitz = 20;
+
+        if (gameModeType === 'classic' && cards.length < minWordsForClassic) {
+          console.warn('[GameService] Shortened round: Classic mode with only', cards.length, 'words available');
+          wordCount = cards.length;
+        } else if (gameModeType === 'blitz' && cards.length < minWordsForBlitz) {
+          console.warn('[GameService] Shortened round: Blitz mode with only', cards.length, 'words available');
+          wordCount = cards.length;
+        }
+      }
     } catch (error) {
       console.error('[GameService] Failed to load translated vocabulary, using fallback:', error);
       // Use static fallback words as safety net
       cards = this.getStaticFallbackWords(topic, wordCount, difficulty);
     }
 
-    console.log('[GameService] Total cards before filtering:', cards.length);
-
-    // Filter cards based on selected practice mode
-    if (practiceMode === GameMode.New) {
-      // Show only words never seen before
-      cards = cards.filter(card => !this.statsService.getStats(card.english));
-    } else if (practiceMode === GameMode.Practice) {
-      // Show words that need practice from the stats service
-      const practiceWords = new Set(this.statsService.getWordsNeedingPractice()
-        .filter(stat => stat.category === topic)
-        .map(s => s.english.toLowerCase()));
-
-      cards = cards.filter(c => practiceWords.has(c.english.toLowerCase()))
-                   .slice(0, wordCount);
-    }
+    console.log('[GameService] Final cards count:', cards.length);
 
     const flashcards: Flashcard[] = cards.map((item) => {
       // Always use English definition from the base file (e.g., hr_en.json)
@@ -76,6 +127,15 @@ export class GameService {
         definition: definition
       };
     });
+
+    // Save session configuration for "Play again" functionality
+    this.store.sessionConfig.set({
+      category: topic,
+      practiceMode: practiceMode as any,
+      gameMode: gameModeType as any,
+      difficulty: difficulty
+    });
+
     this.store.startGame(this.gameModeService.getGameMode(gameModeType), flashcards);
   }
 
@@ -183,5 +243,11 @@ export class GameService {
       case 'fr': return 'french';
       default: return 'polish'; // fallback
     }
+  }
+
+  async getAvailableWordsCount(topic: string, difficulty?: number): Promise<number> {
+    const isPremium = await this.authService.isPremiumUser();
+    const topicLower = topic.toLowerCase();
+    return firstValueFrom(this.staticVocab.getAvailableWordsCount(topicLower, difficulty, isPremium));
   }
 }

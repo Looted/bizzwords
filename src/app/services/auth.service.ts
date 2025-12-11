@@ -13,6 +13,7 @@ import {
 } from '@angular/fire/auth';
 import { FirestoreService } from './firestore.service';
 import { MigrationService } from './migration.service';
+import { RevenueCatService } from './revenuecat.service';
 
 export type AuthStatus = 'loading' | 'authenticated' | 'guest';
 
@@ -24,6 +25,7 @@ export class AuthService {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly firestoreService = inject(FirestoreService);
   private readonly migrationService = inject(MigrationService);
+  private readonly revenueCatService = inject(RevenueCatService);
 
   // Reactive signals for auth state
   private _currentUser = signal<User | null>(null);
@@ -149,5 +151,12 @@ export class AuthService {
       photoURL: user.photoURL,
       uid: user.uid
     };
+  }
+
+  // Check if user is premium (using RevenueCat entitlements)
+  async isPremiumUser(): Promise<boolean> {
+    // For now, use RevenueCat service check
+    // TODO: In production, this should check RevenueCat entitlements
+    return this.revenueCatService.hasProEntitlement();
   }
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { GameStore } from '../../game-store';
 import { VocabularyStatsService } from '../../services/vocabulary-stats.service';
+import { GameService } from '../../services/game.service';
 
 @Component({
   selector: 'app-summary',
@@ -39,9 +40,31 @@ export class SummaryComponent {
     };
   });
 
+  gameService = inject(GameService);
+
   startNewSession() {
-    this.store.startNewGame();
-    this.router.navigate(['/game']);
+    // Get the session config from the store
+    const config = this.store.sessionConfig();
+    if (config) {
+      // Restart the game with the same configuration to get a fresh deck
+      this.gameService.startGame(
+        config.category,
+        config.practiceMode as any,
+        config.gameMode,
+        config.difficulty
+      ).then(() => {
+        this.router.navigate(['/game']);
+      }).catch(error => {
+        console.error('[SummaryComponent] Failed to restart game:', error);
+        // Fallback to menu if there's an error (e.g., freemium limit)
+        this.store.reset();
+        this.router.navigate(['/']);
+      });
+    } else {
+      // Fallback to menu if no config is available
+      this.store.reset();
+      this.router.navigate(['/']);
+    }
   }
 
   backToHome() {

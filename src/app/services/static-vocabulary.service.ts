@@ -13,6 +13,7 @@ export interface TranslationItem {
     difficulty: number;
     tags: string[];
   };
+  isFree?: boolean;
 }
 
 export interface TranslatedItem extends TranslationItem {
@@ -99,10 +100,30 @@ export class StaticVocabularyService {
     });
   }
 
+  getAvailableWordsCount(theme: string, difficulty?: number, isPremium: boolean = false): Observable<number> {
+    return this.loadTranslationData(theme, 'english').pipe(
+      map(translationData => {
+        let filtered = translationData;
+
+        // Filter by difficulty if specified
+        if (difficulty !== undefined) {
+          filtered = translationData.filter(item => item.metadata.difficulty === difficulty);
+        }
+
+        // Filter by premium status - only free words for non-premium users
+        if (!isPremium) {
+          filtered = filtered.filter(item => item.isFree === true);
+        }
+
+        return filtered.length;
+      })
+    );
+  }
 
 
-  generateTranslatedWords(theme: string, language: string, count: number, difficulty?: number): Observable<{english: string, translations: Record<string, string>}[]> {
-    console.log('[StaticVocabulary] generateTranslatedWords called:', { theme, language, count, difficulty });
+
+  generateTranslatedWords(theme: string, language: string, count: number, difficulty?: number, isPremium: boolean = false): Observable<{english: string, translations: Record<string, string>}[]> {
+    console.log('[StaticVocabulary] generateTranslatedWords called:', { theme, language, count, difficulty, isPremium });
 
     return this.loadTranslationData(theme, language).pipe(
       map(translationData => {
@@ -120,6 +141,13 @@ export class StaticVocabularyService {
         if (filtered.length === 0) {
           console.warn('[StaticVocabulary] No translation items match difficulty, using all items');
           filtered = translationData;
+        }
+
+        // Filter by premium status - only free words for non-premium users
+        if (!isPremium) {
+          const freeWords = filtered.filter(item => item.isFree === true);
+          console.log('[StaticVocabulary] Filtered by free words:', freeWords.length, 'items');
+          filtered = freeWords;
         }
 
         const shuffled = [...filtered].sort(() => Math.random() - 0.5);

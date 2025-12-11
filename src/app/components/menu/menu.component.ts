@@ -1,4 +1,4 @@
-import { Component, inject, signal, computed, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, Inject, PLATFORM_ID, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -7,6 +7,8 @@ import { GameService } from '../../services/game.service';
 import { VocabularyStatsService } from '../../services/vocabulary-stats.service';
 import { StorageService } from '../../services/storage.service';
 import { PwaService } from '../../services/pwa.service';
+import { AuthService } from '../../services/auth.service';
+import { FreemiumService } from '../../services/freemium.service';
 import { GameMode } from '../../shared/constants';
 import { GameModeType } from '../../services/game-mode.service';
 
@@ -23,6 +25,7 @@ export class MenuComponent implements OnInit {
   router = inject(Router);
   storageService = inject(StorageService);
   pwaService = inject(PwaService);
+  authService = inject(AuthService);
 
   // Two-screen navigation
   currentScreen = signal<'home' | 'config'>('home');
@@ -41,6 +44,11 @@ export class MenuComponent implements OnInit {
     gameMode: GameModeType;
     difficulty: number | null;
   } | null>(null);
+
+  // Freemium State
+  isPremium = signal<boolean>(false);
+  exhaustedDifficulties = signal<Set<number>>(new Set());
+  startButtonState = signal<'blue' | 'gold'>('blue');
 
   // Computed category stats using reactive signals
   categoryStats = computed(() => {
@@ -132,7 +140,41 @@ export class MenuComponent implements OnInit {
     return false;
   }
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+  freemiumService = inject(FreemiumService);
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    // Effect to check exhaustion whenever category or difficulty changes
+    effect(async () => {
+      const category = this.selectedCategory();
+      const difficulty = this.selectedDifficulty();
+
+      // Check premium status
+      const premium = await this.authService.isPremiumUser();
+      this.isPremium.set(premium);
+
+      // Check category exhaustion using freemium service
+      const isCategoryExhausted = category ? this.freemiumService.isCategoryExhausted(category) : false;
+
+      if (category && !premium) {
+        // Check exhaustion for all difficulty levels
+        const exhausted = new Set<number>();
+        for (const level of [1, 2, 3]) {
+          const count = await this.gameService.getAvailableWordsCount(category, level);
+          if (count === 0) {
+            exhausted.add(level);
+          }
+        }
+        this.exhaustedDifficulties.set(exhausted);
+
+        // Check start button state - gold if category exhausted
+        const availableWords = await this.gameService.getAvailableWordsCount(category, difficulty ?? undefined);
+        this.startButtonState.set((availableWords === 0 || isCategoryExhausted) ? 'gold' : 'blue');
+      } else {
+        this.exhaustedDifficulties.set(new Set());
+        this.startButtonState.set('blue');
+      }
+    });
+  }
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -204,6 +246,12 @@ export class MenuComponent implements OnInit {
     const category = this.selectedCategory();
     if (!category) return;
 
+    // Redirect to Paywall if content is exhausted (Gold button)
+    if (this.startButtonState() === 'gold') {
+      this.router.navigate(['/paywall']);
+      return;
+    }
+
     this.isLoading.set(true);
     try {
       await this.gameService.startGame(
@@ -228,9 +276,14 @@ export class MenuComponent implements OnInit {
       this.router.navigate(['/game']);
     } catch (error) {
       console.error('[MenuComponent] Failed to start session:', error);
-      alert('Failed to start session. Please try again.');
-      this.currentScreen.set('home');
-      this.selectedCategory.set(null);
+      // Handle freemium limit exhausted error
+      if (error instanceof Error && error.message === 'FREEMIUM_LIMIT_EXHAUSTED') {
+        this.router.navigate(['/paywall']);
+      } else {
+        alert('Failed to start session. Please try again.');
+        this.currentScreen.set('home');
+        this.selectedCategory.set(null);
+      }
     } finally {
       this.isLoading.set(false);
     }
@@ -283,5 +336,43 @@ export class MenuComponent implements OnInit {
   getMistakesCount(categoryId: string | null): number {
     // Return 0 to avoid displaying misleading counts for future AI integration
     return 0;
+  }
+
+  // Freemium logic methods
+  async getAvailableWordsCount(categoryId: string | null, difficulty?: number): Promise<number> {
+    if (!categoryId) return 0;
+    return this.gameService.getAvailableWordsCount(categoryId, difficulty);
+  }
+
+  async isPremiumUser(): Promise<boolean> {
+    return this.authService.isPremiumUser();
+  }
+
+  // Check if a specific difficulty tier is exhausted for free users
+  async isDifficultyExhausted(categoryId: string, difficulty: number): Promise<boolean> {
+    const availableWords = await this.getAvailableWordsCount(categoryId, difficulty);
+    const isPremium = await this.isPremiumUser();
+    return !isPremium && availableWords === 0;
+  }
+
+  // Get button state for start session button
+  async getStartButtonState(categoryId: string | null, difficulty: number | null): Promise<'blue' | 'gold'> {
+    if (!categoryId) return 'blue';
+
+    const availableWords = await this.getAvailableWordsCount(categoryId, difficulty ?? undefined);
+    const isPremium = await this.isPremiumUser();
+
+    // Gold button means paywall/upsell (no available words for free user)
+    if (!isPremium && availableWords === 0) {
+      return 'gold';
+    }
+
+    // Blue button means ready to play
+    return 'blue';
+  }
+
+  // Check if a category is exhausted for free users (using freemium service)
+  isCategoryExhausted(categoryId: string): boolean {
+    return this.freemiumService.isCategoryExhausted(categoryId);
   }
 }
