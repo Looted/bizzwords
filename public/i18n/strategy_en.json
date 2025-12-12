@@ -140,7 +140,7 @@
         "portfolio management"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0010",
@@ -156,7 +156,7 @@
         "marketing"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0011",
@@ -188,7 +188,7 @@
         "marketing"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0013",
@@ -204,7 +204,7 @@
         "sales"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0014",
@@ -220,7 +220,7 @@
         "innovation"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0015",
@@ -235,7 +235,7 @@
         "risk management"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0016",
@@ -250,7 +250,7 @@
         "management"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0017",
@@ -267,7 +267,7 @@
         "legal"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0018",
@@ -284,7 +284,7 @@
         "legal"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0019",
@@ -314,7 +314,7 @@
         "supply chain"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0021",
@@ -329,7 +329,7 @@
         "corporate development"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0022",
@@ -375,7 +375,7 @@
         "niche"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0025",
@@ -409,7 +409,7 @@
         "metrics"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0027",
@@ -426,7 +426,7 @@
         "framework"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0028",
@@ -473,7 +473,7 @@
         "vision"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0031",
@@ -488,7 +488,7 @@
         "technology"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0032",
@@ -503,7 +503,7 @@
         "product management"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0033",
@@ -518,7 +518,7 @@
         "marketing"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0034",
@@ -534,7 +534,7 @@
         "competition"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0035",
@@ -550,7 +550,7 @@
         "platform"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0036",
@@ -566,7 +566,7 @@
         "platform"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0037",
@@ -582,7 +582,7 @@
         "business model"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0038",
@@ -598,7 +598,7 @@
         "management"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0039",
@@ -614,7 +614,7 @@
         "M&A"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0040",
@@ -631,7 +631,7 @@
         "management"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0041",
@@ -648,7 +648,7 @@
         "theory"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0042",
@@ -680,7 +680,7 @@
         "operations"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0044",
@@ -713,7 +713,7 @@
         "startup"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0046",
@@ -730,7 +730,7 @@
         "methodology"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0047",
@@ -746,7 +746,7 @@
         "agility"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0048",
@@ -762,7 +762,7 @@
         "sales"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0049",
@@ -779,7 +779,7 @@
         "startup"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0050",
@@ -828,7 +828,7 @@
         "metrics"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0053",
@@ -1436,7 +1436,7 @@
         "cost management"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0093",
@@ -1451,7 +1451,7 @@
         "cost management"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0094",
@@ -2297,7 +2297,7 @@
         "customer service"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0149",
@@ -2312,7 +2312,7 @@
         "strategy"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0150",
@@ -2328,7 +2328,7 @@
         "strategy"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0151",
@@ -2374,7 +2374,7 @@
         "branding"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0154",
@@ -2780,7 +2780,7 @@
         "entrepreneurship"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0181",
@@ -2795,7 +2795,7 @@
         "legal"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0182",
@@ -2810,7 +2810,7 @@
         "intellectual property"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0183",
@@ -2933,7 +2933,7 @@
     "isFree": false
   },
   {
-    "id": "strategy_0191",
+    "id": "strategy_0192",
     "term": "Portfolio-of-Initiatives",
     "definition": "A strategic approach that views a company's projects as a collection of investments, balancing high-risk, high-reward initiatives with safer bets.",
     "example": "Our R&D department manages a portfolio-of-initiatives, ranging from incremental product improvements to speculative long-term research.",
@@ -2948,7 +2948,7 @@
     "isFree": false
   },
   {
-    "id": "strategy_0192",
+    "id": "strategy_0193",
     "term": "Unbundling",
     "definition": "The process of breaking down a product or service into its separate components, which can then be offered to customers individually.",
     "example": "The unbundling of cable TV allows customers to subscribe only to the channels they actually want to watch.",
@@ -2963,7 +2963,7 @@
     "isFree": false
   },
   {
-    "id": "strategy_0193",
+    "id": "strategy_0194",
     "term": "Rebundling",
     "definition": "The process of combining existing products or services, often from different sources, into a new, integrated package for the customer.",
     "example": "Streaming companies are now rebundling, offering packages that include music, video, and gaming for a single monthly fee.",
@@ -2978,7 +2978,7 @@
     "isFree": false
   },
   {
-    "id": "strategy_0194",
+    "id": "strategy_0195",
     "term": "Disintermediation",
     "definition": "The removal of intermediaries in a supply chain or transaction, such as a company selling directly to consumers online instead of through retailers.",
     "example": "The internet caused the disintermediation of travel agents, as many people now book flights directly with airlines.",
@@ -2993,7 +2993,7 @@
     "isFree": false
   },
   {
-    "id": "strategy_0195",
+    "id": "strategy_0196",
     "term": "Reintermediation",
     "definition": "The introduction of new types of intermediaries into a transaction or supply chain, often using technology to add value.",
     "example": "Food delivery apps are a form of reintermediation, adding a new digital middleman between restaurants and customers.",
@@ -3008,7 +3008,7 @@
     "isFree": false
   },
   {
-    "id": "strategy_0196",
+    "id": "strategy_0197",
     "term": "Data-Driven Strategy",
     "definition": "An approach to business that bases decisions on the analysis and interpretation of data rather than on intuition or observation alone.",
     "example": "Our marketing team uses a data-driven strategy, optimizing ad campaigns based on real-time performance metrics.",
@@ -3020,10 +3020,10 @@
         "decision-making"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
-    "id": "strategy_0197",
+    "id": "strategy_0191",
     "term": "Omni-Channel Strategy",
     "definition": "A strategy that provides a seamless and integrated customer experience across all channels, including in-store, online, and mobile.",
     "example": "With our omni-channel strategy, a customer can add an item to their online cart from their laptop and complete the purchase later on their phone.",
@@ -3068,7 +3068,7 @@
         "metrics"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0200",
@@ -3260,7 +3260,7 @@
         "performance"
       ]
     },
-    "isFree": true
+    "isFree": false
   },
   {
     "id": "strategy_0212",

@@ -936,142 +936,6 @@
     "reviewed": true
   },
   {
-    "id": "sales_0168",
-    "term": "Licence par utilisateur",
-    "acronym": null,
-    "definition": "Un modèle de licence logicielle où le prix est déterminé par le nombre d'utilisateurs individuels, ou 'postes'.",
-    "example": "Notre nouveau logiciel CRM utilise un modèle de licence par utilisateur, il coûte donc 50 € par utilisateur et par mois.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0169",
-    "term": "accord de niveau de service",
-    "acronym": "SLA",
-    "definition": "Un contrat qui définit le niveau de service qu'un fournisseur s'engage à fournir à un client, incluant les indicateurs, les responsabilités et les recours en cas de manquement.",
-    "example": "Avant de signer, notre équipe juridique a examiné l'accord de niveau de service pour s'assurer qu'il garantissait une disponibilité de 99,9 %.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0170",
-    "term": "preuve sociale",
-    "acronym": null,
-    "definition": "Un phénomène psychologique où les individus supposent que les actions des autres reflètent le comportement correct, souvent utilisé en vente à travers des témoignages ou des études de cas.",
-    "example": "Nous utilisons les témoignages de clients et les études de cas sur notre site web comme preuve sociale pour gagner la confiance de nos nouveaux prospects.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0171",
-    "term": "opportunité au point mort",
-    "acronym": null,
-    "definition": "Une transaction potentielle qui a cessé de progresser dans le pipeline de vente pendant une période prolongée.",
-    "example": "L'affaire avec Acme Corp est maintenant une opportunité au point mort ; je n'ai pas eu de nouvelles du décisionnaire depuis plus d'un mois.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0172",
-    "term": "biais du statu quo",
-    "acronym": null,
-    "definition": "La tendance psychologique des gens à préférer que les choses restent inchangées, ce qui peut être un obstacle majeur dans la vente.",
-    "example": "Le plus grand défi est de surmonter le biais du statu quo du client ; il est à l'aise avec son système actuel, moins efficace.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0173",
-    "term": "vente sur comptes cibles",
-    "acronym": "TAS",
-    "definition": "Une méthodologie de vente axée sur l'identification et la prospection d'un petit nombre de comptes stratégiques à forte valeur.",
-    "example": "Au lieu de ratisser large, notre équipe grands comptes utilise la vente sur comptes cibles pour se concentrer sur les 10 plus grandes entreprises du secteur financier.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0174",
-    "term": "validation technique",
-    "acronym": null,
-    "definition": "L'étape du processus de vente où l'équipe technique du prospect convient que votre produit est la meilleure solution pour ses besoins, avant même qu'une décision d'achat finale ne soit prise.",
-    "example": "Nous avons obtenu la validation technique après la démonstration, lorsque leur responsable ingénierie a confirmé que notre logiciel répondait à toutes leurs exigences.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0175",
-    "term": "résiliation pour convenance",
-    "acronym": null,
-    "definition": "Une clause contractuelle qui permet à l'une ou aux deux parties de mettre fin à l'accord pour n'importe quelle raison, sans avoir à prouver une rupture de contrat.",
-    "example": "Le contrat inclut une clause de résiliation pour convenance, nous permettant de mettre fin au partenariat avec un préavis de 30 jours si nos besoins changent.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0176",
-    "term": "valeur totale du contrat",
-    "acronym": "TCV",
-    "definition": "Le revenu total qu'un contrat est censé générer sur toute sa durée, incluant les frais uniques et les frais récurrents.",
-    "example": "L'accord de trois ans a une valeur totale du contrat de 1,2 million d'euros, ce qui inclut les frais de mise en œuvre initiaux.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0177",
-    "term": "test de conclusion",
-    "acronym": null,
-    "definition": "Une technique de vente utilisée pour évaluer la disposition d'un prospect à acheter avant de formuler la demande de conclusion finale.",
-    "example": "Après avoir expliqué les avantages, le commercial a utilisé un test de conclusion en demandant : 'Cela vous semble-t-il être une solution qui fonctionnerait pour votre équipe ?'",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0178",
-    "term": "Tarification à l'usage",
-    "acronym": null,
-    "definition": "Un modèle de tarification où les clients sont facturés en fonction de leur utilisation d'un produit ou d'un service.",
-    "example": "Notre service de stockage cloud a une tarification à l'usage, vous ne payez donc que pour les données que vous stockez réellement chaque mois.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0179",
-    "term": "Écart de valeur",
-    "acronym": null,
-    "definition": "La différence entre la valeur qu'un client s'attend à recevoir d'un produit et la valeur qu'il perçoit réellement.",
-    "example": "Nous devons combler l'écart de valeur ; les clients ne réalisent pas les économies que nous avions promises dans notre marketing.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0180",
-    "term": "Approche de vente par la valeur",
-    "acronym": null,
-    "definition": "Une méthodologie de vente qui se concentre sur la compréhension des problèmes commerciaux d'un client et la démonstration de la valeur économique tangible de votre solution.",
-    "example": "En utilisant une approche de vente par la valeur, nous avons déplacé la conversation du prix vers le retour sur investissement à long terme que notre solution offre.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0181",
-    "term": "Revendeur à valeur ajoutée",
-    "acronym": "VAR",
-    "definition": "Une entreprise qui ajoute des fonctionnalités ou des services à un produit existant puis le revend comme une solution intégrée.",
-    "example": "Nous travaillons en partenariat avec un revendeur à valeur ajoutée qui combine notre logiciel avec son matériel et ses services d'installation.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0182",
-    "term": "Voix du client",
-    "acronym": "VoC",
-    "definition": "Un processus d'étude de marché qui recueille les attentes, les préférences et les retours des clients pour améliorer les produits et services.",
-    "example": "Notre programme 'Voix du client' utilise des enquêtes et des entretiens pour orienter directement notre feuille de route de développement de produits.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0183",
-    "term": "Point de rupture",
-    "acronym": null,
-    "definition": "Le prix le plus bas ou les conditions les moins favorables qu'un vendeur est prêt à accepter dans une négociation, au-delà desquels il mettra fin à la discussion.",
-    "example": "Mon point de rupture dans cette négociation est une remise de 15 % ; au-delà, l'affaire n'est plus rentable.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0184",
-    "term": "Part de portefeuille",
-    "acronym": null,
-    "definition": "Le pourcentage des dépenses totales d'un client dans une catégorie spécifique qui est capté par une seule entreprise.",
-    "example": "Nous avons une faible part de portefeuille avec ce client ; il achète la plupart de ses fournitures chez notre concurrent, il y a donc une grande opportunité de développer le compte.",
-    "reviewed": true
-  },
-  {
     "id": "sales_0118",
     "term": "Clause de décélération",
     "acronym": null,
@@ -1469,6 +1333,142 @@
     "acronym": null,
     "definition": "Un principe psychologique selon lequel les gens accordent une plus grande valeur aux choses qui sont rares ou dont la disponibilité est limitée.",
     "example": "Le commercial a utilisé le principe de rareté en mentionnant que « la remise de 20 % n'est disponible que pour les dix premiers clients ».",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0168",
+    "term": "Licence par utilisateur",
+    "acronym": null,
+    "definition": "Un modèle de licence logicielle où le prix est déterminé par le nombre d'utilisateurs individuels, ou 'postes'.",
+    "example": "Notre nouveau logiciel CRM utilise un modèle de licence par utilisateur, il coûte donc 50 € par utilisateur et par mois.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0169",
+    "term": "accord de niveau de service",
+    "acronym": "SLA",
+    "definition": "Un contrat qui définit le niveau de service qu'un fournisseur s'engage à fournir à un client, incluant les indicateurs, les responsabilités et les recours en cas de manquement.",
+    "example": "Avant de signer, notre équipe juridique a examiné l'accord de niveau de service pour s'assurer qu'il garantissait une disponibilité de 99,9 %.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0170",
+    "term": "preuve sociale",
+    "acronym": null,
+    "definition": "Un phénomène psychologique où les individus supposent que les actions des autres reflètent le comportement correct, souvent utilisé en vente à travers des témoignages ou des études de cas.",
+    "example": "Nous utilisons les témoignages de clients et les études de cas sur notre site web comme preuve sociale pour gagner la confiance de nos nouveaux prospects.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0171",
+    "term": "opportunité au point mort",
+    "acronym": null,
+    "definition": "Une transaction potentielle qui a cessé de progresser dans le pipeline de vente pendant une période prolongée.",
+    "example": "L'affaire avec Acme Corp est maintenant une opportunité au point mort ; je n'ai pas eu de nouvelles du décisionnaire depuis plus d'un mois.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0172",
+    "term": "biais du statu quo",
+    "acronym": null,
+    "definition": "La tendance psychologique des gens à préférer que les choses restent inchangées, ce qui peut être un obstacle majeur dans la vente.",
+    "example": "Le plus grand défi est de surmonter le biais du statu quo du client ; il est à l'aise avec son système actuel, moins efficace.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0173",
+    "term": "vente sur comptes cibles",
+    "acronym": "TAS",
+    "definition": "Une méthodologie de vente axée sur l'identification et la prospection d'un petit nombre de comptes stratégiques à forte valeur.",
+    "example": "Au lieu de ratisser large, notre équipe grands comptes utilise la vente sur comptes cibles pour se concentrer sur les 10 plus grandes entreprises du secteur financier.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0174",
+    "term": "validation technique",
+    "acronym": null,
+    "definition": "L'étape du processus de vente où l'équipe technique du prospect convient que votre produit est la meilleure solution pour ses besoins, avant même qu'une décision d'achat finale ne soit prise.",
+    "example": "Nous avons obtenu la validation technique après la démonstration, lorsque leur responsable ingénierie a confirmé que notre logiciel répondait à toutes leurs exigences.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0175",
+    "term": "résiliation pour convenance",
+    "acronym": null,
+    "definition": "Une clause contractuelle qui permet à l'une ou aux deux parties de mettre fin à l'accord pour n'importe quelle raison, sans avoir à prouver une rupture de contrat.",
+    "example": "Le contrat inclut une clause de résiliation pour convenance, nous permettant de mettre fin au partenariat avec un préavis de 30 jours si nos besoins changent.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0176",
+    "term": "valeur totale du contrat",
+    "acronym": "TCV",
+    "definition": "Le revenu total qu'un contrat est censé générer sur toute sa durée, incluant les frais uniques et les frais récurrents.",
+    "example": "L'accord de trois ans a une valeur totale du contrat de 1,2 million d'euros, ce qui inclut les frais de mise en œuvre initiaux.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0177",
+    "term": "test de conclusion",
+    "acronym": null,
+    "definition": "Une technique de vente utilisée pour évaluer la disposition d'un prospect à acheter avant de formuler la demande de conclusion finale.",
+    "example": "Après avoir expliqué les avantages, le commercial a utilisé un test de conclusion en demandant : 'Cela vous semble-t-il être une solution qui fonctionnerait pour votre équipe ?'",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0178",
+    "term": "Tarification à l'usage",
+    "acronym": null,
+    "definition": "Un modèle de tarification où les clients sont facturés en fonction de leur utilisation d'un produit ou d'un service.",
+    "example": "Notre service de stockage cloud a une tarification à l'usage, vous ne payez donc que pour les données que vous stockez réellement chaque mois.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0179",
+    "term": "Écart de valeur",
+    "acronym": null,
+    "definition": "La différence entre la valeur qu'un client s'attend à recevoir d'un produit et la valeur qu'il perçoit réellement.",
+    "example": "Nous devons combler l'écart de valeur ; les clients ne réalisent pas les économies que nous avions promises dans notre marketing.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0180",
+    "term": "Approche de vente par la valeur",
+    "acronym": null,
+    "definition": "Une méthodologie de vente qui se concentre sur la compréhension des problèmes commerciaux d'un client et la démonstration de la valeur économique tangible de votre solution.",
+    "example": "En utilisant une approche de vente par la valeur, nous avons déplacé la conversation du prix vers le retour sur investissement à long terme que notre solution offre.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0181",
+    "term": "Revendeur à valeur ajoutée",
+    "acronym": "VAR",
+    "definition": "Une entreprise qui ajoute des fonctionnalités ou des services à un produit existant puis le revend comme une solution intégrée.",
+    "example": "Nous travaillons en partenariat avec un revendeur à valeur ajoutée qui combine notre logiciel avec son matériel et ses services d'installation.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0182",
+    "term": "Voix du client",
+    "acronym": "VoC",
+    "definition": "Un processus d'étude de marché qui recueille les attentes, les préférences et les retours des clients pour améliorer les produits et services.",
+    "example": "Notre programme 'Voix du client' utilise des enquêtes et des entretiens pour orienter directement notre feuille de route de développement de produits.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0183",
+    "term": "Point de rupture",
+    "acronym": null,
+    "definition": "Le prix le plus bas ou les conditions les moins favorables qu'un vendeur est prêt à accepter dans une négociation, au-delà desquels il mettra fin à la discussion.",
+    "example": "Mon point de rupture dans cette négociation est une remise de 15 % ; au-delà, l'affaire n'est plus rentable.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0184",
+    "term": "Part de portefeuille",
+    "acronym": null,
+    "definition": "Le pourcentage des dépenses totales d'un client dans une catégorie spécifique qui est capté par une seule entreprise.",
+    "example": "Nous avons une faible part de portefeuille avec ce client ; il achète la plupart de ses fournitures chez notre concurrent, il y a donc une grande opportunité de développer le compte.",
     "reviewed": true
   },
   {

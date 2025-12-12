@@ -85,8 +85,8 @@ describe('VocabularyStatsService', () => {
   });
 
   describe('getWordsNeedingPractice', () => {
-    it('should return words with low mastery levels', () => {
-      // Add a mastered word (many correct answers)
+    it('should return only non-mastered words', () => {
+      // Add a mastered word (many correct answers) - should be filtered out
       for (let i = 0; i < 10; i++) {
         service.recordEncounter('mastered', 'basic', true);
       }
@@ -96,9 +96,10 @@ describe('VocabularyStatsService', () => {
       service.recordEncounter('hard', 'basic', false);
 
       const needsPractice = service.getWordsNeedingPractice(10);
-      // Returns all words sorted, so we expect 2 words
-      expect(needsPractice.length).toBe(2);
+      // Should only return the non-mastered word (mastery < 5)
+      expect(needsPractice.length).toBe(1);
       expect(needsPractice[0].english).toBe('hard');
+      expect(needsPractice[0].masteryLevel).toBe(0);
     });
 
     it('should limit results to specified number', () => {
@@ -179,7 +180,8 @@ describe('VocabularyStatsService', () => {
 
       const stats = service.getStats('skip');
       expect(stats!.skipped).toBe(true);
-      expect(service.getAllStats().length).toBe(0); // skipped words not included
+      expect(service.getAllStats().length).toBe(1);
+      expect(service.getAllStats()[0].skipped).toBe(true);
     });
 
     it('should mark new word as skipped', () => {
@@ -187,7 +189,7 @@ describe('VocabularyStatsService', () => {
 
       const stats = service.getStats('newskip');
       expect(stats!.skipped).toBe(true);
-      expect(stats!.timesEncountered).toBe(0);
+      expect(stats!.timesEncountered).toBe(1);
     });
   });
 

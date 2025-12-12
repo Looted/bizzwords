@@ -59,7 +59,9 @@ describe('GameService', () => {
     };
 
     const freemiumServiceMock = {
-      isCategoryExhausted: vi.fn().mockReturnValue(false),
+      isCategoryExhausted: vi.fn().mockResolvedValue(false),
+      isSessionLimitReached: vi.fn().mockResolvedValue(false),
+      recordSessionWords: vi.fn(),
       getFreeWordsForCategory: vi.fn().mockReturnValue(new Set()),
       getEncounteredFreeWordCountForCategory: vi.fn().mockReturnValue(0),
       getRemainingFreeWordsForCategory: vi.fn().mockReturnValue(60),
@@ -210,6 +212,32 @@ describe('GameService', () => {
         undefined,
         false // isPremium parameter
       );
+    });
+  });
+
+  describe('Exhaustion Handling', () => {
+    it('should throw FREEMIUM_LIMIT_EXHAUSTED when no new words are available in GameMode.New for free users', async () => {
+      // Mock stats to say the word is already learned
+      const statsService = TestBed.inject(VocabularyStatsService);
+      vi.spyOn(statsService, 'getStats').mockReturnValue({ masteryLevel: 1 } as any);
+
+      // We expect startGame to reject with the specific error
+      await expect(service.startGame('hr', GameMode.New, 'classic', null)).rejects.toThrow('FREEMIUM_LIMIT_EXHAUSTED');
+    });
+
+    it('should NOT use fallback logic (recycling old words) for GameMode.New', async () => {
+      // Mock stats to say the word is already learned
+      const statsService = TestBed.inject(VocabularyStatsService);
+      vi.spyOn(statsService, 'getStats').mockReturnValue({ masteryLevel: 1 } as any);
+
+      try {
+        await service.startGame('hr', GameMode.New, 'classic', null);
+      } catch (e) {
+        // Expected error
+      }
+
+      // Verify that gameStore.startGame was NOT called (because we threw error before starting)
+      expect(gameStoreMock.startGame).not.toHaveBeenCalled();
     });
   });
 });

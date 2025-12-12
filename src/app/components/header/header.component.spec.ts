@@ -228,7 +228,7 @@ describe('HeaderComponent', () => {
     let clearTimeoutSpy: any;
 
     beforeEach(() => {
-      clearTimeoutSpy = vi.spyOn(global, 'clearTimeout');
+      clearTimeoutSpy = vi.spyOn(globalThis, 'clearTimeout');
     });
 
     afterEach(() => {

@@ -1520,7 +1520,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0191",
+    "id": "strategy_0192",
     "term": "Portefeuille d'initiatives",
     "acronym": null,
     "definition": "Une approche stratégique qui considère les projets d'une entreprise comme un ensemble d'investissements, équilibrant les initiatives à haut risque et à haut rendement avec des paris plus sûrs.",
@@ -1528,7 +1528,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0192",
+    "id": "strategy_0193",
     "term": "Désagrégation",
     "acronym": null,
     "definition": "Le processus consistant à décomposer un produit ou un service en ses composants distincts, qui peuvent ensuite être proposés individuellement aux clients.",
@@ -1536,7 +1536,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0193",
+    "id": "strategy_0194",
     "term": "Regroupement",
     "acronym": null,
     "definition": "Le processus consistant à combiner des produits ou services existants, souvent de sources différentes, en un nouveau forfait intégré pour le client.",
@@ -1544,7 +1544,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0194",
+    "id": "strategy_0195",
     "term": "Désintermédiation",
     "acronym": null,
     "definition": "La suppression des intermédiaires dans une chaîne d'approvisionnement ou une transaction, comme une entreprise vendant directement aux consommateurs en ligne au lieu de passer par des détaillants.",
@@ -1552,7 +1552,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0195",
+    "id": "strategy_0196",
     "term": "Réintermédiation",
     "acronym": null,
     "definition": "L'introduction de nouveaux types d'intermédiaires dans une transaction ou une chaîne d'approvisionnement, utilisant souvent la technologie pour ajouter de la valeur.",
@@ -1560,7 +1560,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0196",
+    "id": "strategy_0197",
     "term": "Stratégie pilotée par les données",
     "acronym": null,
     "definition": "Une approche de gestion qui fonde les décisions sur l'analyse et l'interprétation de données plutôt que sur la seule intuition ou observation.",
@@ -1568,7 +1568,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0197",
+    "id": "strategy_0191",
     "term": "Stratégie omnicanal",
     "acronym": null,
     "definition": "Une stratégie qui offre une expérience client fluide et intégrée sur tous les canaux, y compris en magasin, en ligne et sur mobile.",

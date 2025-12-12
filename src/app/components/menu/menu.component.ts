@@ -147,28 +147,41 @@ export class MenuComponent implements OnInit {
     effect(async () => {
       const category = this.selectedCategory();
       const difficulty = this.selectedDifficulty();
+      const practiceMode = this.selectedPracticeMode();
 
       // Check premium status
       const premium = await this.authService.isPremiumUser();
       this.isPremium.set(premium);
 
       // Check category exhaustion using freemium service
-      const isCategoryExhausted = category ? this.freemiumService.isCategoryExhausted(category) : false;
+      const isCategoryExhausted = category ? await this.freemiumService.isCategoryExhausted(category) : false;
 
       if (category && !premium) {
-        // Check exhaustion for all difficulty levels
+        // Check exhaustion for all difficulty levels (New Words)
+        const levels = [1, 2, 3];
+        const counts = await Promise.all(levels.map(l => this.gameService.getRemainingNewWordsCount(category, l)));
+
         const exhausted = new Set<number>();
-        for (const level of [1, 2, 3]) {
-          const count = await this.gameService.getAvailableWordsCount(category, level);
-          if (count === 0) {
-            exhausted.add(level);
-          }
-        }
+        counts.forEach((count, index) => {
+          if (count === 0) exhausted.add(levels[index]);
+        });
         this.exhaustedDifficulties.set(exhausted);
 
-        // Check start button state - gold if category exhausted
-        const availableWords = await this.gameService.getAvailableWordsCount(category, difficulty ?? undefined);
-        this.startButtonState.set((availableWords === 0 || isCategoryExhausted) ? 'gold' : 'blue');
+        // Check start button state
+        let availableWords = 0;
+
+        if (practiceMode === GameMode.New) {
+          // Check remaining new words
+          availableWords = await this.gameService.getRemainingNewWordsCount(category, difficulty ?? undefined);
+
+          // Gold button if no new words available (redirects to paywall)
+          this.startButtonState.set((availableWords === 0) ? 'gold' : 'blue');
+        } else {
+          // Practice mode: check words needing practice
+          // Practice mode never redirects to paywall (never gold), unless we want to enforce some limit
+          // User requirement: "Practice mode should remain available (not gold/paywalled) as long as there are words needing practice"
+          this.startButtonState.set('blue');
+        }
       } else {
         this.exhaustedDifficulties.set(new Set());
         this.startButtonState.set('blue');
@@ -338,6 +351,14 @@ export class MenuComponent implements OnInit {
     return 0;
   }
 
+  getPracticeWordsCount(): number {
+    // Get all words that need practice (non-mastered words that have been encountered)
+    const category = this.selectedCategory();
+    if (!category) return 0;
+    const practiceWords = this.statsService.getWordsNeedingPractice(1000, category);
+    return practiceWords.length;
+  }
+
   // Freemium logic methods
   async getAvailableWordsCount(categoryId: string | null, difficulty?: number): Promise<number> {
     if (!categoryId) return 0;
@@ -372,7 +393,7 @@ export class MenuComponent implements OnInit {
   }
 
   // Check if a category is exhausted for free users (using freemium service)
-  isCategoryExhausted(categoryId: string): boolean {
+  async isCategoryExhausted(categoryId: string): Promise<boolean> {
     return this.freemiumService.isCategoryExhausted(categoryId);
   }
 }

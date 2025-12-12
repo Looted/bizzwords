@@ -1,5 +1,405 @@
 [
   {
+    "id": "strategy_0001",
+    "term": "Ventaja Competitiva",
+    "acronym": null,
+    "definition": "Una condición o circunstancia que sitúa a una empresa en una posición de negocio favorable o superior en comparación con sus rivales.",
+    "example": "La fuerte lealtad a la marca y el ecosistema integrado de Apple le otorgan una significativa ventaja competitiva en el mercado de la electrónica de consumo.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0002",
+    "term": "Estrategia del Océano Azul",
+    "acronym": null,
+    "definition": "La búsqueda de la diferenciación y el bajo coste para abrir un nuevo espacio de mercado no disputado y crear nueva demanda, haciendo así que la competencia sea irrelevante.",
+    "example": "En lugar de competir con otros circos, el Cirque du Soleil creó un nuevo mercado fusionando las artes circenses y el entretenimiento callejero, un ejemplo clásico de la estrategia del océano azul.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0003",
+    "term": "Estrategia del Océano Rojo",
+    "acronym": null,
+    "definition": "Competir en espacios de mercado existentes tratando de superar a los rivales para captar una mayor cuota de la demanda existente.",
+    "example": "El mercado de los smartphones es un océano rojo, con los principales actores luchando constantemente por la cuota de mercado mediante mejoras incrementales y guerras de precios.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0004",
+    "term": "Análisis DAFO",
+    "acronym": "SWOT",
+    "definition": "Un marco de planificación estratégica utilizado para identificar y analizar las Debilidades, Amenazas, Fortalezas y Oportunidades de una organización.",
+    "example": "Antes de lanzar el nuevo producto, el equipo realizó un análisis DAFO para comprender sus capacidades internas y el panorama del mercado externo.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0005",
+    "term": "Análisis PESTLE",
+    "acronym": "PESTLE",
+    "definition": "Un marco utilizado para analizar los factores macroambientales externos clave (Políticos, Económicos, Sociales, Tecnológicos, Legales y Ecológicos) que pueden impactar a una organización.",
+    "example": "Nuestro análisis PESTLE para la expansión en Europa destacó posibles desafíos regulatorios y cambios en las preferencias de los consumidores.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0006",
+    "term": "Las Cinco Fuerzas de Porter",
+    "acronym": null,
+    "definition": "Un modelo que identifica y analiza cinco fuerzas competitivas que dan forma a cada industria y ayuda a determinar las debilidades y fortalezas de la misma.",
+    "example": "Utilizando las cinco fuerzas de Porter, determinamos que la alta amenaza de nuevos entrantes hace que este sea un mercado de muy difícil acceso.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0007",
+    "term": "Análisis de la Cadena de Valor",
+    "acronym": null,
+    "definition": "Un proceso en el que una empresa identifica sus actividades primarias y de apoyo que añaden valor a su producto final, analizándolas para reducir costes o aumentar la diferenciación.",
+    "example": "Mediante el análisis de la cadena de valor, encontramos ineficiencias en nuestra red logística que, una vez corregidas, podrían mejorar significativamente nuestros márgenes de beneficio.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0008",
+    "term": "Competencias Clave",
+    "acronym": null,
+    "definition": "Las fortalezas y capacidades únicas de una empresa que son difíciles de imitar para los competidores y que proporcionan la base de su ventaja competitiva.",
+    "example": "Las competencias clave de Honda en el diseño y fabricación de motores le permiten destacar en la producción de coches, motocicletas e incluso generadores eléctricos.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0009",
+    "term": "Matriz BCG",
+    "acronym": "BCG",
+    "definition": "Un modelo de planificación de cartera que ayuda a las empresas a analizar sus líneas de productos o unidades de negocio basándose en la tasa de crecimiento del mercado y la cuota de mercado relativa.",
+    "example": "Según nuestra matriz BCG, nuestro software heredado es una 'Vaca Lechera', que genera ingresos estables que podemos invertir en nuestro producto 'Estrella', la nueva aplicación móvil.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0010",
+    "term": "Matriz de Ansoff",
+    "acronym": null,
+    "definition": "Una herramienta de planificación estratégica que proporciona un marco para el crecimiento presentando cuatro opciones: penetración de mercado, desarrollo de mercado, desarrollo de producto y diversificación.",
+    "example": "La junta directiva está utilizando la matriz de Ansoff para decidir si debemos buscar el crecimiento vendiendo productos existentes en nuevas regiones o desarrollando nuevos productos para nuestros clientes actuales.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0011",
+    "term": "Estrategia de Comercialización",
+    "acronym": "GTM",
+    "definition": "Un plan de acción que especifica cómo una empresa llegará a los clientes objetivo y logrará una ventaja competitiva para un nuevo producto o servicio.",
+    "example": "Nuestra estrategia de comercialización para el nuevo software incluye un equipo de ventas directas para clientes empresariales y una campaña de marketing de contenidos para pequeñas empresas.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0012",
+    "term": "Penetración de Mercado",
+    "acronym": null,
+    "definition": "Una estrategia de crecimiento centrada en aumentar las ventas de productos existentes en un segmento de mercado existente para ganar una mayor cuota de mercado.",
+    "example": "Nuestro objetivo es la penetración de mercado a través de precios agresivos y un programa de fidelización para captar una mayor parte de la base de clientes de nuestro competidor.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0013",
+    "term": "Desarrollo de Mercado",
+    "acronym": null,
+    "definition": "Una estrategia de crecimiento que implica vender los productos existentes de una empresa en nuevos mercados o segmentos de clientes.",
+    "example": "Nuestra estrategia de desarrollo de mercado implica expandir nuestra tienda online para atender por primera vez a clientes en el sudeste asiático.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0014",
+    "term": "Desarrollo de Producto",
+    "acronym": null,
+    "definition": "Una estrategia de crecimiento que se centra en introducir nuevos productos en los mercados existentes para servir mejor a los clientes actuales.",
+    "example": "Como parte de nuestra estrategia de desarrollo de producto, estamos lanzando una versión prémium de nuestro software con características avanzadas solicitadas por nuestros usuarios más expertos.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0015",
+    "term": "Estrategia de Diversificación",
+    "acronym": null,
+    "definition": "Una estrategia de crecimiento que implica que una empresa entre en un nuevo mercado o industria con un nuevo producto.",
+    "example": "La incursión de Google en los coches autónomos es una clásica estrategia de diversificación, aprovechando su experiencia tecnológica en una industria completamente nueva.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0016",
+    "term": "Alianza Estratégica",
+    "acronym": null,
+    "definition": "Un acuerdo entre dos o más organizaciones independientes para perseguir un conjunto de objetivos acordados mientras permanecen como entidades separadas.",
+    "example": "Starbucks formó una alianza estratégica con Spotify para ofrecer una experiencia musical única en sus tiendas, mejorando el ambiente para los clientes de ambas marcas.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0017",
+    "term": "Empresa Conjunta",
+    "acronym": null,
+    "definition": "Un acuerdo comercial en el que dos o más partes acuerdan poner en común sus recursos para llevar a cabo una tarea específica, creando una nueva entidad empresarial separada.",
+    "example": "Sony y Ericsson formaron una empresa conjunta, Sony Ericsson, para combinar la experiencia de Sony en electrónica de consumo con los conocimientos de Ericsson en telecomunicaciones.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0018",
+    "term": "Fusiones y Adquisiciones",
+    "acronym": "M&A",
+    "definition": "La consolidación de empresas o activos a través de transacciones financieras, donde una empresa compra o se fusiona con otra.",
+    "example": "Nuestro equipo de fusiones y adquisiciones está evaluando varias startups tecnológicas más pequeñas como posibles objetivos de adquisición para acelerar nuestra I+D.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0019",
+    "term": "Desinversión",
+    "acronym": null,
+    "definition": "La acción por la que una empresa vende participaciones o inversiones en negocios subsidiarios para centrarse en sus operaciones principales.",
+    "example": "La compañía anunció la desinversión de su división de bienes de consumo para obtener capital y concentrarse en su negocio más rentable de software empresarial.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0020",
+    "term": "Integración Vertical",
+    "acronym": null,
+    "definition": "Una estrategia en la que una empresa posee o controla a sus proveedores, distribuidores o puntos de venta para controlar su cadena de valor o de suministro.",
+    "example": "Al adquirir la granja que suministra sus ingredientes clave, la empresa de alimentos apostó por la integración vertical para asegurar la calidad y controlar los costes.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0021",
+    "term": "Integración Horizontal",
+    "acronym": null,
+    "definition": "Una estrategia en la que una empresa adquiere, se fusiona o toma el control de otra empresa en la misma industria y en la misma etapa de producción.",
+    "example": "La adquisición de Pixar por parte de Disney es un ejemplo de integración horizontal, ya que combinó a dos actores principales en la industria del cine de animación.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0022",
+    "term": "Liderazgo en Costos",
+    "acronym": null,
+    "definition": "Una estrategia utilizada por las empresas para crear un bajo costo de operación dentro de su nicho y así obtener una ventaja competitiva.",
+    "example": "Todo el modelo de negocio de Walmart se basa en una estrategia de liderazgo en costos, centrándose en la eficiencia operativa para ofrecer los precios más bajos.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0023",
+    "term": "Estrategia de Diferenciación",
+    "acronym": null,
+    "definition": "Una estrategia en la que una empresa desarrolla productos o servicios con atributos únicos que son valorados por los clientes, quienes están dispuestos a pagar un precio superior.",
+    "example": "Lush Cosmetics utiliza una estrategia de diferenciación centrándose en productos frescos y hechos a mano con un abastecimiento ético, lo que atrae a una base de clientes específica.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0024",
+    "term": "Estrategia de Enfoque",
+    "acronym": null,
+    "definition": "Una estrategia en la que una empresa concentra sus recursos en servir a un nicho de mercado estrecho de manera más eficaz o eficiente que los competidores con un enfoque más amplio.",
+    "example": "Rolex emplea una estrategia de enfoque al dirigirse al segmento de relojes de lujo de alta gama en lugar de competir en el mercado de relojes más amplio.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0025",
+    "term": "Cuadro de Mando Integral",
+    "acronym": "BSC",
+    "definition": "Una herramienta de gestión del rendimiento estratégico que traduce la visión de una empresa en un conjunto coherente de medidas de rendimiento a través de perspectivas financieras, de cliente, internas y de innovación.",
+    "example": "Estamos implementando un cuadro de mando integral para seguir no solo los resultados financieros, sino también la satisfacción del cliente, los procesos internos y el desarrollo de los empleados.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0026",
+    "term": "Indicador Clave de Rendimiento",
+    "acronym": "KPI",
+    "definition": "Un valor medible que demuestra la eficacia con la que una empresa está logrando sus objetivos empresariales clave.",
+    "example": "Nuestro principal indicador clave de rendimiento para este trimestre es aumentar la retención de clientes en un 5 %.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0027",
+    "term": "Objetivos y Resultados Clave",
+    "acronym": "OKR",
+    "definition": "Un marco para establecer metas que ayuda a las organizaciones a definir objetivos ambiciosos y a seguir sus resultados a través de resultados clave específicos y medibles.",
+    "example": "Nuestro objetivo es 'Lanzar la nueva función con éxito', y un resultado clave es 'Alcanzar 10.000 usuarios activos en el primer mes'.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0028",
+    "term": "Planificación de Escenarios",
+    "acronym": null,
+    "definition": "Un método de planificación estratégica que las organizaciones utilizan para elaborar planes flexibles a largo plazo, imaginando y analizando una variedad de posibles escenarios futuros.",
+    "example": "Nuestro equipo está utilizando la planificación de escenarios para prepararse ante posibles interrupciones en la cadena de suministro, considerando el mejor y el peor de los casos, así como el resultado más probable.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0029",
+    "term": "Hoshin Kanri",
+    "acronym": null,
+    "definition": "Una metodología de planificación estratégica para asegurar que los objetivos de una empresa se comuniquen e implementen en toda la organización.",
+    "example": "A través de Hoshin Kanri, la visión de sostenibilidad de nuestra dirección se está traduciendo en acciones y metas específicas para cada departamento.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0030",
+    "term": "Intención Estratégica",
+    "acronym": null,
+    "definition": "Una declaración convincente sobre hacia dónde se dirige una organización y qué quiere lograr, delineando sus ambiciosos objetivos a largo plazo.",
+    "example": "En la década de 1960, la intención estratégica de la NASA era clara y poderosa: poner un hombre en la luna antes de que terminara la década.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0031",
+    "term": "Innovación Disruptiva",
+    "acronym": null,
+    "definition": "Una innovación que crea un nuevo mercado y una nueva red de valor, desplazando finalmente a las empresas, productos y alianzas líderes del mercado establecido.",
+    "example": "El servicio de streaming de Netflix fue una innovación disruptiva que cambió por completo la industria del entretenimiento en el hogar, dejando obsoletos los videoclubs.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0032",
+    "term": "Innovación Incremental",
+    "acronym": null,
+    "definition": "Una innovación que mejora los productos o servicios existentes, generalmente en las dimensiones de rendimiento que los clientes mayoritarios han valorado históricamente.",
+    "example": "El lanzamiento anual de un nuevo iPhone con una mejor cámara y un procesador más rápido es un ejemplo clásico de innovación incremental.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0033",
+    "term": "Ventaja del Pionero",
+    "acronym": null,
+    "definition": "La ventaja competitiva que obtiene una empresa por ser la primera en ocupar una posición significativa en un segmento de mercado.",
+    "example": "Amazon obtuvo una enorme ventaja del pionero en el comercio electrónico, lo que dificultó que los competidores posteriores pudieran alcanzarlo.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0034",
+    "term": "Foso Económico",
+    "acronym": null,
+    "definition": "Una ventaja competitiva distintiva y sostenible que permite a una empresa proteger su cuota de mercado y rentabilidad de los competidores.",
+    "example": "El fuerte reconocimiento de marca y la red de distribución global de Coca-Cola crean un amplio foso económico que es muy difícil de superar para sus rivales.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0035",
+    "term": "Efectos de Red",
+    "acronym": null,
+    "definition": "Un fenómeno por el cual un producto o servicio adquiere valor adicional a medida que más personas lo utilizan.",
+    "example": "Las plataformas de redes sociales como Facebook son poderosas debido a los efectos de red; su valor aumenta a medida que más amigos y colegas se unen.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0036",
+    "term": "Estrategia de Plataforma",
+    "acronym": null,
+    "definition": "Un modelo de negocio que crea valor al facilitar los intercambios entre dos o más grupos interdependientes, generalmente consumidores y productores.",
+    "example": "La estrategia de plataforma de Uber conecta a conductores con pasajeros, creando valor para ambos grupos sin poseer los vehículos.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0037",
+    "term": "Estrategia de Ecosistema",
+    "acronym": null,
+    "definition": "Una estrategia que involucra una red de servicios, productos y empresas interconectados que trabajan juntos para crear una experiencia de cliente fluida y fidelizar a los usuarios.",
+    "example": "La estrategia de ecosistema de Apple, con su estrecha integración de hardware, software y servicios, mantiene a los clientes leales a la marca.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0038",
+    "term": "Crecimiento Orgánico",
+    "acronym": null,
+    "definition": "La tasa de crecimiento que una empresa logra aumentando la producción y mejorando las ventas internamente, sin recurrir a fusiones o adquisiciones.",
+    "example": "La empresa se está centrando en el crecimiento orgánico este año, optimizando sus embudos de marketing y expandiendo sus líneas de productos existentes.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0039",
+    "term": "Crecimiento Inorgánico",
+    "acronym": null,
+    "definition": "El crecimiento en las operaciones e ingresos de una empresa que proviene de fusiones, adquisiciones o empresas conjuntas en lugar de sus propias actividades comerciales.",
+    "example": "Para entrar rápidamente en el mercado europeo, la firma decidió perseguir el crecimiento inorgánico mediante la adquisición de un competidor local.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0040",
+    "term": "Visión Basada en los Recursos",
+    "acronym": "RBV",
+    "definition": "Un marco de gestión utilizado para determinar los recursos estratégicos que una empresa puede explotar para lograr una ventaja competitiva sostenible.",
+    "example": "Utilizando la visión basada en los recursos, identificamos nuestro algoritmo propio como un recurso clave que es valioso, raro y difícil de imitar.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0041",
+    "term": "Marco VRIO",
+    "acronym": "VRIO",
+    "definition": "Una herramienta de análisis estratégico para ayudar a identificar recursos y capacidades que pueden ser una fuente de ventaja competitiva sostenida, basándose en si son Valiosos, Raros, Inimitables y si la empresa está Organizada para explotarlos.",
+    "example": "Aplicamos el marco VRIO a nuestra cartera de patentes y confirmamos que proporciona una ventaja competitiva a largo plazo.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0042",
+    "term": "Capacidades Dinámicas",
+    "acronym": null,
+    "definition": "La capacidad de una empresa para integrar, construir y reconfigurar competencias internas y externas para hacer frente a entornos que cambian rápidamente.",
+    "example": "En la vertiginosa industria tecnológica, las capacidades dinámicas de una empresa —su habilidad para adaptarse e innovar rápidamente— son más importantes que sus activos actuales.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0043",
+    "term": "Agilidad Estratégica",
+    "acronym": null,
+    "definition": "La capacidad de una organización para detectar y responder a las oportunidades y amenazas del mercado con rapidez y flexibilidad.",
+    "example": "Nuestra agilidad estratégica nos permitió cambiar rápidamente nuestro enfoque de producción para satisfacer el repentino aumento de la demanda de equipos de oficina en casa.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0044",
+    "term": "Organización ambidiestra",
+    "acronym": null,
+    "definition": "Una organización que es capaz de explorar nuevas oportunidades (innovar) y explotar sus capacidades existentes (operar eficientemente) al mismo tiempo.",
+    "example": "Google aspira a ser una organización ambidiestra gestionando su rentable negocio de búsquedas mientras invierte fuertemente en proyectos experimentales de alto riesgo ('moonshots').",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0045",
+    "term": "Metodología Lean Startup",
+    "acronym": null,
+    "definition": "Un método para desarrollar negocios y productos que tiene como objetivo acortar los ciclos de desarrollo mediante la adopción de una combinación de experimentación, lanzamientos iterativos y aprendizaje validado.",
+    "example": "Siguiendo la metodología Lean Startup, lanzamos una versión simple de la aplicación para probar primero nuestras suposiciones principales con usuarios reales.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0046",
+    "term": "Producto Mínimo Viable",
+    "acronym": "MVP",
+    "definition": "Una versión de un nuevo producto que permite a un equipo recopilar la máxima cantidad de aprendizaje validado sobre los clientes con el mínimo esfuerzo.",
+    "example": "Nuestro primer producto mínimo viable es solo una página de destino con un formulario de registro para medir el interés antes de escribir una sola línea de código.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0047",
+    "term": "Pivote Estratégico",
+    "acronym": null,
+    "definition": "Un cambio fundamental en la estrategia de negocio de una empresa, a menudo en respuesta a la retroalimentación del mercado, para probar una nueva hipótesis central.",
+    "example": "Tras darnos cuenta de que nuestro mercado objetivo inicial no respondía, hicimos un pivote estratégico para centrarnos en clientes empresariales en lugar de consumidores individuales.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0048",
+    "term": "Propuesta de Valor",
+    "acronym": null,
+    "definition": "Una declaración que identifica claramente los beneficios que los productos o servicios de una empresa ofrecerán a sus clientes y qué la hace única frente a la competencia.",
+    "example": "La propuesta de valor de Slack es que reduce el correo electrónico interno y agrupa toda la comunicación del equipo en un solo lugar, haciendo el trabajo más productivo.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0049",
+    "term": "Lienzo de Modelo de Negocio",
+    "acronym": null,
+    "definition": "Una plantilla de gestión estratégica para desarrollar nuevos modelos de negocio o documentar los existentes en un único gráfico visual.",
+    "example": "Utilizamos el lienzo de modelo de negocio en nuestro taller para esbozar rápidamente los componentes clave de nuestro nuevo servicio de suscripción.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0050",
+    "term": "Valor de Vida del Cliente",
+    "acronym": "CLV",
+    "definition": "Una métrica que predice el beneficio neto total que una empresa puede esperar obtener de un solo cliente durante toda la duración de su relación.",
+    "example": "Al aumentar nuestro valor de vida del cliente, podemos justificar un mayor gasto en adquisición, ya que cada nuevo cliente generará más ingresos a largo plazo.",
+    "reviewed": true
+  },
+  {
     "id": "strategy_0051",
     "term": "Fusiones y Adquisiciones",
     "acronym": "M&A",
@@ -1120,7 +1520,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0191",
+    "id": "strategy_0192",
     "term": "Cartera de iniciativas",
     "acronym": null,
     "definition": "Un enfoque estratégico que considera los proyectos de una empresa como una colección de inversiones, equilibrando iniciativas de alto riesgo y alta recompensa con apuestas más seguras.",
@@ -1128,7 +1528,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0192",
+    "id": "strategy_0193",
     "term": "Desagregación",
     "acronym": null,
     "definition": "El proceso de descomponer un producto o servicio en sus componentes separados, que luego pueden ofrecerse a los clientes de forma individual.",
@@ -1136,7 +1536,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0193",
+    "id": "strategy_0194",
     "term": "Reagregación",
     "acronym": null,
     "definition": "El proceso de combinar productos o servicios existentes, a menudo de diferentes fuentes, en un paquete nuevo e integrado para el cliente.",
@@ -1144,7 +1544,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0194",
+    "id": "strategy_0195",
     "term": "Desintermediación",
     "acronym": null,
     "definition": "La eliminación de intermediarios en una cadena de suministro o transacción, como cuando una empresa vende directamente a los consumidores en línea en lugar de a través de minoristas.",
@@ -1152,7 +1552,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0195",
+    "id": "strategy_0196",
     "term": "Reintermediación",
     "acronym": null,
     "definition": "La introducción de nuevos tipos de intermediarios en una transacción o cadena de suministro, a menudo utilizando la tecnología para añadir valor.",
@@ -1160,7 +1560,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0196",
+    "id": "strategy_0197",
     "term": "Estrategia basada en datos",
     "acronym": null,
     "definition": "Un enfoque empresarial que basa las decisiones en el análisis y la interpretación de datos en lugar de basarse únicamente en la intuición o la observación.",
@@ -1168,411 +1568,11 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0197",
+    "id": "strategy_0191",
     "term": "Estrategia omnicanal",
     "acronym": null,
     "definition": "Una estrategia que proporciona una experiencia de cliente fluida e integrada a través de todos los canales, incluyendo la tienda física, el canal en línea y el canal móvil.",
     "example": "Con nuestra estrategia omnicanal, un cliente puede añadir un artículo a su carrito en línea desde su portátil y completar la compra más tarde en su teléfono.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0001",
-    "term": "Ventaja Competitiva",
-    "acronym": null,
-    "definition": "Una condición o circunstancia que sitúa a una empresa en una posición de negocio favorable o superior en comparación con sus rivales.",
-    "example": "La fuerte lealtad a la marca y el ecosistema integrado de Apple le otorgan una significativa ventaja competitiva en el mercado de la electrónica de consumo.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0002",
-    "term": "Estrategia del Océano Azul",
-    "acronym": null,
-    "definition": "La búsqueda de la diferenciación y el bajo coste para abrir un nuevo espacio de mercado no disputado y crear nueva demanda, haciendo así que la competencia sea irrelevante.",
-    "example": "En lugar de competir con otros circos, el Cirque du Soleil creó un nuevo mercado fusionando las artes circenses y el entretenimiento callejero, un ejemplo clásico de la estrategia del océano azul.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0003",
-    "term": "Estrategia del Océano Rojo",
-    "acronym": null,
-    "definition": "Competir en espacios de mercado existentes tratando de superar a los rivales para captar una mayor cuota de la demanda existente.",
-    "example": "El mercado de los smartphones es un océano rojo, con los principales actores luchando constantemente por la cuota de mercado mediante mejoras incrementales y guerras de precios.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0004",
-    "term": "Análisis DAFO",
-    "acronym": "SWOT",
-    "definition": "Un marco de planificación estratégica utilizado para identificar y analizar las Debilidades, Amenazas, Fortalezas y Oportunidades de una organización.",
-    "example": "Antes de lanzar el nuevo producto, el equipo realizó un análisis DAFO para comprender sus capacidades internas y el panorama del mercado externo.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0005",
-    "term": "Análisis PESTLE",
-    "acronym": "PESTLE",
-    "definition": "Un marco utilizado para analizar los factores macroambientales externos clave (Políticos, Económicos, Sociales, Tecnológicos, Legales y Ecológicos) que pueden impactar a una organización.",
-    "example": "Nuestro análisis PESTLE para la expansión en Europa destacó posibles desafíos regulatorios y cambios en las preferencias de los consumidores.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0006",
-    "term": "Las Cinco Fuerzas de Porter",
-    "acronym": null,
-    "definition": "Un modelo que identifica y analiza cinco fuerzas competitivas que dan forma a cada industria y ayuda a determinar las debilidades y fortalezas de la misma.",
-    "example": "Utilizando las cinco fuerzas de Porter, determinamos que la alta amenaza de nuevos entrantes hace que este sea un mercado de muy difícil acceso.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0007",
-    "term": "Análisis de la Cadena de Valor",
-    "acronym": null,
-    "definition": "Un proceso en el que una empresa identifica sus actividades primarias y de apoyo que añaden valor a su producto final, analizándolas para reducir costes o aumentar la diferenciación.",
-    "example": "Mediante el análisis de la cadena de valor, encontramos ineficiencias en nuestra red logística que, una vez corregidas, podrían mejorar significativamente nuestros márgenes de beneficio.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0008",
-    "term": "Competencias Clave",
-    "acronym": null,
-    "definition": "Las fortalezas y capacidades únicas de una empresa que son difíciles de imitar para los competidores y que proporcionan la base de su ventaja competitiva.",
-    "example": "Las competencias clave de Honda en el diseño y fabricación de motores le permiten destacar en la producción de coches, motocicletas e incluso generadores eléctricos.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0009",
-    "term": "Matriz BCG",
-    "acronym": "BCG",
-    "definition": "Un modelo de planificación de cartera que ayuda a las empresas a analizar sus líneas de productos o unidades de negocio basándose en la tasa de crecimiento del mercado y la cuota de mercado relativa.",
-    "example": "Según nuestra matriz BCG, nuestro software heredado es una 'Vaca Lechera', que genera ingresos estables que podemos invertir en nuestro producto 'Estrella', la nueva aplicación móvil.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0010",
-    "term": "Matriz de Ansoff",
-    "acronym": null,
-    "definition": "Una herramienta de planificación estratégica que proporciona un marco para el crecimiento presentando cuatro opciones: penetración de mercado, desarrollo de mercado, desarrollo de producto y diversificación.",
-    "example": "La junta directiva está utilizando la matriz de Ansoff para decidir si debemos buscar el crecimiento vendiendo productos existentes en nuevas regiones o desarrollando nuevos productos para nuestros clientes actuales.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0011",
-    "term": "Estrategia de Comercialización",
-    "acronym": "GTM",
-    "definition": "Un plan de acción que especifica cómo una empresa llegará a los clientes objetivo y logrará una ventaja competitiva para un nuevo producto o servicio.",
-    "example": "Nuestra estrategia de comercialización para el nuevo software incluye un equipo de ventas directas para clientes empresariales y una campaña de marketing de contenidos para pequeñas empresas.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0012",
-    "term": "Penetración de Mercado",
-    "acronym": null,
-    "definition": "Una estrategia de crecimiento centrada en aumentar las ventas de productos existentes en un segmento de mercado existente para ganar una mayor cuota de mercado.",
-    "example": "Nuestro objetivo es la penetración de mercado a través de precios agresivos y un programa de fidelización para captar una mayor parte de la base de clientes de nuestro competidor.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0013",
-    "term": "Desarrollo de Mercado",
-    "acronym": null,
-    "definition": "Una estrategia de crecimiento que implica vender los productos existentes de una empresa en nuevos mercados o segmentos de clientes.",
-    "example": "Nuestra estrategia de desarrollo de mercado implica expandir nuestra tienda online para atender por primera vez a clientes en el sudeste asiático.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0014",
-    "term": "Desarrollo de Producto",
-    "acronym": null,
-    "definition": "Una estrategia de crecimiento que se centra en introducir nuevos productos en los mercados existentes para servir mejor a los clientes actuales.",
-    "example": "Como parte de nuestra estrategia de desarrollo de producto, estamos lanzando una versión prémium de nuestro software con características avanzadas solicitadas por nuestros usuarios más expertos.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0015",
-    "term": "Estrategia de Diversificación",
-    "acronym": null,
-    "definition": "Una estrategia de crecimiento que implica que una empresa entre en un nuevo mercado o industria con un nuevo producto.",
-    "example": "La incursión de Google en los coches autónomos es una clásica estrategia de diversificación, aprovechando su experiencia tecnológica en una industria completamente nueva.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0016",
-    "term": "Alianza Estratégica",
-    "acronym": null,
-    "definition": "Un acuerdo entre dos o más organizaciones independientes para perseguir un conjunto de objetivos acordados mientras permanecen como entidades separadas.",
-    "example": "Starbucks formó una alianza estratégica con Spotify para ofrecer una experiencia musical única en sus tiendas, mejorando el ambiente para los clientes de ambas marcas.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0017",
-    "term": "Empresa Conjunta",
-    "acronym": null,
-    "definition": "Un acuerdo comercial en el que dos o más partes acuerdan poner en común sus recursos para llevar a cabo una tarea específica, creando una nueva entidad empresarial separada.",
-    "example": "Sony y Ericsson formaron una empresa conjunta, Sony Ericsson, para combinar la experiencia de Sony en electrónica de consumo con los conocimientos de Ericsson en telecomunicaciones.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0018",
-    "term": "Fusiones y Adquisiciones",
-    "acronym": "M&A",
-    "definition": "La consolidación de empresas o activos a través de transacciones financieras, donde una empresa compra o se fusiona con otra.",
-    "example": "Nuestro equipo de fusiones y adquisiciones está evaluando varias startups tecnológicas más pequeñas como posibles objetivos de adquisición para acelerar nuestra I+D.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0019",
-    "term": "Desinversión",
-    "acronym": null,
-    "definition": "La acción por la que una empresa vende participaciones o inversiones en negocios subsidiarios para centrarse en sus operaciones principales.",
-    "example": "La compañía anunció la desinversión de su división de bienes de consumo para obtener capital y concentrarse en su negocio más rentable de software empresarial.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0020",
-    "term": "Integración Vertical",
-    "acronym": null,
-    "definition": "Una estrategia en la que una empresa posee o controla a sus proveedores, distribuidores o puntos de venta para controlar su cadena de valor o de suministro.",
-    "example": "Al adquirir la granja que suministra sus ingredientes clave, la empresa de alimentos apostó por la integración vertical para asegurar la calidad y controlar los costes.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0021",
-    "term": "Integración Horizontal",
-    "acronym": null,
-    "definition": "Una estrategia en la que una empresa adquiere, se fusiona o toma el control de otra empresa en la misma industria y en la misma etapa de producción.",
-    "example": "La adquisición de Pixar por parte de Disney es un ejemplo de integración horizontal, ya que combinó a dos actores principales en la industria del cine de animación.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0022",
-    "term": "Liderazgo en Costos",
-    "acronym": null,
-    "definition": "Una estrategia utilizada por las empresas para crear un bajo costo de operación dentro de su nicho y así obtener una ventaja competitiva.",
-    "example": "Todo el modelo de negocio de Walmart se basa en una estrategia de liderazgo en costos, centrándose en la eficiencia operativa para ofrecer los precios más bajos.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0023",
-    "term": "Estrategia de Diferenciación",
-    "acronym": null,
-    "definition": "Una estrategia en la que una empresa desarrolla productos o servicios con atributos únicos que son valorados por los clientes, quienes están dispuestos a pagar un precio superior.",
-    "example": "Lush Cosmetics utiliza una estrategia de diferenciación centrándose en productos frescos y hechos a mano con un abastecimiento ético, lo que atrae a una base de clientes específica.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0024",
-    "term": "Estrategia de Enfoque",
-    "acronym": null,
-    "definition": "Una estrategia en la que una empresa concentra sus recursos en servir a un nicho de mercado estrecho de manera más eficaz o eficiente que los competidores con un enfoque más amplio.",
-    "example": "Rolex emplea una estrategia de enfoque al dirigirse al segmento de relojes de lujo de alta gama en lugar de competir en el mercado de relojes más amplio.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0025",
-    "term": "Cuadro de Mando Integral",
-    "acronym": "BSC",
-    "definition": "Una herramienta de gestión del rendimiento estratégico que traduce la visión de una empresa en un conjunto coherente de medidas de rendimiento a través de perspectivas financieras, de cliente, internas y de innovación.",
-    "example": "Estamos implementando un cuadro de mando integral para seguir no solo los resultados financieros, sino también la satisfacción del cliente, los procesos internos y el desarrollo de los empleados.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0026",
-    "term": "Indicador Clave de Rendimiento",
-    "acronym": "KPI",
-    "definition": "Un valor medible que demuestra la eficacia con la que una empresa está logrando sus objetivos empresariales clave.",
-    "example": "Nuestro principal indicador clave de rendimiento para este trimestre es aumentar la retención de clientes en un 5 %.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0027",
-    "term": "Objetivos y Resultados Clave",
-    "acronym": "OKR",
-    "definition": "Un marco para establecer metas que ayuda a las organizaciones a definir objetivos ambiciosos y a seguir sus resultados a través de resultados clave específicos y medibles.",
-    "example": "Nuestro objetivo es 'Lanzar la nueva función con éxito', y un resultado clave es 'Alcanzar 10.000 usuarios activos en el primer mes'.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0028",
-    "term": "Planificación de Escenarios",
-    "acronym": null,
-    "definition": "Un método de planificación estratégica que las organizaciones utilizan para elaborar planes flexibles a largo plazo, imaginando y analizando una variedad de posibles escenarios futuros.",
-    "example": "Nuestro equipo está utilizando la planificación de escenarios para prepararse ante posibles interrupciones en la cadena de suministro, considerando el mejor y el peor de los casos, así como el resultado más probable.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0029",
-    "term": "Hoshin Kanri",
-    "acronym": null,
-    "definition": "Una metodología de planificación estratégica para asegurar que los objetivos de una empresa se comuniquen e implementen en toda la organización.",
-    "example": "A través de Hoshin Kanri, la visión de sostenibilidad de nuestra dirección se está traduciendo en acciones y metas específicas para cada departamento.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0030",
-    "term": "Intención Estratégica",
-    "acronym": null,
-    "definition": "Una declaración convincente sobre hacia dónde se dirige una organización y qué quiere lograr, delineando sus ambiciosos objetivos a largo plazo.",
-    "example": "En la década de 1960, la intención estratégica de la NASA era clara y poderosa: poner un hombre en la luna antes de que terminara la década.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0031",
-    "term": "Innovación Disruptiva",
-    "acronym": null,
-    "definition": "Una innovación que crea un nuevo mercado y una nueva red de valor, desplazando finalmente a las empresas, productos y alianzas líderes del mercado establecido.",
-    "example": "El servicio de streaming de Netflix fue una innovación disruptiva que cambió por completo la industria del entretenimiento en el hogar, dejando obsoletos los videoclubs.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0032",
-    "term": "Innovación Incremental",
-    "acronym": null,
-    "definition": "Una innovación que mejora los productos o servicios existentes, generalmente en las dimensiones de rendimiento que los clientes mayoritarios han valorado históricamente.",
-    "example": "El lanzamiento anual de un nuevo iPhone con una mejor cámara y un procesador más rápido es un ejemplo clásico de innovación incremental.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0033",
-    "term": "Ventaja del Pionero",
-    "acronym": null,
-    "definition": "La ventaja competitiva que obtiene una empresa por ser la primera en ocupar una posición significativa en un segmento de mercado.",
-    "example": "Amazon obtuvo una enorme ventaja del pionero en el comercio electrónico, lo que dificultó que los competidores posteriores pudieran alcanzarlo.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0034",
-    "term": "Foso Económico",
-    "acronym": null,
-    "definition": "Una ventaja competitiva distintiva y sostenible que permite a una empresa proteger su cuota de mercado y rentabilidad de los competidores.",
-    "example": "El fuerte reconocimiento de marca y la red de distribución global de Coca-Cola crean un amplio foso económico que es muy difícil de superar para sus rivales.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0035",
-    "term": "Efectos de Red",
-    "acronym": null,
-    "definition": "Un fenómeno por el cual un producto o servicio adquiere valor adicional a medida que más personas lo utilizan.",
-    "example": "Las plataformas de redes sociales como Facebook son poderosas debido a los efectos de red; su valor aumenta a medida que más amigos y colegas se unen.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0036",
-    "term": "Estrategia de Plataforma",
-    "acronym": null,
-    "definition": "Un modelo de negocio que crea valor al facilitar los intercambios entre dos o más grupos interdependientes, generalmente consumidores y productores.",
-    "example": "La estrategia de plataforma de Uber conecta a conductores con pasajeros, creando valor para ambos grupos sin poseer los vehículos.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0037",
-    "term": "Estrategia de Ecosistema",
-    "acronym": null,
-    "definition": "Una estrategia que involucra una red de servicios, productos y empresas interconectados que trabajan juntos para crear una experiencia de cliente fluida y fidelizar a los usuarios.",
-    "example": "La estrategia de ecosistema de Apple, con su estrecha integración de hardware, software y servicios, mantiene a los clientes leales a la marca.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0038",
-    "term": "Crecimiento Orgánico",
-    "acronym": null,
-    "definition": "La tasa de crecimiento que una empresa logra aumentando la producción y mejorando las ventas internamente, sin recurrir a fusiones o adquisiciones.",
-    "example": "La empresa se está centrando en el crecimiento orgánico este año, optimizando sus embudos de marketing y expandiendo sus líneas de productos existentes.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0039",
-    "term": "Crecimiento Inorgánico",
-    "acronym": null,
-    "definition": "El crecimiento en las operaciones e ingresos de una empresa que proviene de fusiones, adquisiciones o empresas conjuntas en lugar de sus propias actividades comerciales.",
-    "example": "Para entrar rápidamente en el mercado europeo, la firma decidió perseguir el crecimiento inorgánico mediante la adquisición de un competidor local.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0040",
-    "term": "Visión Basada en los Recursos",
-    "acronym": "RBV",
-    "definition": "Un marco de gestión utilizado para determinar los recursos estratégicos que una empresa puede explotar para lograr una ventaja competitiva sostenible.",
-    "example": "Utilizando la visión basada en los recursos, identificamos nuestro algoritmo propio como un recurso clave que es valioso, raro y difícil de imitar.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0041",
-    "term": "Marco VRIO",
-    "acronym": "VRIO",
-    "definition": "Una herramienta de análisis estratégico para ayudar a identificar recursos y capacidades que pueden ser una fuente de ventaja competitiva sostenida, basándose en si son Valiosos, Raros, Inimitables y si la empresa está Organizada para explotarlos.",
-    "example": "Aplicamos el marco VRIO a nuestra cartera de patentes y confirmamos que proporciona una ventaja competitiva a largo plazo.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0042",
-    "term": "Capacidades Dinámicas",
-    "acronym": null,
-    "definition": "La capacidad de una empresa para integrar, construir y reconfigurar competencias internas y externas para hacer frente a entornos que cambian rápidamente.",
-    "example": "En la vertiginosa industria tecnológica, las capacidades dinámicas de una empresa —su habilidad para adaptarse e innovar rápidamente— son más importantes que sus activos actuales.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0043",
-    "term": "Agilidad Estratégica",
-    "acronym": null,
-    "definition": "La capacidad de una organización para detectar y responder a las oportunidades y amenazas del mercado con rapidez y flexibilidad.",
-    "example": "Nuestra agilidad estratégica nos permitió cambiar rápidamente nuestro enfoque de producción para satisfacer el repentino aumento de la demanda de equipos de oficina en casa.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0044",
-    "term": "Organización ambidiestra",
-    "acronym": null,
-    "definition": "Una organización que es capaz de explorar nuevas oportunidades (innovar) y explotar sus capacidades existentes (operar eficientemente) al mismo tiempo.",
-    "example": "Google aspira a ser una organización ambidiestra gestionando su rentable negocio de búsquedas mientras invierte fuertemente en proyectos experimentales de alto riesgo ('moonshots').",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0045",
-    "term": "Metodología Lean Startup",
-    "acronym": null,
-    "definition": "Un método para desarrollar negocios y productos que tiene como objetivo acortar los ciclos de desarrollo mediante la adopción de una combinación de experimentación, lanzamientos iterativos y aprendizaje validado.",
-    "example": "Siguiendo la metodología Lean Startup, lanzamos una versión simple de la aplicación para probar primero nuestras suposiciones principales con usuarios reales.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0046",
-    "term": "Producto Mínimo Viable",
-    "acronym": "MVP",
-    "definition": "Una versión de un nuevo producto que permite a un equipo recopilar la máxima cantidad de aprendizaje validado sobre los clientes con el mínimo esfuerzo.",
-    "example": "Nuestro primer producto mínimo viable es solo una página de destino con un formulario de registro para medir el interés antes de escribir una sola línea de código.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0047",
-    "term": "Pivote Estratégico",
-    "acronym": null,
-    "definition": "Un cambio fundamental en la estrategia de negocio de una empresa, a menudo en respuesta a la retroalimentación del mercado, para probar una nueva hipótesis central.",
-    "example": "Tras darnos cuenta de que nuestro mercado objetivo inicial no respondía, hicimos un pivote estratégico para centrarnos en clientes empresariales en lugar de consumidores individuales.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0048",
-    "term": "Propuesta de Valor",
-    "acronym": null,
-    "definition": "Una declaración que identifica claramente los beneficios que los productos o servicios de una empresa ofrecerán a sus clientes y qué la hace única frente a la competencia.",
-    "example": "La propuesta de valor de Slack es que reduce el correo electrónico interno y agrupa toda la comunicación del equipo en un solo lugar, haciendo el trabajo más productivo.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0049",
-    "term": "Lienzo de Modelo de Negocio",
-    "acronym": null,
-    "definition": "Una plantilla de gestión estratégica para desarrollar nuevos modelos de negocio o documentar los existentes en un único gráfico visual.",
-    "example": "Utilizamos el lienzo de modelo de negocio en nuestro taller para esbozar rápidamente los componentes clave de nuestro nuevo servicio de suscripción.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0050",
-    "term": "Valor de Vida del Cliente",
-    "acronym": "CLV",
-    "definition": "Una métrica que predice el beneficio neto total que una empresa puede esperar obtener de un solo cliente durante toda la duración de su relación.",
-    "example": "Al aumentar nuestro valor de vida del cliente, podemos justificar un mayor gasto en adquisición, ya que cada nuevo cliente generará más ingresos a largo plazo.",
     "reviewed": true
   },
   {

@@ -614,7 +614,7 @@ describe('PWA Service Integration', () => {
 
     it('should handle init method with SwUpdate integration', () => {
       // Mock window to simulate browser environment
-      Object.defineProperty(global, 'window', {
+      Object.defineProperty(globalThis, 'window', {
         value: {
           addEventListener: vi.fn(),
           innerWidth: 1024

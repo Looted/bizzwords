@@ -1,6 +1,6 @@
 # Active Context
 
-Current work focus: Freemium architecture implementation completed. All changes documented in memory bank.
+Current work focus: Freemium architecture refinements. All changes documented in memory bank.
 
 Recent changes:
 - Implemented Firebase Authentication with Google OAuth and email/password providers
@@ -21,6 +21,11 @@ Recent changes:
   - GameService handling shortened rounds for free users
   - MenuComponent with visual feedback (blue/gold buttons, difficulty pills)
   - All tests passing (395/395) with freemium logic coverage
+- **✅ Freemium Logic Refinements**:
+  - **Skipped Cards**: Updated `VocabularyStatsService` to include skipped cards in mastery stats (auto-mastered).
+  - **Persistent Free Limit**: Updated `FreemiumService` to use `StorageService` for persistent tracking of "words played" for unlogged users, enforcing a strict 60-word limit (equivalent to 3 full 20-card blitz rounds).
+  - **Paywall UI**: Updated `MenuComponent` to display a gold "Start" button when the freemium limit is reached, providing clear user feedback.
+  - **Exhaustion Handling Regression Fix**: Fixed an issue where "Learn New Words" mode would recycle old words when new words were exhausted for free users. Now it strictly enforces the limit and shows the paywall.
 
 Current fixes in progress:
 - Updated Playwright config to start Firebase emulators before Angular dev server

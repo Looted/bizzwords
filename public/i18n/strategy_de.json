@@ -1,5 +1,405 @@
 [
   {
+    "id": "strategy_0001",
+    "term": "Wettbewerbsvorteil",
+    "acronym": null,
+    "definition": "Ein Zustand oder Umstand, der ein Unternehmen im Vergleich zu seinen Konkurrenten in eine vorteilhafte oder überlegene Geschäftsposition bringt.",
+    "example": "Apples starke Markentreue und integriertes Ökosystem verschaffen dem Unternehmen einen signifikanten Wettbewerbsvorteil auf dem Markt für Unterhaltungselektronik.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0002",
+    "term": "Blue-Ocean-Strategie",
+    "acronym": null,
+    "definition": "Das Streben nach Differenzierung und niedrigen Kosten, um einen neuen, unumkämpften Marktraum zu erschließen und neue Nachfrage zu schaffen, wodurch der Wettbewerb irrelevant wird.",
+    "example": "Anstatt mit anderen Zirkussen zu konkurrieren, schuf Cirque du Soleil durch die Mischung aus Zirkuskunst und Straßenunterhaltung einen neuen Markt – ein klassisches Beispiel für eine Blue-Ocean-Strategie.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0003",
+    "term": "Red-Ocean-Strategie",
+    "acronym": null,
+    "definition": "Der Wettbewerb in bestehenden Markträumen, bei dem versucht wird, Konkurrenten zu übertreffen, um einen größeren Anteil an der bestehenden Nachfrage zu gewinnen.",
+    "example": "Auf dem Smartphone-Markt verfolgen die Hauptakteure eine Red-Ocean-Strategie und kämpfen durch schrittweise Verbesserungen und Preiskämpfe ständig um Marktanteile.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0004",
+    "term": "SWOT-Analyse",
+    "acronym": "SWOT",
+    "definition": "Ein strategisches Planungsmodell zur Identifizierung und Analyse der Stärken (Strengths), Schwächen (Weaknesses), Chancen (Opportunities) und Risiken (Threats) einer Organisation.",
+    "example": "Vor der Einführung des neuen Produkts führte das Team eine SWOT-Analyse durch, um die internen Fähigkeiten und das externe Marktumfeld zu verstehen.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0005",
+    "term": "PESTLE-Analyse",
+    "acronym": "PESTLE",
+    "definition": "Ein Analysemodell zur Untersuchung der wichtigsten externen makroökonomischen Umfeldfaktoren (politisch, wirtschaftlich, soziokulturell, technologisch, rechtlich und ökologisch), die eine Organisation beeinflussen können.",
+    "example": "Unsere PESTLE-Analyse für die Expansion nach Europa hat potenzielle regulatorische Herausforderungen und sich ändernde Verbraucherpräferenzen aufgezeigt.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0006",
+    "term": "Fünf-Kräfte-Modell nach Porter",
+    "acronym": null,
+    "definition": "Ein Modell, das fünf Wettbewerbskräfte identifiziert und analysiert, die jede Branche prägen, und das hilft, die Schwächen und Stärken einer Branche zu bestimmen.",
+    "example": "Mithilfe des Fünf-Kräfte-Modells nach Porter stellten wir fest, dass die hohe Bedrohung durch neue Wettbewerber den Eintritt in diesen Markt sehr schwierig macht.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0007",
+    "term": "Wertschöpfungskettenanalyse",
+    "acronym": null,
+    "definition": "Ein Prozess, bei dem ein Unternehmen seine primären und unterstützenden Aktivitäten identifiziert, die zum Wert seines Endprodukts beitragen, und diese analysiert, um Kosten zu senken oder die Differenzierung zu erhöhen.",
+    "example": "Durch eine Wertschöpfungskettenanalyse haben wir Ineffizienzen in unserem Logistiknetzwerk aufgedeckt, die nach ihrer Behebung unsere Gewinnmargen erheblich verbessern könnten.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0008",
+    "term": "Kernkompetenzen",
+    "acronym": null,
+    "definition": "Die einzigartigen Stärken und Fähigkeiten eines Unternehmens, die für Wettbewerber schwer zu imitieren sind und die Grundlage für seinen Wettbewerbsvorteil bilden.",
+    "example": "Hondas Kernkompetenzen im Motorendesign und in der Fertigung ermöglichen es dem Unternehmen, bei der Herstellung von Autos, Motorrädern und sogar Stromgeneratoren hervorragende Leistungen zu erbringen.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0009",
+    "term": "BCG-Matrix",
+    "acronym": "BCG",
+    "definition": "Ein Portfolio-Planungsmodell, das Unternehmen bei der Analyse ihrer Produktlinien oder Geschäftsbereiche anhand der Marktwachstumsrate und des relativen Marktanteils unterstützt.",
+    "example": "Laut unserer BCG-Matrix ist unsere alte Software eine „Cash Cow“ und generiert stetige Einnahmen, die wir in unser „Star“-Produkt, die neue mobile App, investieren können.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0010",
+    "term": "Ansoff-Matrix",
+    "acronym": null,
+    "definition": "Ein strategisches Planungsinstrument, das einen Rahmen für Wachstum bietet, indem es vier Optionen aufzeigt: Marktdurchdringung, Marktentwicklung, Produktentwicklung und Diversifikation.",
+    "example": "Der Vorstand verwendet die Ansoff-Matrix, um zu entscheiden, ob wir Wachstum durch den Verkauf bestehender Produkte in neuen Regionen oder durch die Entwicklung neuer Produkte für unsere aktuellen Kunden anstreben sollen.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0011",
+    "term": "Go-to-Market-Strategie",
+    "acronym": "GTM",
+    "definition": "Ein Aktionsplan, der festlegt, wie ein Unternehmen Zielkunden erreichen und einen Wettbewerbsvorteil für ein neues Produkt oder eine neue Dienstleistung erzielen wird.",
+    "example": "Unsere Go-to-Market-Strategie für die neue Software umfasst ein Direktvertriebsteam für Unternehmenskunden und eine Content-Marketing-Kampagne für kleine Unternehmen.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0012",
+    "term": "Marktdurchdringung",
+    "acronym": null,
+    "definition": "Eine Wachstumsstrategie, die darauf abzielt, den Verkauf bestehender Produkte in einem bestehenden Marktsegment zu steigern, um einen höheren Marktanteil zu erzielen.",
+    "example": "Wir streben eine Marktdurchdringung durch aggressive Preisgestaltung und ein Treueprogramm an, um mehr Kunden von unseren Wettbewerbern abzuwerben.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0013",
+    "term": "Marktentwicklung",
+    "acronym": null,
+    "definition": "Eine Wachstumsstrategie, die den Verkauf der bestehenden Produkte eines Unternehmens in neuen Märkten oder Kundensegmenten beinhaltet.",
+    "example": "Unsere Marktentwicklungsstrategie beinhaltet die Erweiterung unseres Online-Shops, um erstmals Kunden in Südostasien zu bedienen.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0014",
+    "term": "Produktentwicklung",
+    "acronym": null,
+    "definition": "Eine Wachstumsstrategie, die sich auf die Einführung neuer Produkte in bestehenden Märkten konzentriert, um aktuelle Kunden besser zu bedienen.",
+    "example": "Im Rahmen unserer Produktentwicklungsstrategie führen wir eine Premium-Version unserer Software mit erweiterten Funktionen ein, die von unseren Power-Usern gewünscht wurden.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0015",
+    "term": "Diversifikationsstrategie",
+    "acronym": null,
+    "definition": "Eine Wachstumsstrategie, bei der ein Unternehmen mit einem neuen Produkt in einen neuen Markt oder eine neue Branche eintritt.",
+    "example": "Googles Einstieg in selbstfahrende Autos ist eine klassische Diversifikationsstrategie, bei der das Unternehmen seine Technologiekompetenz in einer völlig neuen Branche einsetzt.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0016",
+    "term": "Strategische Allianz",
+    "acronym": null,
+    "definition": "Eine Vereinbarung zwischen zwei oder mehr unabhängigen Organisationen, eine Reihe von vereinbarten Zielen zu verfolgen, während sie separate Einheiten bleiben.",
+    "example": "Starbucks bildete eine strategische Allianz mit Spotify, um ein einzigartiges Musikerlebnis in den Filialen zu bieten und so das Kundenerlebnis für beide Marken zu verbessern.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0017",
+    "term": "Joint Venture",
+    "acronym": null,
+    "definition": "Eine Geschäftsvereinbarung, bei der zwei oder mehr Parteien zustimmen, ihre Ressourcen zu bündeln, um eine bestimmte Aufgabe zu erfüllen, wobei eine neue, separate Geschäftseinheit entsteht.",
+    "example": "Sony und Ericsson gründeten ein Joint Venture, Sony Ericsson, um Sonys Expertise in der Unterhaltungselektronik mit Ericssons Telekommunikationswissen zu kombinieren.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0018",
+    "term": "Fusionen und Übernahmen",
+    "acronym": "M&A",
+    "definition": "Die Konsolidierung von Unternehmen oder Vermögenswerten durch Finanztransaktionen, bei denen ein Unternehmen ein anderes kauft oder mit ihm fusioniert.",
+    "example": "Unser M&A-Team prüft derzeit mehrere kleinere Tech-Start-ups als potenzielle Übernahmeziele, um unsere F&E zu beschleunigen.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0019",
+    "term": "Veräußerung",
+    "acronym": null,
+    "definition": "Die Handlung eines Unternehmens, Geschäftsbereiche oder Investitionen einer Tochtergesellschaft zu verkaufen, um sich auf seine Kerngeschäfte zu konzentrieren.",
+    "example": "Das Unternehmen kündigte die Veräußerung seiner Konsumgütersparte an, um Kapital zu beschaffen und sich auf sein profitableres Geschäft mit Unternehmenssoftware zu konzentrieren.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0020",
+    "term": "Vertikale Integration",
+    "acronym": null,
+    "definition": "Eine Strategie, bei der ein Unternehmen seine Lieferanten, Händler oder Einzelhandelsstandorte besitzt oder kontrolliert, um seine Wertschöpfungs- oder Lieferkette zu steuern.",
+    "example": "Durch den Erwerb des landwirtschaftlichen Betriebs, der die Hauptzutaten liefert, verfolgte das Lebensmittelunternehmen eine vertikale Integration, um Qualität zu sichern und Kosten zu kontrollieren.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0021",
+    "term": "Horizontale Integration",
+    "acronym": null,
+    "definition": "Eine Strategie, bei der ein Unternehmen ein anderes Unternehmen in derselben Branche und auf derselben Produktionsstufe erwirbt, mit ihm fusioniert oder es übernimmt.",
+    "example": "Disneys Übernahme von Pixar ist ein Beispiel für horizontale Integration, da sie zwei Hauptakteure in der Animationsfilmindustrie zusammenführte.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0022",
+    "term": "Kostenführerschaft",
+    "acronym": null,
+    "definition": "Eine Strategie, die von Unternehmen genutzt wird, um niedrige Betriebskosten innerhalb ihrer Nische zu schaffen und so einen Wettbewerbsvorteil zu erlangen.",
+    "example": "Walmarts gesamtes Geschäftsmodell basiert auf einer Kostenführerschaftsstrategie und konzentriert sich auf betriebliche Effizienz, um die niedrigsten Preise anzubieten.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0023",
+    "term": "Differenzierungsstrategie",
+    "acronym": null,
+    "definition": "Eine Strategie, bei der ein Unternehmen Produkte oder Dienstleistungen mit einzigartigen Merkmalen entwickelt, die von den Kunden geschätzt werden, weshalb diese bereit sind, einen höheren Preis zu zahlen.",
+    "example": "Lush Cosmetics verfolgt eine Differenzierungsstrategie, indem es sich auf frische, handgefertigte Produkte mit ethischer Beschaffung konzentriert, was eine spezifische Kundengruppe anspricht.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0024",
+    "term": "Fokusstrategie",
+    "acronym": null,
+    "definition": "Eine Strategie, bei der ein Unternehmen seine Ressourcen darauf konzentriert, eine enge Marktnische effektiver oder effizienter zu bedienen als breiter aufgestellte Wettbewerber.",
+    "example": "Rolex verfolgt eine Fokusstrategie, indem es auf das Segment der Luxusuhren im oberen Preissegment abzielt, anstatt auf dem breiteren Uhrenmarkt zu konkurrieren.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0025",
+    "term": "Balanced Scorecard",
+    "acronym": "BSC",
+    "definition": "Ein strategisches Managementsystem, das die Vision eines Unternehmens in ein kohärentes Set von Leistungskennzahlen aus den Perspektiven Finanzen, Kunden, interne Prozesse sowie Lernen und Entwicklung übersetzt.",
+    "example": "Wir führen eine Balanced Scorecard ein, um nicht nur Finanzergebnisse zu verfolgen, sondern auch Kundenzufriedenheit, interne Prozesse und die Mitarbeiterentwicklung.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0026",
+    "term": "Leistungskennzahl",
+    "acronym": "KPI",
+    "definition": "Ein messbarer Wert, der anzeigt, wie effektiv ein Unternehmen wichtige Geschäftsziele erreicht.",
+    "example": "Unsere wichtigste Leistungskennzahl für dieses Quartal ist die Steigerung der Kundenbindung um 5 %.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0027",
+    "term": "Objectives and Key Results",
+    "acronym": "OKR",
+    "definition": "Ein Zielsetzungs-Framework, das Organisationen hilft, ehrgeizige Ziele zu definieren und deren Ergebnisse durch spezifische, messbare Schlüsselergebnisse zu verfolgen.",
+    "example": "Unser Objective lautet 'Das neue Feature erfolgreich einführen', und ein zugehöriges Key Result ist '10.000 aktive Nutzer im ersten Monat erreichen'.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0028",
+    "term": "Szenarioplanung",
+    "acronym": null,
+    "definition": "Eine strategische Planungsmethode, mit der Organisationen flexible langfristige Pläne erstellen, indem sie eine Vielzahl möglicher Zukunftsszenarien entwerfen und analysieren.",
+    "example": "Unser Team nutzt die Szenarioplanung, um sich auf mögliche Störungen in der Lieferkette vorzubereiten, und berücksichtigt dabei Best-Case-, Worst-Case- und wahrscheinlichste Szenarien.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0029",
+    "term": "Hoshin Kanri",
+    "acronym": null,
+    "definition": "Eine Methodik der strategischen Planung, die sicherstellt, dass die Ziele eines Unternehmens in der gesamten Organisation kommuniziert und umgesetzt werden.",
+    "example": "Durch Hoshin Kanri wird die Nachhaltigkeitsvision unserer Führung in konkrete Maßnahmen und Ziele für jede Abteilung übersetzt.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0030",
+    "term": "Strategische Absicht",
+    "acronym": null,
+    "definition": "Eine überzeugende Aussage darüber, wohin eine Organisation steuert und was sie erreichen will, die ihre ehrgeizigen langfristigen Ziele umreißt.",
+    "example": "In den 1960er Jahren war die strategische Absicht der NASA klar und wirkungsvoll: einen Menschen vor dem Ende des Jahrzehnts auf den Mond zu bringen.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0031",
+    "term": "Disruptive Innovation",
+    "acronym": null,
+    "definition": "Eine Innovation, die einen neuen Markt und ein neues Wertschöpfungsnetzwerk schafft und schließlich etablierte marktführende Unternehmen, Produkte und Allianzen verdrängt.",
+    "example": "Der Streaming-Dienst von Netflix war eine disruptive Innovation, die die Home-Entertainment-Branche komplett veränderte und Videotheken überflüssig machte.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0032",
+    "term": "Erhaltende Innovation",
+    "acronym": null,
+    "definition": "Eine Innovation, die bestehende Produkte oder Dienstleistungen verbessert, typischerweise entlang der Leistungsdimensionen, die von der Mehrheit der Kunden traditionell geschätzt werden.",
+    "example": "Die jährliche Veröffentlichung eines neuen iPhones mit einer besseren Kamera und einem schnelleren Prozessor ist ein klassisches Beispiel für eine erhaltende Innovation.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0033",
+    "term": "Pioniervorteil",
+    "acronym": null,
+    "definition": "Der Wettbewerbsvorteil, den der erste bedeutende Akteur in einem Marktsegment erlangt.",
+    "example": "Amazon erlangte einen riesigen Pioniervorteil im E-Commerce, was es für spätere Wettbewerber schwierig machte, aufzuholen.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0034",
+    "term": "Wirtschaftlicher Burggraben",
+    "acronym": null,
+    "definition": "Ein deutlicher und nachhaltiger Wettbewerbsvorteil, der es einem Unternehmen ermöglicht, seinen Marktanteil und seine Rentabilität vor Wettbewerbern zu schützen.",
+    "example": "Die starke Markenbekanntheit und das globale Vertriebsnetz von Coca-Cola schaffen einen breiten wirtschaftlichen Burggraben, den Konkurrenten nur sehr schwer überwinden können.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0035",
+    "term": "Netzwerkeffekte",
+    "acronym": null,
+    "definition": "Ein Phänomen, bei dem ein Produkt oder eine Dienstleistung an Wert gewinnt, je mehr Menschen es nutzen.",
+    "example": "Soziale Medienplattformen wie Facebook sind aufgrund von Netzwerkeffekten so mächtig; ihr Wert steigt, je mehr Freunde und Kollegen beitreten.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0036",
+    "term": "Plattformstrategie",
+    "acronym": null,
+    "definition": "Ein Geschäftsmodell, das Wert schafft, indem es den Austausch zwischen zwei oder mehr voneinander abhängigen Gruppen, üblicherweise Verbrauchern und Produzenten, ermöglicht.",
+    "example": "Ubers Plattformstrategie verbindet Fahrer mit Fahrgästen und schafft so Wert für beide Gruppen, ohne die Autos selbst zu besitzen.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0037",
+    "term": "Ökosystem-Strategie",
+    "acronym": null,
+    "definition": "Eine Strategie, die ein Netzwerk aus miteinander verbundenen Dienstleistungen, Produkten und Unternehmen umfasst, die zusammenarbeiten, um ein nahtloses Kundenerlebnis zu schaffen und Nutzer zu binden.",
+    "example": "Apples Ökosystem-Strategie mit ihrer engen Integration von Hardware, Software und Dienstleistungen bindet die Kunden an die Marke.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0038",
+    "term": "Organisches Wachstum",
+    "acronym": null,
+    "definition": "Die Wachstumsrate, die ein Unternehmen durch Steigerung der Produktion und Verbesserung des internen Vertriebs erzielt, ohne auf Fusionen oder Übernahmen zurückzugreifen.",
+    "example": "Das Unternehmen konzentriert sich in diesem Jahr auf organisches Wachstum, indem es seine Marketing-Funnels optimiert und seine bestehenden Produktlinien erweitert.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0039",
+    "term": "Anorganisches Wachstum",
+    "acronym": null,
+    "definition": "Wachstum der Geschäftstätigkeit und des Umsatzes eines Unternehmens, das aus Fusionen, Übernahmen oder Joint Ventures und nicht aus der eigenen Geschäftstätigkeit stammt.",
+    "example": "Um schnell in den europäischen Markt einzutreten, entschied sich das Unternehmen für anorganisches Wachstum durch die Übernahme eines lokalen Wettbewerbers.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0040",
+    "term": "Ressourcenbasierter Ansatz",
+    "acronym": "RBV",
+    "definition": "Ein strategischer Managementansatz zur Identifizierung jener Ressourcen, mit denen ein Unternehmen einen nachhaltigen Wettbewerbsvorteil erzielen kann.",
+    "example": "Mithilfe des ressourcenbasierten Ansatzes haben wir unseren proprietären Algorithmus als eine Schlüsselressource identifiziert, die wertvoll, selten und schwer zu imitieren ist.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0041",
+    "term": "VRIO-Framework",
+    "acronym": "VRIO",
+    "definition": "Ein strategisches Analyseinstrument zur Identifizierung von Ressourcen und Fähigkeiten, die eine Quelle für nachhaltige Wettbewerbsvorteile sein können, basierend darauf, ob sie wertvoll (Valuable), selten (Rare), schwer zu imitieren (Inimitable) und vom Unternehmen genutzt (Organized) sind.",
+    "example": "Wir haben das VRIO-Framework auf unser Patentportfolio angewendet und bestätigt, dass es einen langfristigen Wettbewerbsvorteil bietet.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0042",
+    "term": "Dynamische Fähigkeiten",
+    "acronym": null,
+    "definition": "Die Fähigkeit eines Unternehmens, interne und externe Kompetenzen zu integrieren, aufzubauen und neu zu konfigurieren, um auf sich schnell ändernde Umgebungen zu reagieren.",
+    "example": "In der schnelllebigen Technologiebranche sind die dynamischen Fähigkeiten eines Unternehmens – seine Fähigkeit, sich schnell anzupassen und zu innovieren – wichtiger als seine aktuellen Vermögenswerte.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0043",
+    "term": "Strategische Agilität",
+    "acronym": null,
+    "definition": "Die Fähigkeit einer Organisation, Marktchancen und -bedrohungen schnell und flexibel zu erkennen und darauf zu reagieren.",
+    "example": "Unsere strategische Agilität ermöglichte es uns, unseren Produktionsfokus schnell zu verlagern, um der plötzlich gestiegenen Nachfrage nach Home-Office-Ausstattung gerecht zu werden.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0044",
+    "term": "Ambidextre Organisation",
+    "acronym": null,
+    "definition": "Eine Organisation, die in der Lage ist, gleichzeitig neue Möglichkeiten zu erkunden (Exploration) und ihre bestehenden Fähigkeiten effizient zu nutzen (Exploitation).",
+    "example": "Google strebt danach, eine ambidextre Organisation zu sein, indem es sein profitables Suchmaschinengeschäft betreibt und gleichzeitig stark in experimentelle „Moonshot“-Projekte investiert.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0045",
+    "term": "Lean-Startup-Methode",
+    "acronym": null,
+    "definition": "Eine Methode zur Entwicklung von Unternehmen und Produkten, die darauf abzielt, Entwicklungszyklen durch eine Kombination aus Experimentieren, iterativen Veröffentlichungen und validiertem Lernen zu verkürzen.",
+    "example": "Indem wir der Lean-Startup-Methode folgten, haben wir eine einfache Version der App veröffentlicht, um unsere Kernannahmen zuerst mit echten Nutzern zu testen.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0046",
+    "term": "Minimum Viable Product",
+    "acronym": "MVP",
+    "definition": "Eine Version eines neuen Produkts, die es einem Team ermöglicht, mit dem geringsten Aufwand die maximale Menge an validiertem Wissen über Kunden zu sammeln.",
+    "example": "Unser erstes Minimum Viable Product ist nur eine Landingpage mit einem Anmeldeformular, um das Interesse zu messen, bevor wir auch nur eine Zeile Code schreiben.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0047",
+    "term": "Strategischer Pivot",
+    "acronym": null,
+    "definition": "Eine grundlegende Änderung der Geschäftsstrategie eines Unternehmens, oft als Reaktion auf Marktfeedback, um eine neue Kernhypothese zu testen.",
+    "example": "Nachdem wir festgestellt hatten, dass unser ursprünglicher Zielmarkt nicht reagierte, machten wir einen strategischen Pivot und konzentrierten uns stattdessen auf Unternehmenskunden.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0048",
+    "term": "Wertversprechen",
+    "acronym": null,
+    "definition": "Eine Aussage, die klar die Vorteile aufzeigt, die die Produkte oder Dienstleistungen eines Unternehmens seinen Kunden bieten, und wodurch sie sich von Wettbewerbern abheben.",
+    "example": "Das Wertversprechen von Slack besteht darin, dass es interne E-Mails reduziert und die gesamte Teamkommunikation an einem Ort bündelt, was die Arbeit produktiver macht.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0049",
+    "term": "Business Model Canvas",
+    "acronym": null,
+    "definition": "Eine Vorlage für das strategische Management zur Entwicklung neuer oder zur Dokumentation bestehender Geschäftsmodelle auf einer einzigen visuellen Übersicht.",
+    "example": "Wir haben in unserem Workshop das Business Model Canvas verwendet, um schnell die Schlüsselkomponenten unseres neuen Abonnement-Dienstes zu skizzieren.",
+    "reviewed": true
+  },
+  {
+    "id": "strategy_0050",
+    "term": "Kundenlebenszeitwert",
+    "acronym": "CLV",
+    "definition": "Eine Kennzahl, die den gesamten Nettogewinn vorhersagt, den ein Unternehmen von einem einzelnen Kunden über die gesamte Dauer der Geschäftsbeziehung erwarten kann.",
+    "example": "Durch die Steigerung unseres Kundenlebenszeitwerts können wir höhere Ausgaben für die Akquise rechtfertigen, da jeder neue Kunde langfristig mehr Umsatz generiert.",
+    "reviewed": true
+  },
+  {
     "id": "strategy_0051",
     "term": "Mergers & Acquisitions",
     "acronym": "M&A",
@@ -1120,7 +1520,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0191",
+    "id": "strategy_0192",
     "term": "Initiativenportfolio",
     "acronym": null,
     "definition": "Ein strategischer Ansatz, der die Projekte eines Unternehmens als eine Sammlung von Investitionen betrachtet und risikoreiche, ertragreiche Initiativen mit sichereren Wetten ausbalanciert.",
@@ -1128,7 +1528,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0192",
+    "id": "strategy_0193",
     "term": "Entbündelung",
     "acronym": null,
     "definition": "Der Prozess, ein Produkt oder eine Dienstleistung in seine einzelnen Komponenten zu zerlegen, die den Kunden dann einzeln angeboten werden können.",
@@ -1136,7 +1536,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0193",
+    "id": "strategy_0194",
     "term": "Neubündelung",
     "acronym": null,
     "definition": "Der Prozess, bestehende Produkte oder Dienstleistungen, oft aus verschiedenen Quellen, zu einem neuen, integrierten Paket für den Kunden zusammenzufassen.",
@@ -1144,7 +1544,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0194",
+    "id": "strategy_0195",
     "term": "Disintermediation",
     "acronym": null,
     "definition": "Die Beseitigung von Vermittlern in einer Lieferkette oder Transaktion, z. B. wenn ein Unternehmen direkt an Verbraucher online statt über Einzelhändler verkauft.",
@@ -1152,7 +1552,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0195",
+    "id": "strategy_0196",
     "term": "Reintermediation",
     "acronym": null,
     "definition": "Die Einführung neuer Arten von Vermittlern in eine Transaktion oder Lieferkette, oft unter Nutzung von Technologie, um einen Mehrwert zu schaffen.",
@@ -1160,7 +1560,7 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0196",
+    "id": "strategy_0197",
     "term": "Datengesteuerte Strategie",
     "acronym": null,
     "definition": "Ein Geschäftsansatz, der Entscheidungen auf der Analyse und Interpretation von Daten basiert, anstatt allein auf Intuition oder Beobachtung.",
@@ -1168,411 +1568,11 @@
     "reviewed": true
   },
   {
-    "id": "strategy_0197",
+    "id": "strategy_0191",
     "term": "Omnichannel-Strategie",
     "acronym": null,
     "definition": "Eine Strategie, die ein nahtloses und integriertes Kundenerlebnis über alle Kanäle hinweg bietet, einschließlich im Geschäft, online und mobil.",
     "example": "Mit unserer Omnichannel-Strategie kann ein Kunde einen Artikel von seinem Laptop aus in den Online-Warenkorb legen und den Kauf später auf seinem Handy abschließen.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0001",
-    "term": "Wettbewerbsvorteil",
-    "acronym": null,
-    "definition": "Ein Zustand oder Umstand, der ein Unternehmen im Vergleich zu seinen Konkurrenten in eine vorteilhafte oder überlegene Geschäftsposition bringt.",
-    "example": "Apples starke Markentreue und integriertes Ökosystem verschaffen dem Unternehmen einen signifikanten Wettbewerbsvorteil auf dem Markt für Unterhaltungselektronik.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0002",
-    "term": "Blue-Ocean-Strategie",
-    "acronym": null,
-    "definition": "Das Streben nach Differenzierung und niedrigen Kosten, um einen neuen, unumkämpften Marktraum zu erschließen und neue Nachfrage zu schaffen, wodurch der Wettbewerb irrelevant wird.",
-    "example": "Anstatt mit anderen Zirkussen zu konkurrieren, schuf Cirque du Soleil durch die Mischung aus Zirkuskunst und Straßenunterhaltung einen neuen Markt – ein klassisches Beispiel für eine Blue-Ocean-Strategie.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0003",
-    "term": "Red-Ocean-Strategie",
-    "acronym": null,
-    "definition": "Der Wettbewerb in bestehenden Markträumen, bei dem versucht wird, Konkurrenten zu übertreffen, um einen größeren Anteil an der bestehenden Nachfrage zu gewinnen.",
-    "example": "Auf dem Smartphone-Markt verfolgen die Hauptakteure eine Red-Ocean-Strategie und kämpfen durch schrittweise Verbesserungen und Preiskämpfe ständig um Marktanteile.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0004",
-    "term": "SWOT-Analyse",
-    "acronym": "SWOT",
-    "definition": "Ein strategisches Planungsmodell zur Identifizierung und Analyse der Stärken (Strengths), Schwächen (Weaknesses), Chancen (Opportunities) und Risiken (Threats) einer Organisation.",
-    "example": "Vor der Einführung des neuen Produkts führte das Team eine SWOT-Analyse durch, um die internen Fähigkeiten und das externe Marktumfeld zu verstehen.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0005",
-    "term": "PESTLE-Analyse",
-    "acronym": "PESTLE",
-    "definition": "Ein Analysemodell zur Untersuchung der wichtigsten externen makroökonomischen Umfeldfaktoren (politisch, wirtschaftlich, soziokulturell, technologisch, rechtlich und ökologisch), die eine Organisation beeinflussen können.",
-    "example": "Unsere PESTLE-Analyse für die Expansion nach Europa hat potenzielle regulatorische Herausforderungen und sich ändernde Verbraucherpräferenzen aufgezeigt.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0006",
-    "term": "Fünf-Kräfte-Modell nach Porter",
-    "acronym": null,
-    "definition": "Ein Modell, das fünf Wettbewerbskräfte identifiziert und analysiert, die jede Branche prägen, und das hilft, die Schwächen und Stärken einer Branche zu bestimmen.",
-    "example": "Mithilfe des Fünf-Kräfte-Modells nach Porter stellten wir fest, dass die hohe Bedrohung durch neue Wettbewerber den Eintritt in diesen Markt sehr schwierig macht.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0007",
-    "term": "Wertschöpfungskettenanalyse",
-    "acronym": null,
-    "definition": "Ein Prozess, bei dem ein Unternehmen seine primären und unterstützenden Aktivitäten identifiziert, die zum Wert seines Endprodukts beitragen, und diese analysiert, um Kosten zu senken oder die Differenzierung zu erhöhen.",
-    "example": "Durch eine Wertschöpfungskettenanalyse haben wir Ineffizienzen in unserem Logistiknetzwerk aufgedeckt, die nach ihrer Behebung unsere Gewinnmargen erheblich verbessern könnten.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0008",
-    "term": "Kernkompetenzen",
-    "acronym": null,
-    "definition": "Die einzigartigen Stärken und Fähigkeiten eines Unternehmens, die für Wettbewerber schwer zu imitieren sind und die Grundlage für seinen Wettbewerbsvorteil bilden.",
-    "example": "Hondas Kernkompetenzen im Motorendesign und in der Fertigung ermöglichen es dem Unternehmen, bei der Herstellung von Autos, Motorrädern und sogar Stromgeneratoren hervorragende Leistungen zu erbringen.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0009",
-    "term": "BCG-Matrix",
-    "acronym": "BCG",
-    "definition": "Ein Portfolio-Planungsmodell, das Unternehmen bei der Analyse ihrer Produktlinien oder Geschäftsbereiche anhand der Marktwachstumsrate und des relativen Marktanteils unterstützt.",
-    "example": "Laut unserer BCG-Matrix ist unsere alte Software eine „Cash Cow“ und generiert stetige Einnahmen, die wir in unser „Star“-Produkt, die neue mobile App, investieren können.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0010",
-    "term": "Ansoff-Matrix",
-    "acronym": null,
-    "definition": "Ein strategisches Planungsinstrument, das einen Rahmen für Wachstum bietet, indem es vier Optionen aufzeigt: Marktdurchdringung, Marktentwicklung, Produktentwicklung und Diversifikation.",
-    "example": "Der Vorstand verwendet die Ansoff-Matrix, um zu entscheiden, ob wir Wachstum durch den Verkauf bestehender Produkte in neuen Regionen oder durch die Entwicklung neuer Produkte für unsere aktuellen Kunden anstreben sollen.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0011",
-    "term": "Go-to-Market-Strategie",
-    "acronym": "GTM",
-    "definition": "Ein Aktionsplan, der festlegt, wie ein Unternehmen Zielkunden erreichen und einen Wettbewerbsvorteil für ein neues Produkt oder eine neue Dienstleistung erzielen wird.",
-    "example": "Unsere Go-to-Market-Strategie für die neue Software umfasst ein Direktvertriebsteam für Unternehmenskunden und eine Content-Marketing-Kampagne für kleine Unternehmen.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0012",
-    "term": "Marktdurchdringung",
-    "acronym": null,
-    "definition": "Eine Wachstumsstrategie, die darauf abzielt, den Verkauf bestehender Produkte in einem bestehenden Marktsegment zu steigern, um einen höheren Marktanteil zu erzielen.",
-    "example": "Wir streben eine Marktdurchdringung durch aggressive Preisgestaltung und ein Treueprogramm an, um mehr Kunden von unseren Wettbewerbern abzuwerben.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0013",
-    "term": "Marktentwicklung",
-    "acronym": null,
-    "definition": "Eine Wachstumsstrategie, die den Verkauf der bestehenden Produkte eines Unternehmens in neuen Märkten oder Kundensegmenten beinhaltet.",
-    "example": "Unsere Marktentwicklungsstrategie beinhaltet die Erweiterung unseres Online-Shops, um erstmals Kunden in Südostasien zu bedienen.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0014",
-    "term": "Produktentwicklung",
-    "acronym": null,
-    "definition": "Eine Wachstumsstrategie, die sich auf die Einführung neuer Produkte in bestehenden Märkten konzentriert, um aktuelle Kunden besser zu bedienen.",
-    "example": "Im Rahmen unserer Produktentwicklungsstrategie führen wir eine Premium-Version unserer Software mit erweiterten Funktionen ein, die von unseren Power-Usern gewünscht wurden.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0015",
-    "term": "Diversifikationsstrategie",
-    "acronym": null,
-    "definition": "Eine Wachstumsstrategie, bei der ein Unternehmen mit einem neuen Produkt in einen neuen Markt oder eine neue Branche eintritt.",
-    "example": "Googles Einstieg in selbstfahrende Autos ist eine klassische Diversifikationsstrategie, bei der das Unternehmen seine Technologiekompetenz in einer völlig neuen Branche einsetzt.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0016",
-    "term": "Strategische Allianz",
-    "acronym": null,
-    "definition": "Eine Vereinbarung zwischen zwei oder mehr unabhängigen Organisationen, eine Reihe von vereinbarten Zielen zu verfolgen, während sie separate Einheiten bleiben.",
-    "example": "Starbucks bildete eine strategische Allianz mit Spotify, um ein einzigartiges Musikerlebnis in den Filialen zu bieten und so das Kundenerlebnis für beide Marken zu verbessern.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0017",
-    "term": "Joint Venture",
-    "acronym": null,
-    "definition": "Eine Geschäftsvereinbarung, bei der zwei oder mehr Parteien zustimmen, ihre Ressourcen zu bündeln, um eine bestimmte Aufgabe zu erfüllen, wobei eine neue, separate Geschäftseinheit entsteht.",
-    "example": "Sony und Ericsson gründeten ein Joint Venture, Sony Ericsson, um Sonys Expertise in der Unterhaltungselektronik mit Ericssons Telekommunikationswissen zu kombinieren.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0018",
-    "term": "Fusionen und Übernahmen",
-    "acronym": "M&A",
-    "definition": "Die Konsolidierung von Unternehmen oder Vermögenswerten durch Finanztransaktionen, bei denen ein Unternehmen ein anderes kauft oder mit ihm fusioniert.",
-    "example": "Unser M&A-Team prüft derzeit mehrere kleinere Tech-Start-ups als potenzielle Übernahmeziele, um unsere F&E zu beschleunigen.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0019",
-    "term": "Veräußerung",
-    "acronym": null,
-    "definition": "Die Handlung eines Unternehmens, Geschäftsbereiche oder Investitionen einer Tochtergesellschaft zu verkaufen, um sich auf seine Kerngeschäfte zu konzentrieren.",
-    "example": "Das Unternehmen kündigte die Veräußerung seiner Konsumgütersparte an, um Kapital zu beschaffen und sich auf sein profitableres Geschäft mit Unternehmenssoftware zu konzentrieren.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0020",
-    "term": "Vertikale Integration",
-    "acronym": null,
-    "definition": "Eine Strategie, bei der ein Unternehmen seine Lieferanten, Händler oder Einzelhandelsstandorte besitzt oder kontrolliert, um seine Wertschöpfungs- oder Lieferkette zu steuern.",
-    "example": "Durch den Erwerb des landwirtschaftlichen Betriebs, der die Hauptzutaten liefert, verfolgte das Lebensmittelunternehmen eine vertikale Integration, um Qualität zu sichern und Kosten zu kontrollieren.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0021",
-    "term": "Horizontale Integration",
-    "acronym": null,
-    "definition": "Eine Strategie, bei der ein Unternehmen ein anderes Unternehmen in derselben Branche und auf derselben Produktionsstufe erwirbt, mit ihm fusioniert oder es übernimmt.",
-    "example": "Disneys Übernahme von Pixar ist ein Beispiel für horizontale Integration, da sie zwei Hauptakteure in der Animationsfilmindustrie zusammenführte.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0022",
-    "term": "Kostenführerschaft",
-    "acronym": null,
-    "definition": "Eine Strategie, die von Unternehmen genutzt wird, um niedrige Betriebskosten innerhalb ihrer Nische zu schaffen und so einen Wettbewerbsvorteil zu erlangen.",
-    "example": "Walmarts gesamtes Geschäftsmodell basiert auf einer Kostenführerschaftsstrategie und konzentriert sich auf betriebliche Effizienz, um die niedrigsten Preise anzubieten.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0023",
-    "term": "Differenzierungsstrategie",
-    "acronym": null,
-    "definition": "Eine Strategie, bei der ein Unternehmen Produkte oder Dienstleistungen mit einzigartigen Merkmalen entwickelt, die von den Kunden geschätzt werden, weshalb diese bereit sind, einen höheren Preis zu zahlen.",
-    "example": "Lush Cosmetics verfolgt eine Differenzierungsstrategie, indem es sich auf frische, handgefertigte Produkte mit ethischer Beschaffung konzentriert, was eine spezifische Kundengruppe anspricht.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0024",
-    "term": "Fokusstrategie",
-    "acronym": null,
-    "definition": "Eine Strategie, bei der ein Unternehmen seine Ressourcen darauf konzentriert, eine enge Marktnische effektiver oder effizienter zu bedienen als breiter aufgestellte Wettbewerber.",
-    "example": "Rolex verfolgt eine Fokusstrategie, indem es auf das Segment der Luxusuhren im oberen Preissegment abzielt, anstatt auf dem breiteren Uhrenmarkt zu konkurrieren.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0025",
-    "term": "Balanced Scorecard",
-    "acronym": "BSC",
-    "definition": "Ein strategisches Managementsystem, das die Vision eines Unternehmens in ein kohärentes Set von Leistungskennzahlen aus den Perspektiven Finanzen, Kunden, interne Prozesse sowie Lernen und Entwicklung übersetzt.",
-    "example": "Wir führen eine Balanced Scorecard ein, um nicht nur Finanzergebnisse zu verfolgen, sondern auch Kundenzufriedenheit, interne Prozesse und die Mitarbeiterentwicklung.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0026",
-    "term": "Leistungskennzahl",
-    "acronym": "KPI",
-    "definition": "Ein messbarer Wert, der anzeigt, wie effektiv ein Unternehmen wichtige Geschäftsziele erreicht.",
-    "example": "Unsere wichtigste Leistungskennzahl für dieses Quartal ist die Steigerung der Kundenbindung um 5 %.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0027",
-    "term": "Objectives and Key Results",
-    "acronym": "OKR",
-    "definition": "Ein Zielsetzungs-Framework, das Organisationen hilft, ehrgeizige Ziele zu definieren und deren Ergebnisse durch spezifische, messbare Schlüsselergebnisse zu verfolgen.",
-    "example": "Unser Objective lautet 'Das neue Feature erfolgreich einführen', und ein zugehöriges Key Result ist '10.000 aktive Nutzer im ersten Monat erreichen'.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0028",
-    "term": "Szenarioplanung",
-    "acronym": null,
-    "definition": "Eine strategische Planungsmethode, mit der Organisationen flexible langfristige Pläne erstellen, indem sie eine Vielzahl möglicher Zukunftsszenarien entwerfen und analysieren.",
-    "example": "Unser Team nutzt die Szenarioplanung, um sich auf mögliche Störungen in der Lieferkette vorzubereiten, und berücksichtigt dabei Best-Case-, Worst-Case- und wahrscheinlichste Szenarien.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0029",
-    "term": "Hoshin Kanri",
-    "acronym": null,
-    "definition": "Eine Methodik der strategischen Planung, die sicherstellt, dass die Ziele eines Unternehmens in der gesamten Organisation kommuniziert und umgesetzt werden.",
-    "example": "Durch Hoshin Kanri wird die Nachhaltigkeitsvision unserer Führung in konkrete Maßnahmen und Ziele für jede Abteilung übersetzt.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0030",
-    "term": "Strategische Absicht",
-    "acronym": null,
-    "definition": "Eine überzeugende Aussage darüber, wohin eine Organisation steuert und was sie erreichen will, die ihre ehrgeizigen langfristigen Ziele umreißt.",
-    "example": "In den 1960er Jahren war die strategische Absicht der NASA klar und wirkungsvoll: einen Menschen vor dem Ende des Jahrzehnts auf den Mond zu bringen.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0031",
-    "term": "Disruptive Innovation",
-    "acronym": null,
-    "definition": "Eine Innovation, die einen neuen Markt und ein neues Wertschöpfungsnetzwerk schafft und schließlich etablierte marktführende Unternehmen, Produkte und Allianzen verdrängt.",
-    "example": "Der Streaming-Dienst von Netflix war eine disruptive Innovation, die die Home-Entertainment-Branche komplett veränderte und Videotheken überflüssig machte.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0032",
-    "term": "Erhaltende Innovation",
-    "acronym": null,
-    "definition": "Eine Innovation, die bestehende Produkte oder Dienstleistungen verbessert, typischerweise entlang der Leistungsdimensionen, die von der Mehrheit der Kunden traditionell geschätzt werden.",
-    "example": "Die jährliche Veröffentlichung eines neuen iPhones mit einer besseren Kamera und einem schnelleren Prozessor ist ein klassisches Beispiel für eine erhaltende Innovation.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0033",
-    "term": "Pioniervorteil",
-    "acronym": null,
-    "definition": "Der Wettbewerbsvorteil, den der erste bedeutende Akteur in einem Marktsegment erlangt.",
-    "example": "Amazon erlangte einen riesigen Pioniervorteil im E-Commerce, was es für spätere Wettbewerber schwierig machte, aufzuholen.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0034",
-    "term": "Wirtschaftlicher Burggraben",
-    "acronym": null,
-    "definition": "Ein deutlicher und nachhaltiger Wettbewerbsvorteil, der es einem Unternehmen ermöglicht, seinen Marktanteil und seine Rentabilität vor Wettbewerbern zu schützen.",
-    "example": "Die starke Markenbekanntheit und das globale Vertriebsnetz von Coca-Cola schaffen einen breiten wirtschaftlichen Burggraben, den Konkurrenten nur sehr schwer überwinden können.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0035",
-    "term": "Netzwerkeffekte",
-    "acronym": null,
-    "definition": "Ein Phänomen, bei dem ein Produkt oder eine Dienstleistung an Wert gewinnt, je mehr Menschen es nutzen.",
-    "example": "Soziale Medienplattformen wie Facebook sind aufgrund von Netzwerkeffekten so mächtig; ihr Wert steigt, je mehr Freunde und Kollegen beitreten.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0036",
-    "term": "Plattformstrategie",
-    "acronym": null,
-    "definition": "Ein Geschäftsmodell, das Wert schafft, indem es den Austausch zwischen zwei oder mehr voneinander abhängigen Gruppen, üblicherweise Verbrauchern und Produzenten, ermöglicht.",
-    "example": "Ubers Plattformstrategie verbindet Fahrer mit Fahrgästen und schafft so Wert für beide Gruppen, ohne die Autos selbst zu besitzen.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0037",
-    "term": "Ökosystem-Strategie",
-    "acronym": null,
-    "definition": "Eine Strategie, die ein Netzwerk aus miteinander verbundenen Dienstleistungen, Produkten und Unternehmen umfasst, die zusammenarbeiten, um ein nahtloses Kundenerlebnis zu schaffen und Nutzer zu binden.",
-    "example": "Apples Ökosystem-Strategie mit ihrer engen Integration von Hardware, Software und Dienstleistungen bindet die Kunden an die Marke.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0038",
-    "term": "Organisches Wachstum",
-    "acronym": null,
-    "definition": "Die Wachstumsrate, die ein Unternehmen durch Steigerung der Produktion und Verbesserung des internen Vertriebs erzielt, ohne auf Fusionen oder Übernahmen zurückzugreifen.",
-    "example": "Das Unternehmen konzentriert sich in diesem Jahr auf organisches Wachstum, indem es seine Marketing-Funnels optimiert und seine bestehenden Produktlinien erweitert.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0039",
-    "term": "Anorganisches Wachstum",
-    "acronym": null,
-    "definition": "Wachstum der Geschäftstätigkeit und des Umsatzes eines Unternehmens, das aus Fusionen, Übernahmen oder Joint Ventures und nicht aus der eigenen Geschäftstätigkeit stammt.",
-    "example": "Um schnell in den europäischen Markt einzutreten, entschied sich das Unternehmen für anorganisches Wachstum durch die Übernahme eines lokalen Wettbewerbers.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0040",
-    "term": "Ressourcenbasierter Ansatz",
-    "acronym": "RBV",
-    "definition": "Ein strategischer Managementansatz zur Identifizierung jener Ressourcen, mit denen ein Unternehmen einen nachhaltigen Wettbewerbsvorteil erzielen kann.",
-    "example": "Mithilfe des ressourcenbasierten Ansatzes haben wir unseren proprietären Algorithmus als eine Schlüsselressource identifiziert, die wertvoll, selten und schwer zu imitieren ist.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0041",
-    "term": "VRIO-Framework",
-    "acronym": "VRIO",
-    "definition": "Ein strategisches Analyseinstrument zur Identifizierung von Ressourcen und Fähigkeiten, die eine Quelle für nachhaltige Wettbewerbsvorteile sein können, basierend darauf, ob sie wertvoll (Valuable), selten (Rare), schwer zu imitieren (Inimitable) und vom Unternehmen genutzt (Organized) sind.",
-    "example": "Wir haben das VRIO-Framework auf unser Patentportfolio angewendet und bestätigt, dass es einen langfristigen Wettbewerbsvorteil bietet.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0042",
-    "term": "Dynamische Fähigkeiten",
-    "acronym": null,
-    "definition": "Die Fähigkeit eines Unternehmens, interne und externe Kompetenzen zu integrieren, aufzubauen und neu zu konfigurieren, um auf sich schnell ändernde Umgebungen zu reagieren.",
-    "example": "In der schnelllebigen Technologiebranche sind die dynamischen Fähigkeiten eines Unternehmens – seine Fähigkeit, sich schnell anzupassen und zu innovieren – wichtiger als seine aktuellen Vermögenswerte.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0043",
-    "term": "Strategische Agilität",
-    "acronym": null,
-    "definition": "Die Fähigkeit einer Organisation, Marktchancen und -bedrohungen schnell und flexibel zu erkennen und darauf zu reagieren.",
-    "example": "Unsere strategische Agilität ermöglichte es uns, unseren Produktionsfokus schnell zu verlagern, um der plötzlich gestiegenen Nachfrage nach Home-Office-Ausstattung gerecht zu werden.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0044",
-    "term": "Ambidextre Organisation",
-    "acronym": null,
-    "definition": "Eine Organisation, die in der Lage ist, gleichzeitig neue Möglichkeiten zu erkunden (Exploration) und ihre bestehenden Fähigkeiten effizient zu nutzen (Exploitation).",
-    "example": "Google strebt danach, eine ambidextre Organisation zu sein, indem es sein profitables Suchmaschinengeschäft betreibt und gleichzeitig stark in experimentelle „Moonshot“-Projekte investiert.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0045",
-    "term": "Lean-Startup-Methode",
-    "acronym": null,
-    "definition": "Eine Methode zur Entwicklung von Unternehmen und Produkten, die darauf abzielt, Entwicklungszyklen durch eine Kombination aus Experimentieren, iterativen Veröffentlichungen und validiertem Lernen zu verkürzen.",
-    "example": "Indem wir der Lean-Startup-Methode folgten, haben wir eine einfache Version der App veröffentlicht, um unsere Kernannahmen zuerst mit echten Nutzern zu testen.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0046",
-    "term": "Minimum Viable Product",
-    "acronym": "MVP",
-    "definition": "Eine Version eines neuen Produkts, die es einem Team ermöglicht, mit dem geringsten Aufwand die maximale Menge an validiertem Wissen über Kunden zu sammeln.",
-    "example": "Unser erstes Minimum Viable Product ist nur eine Landingpage mit einem Anmeldeformular, um das Interesse zu messen, bevor wir auch nur eine Zeile Code schreiben.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0047",
-    "term": "Strategischer Pivot",
-    "acronym": null,
-    "definition": "Eine grundlegende Änderung der Geschäftsstrategie eines Unternehmens, oft als Reaktion auf Marktfeedback, um eine neue Kernhypothese zu testen.",
-    "example": "Nachdem wir festgestellt hatten, dass unser ursprünglicher Zielmarkt nicht reagierte, machten wir einen strategischen Pivot und konzentrierten uns stattdessen auf Unternehmenskunden.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0048",
-    "term": "Wertversprechen",
-    "acronym": null,
-    "definition": "Eine Aussage, die klar die Vorteile aufzeigt, die die Produkte oder Dienstleistungen eines Unternehmens seinen Kunden bieten, und wodurch sie sich von Wettbewerbern abheben.",
-    "example": "Das Wertversprechen von Slack besteht darin, dass es interne E-Mails reduziert und die gesamte Teamkommunikation an einem Ort bündelt, was die Arbeit produktiver macht.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0049",
-    "term": "Business Model Canvas",
-    "acronym": null,
-    "definition": "Eine Vorlage für das strategische Management zur Entwicklung neuer oder zur Dokumentation bestehender Geschäftsmodelle auf einer einzigen visuellen Übersicht.",
-    "example": "Wir haben in unserem Workshop das Business Model Canvas verwendet, um schnell die Schlüsselkomponenten unseres neuen Abonnement-Dienstes zu skizzieren.",
-    "reviewed": true
-  },
-  {
-    "id": "strategy_0050",
-    "term": "Kundenlebenszeitwert",
-    "acronym": "CLV",
-    "definition": "Eine Kennzahl, die den gesamten Nettogewinn vorhersagt, den ein Unternehmen von einem einzelnen Kunden über die gesamte Dauer der Geschäftsbeziehung erwarten kann.",
-    "example": "Durch die Steigerung unseres Kundenlebenszeitwerts können wir höhere Ausgaben für die Akquise rechtfertigen, da jeder neue Kunde langfristig mehr Umsatz generiert.",
     "reviewed": true
   },
   {

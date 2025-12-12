@@ -148,7 +148,14 @@ export class VocabularyStatsService {
         };
       }
 
+      // Mark as encountered
+      stat.timesEncountered++;
+      stat.lastEncountered = Date.now();
+      // Mark as skipped
       stat.skipped = true;
+      // Auto-master skipped cards (set mastery to 5)
+      stat.masteryLevel = 5;
+
       stats.set(key, stat);
       return stats;
     });
@@ -160,15 +167,24 @@ export class VocabularyStatsService {
   }
 
   getAllStats(): WordStats[] {
-    return Array.from(this.stats().values()).filter((s: WordStats) => !s.skipped);
+    return Array.from(this.stats().values());
   }
 
   getStatsByCategory(category: string): WordStats[] {
     return this.getAllStats().filter(s => s.category === category);
   }
 
-  getWordsNeedingPractice(limit: number = 10): WordStats[] {
-    return this.getAllStats()
+  getWordsNeedingPractice(limit: number = 10, category?: string): WordStats[] {
+    // Get all stats including encountered words (filter out only explicitly skipped words)
+    let allStats = Array.from(this.stats().values()).filter((s: WordStats) => !s.skipped);
+
+    // Filter by category if provided
+    if (category) {
+      allStats = allStats.filter(s => s.category === category);
+    }
+
+    return allStats
+      .filter(s => s.masteryLevel < 4) // Word is mastered at level 4
       .sort((a, b) => {
         // First sort by mastery level (ascending)
         if (a.masteryLevel !== b.masteryLevel) {

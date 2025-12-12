@@ -17,7 +17,7 @@ describe('PwaService', () => {
     };
 
     // Mock global window
-    Object.defineProperty(global, 'window', {
+    Object.defineProperty(globalThis, 'window', {
       value: mockWindow,
       writable: true
     });
@@ -53,7 +53,7 @@ describe('PwaService', () => {
 
     it('should skip initialization when window is undefined', () => {
       // Temporarily remove window
-      Object.defineProperty(global, 'window', {
+      Object.defineProperty(globalThis, 'window', {
         value: undefined,
         writable: true
       });
@@ -61,7 +61,7 @@ describe('PwaService', () => {
       service.init();
 
       // Restore window for other tests
-      Object.defineProperty(global, 'window', {
+      Object.defineProperty(globalThis, 'window', {
         value: mockWindow,
         writable: true
       });

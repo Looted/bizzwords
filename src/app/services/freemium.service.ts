@@ -16,8 +16,12 @@ export class FreemiumService {
   private readonly storageService = inject(StorageService);
 
   // Free word IDs per category
-  private readonly freeWordIdsByCategory = signal<Map<string, Set<string>>>(new Map());
+  private readonly freeWordsByCategory = signal<Map<string, {id: string, term: string, difficulty: number}[]>>(new Map());
   private readonly isLoading = signal<boolean>(true);
+
+  // Persistent storage tracking
+  private readonly STORAGE_KEY = 'freemium_words_count';
+  private readonly MAX_FREE_WORDS = 60; // 3 rounds * 20 words
 
   // Public signals
   readonly isLoadingFreemiumData = this.isLoading.asReadonly();
@@ -40,7 +44,7 @@ export class FreemiumService {
     this.isLoading.set(true);
     try {
       const topics = ['technology', 'finance', 'sales', 'hr', 'strategy'];
-      const freeIdsByCategory = new Map<string, Set<string>>();
+      const freeWordsByCategory = new Map<string, {id: string, term: string, difficulty: number}[]>();
 
       // Load all English base files to collect free word IDs per category
       const observables = topics.map(topic => {
@@ -48,13 +52,17 @@ export class FreemiumService {
         const url = `/i18n/${filename}`;
         return this.http.get<TranslatedItem[]>(url).pipe(
           map(data => {
-            const freeIds = new Set<string>();
+            const freeWords: {id: string, term: string, difficulty: number}[] = [];
             data.forEach(item => {
               if (item.isFree) {
-                freeIds.add(item.id);
+                freeWords.push({
+                  id: item.id,
+                  term: item.term,
+                  difficulty: item.metadata?.difficulty || 1 // Default to 1 if missing
+                });
               }
             });
-            freeIdsByCategory.set(topic, freeIds);
+            freeWordsByCategory.set(topic, freeWords);
           }),
           catchError(error => {
             console.error(`[FreemiumService] Failed to load free words for ${topic}:`, error);
@@ -65,8 +73,8 @@ export class FreemiumService {
 
       // Execute all requests in parallel
       await forkJoin(observables).toPromise();
-      this.freeWordIdsByCategory.set(freeIdsByCategory);
-      console.log(`[FreemiumService] Loaded free word IDs by category`, freeIdsByCategory);
+      this.freeWordsByCategory.set(freeWordsByCategory);
+      console.log(`[FreemiumService] Loaded free word IDs by category`, freeWordsByCategory);
     } catch (error) {
       console.error('[FreemiumService] Failed to load free word IDs:', error);
     } finally {
@@ -74,19 +82,31 @@ export class FreemiumService {
     }
   }
 
-  // Get free word IDs for a specific category
+  // Get free words list for a specific category
+  getFreeWordsListForCategory(category: string, difficulty?: number): {id: string, term: string, difficulty: number}[] {
+    const words = this.freeWordsByCategory().get(category) || [];
+    if (difficulty !== undefined) {
+      return words.filter(w => w.difficulty === difficulty);
+    }
+    return words;
+  }
+
+  // Get free word IDs for a specific category (compatibility method)
   getFreeWordsForCategory(category: string): Set<string> {
-    return this.freeWordIdsByCategory().get(category) || new Set();
+    const words = this.getFreeWordsListForCategory(category);
+    return new Set(words.map(w => w.term.toLowerCase()));
   }
 
   // Get the number of free words already encountered for a category
-  getEncounteredFreeWordCountForCategory(category: string): number {
-    const freeIds = this.getFreeWordsForCategory(category);
+  getEncounteredFreeWordCountForCategory(category: string, difficulty?: number): number {
+    const freeWords = this.getFreeWordsListForCategory(category, difficulty);
+    const freeTerms = new Set(freeWords.map(w => w.term.toLowerCase()));
+
     const allStats = this.statsService.getAllStats();
     const encountered = new Set<string>();
 
     allStats.forEach(stat => {
-      if (stat.category === category && freeIds.has(stat.english.toLowerCase())) {
+      if (stat.category === category && freeTerms.has(stat.english.toLowerCase())) {
         encountered.add(stat.english.toLowerCase());
       }
     });
@@ -95,25 +115,80 @@ export class FreemiumService {
   }
 
   // Get remaining free words for a category
-  getRemainingFreeWordsForCategory(category: string): number {
-    const totalFreeWords = this.getFreeWordsForCategory(category).size;
-    const encountered = this.getEncounteredFreeWordCountForCategory(category);
+  getRemainingFreeWordsForCategory(category: string, difficulty?: number): number {
+    const totalFreeWords = this.getFreeWordsListForCategory(category, difficulty).length;
+    const encountered = this.getEncounteredFreeWordCountForCategory(category, difficulty);
     return Math.max(0, totalFreeWords - encountered);
   }
 
   // Check if a specific category is exhausted
-  isCategoryExhausted(category: string): boolean {
-    const isPremium = this.authService.isPremiumUser();
-    return !isPremium && this.getRemainingFreeWordsForCategory(category) === 0;
+  async isCategoryExhausted(category: string, difficulty?: number): Promise<boolean> {
+    const isPremium = await this.authService.isPremiumUser();
+    return !isPremium && this.getRemainingFreeWordsForCategory(category, difficulty) === 0;
   }
 
   // Check if a specific word is free (for a given category)
   isFreeWord(word: string, category: string): boolean {
-    return this.getFreeWordsForCategory(category).has(word.toLowerCase());
+    const words = this.getFreeWordsListForCategory(category);
+    return words.some(w => w.term.toLowerCase() === word.toLowerCase());
   }
 
   // Get the total number of free words available for a category
-  getTotalFreeWordsForCategory(category: string): number {
-    return this.getFreeWordsForCategory(category).size;
+  getTotalFreeWordsForCategory(category: string, difficulty?: number): number {
+    return this.getFreeWordsListForCategory(category, difficulty).length;
+  }
+
+  // Persistent tracking methods for unlogged/free users
+  private getWordsPlayedCount(): number {
+    const count = this.storageService.getItem(this.STORAGE_KEY);
+    return count ? parseInt(count, 10) : 0;
+  }
+
+  private incrementWordsPlayed(count: number): void {
+    const current = this.getWordsPlayedCount();
+    this.storageService.setItem(this.STORAGE_KEY, (current + count).toString());
+  }
+
+  isFreeLimitReached(): boolean {
+    // Deprecated: Global limit is no longer enforced
+    return false;
+  }
+
+  // Session tracking methods
+  recordSessionWords(category: string, wordCount: number): void {
+    // Keep tracking for potential future use or analytics
+    this.incrementWordsPlayed(wordCount);
+  }
+
+  getSessionWordCount(category: string): number {
+    return 0; // Deprecated: using persistent storage now
+  }
+
+  resetSessionWordCount(category: string): void {
+    // Deprecated
+  }
+
+  // Reset all session tracking (called when user returns to menu)
+  resetAllSessionTracking(): void {
+    // Deprecated
+  }
+
+  // Check if session limit is reached for a category
+  async isSessionLimitReached(category: string, gameModeType: 'classic' | 'blitz'): Promise<boolean> {
+    // Deprecated: No session/global limits, only category exhaustion
+    return false;
+  }
+
+  // Check if user can start a new game (considering both exhaustion and session limits)
+  async canStartNewGame(category: string, gameModeType: 'classic' | 'blitz'): Promise<boolean> {
+    const isPremium = await this.authService.isPremiumUser();
+    if (isPremium) return true;
+
+    // Check if category is completely exhausted
+    if (await this.isCategoryExhausted(category)) {
+      return false;
+    }
+
+    return true;
   }
 }

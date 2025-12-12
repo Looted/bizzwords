@@ -11,11 +11,10 @@ Authentication & Data Sync: Users can learn as guests with local progress storag
 User experience goals: Simple, intuitive interface that encourages daily professional vocabulary practice. Fast loading, offline capability through PWA service workers, installable as a native app, push notifications for review reminders, and progress tracking to keep users motivated. Mobile-first design with slide-over settings menu for easy access to preferences and account management.
 
 ## Flashcard Features
-- English Definitions
-- Polish Translations
+- English, Polish, French, Spanish and German Definitions
+- Polish, French, Spanish and German Translations
 - Example Sentences
 - Spaced Repetition
-- AI-Generated Content
 - Difficulty Levels
 - Themed Vocabulary Decks
 - Progress Tracking

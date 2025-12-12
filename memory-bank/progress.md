@@ -24,6 +24,14 @@ What works:
   - GameService handles shortened rounds when insufficient free words available
   - MenuComponent provides visual feedback with blue/gold button states
   - All tests passing (395/395) with comprehensive coverage including freemium logic
+    - Regression fix: "Learn New Words" strictly blocked when exhausted (no recycling of old words for free users)
+  - **Freemium Logic Fixes & Testing**:
+    - Fixed "Start Game" button logic (Gold vs Blue) based on new word availability.
+    - Ensured Practice Mode remains available as long as words need practice.
+    - Optimized Blitz rounds to maximize length.
+    - Fixed test failures in `VocabularyStatsService` and `SummaryComponent`.
+    - Resolved `global` variable issues in spec files for cleaner test runs.
+    - **Mastery Calculation Fix**: Resolved inconsistency where words with `masteryLevel: 4` were counted as both "Mastered" and "Practice". A word is now considered "needing practice" only if `masteryLevel < 4`, ensuring "Mastered" and "Practice" states are mutually exclusive. This fixed a reporting bug where a user with 53 mastered words saw 0 words in practice mode.
 
 What's left to build:
 - Deck management components (create themed decks: IT, HR, etc.) using signals and OnPush

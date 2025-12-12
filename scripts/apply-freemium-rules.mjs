@@ -12,30 +12,30 @@ const processFile = (filePath) => {
 
   let freeCount = 0;
 
-  // 2. Step 1 (Hard Teaser): Select 10 first words with difficulty: 3
+  // 2. Step 1 (Hard Teaser): Select 5 first words with difficulty: 3
   let hardCount = 0;
   for (const word of words) {
-    if (word.metadata.difficulty === 3 && hardCount < 10) {
+    if (word.metadata.difficulty === 3 && hardCount < 5) {
       word.isFree = true;
       hardCount++;
       freeCount++;
     }
   }
 
-  // 3. Step 2 (Medium Pack): Select 20 first words with difficulty: 2
+  // 3. Step 2 (Medium Pack): Select 5 first words with difficulty: 2
   let mediumCount = 0;
   for (const word of words) {
-    if (word.metadata.difficulty === 2 && mediumCount < 20) {
+    if (word.metadata.difficulty === 2 && mediumCount < 5) {
       word.isFree = true;
       mediumCount++;
       freeCount++;
     }
   }
 
-  // 4. Step 3 (Easy Base): Select 30 first words with difficulty: 1
+  // 4. Step 3 (Easy Base): Select 5 first words with difficulty: 1
   let easyCount = 0;
   for (const word of words) {
-    if (word.metadata.difficulty === 1 && easyCount < 30) {
+    if (word.metadata.difficulty === 1 && easyCount < 5) {
       word.isFree = true;
       easyCount++;
       freeCount++;
@@ -43,7 +43,7 @@ const processFile = (filePath) => {
   }
 
   // 5. Validation / Backfill (Waterfall)
-  const TARGET_TOTAL = 60;
+  const TARGET_TOTAL = 15;
 
   if (freeCount < TARGET_TOTAL) {
     console.log(`[Backfill] ${path.basename(filePath)} needs backfill. Current: ${freeCount}`);

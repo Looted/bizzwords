@@ -68,7 +68,8 @@ describe('SummaryComponent', () => {
     };
 
     const freemiumServiceMock = {
-      isCategoryExhausted: vi.fn().mockReturnValue(false)
+      isCategoryExhausted: vi.fn().mockReturnValue(false),
+      resetAllSessionTracking: vi.fn()
     };
 
     const staticVocabServiceMock = {

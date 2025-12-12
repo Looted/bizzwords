@@ -936,142 +936,6 @@
     "reviewed": true
   },
   {
-    "id": "sales_0168",
-    "term": "Licencia por puesto",
-    "acronym": null,
-    "definition": "Un modelo de licencia de software donde el precio se determina por el número de usuarios individuales o 'puestos'.",
-    "example": "Nuestro nuevo software CRM utiliza un modelo de licencia por puesto, por lo que cuesta $50 por usuario al mes.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0169",
-    "term": "Acuerdo de Nivel de Servicio",
-    "acronym": "SLA",
-    "definition": "Un contrato que define el nivel de servicio que un proveedor promete a un cliente, incluyendo métricas, responsabilidades y soluciones en caso de incumplimiento.",
-    "example": "Antes de firmar, nuestro equipo legal revisó el Acuerdo de Nivel de Servicio para asegurarse de que garantizaba un 99,9 % de tiempo de actividad.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0170",
-    "term": "Validación social",
-    "acronym": null,
-    "definition": "Un fenómeno psicológico en el que las personas asumen que las acciones de otros reflejan el comportamiento correcto, a menudo utilizado en ventas a través de testimonios o casos de estudio.",
-    "example": "Utilizamos testimonios de clientes y casos de estudio en nuestro sitio web como validación social para generar confianza con nuevos leads.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0171",
-    "term": "Oportunidad estancada",
-    "acronym": null,
-    "definition": "Un acuerdo potencial que ha dejado de progresar en el pipeline de ventas durante un período prolongado.",
-    "example": "Ese trato con Acme Corp es ahora una oportunidad estancada; no he tenido noticias del responsable de la toma de decisiones en más de un mes.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0172",
-    "term": "Sesgo del statu quo",
-    "acronym": null,
-    "definition": "La tendencia psicológica de las personas a preferir que las cosas permanezcan igual, lo que puede ser un obstáculo importante en las ventas.",
-    "example": "El mayor desafío es superar el sesgo del statu quo del cliente; se sienten cómodos con su sistema actual, que es menos eficiente.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0173",
-    "term": "Venta a cuentas objetivo",
-    "acronym": "TAS",
-    "definition": "Una metodología de ventas centrada en identificar y perseguir un pequeño número de cuentas estratégicas y de alto valor.",
-    "example": "En lugar de lanzar una red amplia, nuestro equipo de grandes cuentas está utilizando la venta a cuentas objetivo para centrarse en las 10 principales empresas del sector financiero.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0174",
-    "term": "Victoria técnica",
-    "acronym": null,
-    "definition": "El punto en un proceso de ventas donde el equipo técnico del cliente potencial acepta que tu producto es la mejor solución para sus necesidades, incluso antes de que se tome una decisión final de compra.",
-    "example": "Logramos una victoria técnica después de la demostración, cuando su jefe de ingeniería confirmó que nuestro software cumplía con todos sus requisitos.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0175",
-    "term": "Rescisión por conveniencia",
-    "acronym": null,
-    "definition": "Una cláusula contractual que permite a una o ambas partes finalizar el acuerdo por cualquier motivo, sin necesidad de probar un incumplimiento de contrato.",
-    "example": "El contrato incluye una cláusula de rescisión por conveniencia, lo que nos permite finalizar la asociación con 30 días de antelación si nuestras necesidades cambian.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0176",
-    "term": "Valor total del contrato",
-    "acronym": "TCV",
-    "definition": "Los ingresos totales que se espera que un contrato genere durante todo su plazo, incluyendo cargos únicos y tarifas recurrentes.",
-    "example": "El acuerdo de tres años tiene un valor total del contrato de 1,2 millones de dólares, que incluye las tarifas iniciales de implementación.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0177",
-    "term": "Cierre de prueba",
-    "acronym": null,
-    "definition": "Una técnica de ventas utilizada para medir la disposición de un cliente potencial a comprar antes de solicitar formalmente el cierre de la venta.",
-    "example": "Después de explicar los beneficios, el vendedor utilizó un cierre de prueba al preguntar: '¿Le parece que esta sería una solución que funcionaría para su equipo?'",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0178",
-    "term": "Precio basado en el uso",
-    "acronym": null,
-    "definition": "Un modelo de precios en el que a los clientes se les cobra en función de cuánto utilizan un producto o servicio.",
-    "example": "Nuestro servicio de almacenamiento en la nube tiene un precio basado en el uso, por lo que solo pagas por los datos que realmente almacenas cada mes.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0179",
-    "term": "Brecha de valor",
-    "acronym": null,
-    "definition": "La diferencia entre el valor que un cliente espera recibir de un producto y el valor que realmente percibe.",
-    "example": "Necesitamos abordar la brecha de valor; los clientes no están experimentando el ahorro de costes que prometimos en nuestro marketing.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0180",
-    "term": "Marco de ventas basado en el valor",
-    "acronym": null,
-    "definition": "Una metodología de ventas que se centra en comprender los problemas comerciales de un cliente y demostrar el valor económico tangible de su solución.",
-    "example": "Al utilizar un marco de ventas basado en el valor, cambiamos la conversación del precio al retorno de la inversión a largo plazo que ofrece nuestra solución.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0181",
-    "term": "Revendedor de valor agregado",
-    "acronym": "VAR",
-    "definition": "Una empresa que añade características o servicios a un producto existente y luego lo revende como una solución integrada.",
-    "example": "Nos asociamos con un revendedor de valor agregado que empaqueta nuestro software con su hardware y servicios de instalación.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0182",
-    "term": "Voz del cliente",
-    "acronym": "VoC",
-    "definition": "Un proceso de investigación de mercado que captura las expectativas, preferencias y comentarios de los clientes para mejorar productos y servicios.",
-    "example": "Nuestro programa de Voz del Cliente utiliza encuestas y entrevistas para definir directamente nuestra hoja de ruta de desarrollo de productos.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0183",
-    "term": "Punto de ruptura",
-    "acronym": null,
-    "definition": "El precio más bajo o las condiciones menos favorables que un vendedor está dispuesto a aceptar en una negociación, más allá de los cuales terminará la discusión.",
-    "example": "Mi punto de ruptura en esta negociación es un descuento del 15 %; cualquier cosa por encima de eso y el acuerdo no es rentable.",
-    "reviewed": true
-  },
-  {
-    "id": "sales_0184",
-    "term": "Cuota de cartera",
-    "acronym": null,
-    "definition": "El porcentaje del gasto total de un cliente dentro de una categoría específica que es capturado por una sola empresa.",
-    "example": "Tenemos una baja cuota de cartera con este cliente; compran la mayoría de sus suministros a nuestro competidor, así que hay una gran oportunidad para hacer crecer la cuenta.",
-    "reviewed": true
-  },
-  {
     "id": "sales_0118",
     "term": "Cláusula de desaceleración",
     "acronym": null,
@@ -1469,6 +1333,142 @@
     "acronym": null,
     "definition": "Principio psicológico según el cual las personas otorgan un mayor valor a las cosas que son escasas o de disponibilidad limitada.",
     "example": "El vendedor utilizó el principio de escasez al mencionar que 'el descuento del 20 % solo está disponible para los diez primeros clientes'.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0168",
+    "term": "Licencia por puesto",
+    "acronym": null,
+    "definition": "Un modelo de licencia de software donde el precio se determina por el número de usuarios individuales o 'puestos'.",
+    "example": "Nuestro nuevo software CRM utiliza un modelo de licencia por puesto, por lo que cuesta $50 por usuario al mes.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0169",
+    "term": "Acuerdo de Nivel de Servicio",
+    "acronym": "SLA",
+    "definition": "Un contrato que define el nivel de servicio que un proveedor promete a un cliente, incluyendo métricas, responsabilidades y soluciones en caso de incumplimiento.",
+    "example": "Antes de firmar, nuestro equipo legal revisó el Acuerdo de Nivel de Servicio para asegurarse de que garantizaba un 99,9 % de tiempo de actividad.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0170",
+    "term": "Validación social",
+    "acronym": null,
+    "definition": "Un fenómeno psicológico en el que las personas asumen que las acciones de otros reflejan el comportamiento correcto, a menudo utilizado en ventas a través de testimonios o casos de estudio.",
+    "example": "Utilizamos testimonios de clientes y casos de estudio en nuestro sitio web como validación social para generar confianza con nuevos leads.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0171",
+    "term": "Oportunidad estancada",
+    "acronym": null,
+    "definition": "Un acuerdo potencial que ha dejado de progresar en el pipeline de ventas durante un período prolongado.",
+    "example": "Ese trato con Acme Corp es ahora una oportunidad estancada; no he tenido noticias del responsable de la toma de decisiones en más de un mes.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0172",
+    "term": "Sesgo del statu quo",
+    "acronym": null,
+    "definition": "La tendencia psicológica de las personas a preferir que las cosas permanezcan igual, lo que puede ser un obstáculo importante en las ventas.",
+    "example": "El mayor desafío es superar el sesgo del statu quo del cliente; se sienten cómodos con su sistema actual, que es menos eficiente.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0173",
+    "term": "Venta a cuentas objetivo",
+    "acronym": "TAS",
+    "definition": "Una metodología de ventas centrada en identificar y perseguir un pequeño número de cuentas estratégicas y de alto valor.",
+    "example": "En lugar de lanzar una red amplia, nuestro equipo de grandes cuentas está utilizando la venta a cuentas objetivo para centrarse en las 10 principales empresas del sector financiero.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0174",
+    "term": "Victoria técnica",
+    "acronym": null,
+    "definition": "El punto en un proceso de ventas donde el equipo técnico del cliente potencial acepta que tu producto es la mejor solución para sus necesidades, incluso antes de que se tome una decisión final de compra.",
+    "example": "Logramos una victoria técnica después de la demostración, cuando su jefe de ingeniería confirmó que nuestro software cumplía con todos sus requisitos.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0175",
+    "term": "Rescisión por conveniencia",
+    "acronym": null,
+    "definition": "Una cláusula contractual que permite a una o ambas partes finalizar el acuerdo por cualquier motivo, sin necesidad de probar un incumplimiento de contrato.",
+    "example": "El contrato incluye una cláusula de rescisión por conveniencia, lo que nos permite finalizar la asociación con 30 días de antelación si nuestras necesidades cambian.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0176",
+    "term": "Valor total del contrato",
+    "acronym": "TCV",
+    "definition": "Los ingresos totales que se espera que un contrato genere durante todo su plazo, incluyendo cargos únicos y tarifas recurrentes.",
+    "example": "El acuerdo de tres años tiene un valor total del contrato de 1,2 millones de dólares, que incluye las tarifas iniciales de implementación.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0177",
+    "term": "Cierre de prueba",
+    "acronym": null,
+    "definition": "Una técnica de ventas utilizada para medir la disposición de un cliente potencial a comprar antes de solicitar formalmente el cierre de la venta.",
+    "example": "Después de explicar los beneficios, el vendedor utilizó un cierre de prueba al preguntar: '¿Le parece que esta sería una solución que funcionaría para su equipo?'",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0178",
+    "term": "Precio basado en el uso",
+    "acronym": null,
+    "definition": "Un modelo de precios en el que a los clientes se les cobra en función de cuánto utilizan un producto o servicio.",
+    "example": "Nuestro servicio de almacenamiento en la nube tiene un precio basado en el uso, por lo que solo pagas por los datos que realmente almacenas cada mes.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0179",
+    "term": "Brecha de valor",
+    "acronym": null,
+    "definition": "La diferencia entre el valor que un cliente espera recibir de un producto y el valor que realmente percibe.",
+    "example": "Necesitamos abordar la brecha de valor; los clientes no están experimentando el ahorro de costes que prometimos en nuestro marketing.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0180",
+    "term": "Marco de ventas basado en el valor",
+    "acronym": null,
+    "definition": "Una metodología de ventas que se centra en comprender los problemas comerciales de un cliente y demostrar el valor económico tangible de su solución.",
+    "example": "Al utilizar un marco de ventas basado en el valor, cambiamos la conversación del precio al retorno de la inversión a largo plazo que ofrece nuestra solución.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0181",
+    "term": "Revendedor de valor agregado",
+    "acronym": "VAR",
+    "definition": "Una empresa que añade características o servicios a un producto existente y luego lo revende como una solución integrada.",
+    "example": "Nos asociamos con un revendedor de valor agregado que empaqueta nuestro software con su hardware y servicios de instalación.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0182",
+    "term": "Voz del cliente",
+    "acronym": "VoC",
+    "definition": "Un proceso de investigación de mercado que captura las expectativas, preferencias y comentarios de los clientes para mejorar productos y servicios.",
+    "example": "Nuestro programa de Voz del Cliente utiliza encuestas y entrevistas para definir directamente nuestra hoja de ruta de desarrollo de productos.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0183",
+    "term": "Punto de ruptura",
+    "acronym": null,
+    "definition": "El precio más bajo o las condiciones menos favorables que un vendedor está dispuesto a aceptar en una negociación, más allá de los cuales terminará la discusión.",
+    "example": "Mi punto de ruptura en esta negociación es un descuento del 15 %; cualquier cosa por encima de eso y el acuerdo no es rentable.",
+    "reviewed": true
+  },
+  {
+    "id": "sales_0184",
+    "term": "Cuota de cartera",
+    "acronym": null,
+    "definition": "El porcentaje del gasto total de un cliente dentro de una categoría específica que es capturado por una sola empresa.",
+    "example": "Tenemos una baja cuota de cartera con este cliente; compran la mayoría de sus suministros a nuestro competidor, así que hay una gran oportunidad para hacer crecer la cuenta.",
     "reviewed": true
   },
   {

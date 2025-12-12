@@ -1,6 +1,6 @@
 import { Injectable, inject, signal } from '@angular/core';
-import { firstValueFrom } from 'rxjs';
-import { StaticVocabularyService } from './static-vocabulary.service';
+import { firstValueFrom, map } from 'rxjs';
+import { StaticVocabularyService, TranslatedItem } from './static-vocabulary.service';
 import { VocabularyStatsService } from './vocabulary-stats.service';
 import { GameStore, Flashcard } from '../game-store';
 import { GameMode, GAME_CONSTANTS } from '../shared/constants';
@@ -28,11 +28,8 @@ export class GameService {
     const isPremium = await this.authService.isPremiumUser();
     console.log('[GameService] User premium status:', isPremium);
 
-    // Check if freemium limit is exhausted for non-premium users for this category
-    if (!isPremium && this.freemiumService.isCategoryExhausted(topic)) {
-      console.log('[GameService] Freemium limit exhausted for category', topic, 'redirecting to paywall');
-      throw new Error('FREEMIUM_LIMIT_EXHAUSTED');
-    }
+    // Freemium checks are now handled by whether we can actually fetch words.
+    // We don't block prematurely based on broad category exhaustion or global limits.
 
     // Determine word count based on game mode
     let wordCount = gameModeType === 'blitz'
@@ -60,12 +57,6 @@ export class GameService {
         cards = allEligibleCards.filter(card => !this.statsService.getStats(card.english));
         console.log('[GameService] New words filter - cards with no stats:', cards.length);
 
-        // If no new words available, fall back to all eligible cards
-        if (cards.length === 0) {
-          console.log('[GameService] No new words available, falling back to all eligible cards');
-          cards = [...allEligibleCards];
-        }
-
         // Slice to the desired word count
         cards = cards.slice(0, wordCount);
       } else if (practiceMode === GameMode.Practice) {
@@ -91,6 +82,13 @@ export class GameService {
 
       // Handle shortened rounds for non-premium users (after filtering)
       if (!isPremium) {
+        // If we found NO cards at all for the selected criteria, and it's a free user,
+        // this constitutes exhaustion of the available free pool for this mode.
+        if (cards.length === 0) {
+          console.log('[GameService] Freemium limit exhausted: No words available for this category/mode');
+          throw new Error('FREEMIUM_LIMIT_EXHAUSTED');
+        }
+
         const minWordsForClassic = 5;
         const minWordsForBlitz = 20;
 
@@ -102,7 +100,12 @@ export class GameService {
           wordCount = cards.length;
         }
       }
-    } catch (error) {
+    } catch (error: any) {
+      // If we explicitly threw FREEMIUM_LIMIT_EXHAUSTED, re-throw it so the UI handles it
+      if (error?.message === 'FREEMIUM_LIMIT_EXHAUSTED') {
+        throw error;
+      }
+
       console.error('[GameService] Failed to load translated vocabulary, using fallback:', error);
       // Use static fallback words as safety net
       cards = this.getStaticFallbackWords(topic, wordCount, difficulty);
@@ -137,6 +140,12 @@ export class GameService {
     });
 
     this.store.startGame(this.gameModeService.getGameMode(gameModeType), flashcards);
+
+    // Record session words for freemium tracking
+    if (!isPremium) {
+      this.freemiumService.recordSessionWords(topic, cards.length);
+      console.log('[GameService] Recorded session words for freemium tracking:', cards.length, 'words for category', topic);
+    }
   }
 
   handleAnswer(correct: boolean) {
@@ -249,5 +258,40 @@ export class GameService {
     const isPremium = await this.authService.isPremiumUser();
     const topicLower = topic.toLowerCase();
     return firstValueFrom(this.staticVocab.getAvailableWordsCount(topicLower, difficulty, isPremium));
+  }
+
+  async getRemainingNewWordsCount(topic: string, difficulty?: number): Promise<number> {
+    const isPremium = await this.authService.isPremiumUser();
+    const topicLower = topic.toLowerCase();
+
+    // Get all eligible words (filtered by premium status and difficulty)
+    const countObservable = this.staticVocab.loadTranslationData(topicLower, 'english').pipe(
+        map((translationData: TranslatedItem[]) => {
+            let filtered = translationData;
+            // Filter by difficulty if specified
+            if (difficulty !== undefined) {
+                filtered = filtered.filter((item: TranslatedItem) => item.metadata?.difficulty === difficulty);
+            }
+            // Filter by premium status - only free words for non-premium users
+            if (!isPremium) {
+                filtered = filtered.filter((item: TranslatedItem) => item.isFree === true);
+            }
+            return filtered;
+        })
+    );
+
+    const eligibleWords = await firstValueFrom(countObservable);
+    if (!eligibleWords) return 0;
+
+    // Filter out encountered words to find truly "new" words
+    let remainingCount = 0;
+    for (const word of eligibleWords) {
+        // If no stats, it's new
+        if (!this.statsService.getStats(word.term)) {
+            remainingCount++;
+        }
+    }
+
+    return remainingCount;
   }
 }
