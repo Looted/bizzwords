@@ -13,7 +13,9 @@
     "e2e:safe": "firebase emulators:exec --only auth,firestore --project demo-bizzwords \"npm run e2e\"",
     "serve:ssr:bizzwords": "node dist/bizzwords/server/server.mjs",
     "deploy:ghpages": "ng deploy --base-href=/bizzwords/",
-    "apply-freemium-rules": "node scripts/apply-freemium-rules.mjs"
+    "apply-freemium-rules": "node scripts/apply-freemium-rules.mjs",
+    "cap:sync": "ng build && npx cap sync",
+    "cap:open": "npx cap open android"
   },
   "prettier": {
     "printWidth": 100,
@@ -39,9 +41,12 @@
     "@angular/router": "^21.0.3",
     "@angular/service-worker": "^21.0.3",
     "@angular/ssr": "^21.0.2",
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/cli": "^7.4.4",
+    "@capacitor/core": "^8.0.0",
     "@huggingface/transformers": "^3.8.1",
     "@ngneat/tailwind": "^7.0.3",
-    "@revenuecat/purchases-js": "^1.20.0",
+    "@revenuecat/purchases-capacitor": "^11.3.0",
     "@tailwindcss/postcss": "^4.1.17",
     "execa": "^9.6.1",
     "express": "^5.2.1",

@@ -12,5 +12,9 @@ export const routes: Routes = [
   {
     path: 'summary',
     loadComponent: () => import('./components/summary/summary.component').then(m => m.SummaryComponent)
+  },
+  {
+    path: 'paywall',
+    loadComponent: () => import('./components/paywall/paywall.component').then(m => m.PaywallComponent)
   }
 ];

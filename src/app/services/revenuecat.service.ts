@@ -1,5 +1,7 @@
 import { Injectable, inject, signal, computed, PLATFORM_ID, isDevMode } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { Purchases, PurchasesPackage, CustomerInfo, LOG_LEVEL } from '@revenuecat/purchases-capacitor';
+import { Capacitor } from '@capacitor/core';
 import { FirestoreService } from './firestore.service';
 
 @Injectable({
@@ -10,20 +12,23 @@ export class RevenueCatService {
   private readonly firestoreService = inject(FirestoreService);
 
   // RevenueCat configuration
-  private readonly REVENUECAT_API_KEY = 'test_OKZAyYxDIQSzNuzIShHsKFXKlkpHsK';
+  // TODO: Replace with real API key
+  private readonly REVENUECAT_API_KEY_ANDROID = 'goog_OKZAyYxDIQSzNuzIShHsKFXKlkpHsK'; // Placeholder for Android
   private readonly ENTITLEMENT_PRO = 'bizzwords_pro';
 
   // Reactive signals for subscription state
-  private _customerInfo = signal<any>(null);
-  private _offerings = signal<any>(null);
+  private _customerInfo = signal<CustomerInfo | null>(null);
+  private _offerings = signal<any>(null); // Type is complex, keeping as any for now or strictly typed if possible
   private _isLoading = signal(false);
   private _error = signal<string | null>(null);
+  private _isInitialized = signal(false);
 
   // Public signals
   readonly customerInfo = this._customerInfo.asReadonly();
   readonly offerings = this._offerings.asReadonly();
   readonly isLoading = this._isLoading.asReadonly();
   readonly error = this._error.asReadonly();
+  readonly isInitialized = this._isInitialized.asReadonly();
 
   // Computed signals for convenience
   readonly isProUser = computed(() => {
@@ -33,7 +38,7 @@ export class RevenueCatService {
 
   readonly lifetimeOffering = computed(() => {
     const offerings = this._offerings();
-    return offerings?.['default'] || null;
+    return offerings?.current || offerings?.all?.['default'] || null;
   });
 
   readonly lifetimePackage = computed(() => {
@@ -49,17 +54,24 @@ export class RevenueCatService {
 
   private async initializeRevenueCat(): Promise<void> {
     try {
-      // TODO: Initialize RevenueCat SDK when API is clarified
-      console.log('[RevenueCat] Service initialized (TODO: implement SDK integration)');
-
-      // For now, set some mock data for development
-      if (isDevMode()) {
-        this._customerInfo.set({
-          entitlements: {
-            active: {}
-          }
-        });
+      if (!Capacitor.isNativePlatform()) {
+        console.warn('[RevenueCat] Not running on native platform. Payments disabled.');
+        this._isInitialized.set(true);
+        return;
       }
+
+      if (isDevMode()) {
+        await Purchases.setLogLevel({ level: LOG_LEVEL.DEBUG });
+      }
+
+      await Purchases.configure({ apiKey: this.REVENUECAT_API_KEY_ANDROID });
+
+      this._isInitialized.set(true);
+      console.log('[RevenueCat] Service initialized');
+
+      // Load initial data
+      await this.refreshCustomerInfo();
+      await this.refreshOfferings();
 
     } catch (error) {
       console.error('[RevenueCat] Failed to initialize:', error);
@@ -71,20 +83,18 @@ export class RevenueCatService {
    * Refresh customer info from RevenueCat
    */
   async refreshCustomerInfo(): Promise<void> {
+    if (!Capacitor.isNativePlatform()) return;
+
     try {
       this._isLoading.set(true);
       this._error.set(null);
 
-      // TODO: Implement RevenueCat customer info fetching
-      console.log('[RevenueCat] TODO: Refresh customer info from RevenueCat');
-
-      // For now, maintain current state
-      const currentInfo = this._customerInfo();
-      this._customerInfo.set(currentInfo);
+      const { customerInfo } = await Purchases.getCustomerInfo();
+      this._customerInfo.set(customerInfo);
 
     } catch (error) {
       console.error('[RevenueCat] Failed to refresh customer info:', error);
-      this._error.set('Failed to load subscription status');
+      // Don't set global error here to avoid blocking UI, just log it
     } finally {
       this._isLoading.set(false);
     }
@@ -94,14 +104,11 @@ export class RevenueCatService {
    * Refresh available offerings
    */
   async refreshOfferings(): Promise<void> {
+    if (!Capacitor.isNativePlatform()) return;
+
     try {
-      // TODO: Implement RevenueCat offerings fetching
-      console.log('[RevenueCat] TODO: Refresh offerings from RevenueCat');
-
-      // For now, maintain current state
-      const currentOfferings = this._offerings();
-      this._offerings.set(currentOfferings);
-
+      const offerings = await Purchases.getOfferings();
+      this._offerings.set(offerings);
     } catch (error) {
       console.error('[RevenueCat] Failed to refresh offerings:', error);
       this._error.set('Failed to load product offerings');
@@ -112,42 +119,30 @@ export class RevenueCatService {
    * Check if user has Pro entitlement
    */
   hasProEntitlement(): boolean {
+    // In dev mode on web, allow bypass if needed, or strictly enforce false
+    // For now, reactive signal serves as source of truth
     return this.isProUser();
   }
 
   /**
    * Purchase lifetime subscription
    */
-  async purchaseLifetime(): Promise<any> {
-    const lifetimePackage = this.lifetimePackage();
-    if (!lifetimePackage) {
-      throw new Error('Lifetime package not available');
+  async purchaseLifetime(pkg: PurchasesPackage): Promise<any> {
+    if (!Capacitor.isNativePlatform()) {
+      throw new Error('Purchases are only available on the mobile app.');
     }
 
     try {
       this._isLoading.set(true);
       this._error.set(null);
 
-      // TODO: Implement RevenueCat purchase
-      console.log('[RevenueCat] TODO: Purchase lifetime package');
-
-      // Simulate successful purchase for development
-      if (isDevMode()) {
-        // Add pro entitlement to mock customer info
-        const currentInfo = this._customerInfo() || { entitlements: { active: {} } };
-        currentInfo.entitlements.active[this.ENTITLEMENT_PRO] = {
-          identifier: this.ENTITLEMENT_PRO,
-          isActive: true,
-          willRenew: false
-        };
-        this._customerInfo.set(currentInfo);
-      }
+      const { customerInfo } = await Purchases.purchasePackage({ aPackage: pkg });
+      this._customerInfo.set(customerInfo);
 
       return { success: true };
     } catch (error: any) {
       console.error('[RevenueCat] Purchase failed:', error);
 
-      // Handle different error types
       if (error.userCancelled) {
         throw new Error('Purchase was cancelled');
       } else {
@@ -160,16 +155,35 @@ export class RevenueCatService {
   }
 
   /**
+   * Restore purchases
+   */
+  async restorePurchases(): Promise<void> {
+    if (!Capacitor.isNativePlatform()) {
+      throw new Error('Restore is only available on the mobile app.');
+    }
+
+    try {
+      this._isLoading.set(true);
+      this._error.set(null);
+
+      const { customerInfo } = await Purchases.restorePurchases();
+      this._customerInfo.set(customerInfo);
+
+      console.log('[RevenueCat] Purchases restored');
+
+    } catch (error: any) {
+      console.error('[RevenueCat] Restore failed:', error);
+      this._error.set(error.message || 'Failed to restore purchases');
+      throw error;
+    } finally {
+      this._isLoading.set(false);
+    }
+  }
+
+  /**
    * Clear any errors
    */
   clearError(): void {
     this._error.set(null);
-  }
-
-  /**
-   * Get current customer info synchronously
-   */
-  getCurrentCustomerInfo(): any {
-    return this._customerInfo();
   }
 }

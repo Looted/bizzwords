@@ -1,110 +1,166 @@
-<div class="paywall-container animate-fade-in">
+<div class="paywall-container animate-fade-in relative min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
+
+  <button (click)="goBack()" class="absolute top-4 left-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 text-gray-800 dark:text-white transition-colors">
+    <span class="sr-only">Back</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+  </button>
+
   <!-- Already Pro User Message -->
   @if (isProUser()) {
-    <div class="pro-status animate-scale-in">
-      <div class="pro-badge">
-        <span class="pro-icon">⭐</span>
-        <span class="pro-text">BizzWords Pro</span>
+    <div class="pro-status animate-scale-in flex flex-col items-center justify-center pt-20 px-4 text-center">
+      <div class="pro-badge bg-gradient-to-r from-amber-400 to-amber-600 text-white px-6 py-2 rounded-full shadow-lg mb-8 transform scale-110">
+        <span class="pro-icon mr-2">⭐</span>
+        <span class="pro-text font-bold">BizzWords Pro</span>
       </div>
-      <h2>You're all set!</h2>
-      <p>You have unlimited access to all business vocabulary.</p>
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">You're all set!</h2>
+      <p class="text-gray-600 dark:text-gray-300 text-lg max-w-md">You have unlimited access to all business vocabulary, difficulty levels, and stats.</p>
     </div>
   } @else {
     <!-- Paywall Content -->
-    <div class="paywall-content animate-slide-up">
-      <div class="header">
-        <h1>Unlock Professional Mastery</h1>
-        <p>Take your business vocabulary to the executive level.</p>
+    <div class="paywall-content animate-slide-up px-4 pt-16 max-w-md mx-auto">
+      <div class="header text-center mb-10">
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-3">Unlock Professional Mastery</h1>
+        <p class="text-gray-600 dark:text-gray-400">Take your business vocabulary to the executive level.</p>
       </div>
 
-      <div class="features">
-        <div class="feature">
-          <div class="feature-icon-container">
-            <span class="feature-icon">📚</span>
+      <!-- Web Warning -->
+      @if (!isNative()) {
+        <div class="web-warning bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-8 flex items-start gap-3">
+          <span class="text-2xl">📱</span>
+          <div>
+            <h3 class="font-bold text-blue-900 dark:text-blue-100 mb-1">Download the App</h3>
+            <p class="text-sm text-blue-800 dark:text-blue-200">
+              Purchases are handled securely via Google Play. Please download the Android app to upgrade to Pro.
+            </p>
           </div>
-          <span>Unlimited access to all 500+ words</span>
         </div>
-        <div class="feature">
-          <div class="feature-icon-container">
-            <span class="feature-icon">🎯</span>
+      }
+
+      <div class="features grid grid-cols-1 gap-4 mb-10">
+        <div class="feature flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+          <div class="feature-icon-container w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400">
+            <span class="feature-icon text-xl">📚</span>
           </div>
-          <span>Advanced difficulty levels & idioms</span>
+          <span class="font-medium text-gray-800 dark:text-gray-200">Unlimited access to all 500+ words</span>
         </div>
-        <div class="feature">
-          <div class="feature-icon-container">
-            <span class="feature-icon">📊</span>
+        <div class="feature flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+          <div class="feature-icon-container w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center text-purple-600 dark:text-purple-400">
+            <span class="feature-icon text-xl">🎯</span>
           </div>
-          <span>Detailed progress & mastery analytics</span>
+          <span class="font-medium text-gray-800 dark:text-gray-200">Advanced difficulty levels & idioms</span>
         </div>
-        <div class="feature">
-          <div class="feature-icon-container">
-            <span class="feature-icon">🔄</span>
+        <div class="feature flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+          <div class="feature-icon-container w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/50 flex items-center justify-center text-green-600 dark:text-green-400">
+            <span class="feature-icon text-xl">📊</span>
           </div>
-          <span>Sync progress across all devices</span>
+          <span class="font-medium text-gray-800 dark:text-gray-200">Detailed progress & mastery analytics</span>
+        </div>
+        <div class="feature flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+          <div class="feature-icon-container w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center text-amber-600 dark:text-amber-400">
+             <span class="feature-icon text-xl">🔄</span>
+          </div>
+          <span class="font-medium text-gray-800 dark:text-gray-200">Sync progress across all devices</span>
         </div>
       </div>
 
       <!-- Lifetime Offer -->
       @if (lifetimePackage(); as pkg) {
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <h3>Lifetime Access</h3>
-            <div class="price">
-              <span class="amount">{{ getPackagePrice(pkg) }}</span>
+        <div class="pricing-card bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-6 shadow-xl relative overflow-hidden group">
+          <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <span class="text-9xl">💎</span>
+          </div>
+
+          <div class="pricing-header flex justify-between items-start mb-6 relative z-10">
+            <div>
+              <h3 class="text-lg font-medium text-gray-300">Lifetime Access</h3>
+              <p class="text-sm text-gray-400">One-time payment. Own it forever.</p>
+            </div>
+            <div class="price text-right">
+              <span class="amount text-3xl font-bold text-white">{{ getPackagePrice(pkg) }}</span>
             </div>
           </div>
 
-          <div class="pricing-description">
-            <p>One-time payment. Own it forever.</p>
-          </div>
-
-          <button
-            class="purchase-button"
-            [disabled]="isLoading() || purchaseStatus() === 'purchasing'"
-            (click)="purchaseLifetime()">
-            @if (purchaseStatus() === 'purchasing') {
-              <span class="loading-spinner"></span>
-              Processing...
-            } @else {
-              <span>🚀</span> Upgrade to Pro
-            }
-          </button>
+          @if (isNative()) {
+            <button
+              class="purchase-button w-full py-4 rounded-xl font-bold text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 shadow-lg shadow-blue-500/30 transform transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              [disabled]="isLoading() || purchaseStatus() === 'purchasing'"
+              (click)="purchaseLifetime()">
+              @if (purchaseStatus() === 'purchasing') {
+                <span class="loading-spinner min-w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
+                Processing...
+              } @else {
+                <span>🚀</span> Upgrade to Pro
+              }
+            </button>
+          } @else {
+             <button disabled class="w-full py-4 rounded-xl font-bold bg-white/10 text-gray-400 cursor-not-allowed">
+                Available on Android App
+             </button>
+          }
         </div>
-      } @else {
-        <!-- Loading State -->
-        @if (isLoading()) {
-          <div class="loading-state">
-            <div class="loading-spinner"></div>
-            <p>Loading best offer...</p>
-          </div>
-        } @else {
-          <!-- No packages available -->
-          <div class="error-state">
-            <p>Unable to load pricing. Please check your connection.</p>
-            <button class="retry-button" (click)="resetStatus()">
-              Retry
+
+        <!-- Restore Purchases Link -->
+         @if (isNative()) {
+          <div class="text-center mt-6">
+            <button
+              (click)="restorePurchases()"
+              [disabled]="purchaseStatus() === 'restoring'"
+              class="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors underline">
+
+              @if (purchaseStatus() === 'restoring') {
+                 Restoring...
+              } @else {
+                 Restore Purchases
+              }
             </button>
           </div>
+         }
+
+      } @else {
+        <!-- Loading or Error State -->
+        @if (isLoading()) {
+          <div class="loading-state text-center py-10">
+            <div class="loading-spinner w-8 h-8 mx-auto border-4 border-gray-200 border-t-blue-500 rounded-full animate-spin mb-4"></div>
+            <p class="text-gray-500">Loading best offer...</p>
+          </div>
+        } @else {
+           <!-- Web/Dev Fallback or Error -->
+           @if (!isNative()){
+              <div class="pricing-card bg-gray-100 dark:bg-gray-800 rounded-2xl p-6 text-center opacity-70">
+                 <p class="font-medium text-gray-600 dark:text-gray-300">Offers loading...</p>
+                 <p class="text-sm text-gray-500 mt-2">Open on Android to see pricing.</p>
+              </div>
+           } @else {
+              <div class="error-state text-center py-8">
+                <p class="text-red-500 mb-4">Unable to load pricing.</p>
+                <button class="retry-button px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg text-sm" (click)="resetStatus()">
+                  Retry
+                </button>
+              </div>
+           }
         }
       }
 
       <!-- Status Messages -->
-      @if (purchaseStatus() !== 'idle') {
-        <div class="status-message"
-             [class.success]="purchaseStatus() === 'success'"
-             [class.error]="purchaseStatus() === 'error'">
-          <p>{{ getStatusMessage() }}</p>
-          @if (purchaseStatus() === 'success' || purchaseStatus() === 'error') {
-            <button class="close-button" (click)="resetStatus()">×</button>
-          }
+      @if (purchaseStatus() !== 'idle' && purchaseStatus() !== 'purchasing' && purchaseStatus() !== 'restoring') {
+        <div class="status-message fixed bottom-4 left-4 right-4 md:absolute md:bottom-auto md:top-20 md:left-0 md:right-0 p-4 rounded-xl shadow-lg flex items-center justify-between animate-slide-up bg-white dark:bg-gray-800 border"
+             [class.border-green-500]="purchaseStatus() === 'success'"
+             [class.border-red-500]="purchaseStatus() === 'error'">
+
+          <div class="flex items-center gap-3">
+             <span class="text-2xl">{{ purchaseStatus() === 'success' ? '✅' : '❌' }}</span>
+             <p class="font-medium text-gray-800 dark:text-white">{{ getStatusMessage() }}</p>
+          </div>
+
+          <button class="close-button text-gray-400 hover:text-gray-600 dark:hover:text-gray-200" (click)="resetStatus()">✕</button>
         </div>
       }
 
-      <!-- Error Message -->
+      <!-- Global Error Message -->
       @if (error(); as err) {
-        <div class="error-message">
+        <div class="error-message fixed top-4 left-4 right-4 z-50 bg-red-100 border border-red-200 text-red-700 px-4 py-3 rounded-xl shadow-lg flex justify-between items-center">
           <p>{{ err }}</p>
-          <button class="close-button" (click)="clearError()">×</button>
+          <button class="close-button font-bold text-red-500 hover:text-red-800" (click)="clearError()">✕</button>
         </div>
       }
     </div>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BizzWords</string>
+    <string name="title_activity_main">BizzWords</string>
+    <string name="package_name">com.bizzwords</string>
+    <string name="custom_url_scheme">com.bizzwords</string>
+</resources>
